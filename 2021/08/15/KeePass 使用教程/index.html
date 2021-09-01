@@ -28,7 +28,7 @@
 <meta property="og:description" content="如今，我们的生活充斥着各色各样的密码。所谓密码管理器，就是用一个主密码来保护所有其他密码。使用密码管理器，可以减轻记忆负担，而且只要在主密码不泄漏或者遗忘的情况下，我们的账户安全就能够得到保障，本文所要介绍的 KeePass 就是一款出色的密码管理器。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-08-15T02:05:47.627Z">
-<meta property="article:modified_time" content="2021-08-15T02:45:55.090Z">
+<meta property="article:modified_time" content="2021-09-01T01:35:19.391Z">
 <meta property="article:author" content="Alex">
 <meta property="article:tag" content="工具">
 <meta name="twitter:card" content="summary_large_image">
@@ -60,12 +60,12 @@
 
 <header class="header">
 
-<div class="logo-wrap"><a class="title" href="/"><div class="main">南风小栈</div><div class="sub cap">哈哈哈</div></a></div>
+<div class="logo-wrap"><a class="title" href="/"><div class="main">南风小栈</div></a></div>
 <nav class="menu dis-select"></nav></header>
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#keepass%E4%B8%8E%E5%90%8C%E7%B1%BB%E8%BD%AF%E4%BB%B6%E7%9B%B8%E6%AF%94%E7%A9%B6%E7%AB%9F%E6%9C%89%E4%BD%95%E4%BC%98%E5%8A%BF%EF%BC%9F"><span class="toc-text">keepass与同类软件相比究竟有何优势？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD-amp-%E5%AE%89%E8%A3%85"><span class="toc-text">下载 &amp; 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-text">使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E8%AF%AD%E8%A8%80%E5%8C%85%E5%AE%89%E8%A3%85"><span class="toc-text">1、语言包安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">2、插件安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91%E5%90%8C%E6%AD%A5"><span class="toc-text">3、使用坚果云同步</span></a></li></ol></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#keepass%E4%B8%8E%E5%90%8C%E7%B1%BB%E8%BD%AF%E4%BB%B6%E7%9B%B8%E6%AF%94%E7%A9%B6%E7%AB%9F%E6%9C%89%E4%BD%95%E4%BC%98%E5%8A%BF%EF%BC%9F"><span class="toc-text">keepass与同类软件相比究竟有何优势？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD-amp-%E5%AE%89%E8%A3%85"><span class="toc-text">下载 &amp; 安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B"><span class="toc-text">使用教程</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1%E3%80%81%E8%AF%AD%E8%A8%80%E5%8C%85%E5%AE%89%E8%A3%85"><span class="toc-text">1、语言包安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2%E3%80%81%E6%8F%92%E4%BB%B6%E5%AE%89%E8%A3%85"><span class="toc-text">2、插件安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3%E3%80%81%E4%BD%BF%E7%94%A8%E5%9D%9A%E6%9E%9C%E4%BA%91-WebDAV-%E5%90%8C%E6%AD%A5"><span class="toc-text">3、使用坚果云 WebDAV 同步</span></a></li></ol></li></ol></div></div></div>
 
 
 </div>
@@ -88,7 +88,7 @@
 <li>简单易用，易于上手。</li>
 <li>功能全面，既能保存密码，还能生成健壮的密码</li>
 <li>开源软件，安全性更高</li>
-<li>跨平台软件，支持 <strong>Windows</strong>、<strong>Linux和</strong> <strong>Mac</strong> 三大平台，甚至还有移动操作系统版本。</li>
+<li>跨平台软件，支持 <strong>Windows</strong>、<strong>Linux</strong> 和 <strong>Mac</strong> 三大平台，甚至还有移动操作系统版本。</li>
 <li>移动版软件，便携绿色。</li>
 </ul>
 <p>下面，我们一起来学习如何使用 <strong>KeePass</strong>。</p>
@@ -103,7 +103,7 @@
 <p>访问 <strong>KeePass</strong> 官网下载页面 <a target="_blank" rel="noopener" href="https://keepass.info/download.html">https://keepass.info/download.html</a></p>
 <p><strong>KeePass</strong> 的安装过程非常简单，按照提示安装即可。</p>
 <p>对于 <strong>Ubuntu</strong> 用户，请参阅如何在 <strong>Ubuntu</strong> 中安装 <strong>KeePass 2</strong> 进行安装设置。</p>
-<p>安卓建议使用 <strong>Keepass2Android</strong> 配合坚果云进行同步</p>
+<p>安卓建议使用 <strong>Keepass2Android</strong> 配合坚果云 <strong>WebDAV</strong> 进行同步</p>
 <h3 id="使用教程"><a href="#使用教程" class="headerlink" title="使用教程"></a>使用教程</h3><h4 id="1、语言包安装"><a href="#1、语言包安装" class="headerlink" title="1、语言包安装"></a>1、语言包安装</h4><ol>
 <li>请访问 <a target="_blank" rel="noopener" href="https://keepass.info/translations.html">https://keepass.info/translations.html</a> 下载中文语言包</li>
 <li>安装并运行 <strong>keepass</strong>（安装时默认英文，无中文可选）。</li>
@@ -121,7 +121,7 @@
 <ol>
 <li>KPEntryTemplates （自定义模板）</li>
 </ol>
-<h4 id="3、使用坚果云同步"><a href="#3、使用坚果云同步" class="headerlink" title="3、使用坚果云同步"></a>3、使用坚果云同步</h4>
+<h4 id="3、使用坚果云-WebDAV-同步"><a href="#3、使用坚果云-WebDAV-同步" class="headerlink" title="3、使用坚果云 WebDAV 同步"></a>3、使用坚果云 WebDAV 同步</h4>
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
 </div></section></div>
