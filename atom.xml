@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>南风小栈</title>
+  <icon>http://example.com/images/favicon.ico</icon>
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2021-09-13T06:50:54.396Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>Alex</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>广告快走开</title>
+    <link href="http://example.com/2021/09/03/zawAou2wMK4cz4W9uf0XU/"/>
+    <id>http://example.com/2021/09/03/zawAou2wMK4cz4W9uf0XU/</id>
+    <published>2021-09-03T07:34:03.088Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">日常冲浪时难免会遇到烦人的广告，本文将介绍一些去广告的方法和技巧。</summary>
+    
+    
+    
+    
+    <category term="广告" scheme="http://example.com/tags/%E5%B9%BF%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>KeePass 使用教程</title>
+    <link href="http://example.com/2021/08/15/EkwGPZ1Vq5kxQhmQ1rXuY/"/>
+    <id>http://example.com/2021/08/15/EkwGPZ1Vq5kxQhmQ1rXuY/</id>
+    <published>2021-08-15T02:05:47.627Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">如今，我们的生活充斥着各色各样的密码。所谓密码管理器，就是用一个主密码来保护所有其他密码。使用密码管理器，可以减轻记忆负担，而且只要在主密码不泄漏或者遗忘的情况下，我们的账户安全就能够得到保障，本文所要介绍的 KeePass 就是一款出色的密码管理器。</summary>
+    
+    
+    
+    
+    <category term="工具" scheme="http://example.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Github 使用备忘</title>
+    <link href="http://example.com/2021/08/14/8jGJJucBkj1wSdT2dNtK_/"/>
+    <id>http://example.com/2021/08/14/8jGJJucBkj1wSdT2dNtK_/</id>
+    <published>2021-08-14T11:57:45.597Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">GitHub 是一个面向开源及私有软件项目的托管平台，因为只支持 Git 作为唯一的版本库格式进行托管，故名 GitHub。</summary>
+    
+    
+    
+    
+    <category term="Github" scheme="http://example.com/tags/Github/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Netlify 部署博客及部署自动化</title>
+    <link href="http://example.com/2021/08/14/rmelm59ueN7twuKwlqWRi/"/>
+    <id>http://example.com/2021/08/14/rmelm59ueN7twuKwlqWRi/</id>
+    <published>2021-08-14T11:33:19.097Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">Netlify 是一个提供静态资源网络托管的综合平台，提供CI服务，能够将托管 GitHub，GitLab 等网站上的 Jekyll，Hexo，Hugo 等代码自动编译并生成静态网站。</summary>
+    
+    
+    
+    
+    <category term="博客" scheme="http://example.com/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>魔法资源</title>
+    <link href="http://example.com/2021/08/14/HBrlg9-9w25vYMm-csqyk/"/>
+    <id>http://example.com/2021/08/14/HBrlg9-9w25vYMm-csqyk/</id>
+    <published>2021-08-14T05:58:43.645Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">关于魔法的一些资源。</summary>
+    
+    
+    
+    
+    <category term="魔法" scheme="http://example.com/tags/%E9%AD%94%E6%B3%95/"/>
+    
+    <category term="订阅" scheme="http://example.com/tags/%E8%AE%A2%E9%98%85/"/>
+    
+    <category term="App" scheme="http://example.com/tags/App/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>工具资源</title>
+    <link href="http://example.com/2021/08/14/lDJQ2Nbk4mEAVU0jCR0Oq/"/>
+    <id>http://example.com/2021/08/14/lDJQ2Nbk4mEAVU0jCR0Oq/</id>
+    <published>2021-08-14T05:58:43.641Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">日常收集的一些工具资源。</summary>
+    
+    
+    
+    
+    <category term="工具" scheme="http://example.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Windows" scheme="http://example.com/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端资源</title>
+    <link href="http://example.com/2021/08/14/lwoC7pWCYg2uQKVdvPOCy/"/>
+    <id>http://example.com/2021/08/14/lwoC7pWCYg2uQKVdvPOCy/</id>
+    <published>2021-08-14T05:58:43.636Z</published>
+    <updated>2021-09-13T06:50:54.397Z</updated>
+    
+    
+    <summary type="html">前端收集或使用的一些资源。</summary>
+    
+    
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优秀好用的 chrome 插件合集</title>
+    <link href="http://example.com/2021/08/14/5GsE3zMy5qov5AiNwcLd6/"/>
+    <id>http://example.com/2021/08/14/5GsE3zMy5qov5AiNwcLd6/</id>
+    <published>2021-08-14T05:58:43.631Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">相信很多人都在使用 Chrome 浏览器，其流畅的浏览体验得到了不少用户的偏爱，但流畅只是一方面， Chrome 最大的优势还是其支持众多强大好用的扩展程序（Extensions）。 最近为了更好的利用谷歌浏览器，为了方便日后的使用，整理记录了一下。</summary>
+    
+    
+    
+    
+    <category term="chrome" scheme="http://example.com/tags/chrome/"/>
+    
+    <category term="插件" scheme="http://example.com/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIME</title>
+    <link href="http://example.com/2021/08/14/LWpZeK-vGdqhT2zfI6P3v/"/>
+    <id>http://example.com/2021/08/14/LWpZeK-vGdqhT2zfI6P3v/</id>
+    <published>2021-08-14T05:58:43.627Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">MIME (Multipurpose Internet Mail Extensions) 多用途互联网邮件扩展，它设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。多用于指定一些客户端自定义的文件名，以及一些媒体文件打开方式。</summary>
+    
+    
+    
+    
+    <category term="前端" scheme="http://example.com/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown</title>
+    <link href="http://example.com/2021/08/14/mFEi8iuw3BhOMq9p80tJP/"/>
+    <id>http://example.com/2021/08/14/mFEi8iuw3BhOMq9p80tJP/</id>
+    <published>2021-08-14T05:58:43.622Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">Markdown 作为当下最好的轻量级的写作语法，是十分值得学习一下的，好在现在关于 Markdown 语法的资料已经越来越多。经过一段时间学习，整理出了部分 Markdown 的常用的语法，以及对 Markdown 语法的一些粗浅理解。</summary>
+    
+    
+    
+    
+    <category term="Markdown" scheme="http://example.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 数据类型检测</title>
+    <link href="http://example.com/2021/08/14/rirCpTA_n1yT8dMDNHdfg/"/>
+    <id>http://example.com/2021/08/14/rirCpTA_n1yT8dMDNHdfg/</id>
+    <published>2021-08-14T05:58:43.617Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">JavaScript 中常见数据类型有Number、String、Boolean、Object、Array、Json、Function、Date、RegExp、Error、undefined、Null等十几种。ES6还有新增的数据类型有Symbol、Set、Map等。在实际应用中，我们经常需要判断数据类型，现将其做一个归纳和总结。</summary>
+    
+    
+    
+    
+    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>JavaScript 常用代码片段</title>
+    <link href="http://example.com/2021/08/14/uP0g5JSR13IxGbT7P3cgP/"/>
+    <id>http://example.com/2021/08/14/uP0g5JSR13IxGbT7P3cgP/</id>
+    <published>2021-08-14T05:58:43.613Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">开发时关于 JavaScript 使用的一些常用代码片段。</summary>
+    
+    
+    
+    
+    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Element UI 备忘</title>
+    <link href="http://example.com/2021/08/14/ZxCOHQoM_DPQZBKEfv6ZC/"/>
+    <id>http://example.com/2021/08/14/ZxCOHQoM_DPQZBKEfv6ZC/</id>
+    <published>2021-08-14T05:58:43.609Z</published>
+    <updated>2021-09-13T06:50:54.396Z</updated>
+    
+    
+    <summary type="html">开发时关于 Element UI 使用的一些注意和备忘。</summary>
+    
+    
+    
+    
+    <category term="Element" scheme="http://example.com/tags/Element/"/>
+    
+  </entry>
+  
+</feed>
