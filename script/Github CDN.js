@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Github 添加 CND 功能
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  给 Github 文件列表添加 CDN 链接，便于 CDN 引用
 // @author       alex
 // @match        *://github.com/*
-// @updateURL        *://github.com/*
+// @updateURL    https://cdn.jsdelivr.net/gh/cxp106/alex-blog@main/script/Github%20CDN.js
 // @grant        none
 // ==/UserScript==
 
@@ -27,6 +27,7 @@
     );
     for (let el of TMP_els) {
       // 首先先获取到链接
+      if (!el) continue;
       const link = el
         .querySelector("div:nth-child(2)")
         .getElementsByTagName("a")[0];
