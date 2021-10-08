@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-09-22T01:30:01.715Z</updated>
+  <updated>2021-10-08T09:36:07.041Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Docker 搭建 AdGuard Home 去广告</title>
+    <link href="http://example.com/2021/09/29/GVAlQVu6IyN6CBWcC0bt9/"/>
+    <id>http://example.com/2021/09/29/GVAlQVu6IyN6CBWcC0bt9/</id>
+    <published>2021-09-29T07:14:24.806Z</published>
+    <updated>2021-10-08T09:36:07.041Z</updated>
+    
+    
+    <summary type="html">日常冲浪时难免会遇到烦人的广告，本文将介绍一些去广告的方法和技巧。</summary>
+    
+    
+    
+    
+    <category term="广告" scheme="http://example.com/tags/%E5%B9%BF%E5%91%8A/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vue 备忘</title>
+    <link href="http://example.com/2021/09/23/oIqPTM4lWCA-8FcE3Wsf9/"/>
+    <id>http://example.com/2021/09/23/oIqPTM4lWCA-8FcE3Wsf9/</id>
+    <published>2021-09-23T06:54:25.443Z</published>
+    <updated>2021-10-08T09:36:07.041Z</updated>
+    
+    
+    <summary type="html">开发时关于 Vue 使用的一些注意和备忘。</summary>
+    
+    
+    
+    
+    <category term="Vue" scheme="http://example.com/tags/Vue/"/>
+    
+  </entry>
   
   <entry>
     <title>常用网站</title>
@@ -199,7 +233,7 @@
     <link href="http://example.com/2021/08/14/mFEi8iuw3BhOMq9p80tJP/"/>
     <id>http://example.com/2021/08/14/mFEi8iuw3BhOMq9p80tJP/</id>
     <published>2021-08-14T05:58:43.622Z</published>
-    <updated>2021-09-13T06:50:54.396Z</updated>
+    <updated>2021-09-29T07:22:56.955Z</updated>
     
     
     <summary type="html">Markdown 作为当下最好的轻量级的写作语法，是十分值得学习一下的，好在现在关于 Markdown 语法的资料已经越来越多。经过一段时间学习，整理出了部分 Markdown 的常用的语法，以及对 Markdown 语法的一些粗浅理解。</summary>
