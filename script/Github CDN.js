@@ -31,7 +31,6 @@
       const link = el
         .querySelector("div:nth-child(2)")
         .getElementsByTagName("a")[0];
-      console.log("el", el.getElementsByTagName("span")[0]);
       // 如果链接为空则不进行处理
       if (!link) continue;
       const github_url = link.getAttribute("href");
