@@ -43,7 +43,8 @@
         const CDN_LIST = [
           {
             name: "jsDelivr",
-            url: `https://cdn.jsdelivr.net/gh/${r[2]}/${r[3]}@${r[4]}/${r[5]}`,
+            // url: `https://cdn.jsdelivr.net/gh/${r[2]}/${r[3]}@${r[4]}/${r[5]}`,
+            url: `https://purge.jsdelivr.net/gh/${r[2]}/${r[3]}@${r[4]}/${r[5]}`,
           },
           {
             name: "Statically",
