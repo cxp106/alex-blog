@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Github 添加 CND 功能
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  给 Github 文件列表添加 CDN 链接，便于 CDN 引用
 // @author       alex
 // @match        *://github.com/*
-// @updateURL    https://cdn.jsdelivr.net/gh/cxp106/alex-blog@main/script/Github%20CDN.js
+// @updateURL    https://cdn.statically.io/gh/clashconfig/online/main/SurfShark(31944).yml
 // @grant        none
 // ==/UserScript==
 
@@ -44,7 +44,7 @@
           {
             name: "jsDelivr",
             // url: `https://cdn.jsdelivr.net/gh/${r[2]}/${r[3]}@${r[4]}/${r[5]}`,
-            url: `https://purge.jsdelivr.net/gh/${r[2]}/${r[3]}@${r[4]}/${r[5]}`,
+            url: `https://cdn.jsdelivr.net/gh/${r[2]}/${r[3]}@${r[4]}/${r[5]}`,
           },
           {
             name: "Statically",
