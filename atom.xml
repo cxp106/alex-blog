@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-08T09:36:07.041Z</updated>
+  <updated>2021-10-18T09:08:41.329Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>良心网站推荐</title>
+    <link href="http://example.com/2021/10/18/a8ra_eCIbmCnldOmdx9k_/"/>
+    <id>http://example.com/2021/10/18/a8ra_eCIbmCnldOmdx9k_/</id>
+    <published>2021-10-18T09:06:02.603Z</published>
+    <updated>2021-10-18T09:08:41.329Z</updated>
+    
+    
+    <summary type="html">良心网站推荐集合。</summary>
+    
+    
+    
+    
+    <category term="网站" scheme="http://example.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker 搭建 AdGuard Home 去广告</title>
@@ -140,7 +157,7 @@
     <link href="http://example.com/2021/08/14/HBrlg9-9w25vYMm-csqyk/"/>
     <id>http://example.com/2021/08/14/HBrlg9-9w25vYMm-csqyk/</id>
     <published>2021-08-14T05:58:43.645Z</published>
-    <updated>2021-09-13T06:50:54.396Z</updated>
+    <updated>2021-10-14T01:58:34.432Z</updated>
     
     
     <summary type="html">关于魔法的一些资源。</summary>
