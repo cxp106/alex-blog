@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-18T10:10:36.807Z</updated>
+  <updated>2021-10-26T06:09:39.964Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决 Github DNS 污染</title>
+    <link href="http://example.com/2021/10/26/DETlkvQaP-n5SZHpqB2AF/"/>
+    <id>http://example.com/2021/10/26/DETlkvQaP-n5SZHpqB2AF/</id>
+    <published>2021-10-26T03:47:01.234Z</published>
+    <updated>2021-10-26T06:09:39.964Z</updated>
+    
+    
+    <summary type="html">日常开发中经常要访问到 Github，但是国内的 Github 访问经常很不给力，最近在网上找到了一个代理软件，可以解决 Github DNS 污染的问题，进而解决访问问题。</summary>
+    
+    
+    
+    
+    <category term="Github" scheme="http://example.com/tags/Github/"/>
+    
+  </entry>
   
   <entry>
     <title>良心网站推荐</title>
@@ -38,7 +55,7 @@
     <link href="http://example.com/2021/09/29/GVAlQVu6IyN6CBWcC0bt9/"/>
     <id>http://example.com/2021/09/29/GVAlQVu6IyN6CBWcC0bt9/</id>
     <published>2021-09-29T07:14:24.806Z</published>
-    <updated>2021-10-08T09:36:07.041Z</updated>
+    <updated>2021-10-26T06:15:18.692Z</updated>
     
     
     <summary type="html">日常冲浪时难免会遇到烦人的广告，本文将介绍一些去广告的方法和技巧。</summary>
@@ -55,7 +72,7 @@
     <link href="http://example.com/2021/09/23/oIqPTM4lWCA-8FcE3Wsf9/"/>
     <id>http://example.com/2021/09/23/oIqPTM4lWCA-8FcE3Wsf9/</id>
     <published>2021-09-23T06:54:25.443Z</published>
-    <updated>2021-10-08T09:36:07.041Z</updated>
+    <updated>2021-10-26T06:21:49.981Z</updated>
     
     
     <summary type="html">开发时关于 Vue 使用的一些注意和备忘。</summary>
@@ -157,7 +174,7 @@
     <link href="http://example.com/2021/08/14/HBrlg9-9w25vYMm-csqyk/"/>
     <id>http://example.com/2021/08/14/HBrlg9-9w25vYMm-csqyk/</id>
     <published>2021-08-14T05:58:43.645Z</published>
-    <updated>2021-10-14T01:58:34.432Z</updated>
+    <updated>2021-10-26T03:40:05.357Z</updated>
     
     
     <summary type="html">关于魔法的一些资源。</summary>
@@ -197,7 +214,7 @@
     <link href="http://example.com/2021/08/14/lwoC7pWCYg2uQKVdvPOCy/"/>
     <id>http://example.com/2021/08/14/lwoC7pWCYg2uQKVdvPOCy/</id>
     <published>2021-08-14T05:58:43.636Z</published>
-    <updated>2021-09-14T09:48:12.443Z</updated>
+    <updated>2021-10-20T06:50:33.132Z</updated>
     
     
     <summary type="html">前端收集或使用的一些资源。</summary>
