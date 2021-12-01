@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-26T06:09:39.964Z</updated>
+  <updated>2021-10-26T06:22:09.073Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2021/10/26/DETlkvQaP-n5SZHpqB2AF/"/>
     <id>http://example.com/2021/10/26/DETlkvQaP-n5SZHpqB2AF/</id>
     <published>2021-10-26T03:47:01.234Z</published>
-    <updated>2021-10-26T06:09:39.964Z</updated>
+    <updated>2021-10-26T06:22:09.073Z</updated>
     
     
     <summary type="html">日常开发中经常要访问到 Github，但是国内的 Github 访问经常很不给力，最近在网上找到了一个代理软件，可以解决 Github DNS 污染的问题，进而解决访问问题。</summary>
@@ -106,7 +106,7 @@
     <link href="http://example.com/2021/09/03/zawAou2wMK4cz4W9uf0XU/"/>
     <id>http://example.com/2021/09/03/zawAou2wMK4cz4W9uf0XU/</id>
     <published>2021-09-03T07:34:03.088Z</published>
-    <updated>2021-09-13T06:50:54.396Z</updated>
+    <updated>2021-11-30T02:46:14.695Z</updated>
     
     
     <summary type="html">日常冲浪时难免会遇到烦人的广告，本文将介绍一些去广告的方法和技巧。</summary>
@@ -195,7 +195,7 @@
     <link href="http://example.com/2021/08/14/lDJQ2Nbk4mEAVU0jCR0Oq/"/>
     <id>http://example.com/2021/08/14/lDJQ2Nbk4mEAVU0jCR0Oq/</id>
     <published>2021-08-14T05:58:43.641Z</published>
-    <updated>2021-09-16T01:15:15.450Z</updated>
+    <updated>2021-11-15T03:42:37.330Z</updated>
     
     
     <summary type="html">日常收集的一些工具资源。</summary>
@@ -231,7 +231,7 @@
     <link href="http://example.com/2021/08/14/5GsE3zMy5qov5AiNwcLd6/"/>
     <id>http://example.com/2021/08/14/5GsE3zMy5qov5AiNwcLd6/</id>
     <published>2021-08-14T05:58:43.631Z</published>
-    <updated>2021-09-15T02:42:46.157Z</updated>
+    <updated>2021-12-01T08:11:07.768Z</updated>
     
     
     <summary type="html">相信很多人都在使用 Chrome 浏览器，其流畅的浏览体验得到了不少用户的偏爱，但流畅只是一方面， Chrome 最大的优势还是其支持众多强大好用的扩展程序（Extensions）。 最近为了更好的利用谷歌浏览器，为了方便日后的使用，整理记录了一下。</summary>
@@ -301,7 +301,7 @@
     <link href="http://example.com/2021/08/14/uP0g5JSR13IxGbT7P3cgP/"/>
     <id>http://example.com/2021/08/14/uP0g5JSR13IxGbT7P3cgP/</id>
     <published>2021-08-14T05:58:43.613Z</published>
-    <updated>2021-10-11T07:44:13.459Z</updated>
+    <updated>2021-11-08T03:57:18.547Z</updated>
     
     
     <summary type="html">开发时关于 JavaScript 使用的一些常用代码片段。</summary>
