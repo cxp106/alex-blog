@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-10-26T06:22:09.073Z</updated>
+  <updated>2021-12-09T03:33:52.942Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>代挂托管平台</title>
+    <link href="http://example.com/2021/12/06/T5DqGRPokaRBPMVLa1-vC/"/>
+    <id>http://example.com/2021/12/06/T5DqGRPokaRBPMVLa1-vC/</id>
+    <published>2021-12-06T04:00:22.912Z</published>
+    <updated>2021-12-09T03:33:52.942Z</updated>
+    
+    
+    <summary type="html">代挂托管平台</summary>
+    
+    
+    
+    
+    <category term="工具" scheme="http://example.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>解决 Github DNS 污染</title>
@@ -301,7 +318,7 @@
     <link href="http://example.com/2021/08/14/uP0g5JSR13IxGbT7P3cgP/"/>
     <id>http://example.com/2021/08/14/uP0g5JSR13IxGbT7P3cgP/</id>
     <published>2021-08-14T05:58:43.613Z</published>
-    <updated>2021-11-08T03:57:18.547Z</updated>
+    <updated>2021-12-06T07:03:06.513Z</updated>
     
     
     <summary type="html">开发时关于 JavaScript 使用的一些常用代码片段。</summary>
