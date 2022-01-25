@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-09T03:34:33.301Z</updated>
+  <updated>2022-01-25T07:56:50.639Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>壁纸收集</title>
+    <link href="http://example.com/2022/01/25/z4CtxIrDgg4bYbJnN-x1D/"/>
+    <id>http://example.com/2022/01/25/z4CtxIrDgg4bYbJnN-x1D/</id>
+    <published>2022-01-25T07:36:23.770Z</published>
+    <updated>2022-01-25T07:56:50.639Z</updated>
+    
+    
+    <summary type="html">收集日常觉得有意思的壁纸。</summary>
+    
+    
+    
+    
+    <category term="网站" scheme="http://example.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
   
   <entry>
     <title>代挂托管平台</title>
@@ -106,7 +123,7 @@
     <link href="http://example.com/2021/09/14/Oqd4O-yzOM63aD66xL6dl/"/>
     <id>http://example.com/2021/09/14/Oqd4O-yzOM63aD66xL6dl/</id>
     <published>2021-09-14T01:41:01.544Z</published>
-    <updated>2021-12-24T02:50:36.306Z</updated>
+    <updated>2022-01-15T03:25:14.872Z</updated>
     
     
     <summary type="html">对经常会用到的一些网站整理和收录。</summary>
@@ -191,7 +208,7 @@
     <link href="http://example.com/2021/08/14/HBrlg9-9w25vYMm-csqyk/"/>
     <id>http://example.com/2021/08/14/HBrlg9-9w25vYMm-csqyk/</id>
     <published>2021-08-14T05:58:43.645Z</published>
-    <updated>2021-12-27T02:26:29.387Z</updated>
+    <updated>2022-01-11T06:49:55.953Z</updated>
     
     
     <summary type="html">关于魔法的一些资源。</summary>
@@ -212,7 +229,7 @@
     <link href="http://example.com/2021/08/14/lDJQ2Nbk4mEAVU0jCR0Oq/"/>
     <id>http://example.com/2021/08/14/lDJQ2Nbk4mEAVU0jCR0Oq/</id>
     <published>2021-08-14T05:58:43.641Z</published>
-    <updated>2021-12-24T02:04:55.252Z</updated>
+    <updated>2022-01-20T09:34:52.025Z</updated>
     
     
     <summary type="html">日常收集的一些工具资源。</summary>
