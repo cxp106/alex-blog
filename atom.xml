@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-28T03:27:38.799Z</updated>
+  <updated>2022-01-28T09:07:07.578Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>FFMPEG 备忘</title>
+    <link href="http://example.com/2022/01/28/MVHRbzhXtZQf8g9mAZEzf/"/>
+    <id>http://example.com/2022/01/28/MVHRbzhXtZQf8g9mAZEzf/</id>
+    <published>2022-01-28T08:54:55.570Z</published>
+    <updated>2022-01-28T09:07:07.578Z</updated>
+    
+    
+    <summary type="html">FFMPEG 备忘。</summary>
+    
+    
+    
+    
+    <category term="网站" scheme="http://example.com/tags/%E7%BD%91%E7%AB%99/"/>
+    
+  </entry>
+  
+  <entry>
     <title>破解软件收集</title>
     <link href="http://example.com/2022/01/26/4V3yHnrSu1fqlAkBpvV5Y/"/>
     <id>http://example.com/2022/01/26/4V3yHnrSu1fqlAkBpvV5Y/</id>
     <published>2022-01-26T06:13:07.155Z</published>
-    <updated>2022-01-28T03:27:38.799Z</updated>
+    <updated>2022-01-28T03:44:05.707Z</updated>
     
     
     <summary type="html">收录破解软件。</summary>
@@ -339,23 +356,6 @@
     
     
     <summary type="html">JavaScript 中常见数据类型有Number、String、Boolean、Object、Array、Json、Function、Date、RegExp、Error、undefined、Null等十几种。ES6还有新增的数据类型有Symbol、Set、Map等。在实际应用中，我们经常需要判断数据类型，现将其做一个归纳和总结。</summary>
-    
-    
-    
-    
-    <category term="JavaScript" scheme="http://example.com/tags/JavaScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>JavaScript 常用代码片段</title>
-    <link href="http://example.com/2021/08/14/uP0g5JSR13IxGbT7P3cgP/"/>
-    <id>http://example.com/2021/08/14/uP0g5JSR13IxGbT7P3cgP/</id>
-    <published>2021-08-14T05:58:43.613Z</published>
-    <updated>2021-12-06T07:03:06.513Z</updated>
-    
-    
-    <summary type="html">开发时关于 JavaScript 使用的一些常用代码片段。</summary>
     
     
     
