@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.1.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>MIME - 南风小栈</title>
+
+  
+
+  
+    <meta name="description" content="MIME (Multipurpose Internet Mail Extensions) 多用途互联网邮件扩展，它设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。多用于指定一些客户端自定义的文件名，以及一些媒体文件打开方式。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MIME">
+<meta property="og:url" content="http://example.com/2022/03/28/MIME/index.html">
+<meta property="og:site_name" content="南风小栈">
+<meta property="og:description" content="MIME (Multipurpose Internet Mail Extensions) 多用途互联网邮件扩展，它设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。多用于指定一些客户端自定义的文件名，以及一些媒体文件打开方式。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-28T08:16:06.583Z">
+<meta property="article:modified_time" content="2021-09-13T06:50:54.396Z">
+<meta property="article:author" content="Alex">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="南风小栈" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/favicon.ico" onerror="javascript:this.classList.add('error');this.src='https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">南风小栈</div></a></div>
+<nav class="menu dis-select"></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8-MIME"><span class="toc-text">常用 MIME</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E5%B8%B8%E7%94%A8-MIME"><span class="toc-text">不常用 MIME</span></a></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-03-28T08:16:06.583Z">2022-03-28</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>MIME</span></h1>
+<p><strong>MIME (Multipurpose Internet Mail Extensions)</strong> 多用途互联网邮件扩展，它设定某种扩展名的文件用一种应用程序来打开的方式类型，当该扩展名文件被访问的时候，浏览器会自动使用指定应用程序来打开。多用于指定一些客户端自定义的文件名，以及一些媒体文件打开方式。</p>
+<h3 id="常用-MIME"><a href="#常用-MIME" class="headerlink" title="常用 MIME"></a>常用 MIME</h3><table>
+<thead>
+<tr>
+<th>文件拓展名</th>
+<th>MIME 类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.docx</td>
+<td>application&#x2F;vnd.openxmlformats-officedocument.wordprocessingml.document</td>
+</tr>
+<tr>
+<td>.xlsx</td>
+<td>application&#x2F;vnd.openxmlformats-officedocument.spreadsheetml.sheet</td>
+</tr>
+<tr>
+<td>.xltx</td>
+<td>application&#x2F;vnd.openxmlformats-officedocument.spreadsheetml.template</td>
+</tr>
+<tr>
+<td>.pptx</td>
+<td>application&#x2F;vnd.openxmlformats-officedocument.presentationml.presentation</td>
+</tr>
+<tr>
+<td>*.css</td>
+<td>text&#x2F;css</td>
+</tr>
+<tr>
+<td>*.csv</td>
+<td>text&#x2F;csv</td>
+</tr>
+<tr>
+<td>.doc，.dot</td>
+<td>application&#x2F;msword</td>
+</tr>
+<tr>
+<td>*.gif</td>
+<td>image&#x2F;gif</td>
+</tr>
+<tr>
+<td>.htm，.html</td>
+<td>text&#x2F;html</td>
+</tr>
+<tr>
+<td>*.jpeg</td>
+<td>image&#x2F;jpeg</td>
+</tr>
+<tr>
+<td>*.jpg</td>
+<td>image&#x2F;jpeg</td>
+</tr>
+<tr>
+<td>*.js</td>
+<td>text&#x2F;javascript, application&#x2F;javascript</td>
+</tr>
+<tr>
+<td>*.json</td>
+<td>application&#x2F;json</td>
+</tr>
+<tr>
+<td>*.pdf</td>
+<td>application&#x2F;pdf</td>
+</tr>
+<tr>
+<td>*.png</td>
+<td>image&#x2F;png</td>
+</tr>
+<tr>
+<td>*.txt</td>
+<td>text&#x2F;plain</td>
+</tr>
+<tr>
+<td>*.zip</td>
+<td>aplication&#x2F;zip、application&#x2F;x-compressed</td>
+</tr>
+</tbody></table>
+<h3 id="不常用-MIME"><a href="#不常用-MIME" class="headerlink" title="不常用 MIME"></a>不常用 MIME</h3><table>
+<thead>
+<tr>
+<th>文件拓展名</th>
+<th>MIME 类型</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>.docm</td>
+<td>application&#x2F;vnd.ms-word.document.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.dotx</td>
+<td>application&#x2F;vnd.openxmlformats-officedocument.wordprocessingml.template</td>
+</tr>
+<tr>
+<td>.dotm</td>
+<td>application&#x2F;vnd.ms-word.template.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.xlsm</td>
+<td>application&#x2F;vnd.ms-excel.sheet.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.xltm</td>
+<td>application&#x2F;vnd.ms-excel.template.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.xlsb</td>
+<td>application&#x2F;vnd.ms-excel.sheet.binary.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.xlam</td>
+<td>application&#x2F;vnd.ms-excel.addin.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.pptm</td>
+<td>application&#x2F;vnd.ms-powerpoint.presentation.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.ppsx</td>
+<td>application&#x2F;vnd.openxmlformats-officedocument.presentationml.slideshow</td>
+</tr>
+<tr>
+<td>.ppsm</td>
+<td>application&#x2F;vnd.ms-powerpoint.slideshow.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.potx</td>
+<td>application&#x2F;vnd.openxmlformats-officedocument.presentationml.template</td>
+</tr>
+<tr>
+<td>.potm</td>
+<td>application&#x2F;vnd.ms-powerpoint.template.macroEnabled.12</td>
+</tr>
+<tr>
+<td>.one .onetoc2 .onetmp .onepkg</td>
+<td>application&#x2F;msonenote</td>
+</tr>
+<tr>
+<td>*.3gpp</td>
+<td>audio&#x2F;3gpp, video&#x2F;3gpp</td>
+</tr>
+<tr>
+<td>*.ac3</td>
+<td>audio&#x2F;ac3</td>
+</tr>
+<tr>
+<td>*.asf</td>
+<td>allpication&#x2F;vnd.ms-asf</td>
+</tr>
+<tr>
+<td>*.au</td>
+<td>audio&#x2F;basic</td>
+</tr>
+<tr>
+<td>*.dtd</td>
+<td></td>
+</tr>
+<tr>
+<td>*.dwg</td>
+<td>image&#x2F;vnd.dwg</td>
+</tr>
+<tr>
+<td>*.dxf</td>
+<td>image&#x2F;vnd.dxf</td>
+</tr>
+<tr>
+<td>*.jp2</td>
+<td>image&#x2F;jp2</td>
+</tr>
+<tr>
+<td>*.jpe</td>
+<td>image&#x2F;jpeg</td>
+</tr>
+<tr>
+<td>*.mp2</td>
+<td>audio&#x2F;mpeg, video&#x2F;mpeg</td>
+</tr>
+<tr>
+<td>*.mp3</td>
+<td>audio&#x2F;mpeg</td>
+</tr>
+<tr>
+<td>*.mp4</td>
+<td>audio&#x2F;mp4, video&#x2F;mp4</td>
+</tr>
+<tr>
+<td>.mpeg，.mpg</td>
+<td>video&#x2F;mpeg</td>
+</tr>
+<tr>
+<td>*.mpp</td>
+<td>application&#x2F;vnd.ms-project</td>
+</tr>
+<tr>
+<td>*.ogg</td>
+<td>application&#x2F;ogg, audio&#x2F;ogg</td>
+</tr>
+<tr>
+<td>.pot，.pps，*.ppt</td>
+<td>application&#x2F;vnd.ms-powerpoint</td>
+</tr>
+<tr>
+<td>*.rtf</td>
+<td>application&#x2F;rtf, text&#x2F;rtf</td>
+</tr>
+<tr>
+<td>*.svf</td>
+<td>image&#x2F;vnd.svf</td>
+</tr>
+<tr>
+<td>*.tif</td>
+<td>image&#x2F;tiff</td>
+</tr>
+<tr>
+<td>*.tiff</td>
+<td>image&#x2F;tiff</td>
+</tr>
+<tr>
+<td>*.wdb</td>
+<td>application&#x2F;vnd.ms-works</td>
+</tr>
+<tr>
+<td>*.wps</td>
+<td>application&#x2F;vnd.ms-works</td>
+</tr>
+<tr>
+<td>*.xhtml</td>
+<td>application&#x2F;xhtml+xml</td>
+</tr>
+<tr>
+<td>.xlc，.xlm，.xls，.xlt，*.xlw</td>
+<td>application&#x2F;vnd.ms-excel</td>
+</tr>
+<tr>
+<td>*.xml</td>
+<td>text&#x2F;xml, application&#x2F;xml</td>
+</tr>
+<tr>
+<td>*.apk</td>
+<td>application&#x2F;vnd.android.package-archive</td>
+</tr>
+<tr>
+<td>*.exe</td>
+<td>application&#x2F;octet-stream</td>
+</tr>
+<tr>
+<td>*.dmg</td>
+<td>application&#x2F;octet-stream</td>
+</tr>
+<tr>
+<td>*.woff</td>
+<td>application&#x2F;x-font-woff 字体</td>
+</tr>
+<tr>
+<td>.ipa</td>
+<td>application&#x2F;iphone-package-archive</td>
+</tr>
+</tbody></table>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/03/28/KeePass%20%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/">KeePass 使用教程<span class="note">较早</span></a><div class="line"></div><a id="prev" href="/2022/03/28/Netlify%20%E9%83%A8%E7%BD%B2%E5%8D%9A%E5%AE%A2%E5%8F%8A%E9%83%A8%E7%BD%B2%E8%87%AA%E5%8A%A8%E5%8C%96/">Netlify 部署博客及部署自动化<span class="note">较新</span></a></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.6.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>

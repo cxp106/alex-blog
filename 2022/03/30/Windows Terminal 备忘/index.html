@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+
+<head>
+  <meta name="generator" content="Hexo 6.1.0">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://cdn.jsdelivr.net'>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  <title>Windows Terminal 备忘 - 南风小栈</title>
+
+  
+
+  
+    <meta name="description" content="Windows Terminal 备忘。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows Terminal 备忘">
+<meta property="og:url" content="http://example.com/2022/03/30/Windows%20Terminal%20%E5%A4%87%E5%BF%98/index.html">
+<meta property="og:site_name" content="南风小栈">
+<meta property="og:description" content="Windows Terminal 备忘。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-03-30T01:32:56.936Z">
+<meta property="article:modified_time" content="2022-04-05T07:31:43.111Z">
+<meta property="article:author" content="Alex">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="南风小栈" type="application/atom+xml">
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+
+  
+</head>
+
+<body>
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+
+<header class="header">
+
+<div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.2/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/favicon.ico" onerror="javascript:this.classList.add('error');this.src='https://cdn.jsdelivr.net/gh/cdn-x/placeholder@1.0.1/image/2659360.svg';"></a><a class="title" href="/"><div class="main">南风小栈</div></a></div>
+<nav class="menu dis-select"></nav></header>
+
+<div class="widgets">
+
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%B8%BB%E9%A2%98"><span class="toc-text">安装主题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BF%9D%E5%AD%98%E9%85%8D%E7%BD%AE"><span class="toc-text">保存配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8-Windows-Terminal-%E4%B8%AD%E6%95%B2%E4%B8%8B%E4%B8%8B%E9%9D%A2%E4%B8%A4%E8%A1%8C%E5%91%BD%E4%BB%A4"><span class="toc-text">在 Windows Terminal 中敲下下面两行命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%A8%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%B8%AD%E5%8A%A0%E5%85%A5%E4%B8%8B%E9%9D%A2%E8%BF%99%E6%AE%B5%E9%85%8D%E7%BD%AE"><span class="toc-text">在配置文件中加入下面这段配置</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%AD%97%E4%BD%93"><span class="toc-text">安装字体</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#vscode-%E9%85%8D%E7%BD%AE-power-shell"><span class="toc-text">vscode 配置 power shell</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#NPM-%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E8%A1%A5%E5%85%A8"><span class="toc-text">NPM 命令自动补全</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="toc-text">安装方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE%E8%87%AA%E5%8A%A8%E5%8A%A0%E8%BD%BD"><span class="toc-text">配置自动加载</span></a></li></ol></li></ol></div></div></div>
+
+
+</div>
+
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div><div id="post-meta">发布于&nbsp;<time datetime="2022-03-30T01:32:56.936Z">2022-03-30</time></div></div>
+
+<article class='content md post'>
+<h1 class="article-title"><span>Windows Terminal 备忘</span></h1>
+<blockquote>
+<p>Windows Terminal 当属 Windows 上第一个兼顾速度、界面与可定制性的终端模拟器。</p>
+</blockquote>
+<p>新晋 Windows 终端模拟器：<a target="_blank" rel="noopener" href="https://www.microsoft.com/zh-cn/p/windows-terminal-preview/9n0dx20hk701">Windows Terminal</a>，自发布以来就备受开发者的喜爱，并与 <a target="_blank" rel="noopener" href="https://sspai.com/post/43813">WSL</a> 一起，让不少先前非 Linux 不用的开发者朋友们向 Windows 倾斜。Windows Terminal 不仅开源免费，还拥有现代化的界面、完整的字体字符渲染机制（包括 Emoji）、GPU 加速和 Fluent 设计风格。这些都让 Windows Terminal 成为 Windows 平台最先进的终端模拟器，力压一众第三方终端以及 Windows 自带的默认终端。</p>
+<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>在 Windows Terminal 安装好之后，<strong>使用管理员身份</strong>打开 Windows Terminal。安装 oh-my-posh 和 posh-git。</p>
+<ul>
+<li>第一条命令（绕过 power shell 执行策略，使其可以执行脚本文件 &lt;后面会用到&gt;）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Set-ExecutionPolicy Bypass</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第二条命令（oh-my-posh 提供主题）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Module oh-my-posh -Scope CurrentUser</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第三条命令（posh-git 将 git 信息添加到提示中）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Module posh-git -Scope CurrentUser</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>注意：如果中途有询问，直接 Y 就好了，或者直接 A。</strong></p>
+</blockquote>
+<h3 id="保存配置"><a href="#保存配置" class="headerlink" title="保存配置"></a>保存配置</h3><h4 id="在-Windows-Terminal-中敲下下面两行命令"><a href="#在-Windows-Terminal-中敲下下面两行命令" class="headerlink" title="在 Windows Terminal 中敲下下面两行命令"></a>在 Windows Terminal 中敲下下面两行命令</h4><ul>
+<li>第一条（启动编辑 power shell 配置文件的引擎）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(Test-Path -Path <span class="variable">$PROFILE</span> )) &#123; New-Item -Type File -Path <span class="variable">$PROFILE</span> -Force &#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第二条（使用记事本打开配置文件），或者 vscode 打开</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 记事本打开</span><br><span class="line">notepad <span class="variable">$PROFILE</span></span><br><span class="line">// vscode 打开</span><br><span class="line">code <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="在配置文件中加入下面这段配置"><a href="#在配置文件中加入下面这段配置" class="headerlink" title="在配置文件中加入下面这段配置"></a>在配置文件中加入下面这段配置</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-PoshPrompt -Theme JanDeDobbeleer</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第一条命令表示导入 posh-git</li>
+<li>第二条命令表示导入 oh-my-posh</li>
+<li>第三条命令表示设置主题为 JanDeDobbeleer</li>
+</ul>
+<p><strong>配置完后</strong>，每次打开 Windows Terminal 中的 Power shell 都会执行脚本文件中的三条命令。</p>
+<blockquote>
+<p>这时，你会发现出现了一些方框，效果并不像图片上那么好。那是因为，还没有给主题安装适应的字体。</p>
+</blockquote>
+<h3 id="安装字体"><a href="#安装字体" class="headerlink" title="安装字体"></a>安装字体</h3><ul>
+<li>进入 <a target="_blank" rel="noopener" href="https://www.nerdfonts.com/">Nerd Fonts</a> 网站下载喜欢的字体</li>
+<li>随便下载一款字体（但个人推荐 <strong>DejaVuSansMono Nerd Font</strong> 或 <strong>Cousine Nerd Font</strong>，这两套字体比较全，适配也还不错。）</li>
+<li>下载完成后，解压到当前文件夹，然后 <code>CTRL + A</code> 全选，右键点击安装，等待安装完成即可。</li>
+<li>最后一步重启终端，在设置更多字体中配置即可</li>
+</ul>
+<blockquote>
+<p>此时，终端窗口的字体配置已经完成，如果想在编辑器中使用 power shell，可能还需要进行额外的配置，如 vscode</p>
+</blockquote>
+<h4 id="vscode-配置-power-shell"><a href="#vscode-配置-power-shell" class="headerlink" title="vscode 配置 power shell"></a>vscode 配置 power shell</h4><p>1.使用 <code>CTRL + ，</code> 打开vscode的设置，或者其他方法打开设置页面</p>
+<p>2.在顶部输入框输入以下字符：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Integrated:Font Family</span><br></pre></td></tr></table></figure>
+
+<p>3.在所显示（Terminal › Integrated:Font Family）的输入框中输入相应的字体，如 <strong>Cousine Nerd Font</strong> 或者 <strong>DejaVuSansMono Nerd Font</strong> 等：</p>
+<p>4.使用 CTRL+&#96; 召唤终端，即可看到样式发生改变，如果看不到，请重启vscode。</p>
+<h3 id="NPM-命令自动补全"><a href="#NPM-命令自动补全" class="headerlink" title="NPM 命令自动补全"></a>NPM 命令自动补全</h3><blockquote>
+<p>使用过 Oh-my-zsh 的小伙伴肯定都用过这个功能，在启动前端项目的时候自动补全命令，这样就不用一个个去 package.json 文件中找了，经过一翻探索发现在 Windows Terminal 中也可以实现。</p>
+</blockquote>
+<p>使用过 Oh-my-zsh 的小伙伴肯定都用过这个功能，在启动前端项目的时候自动补全命令，这样就不用一个个去 <code>package.json</code> 文件中找了，经过一翻探索发现在 Windows Terminal 中也可以实现。</p>
+<h4 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h4><p>使用如下命令安装</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Install-Module npm-completion -Scope CurrentUser</span><br></pre></td></tr></table></figure>
+
+<h4 id="配置自动加载"><a href="#配置自动加载" class="headerlink" title="配置自动加载"></a>配置自动加载</h4><p>运行如下命令，打开配置文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">code <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure>
+
+<p>在打开的文件中输入如下内容：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Import-Module npm-completion</span><br></pre></td></tr></table></figure>
+
+<p>这样在 Windows Terminal 窗口中输入 <code>npm run</code> 之后，使用 <code>tab</code> 键可以自动补全命令了。</p>
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="header cap theme"><span>接下来阅读</span></section><section class="body fs14"><a id="next" href="/2022/03/30/NPM%20%E5%A4%87%E5%BF%98/">NPM 备忘<span class="note">较早</span></a><div class="line"></div></section></div>
+
+
+
+
+
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="text"><p>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.6.1';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
+    sitesjs: '/js/plugins/sites.js',
+    friendsjs: '/js/plugins/friends.js',
+  };
+
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@6/swiper-bundle.min.css","js":"https://unpkg.com/swiper@6/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://cdn.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://cdn.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://cdn.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti/umd/heti.min.css","js":"https://unpkg.com/heti/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
