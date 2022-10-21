@@ -31,7 +31,7 @@
 <meta property="og:description" content="开发时关于 Element UI 使用的一些注意和备忘。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-28T08:16:06.565Z">
-<meta property="article:modified_time" content="2022-04-12T02:22:21.264Z">
+<meta property="article:modified_time" content="2022-07-18T06:26:10.729Z">
 <meta property="article:author" content="Alex">
 <meta property="article:tag" content="组件">
 <meta name="twitter:card" content="summary_large_image">
@@ -74,7 +74,7 @@
 
 <div class="widgets">
 
-<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%85%E7%A9%BA%E8%A1%A8%E5%8D%95%E5%86%85%E5%AE%B9"><span class="toc-text">清空表单内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%85%E7%A9%BA%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81"><span class="toc-text">清空表单验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#this-router-push-%E2%80%9Cxxx%E2%80%9D-%E8%B7%B3%E8%BD%AC%E5%90%8E%EF%BC%8C%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95%E6%A0%87%E7%AD%BE%E6%9C%AA%E5%8F%98%E5%8C%96"><span class="toc-text">this.$router.push(“xxx”)跳转后，导航菜单标签未变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#beforeUpload"><span class="toc-text">beforeUpload</span></a></li></ol></div></div></div>
+<div class="widget-wrap single" id="toc"><div class="widget-header cap dis-select"><span class="name">本文目录</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%85%E7%A9%BA%E8%A1%A8%E5%8D%95%E5%86%85%E5%AE%B9"><span class="toc-text">清空表单内容</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B8%85%E7%A9%BA%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81"><span class="toc-text">清空表单验证</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#this-router-push-%E2%80%9Cxxx%E2%80%9D-%E8%B7%B3%E8%BD%AC%E5%90%8E%EF%BC%8C%E5%AF%BC%E8%88%AA%E8%8F%9C%E5%8D%95%E6%A0%87%E7%AD%BE%E6%9C%AA%E5%8F%98%E5%8C%96"><span class="toc-text">this.$router.push(“xxx”)跳转后，导航菜单标签未变化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#beforeUpload"><span class="toc-text">beforeUpload</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E9%A6%96%E6%AC%A1%E5%88%87%E6%8D%A2%E8%8F%9C%E5%8D%95%E6%A0%8F%E4%B8%8D%E9%BB%98%E8%AE%A4%E9%AB%98%E4%BA%AE%EF%BC%8C%E9%9C%80%E8%A6%81%E5%8F%8C%E5%87%BB%E9%AB%98%E4%BA%AE%E7%9A%84%E9%97%AE%E9%A2%98"><span class="toc-text">解决首次切换菜单栏不默认高亮，需要双击高亮的问题</span></a></li></ol></div></div></div>
 
 
 </div>
@@ -103,6 +103,8 @@
 </li>
 </ol>
 <h3 id="beforeUpload"><a href="#beforeUpload" class="headerlink" title="beforeUpload"></a>beforeUpload</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 判断文件类型</span></span><br><span class="line"><span class="comment">// 方法一：</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">IS_ZIP</span> = file.<span class="property">name</span>.<span class="title function_">endsWith</span>(<span class="string">&#x27;.zip&#x27;</span>)</span><br><span class="line"><span class="comment">// 方法二：</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">IS_ZIP</span> = [<span class="string">&#x27;application/zip&#x27;</span>, <span class="string">&#x27;application/x-zip-compressed&#x27;</span>].<span class="title function_">includes</span>(file.<span class="property">type</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">// 判断文件大小</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">IS_LESS_THAN_20M</span> = file.<span class="property">size</span> / <span class="number">1024</span> / <span class="number">1024</span> &lt; <span class="number">20</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="解决首次切换菜单栏不默认高亮，需要双击高亮的问题"><a href="#解决首次切换菜单栏不默认高亮，需要双击高亮的问题" class="headerlink" title="解决首次切换菜单栏不默认高亮，需要双击高亮的问题"></a>解决首次切换菜单栏不默认高亮，需要双击高亮的问题</h3><p>保证 index 属性和的 default-active 属性一致，如：同时用唯一的 $route.path，注意 $route.path 前面的 “&#x2F;”</p>
 
 
 <div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
