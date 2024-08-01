@@ -1,4 +1,3 @@
-console.log('hexo-theme-stellar:\n' + stellar.github);
 // utils
 const util = {
 
@@ -10,27 +9,23 @@ const util = {
     const minute = 1000 * 60
     const hour = minute * 60
     const day = hour * 24
-    const month = day * 30
 
     let result
     if (more) {
-      const monthCount = dateDiff / month
       const dayCount = dateDiff / day
       const hourCount = dateDiff / hour
       const minuteCount = dateDiff / minute
 
-      if (monthCount > 12) {
+      if (dayCount > 14) {
         result = null
-      } else if (monthCount >= 1) {
-        result = parseInt(monthCount) + ' ' + stellar.config.date_suffix.month
       } else if (dayCount >= 1) {
-        result = parseInt(dayCount) + ' ' + stellar.config.date_suffix.day
+        result = parseInt(dayCount) + ' ' + ctx.date_suffix.day
       } else if (hourCount >= 1) {
-        result = parseInt(hourCount) + ' ' + stellar.config.date_suffix.hour
+        result = parseInt(hourCount) + ' ' + ctx.date_suffix.hour
       } else if (minuteCount >= 1) {
-        result = parseInt(minuteCount) + ' ' + stellar.config.date_suffix.min
+        result = parseInt(minuteCount) + ' ' + ctx.date_suffix.min
       } else {
-        result = stellar.config.date_suffix.just
+        result = ctx.date_suffix.just
       }
     } else {
       result = parseInt(dateDiff / day)
@@ -44,7 +39,7 @@ const util = {
       el.select();
       document.execCommand("Copy");
       if (msg && msg.length > 0) {
-        hud.toast(msg);
+        hud.toast(msg, 2500);
       }
     }
   },
@@ -55,21 +50,41 @@ const util = {
       el.classList.toggle("display");
     }
   },
+
+  scrollTop: () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
+  },
+
+  scrollComment: () => {
+    document.getElementById('comments').scrollIntoView({behavior: "smooth"});
+  },
+
+  viewportLazyload: (target, func, enabled = true) => {
+    if (!enabled || !("IntersectionObserver" in window)) {
+      func();
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].intersectionRatio > 0) {
+        func();
+        observer.disconnect();
+      }
+    });
+    observer.observe(target);
+  }
 }
 
 const hud = {
   toast: (msg, duration) => {
-    duration = isNaN(duration) ? 2000 : duration;
+    const d = Number(isNaN(duration) ? 2000 : duration);
     var el = document.createElement('div');
     el.classList.add('toast');
+    el.classList.add('show');
     el.innerHTML = msg;
     document.body.appendChild(el);
-    setTimeout(function () {
-      var d = 0.5;
-      el.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
-      el.style.opacity = '0';
-      setTimeout(function () { document.body.removeChild(el) }, d * 1000);
-    }, duration);
+
+    setTimeout(function(){ document.body.removeChild(el) }, d);
+    
   },
 
 }
@@ -78,54 +93,71 @@ const hud = {
 
 const l_body = document.querySelector('.l_body');
 
-const sidebar = {
-  toggle: () => {
-    if (l_body) {
-      l_body.classList.add('mobile');
-      l_body.classList.toggle("sidebar");
-    }
-  }
-}
 
 const init = {
   toc: () => {
-    stellar.jQuery(() => {
+    utils.jq(() => {
       const scrollOffset = 32;
       var segs = [];
-      $("article.md :header").each(function (idx, node) {
-        segs.push(node)
+      $("article.md-text :header").each(function (idx, node) {
+        segs.push(node);
       });
-      // 滚动
-      $(document, window).scroll(function (e) {
+      function activeTOC() {
         var scrollTop = $(this).scrollTop();
-        var topSeg = null
+        var topSeg = null;
         for (var idx in segs) {
-          var seg = $(segs[idx])
+          var seg = $(segs[idx]);
           if (seg.offset().top > scrollTop + scrollOffset) {
-            continue
+            continue;
           }
           if (!topSeg) {
-            topSeg = seg
+            topSeg = seg;
           } else if (seg.offset().top >= topSeg.offset().top) {
-            topSeg = seg
+            topSeg = seg;
           }
         }
         if (topSeg) {
-          $("#toc a.toc-link").removeClass("active")
-          var link = "#" + topSeg.attr("id")
+          $("#data-toc a.toc-link").removeClass("active");
+          var link = "#" + topSeg.attr("id");
           if (link != '#undefined') {
-            $('#toc a.toc-link[href="' + encodeURI(link) + '"]').addClass("active")
+            const highlightItem = $('#data-toc a.toc-link[href="' + encodeURI(link) + '"]');
+            if (highlightItem.length > 0) {
+              highlightItem.addClass("active");
+            }
           } else {
-            $('#toc a.toc-link:first').addClass("active")
+            $('#data-toc a.toc-link:first').addClass("active");
           }
         }
-      })
+      }
+      function scrollTOC() {
+        const e0 = document.querySelector('#data-toc .toc');
+        const e1 = document.querySelector('#data-toc .toc a.toc-link.active');
+        if (e0 == null || e1 == null) {
+          return;
+        }
+        const offsetBottom = e1.getBoundingClientRect().bottom - e0.getBoundingClientRect().bottom + 100;
+        const offsetTop = e1.getBoundingClientRect().top - e0.getBoundingClientRect().top - 64;
+        if (offsetTop < 0) {
+          e0.scrollBy({top: offsetTop, behavior: "smooth"});
+        } else if (offsetBottom > 0) {
+          e0.scrollBy({top: offsetBottom, behavior: "smooth"});
+        }
+      }
+      
+      var timeout = null;
+      window.addEventListener('scroll', function() {
+        activeTOC();
+        if(timeout !== null) clearTimeout(timeout);
+        timeout = setTimeout(function() {
+          scrollTOC();
+        }.bind(this), 50);
+      });      
     })
   },
   sidebar: () => {
-    stellar.jQuery(() => {
-      $("#toc a.toc-link").click(function (e) {
-        l_body.classList.remove("sidebar");
+    utils.jq(() => {
+      $("#data-toc a.toc-link").click(function (e) {
+        sidebar.dismiss();
       });
     })
   },
@@ -144,7 +176,7 @@ const init = {
    */
   registerTabsTag: function () {
     // Binding `nav-tabs` & `tab-content` by real time permalink changing.
-    document.querySelectorAll('.tabs ul.nav-tabs .tab').forEach(element => {
+    document.querySelectorAll('.tabs .nav-tabs .tab').forEach(element => {
       element.addEventListener('click', event => {
         event.preventDefault();
         // Prevent selected tab to select again.
@@ -176,133 +208,3 @@ init.toc()
 init.sidebar()
 init.relativeDate(document.querySelectorAll('#post-meta time'))
 init.registerTabsTag()
-
-// scrollreveal
-if (stellar.plugins.scrollreveal) {
-  stellar.loadScript(stellar.plugins.scrollreveal.js).then(function () {
-    ScrollReveal().reveal("body .reveal", {
-      distance: stellar.plugins.scrollreveal.distance,
-      duration: stellar.plugins.scrollreveal.duration,
-      interval: stellar.plugins.scrollreveal.interval,
-      scale: stellar.plugins.scrollreveal.scale,
-      easing: "ease-out"
-    });
-  })
-}
-
-// lazyload
-if (stellar.plugins.lazyload) {
-  stellar.loadScript(stellar.plugins.lazyload.js, { defer: true })
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    lazyLoadInstance.update();
-  });
-}
-
-// issuesjs
-if (stellar.plugins.sitesjs) {
-  const issues_api = document.getElementById('sites-api');
-  if (issues_api != undefined) {
-    stellar.jQuery(() => {
-      stellar.loadScript(stellar.plugins.sitesjs, { defer: true })
-    })
-  }
-}
-if (stellar.plugins.friendsjs) {
-  const issues_api = document.getElementById('friends-api');
-  if (issues_api != undefined) {
-    stellar.jQuery(() => {
-      stellar.loadScript(stellar.plugins.friendsjs, { defer: true })
-    })
-  }
-}
-
-// swiper
-if (stellar.plugins.swiper) {
-  const swiper_api = document.getElementById('swiper-api');
-  if (swiper_api != undefined) {
-    stellar.loadCSS(stellar.plugins.swiper.css);
-    stellar.loadScript(stellar.plugins.swiper.js, { defer: true }).then(function () {
-      var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 'auto',
-        spaceBetween: 8,
-        centeredSlides: true,
-        loop: true,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        },
-      });
-    })
-  }
-}
-
-// preload
-if (stellar.plugins.preload) {
-  if (stellar.plugins.preload.service == 'instant_page') {
-    stellar.loadScript(stellar.plugins.preload.instant_page, {
-      defer: true,
-      type: 'module',
-      integrity: 'sha384-OeDn4XE77tdHo8pGtE1apMPmAipjoxUQ++eeJa6EtJCfHlvijigWiJpD7VDPWXV1'
-    })
-  } else if (stellar.plugins.preload.service == 'flying_pages') {
-    window.FPConfig = {
-      delay: 0,
-      ignoreKeywords: [],
-      maxRPS: 5,
-      hoverDelay: 25
-    };
-    stellar.loadScript(stellar.plugins.preload.flying_pages, { defer: true })
-  }
-}
-
-// fancybox
-if (stellar.plugins.fancybox) {
-  let selector = 'img[fancybox]:not(.error)';
-  if (stellar.plugins.fancybox.selector) {
-    selector += `, ${stellar.plugins.fancybox.selector}`
-  }
-  if (document.querySelectorAll(selector).length !== 0) {
-    stellar.loadCSS(stellar.plugins.fancybox.css);
-    stellar.loadScript(stellar.plugins.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        groupAll: true,
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        },
-        caption: function (fancybox, carousel, slide) {
-          return slide.$trigger.alt || null
-        }
-      });
-    })
-  }
-}
-
-// heti
-if (stellar.plugins.heti) {
-  stellar.loadCSS(stellar.plugins.heti.css);
-  stellar.loadScript(stellar.plugins.heti.js, { defer: true }).then(function () {
-    const heti = new Heti('.heti p');
-    heti.autoSpacing();
-    stellar.plugins.heti.enable = false;
-  });
-}
