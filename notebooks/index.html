@@ -526,7 +526,6 @@
 </script>
 <script>
   window.addEventListener("DOMContentLoaded", (event) => {
-    console.log('%c event => ', 'font-size:13px; background:#baccd9; color:#000;', event)
     utils.js(`https://unpkg.com/lenis@1.1.9/dist/lenis.min.js`, { defer: true }).then(function () {
       const lenis = new Lenis({
         smoothWheel: true,
