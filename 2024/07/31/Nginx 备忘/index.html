@@ -588,6 +588,28 @@
   });
 </script>
 <script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    console.log('%c event => ', 'font-size:13px; background:#baccd9; color:#000;', event)
+    utils.js(`https://unpkg.com/lenis@1.1.9/dist/lenis.min.js`, { defer: true }).then(function () {
+      const lenis = new Lenis({
+        smoothWheel: true,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        lerp: 0.05,
+        touchMultiplier: 2,
+        wheelMultiplier: 1,
+        infinite: false,
+        autoResize: true,
+      })
+      const scrollFn = (time) => {
+        lenis.raf(time)
+        requestAnimationFrame(scrollFn)
+      }
+      requestAnimationFrame(scrollFn)
+    })
+  })
+</script>
+<script>
   document.addEventListener('DOMContentLoaded', function () {
     window.codeElements = document.querySelectorAll('.code');
     if (window.codeElements.length > 0) {
