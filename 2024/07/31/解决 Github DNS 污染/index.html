@@ -598,6 +598,14 @@
         requestAnimationFrame(scrollFn)
       }
       requestAnimationFrame(scrollFn)
+
+      // 定义自定义的 scrollTo 方法
+      function smoothScrollTo(x, y = 0) {
+        lenis.scrollTo(y)
+      }
+
+      // 覆盖 window.scrollTo 方法
+      window.scrollTo = smoothScrollTo
     })
   })
 </script>
