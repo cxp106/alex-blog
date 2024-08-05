@@ -29,24 +29,24 @@
             xmlUrl="https://rsshub.rssforever.com/jike/topic/55e02198dcef9f0e00d7b3c3" htmlUrl="https://m.okjike.com/topics/55e02198dcef9f0e00d7b3c3"/>
       <outline text="生活小姿势 - 即刻圈子" title="生活小姿势 - 即刻圈子" type="rss" 
             xmlUrl="https://rsshub.rssforever.com/jike/topic/567b9036fb179d1100f8cbe1" htmlUrl="https://m.okjike.com/topics/567b9036fb179d1100f8cbe1"/>
+      <outline text="潮流周刊" title="潮流周刊" type="rss" 
+            xmlUrl="https://weekly.tw93.fun/rss.xml" htmlUrl="https://weekly.tw93.fun/"/>
+      <outline text="阮一峰的网络日志" title="阮一峰的网络日志" type="rss" 
+            xmlUrl="https://feeds.feedburner.com/ruanyifeng" htmlUrl="http://www.ruanyifeng.com/blog/"/>
+      <outline text="1Link.Fun 科技周刊" title="1Link.Fun 科技周刊" type="rss" 
+            xmlUrl="https://1link.fun/index.xml" htmlUrl="https://1link.fun/"/>
+      <outline text="冻梨游研社|绝区零" title="冻梨游研社|绝区零" type="rss" 
+            xmlUrl="https://rsshub.rssforever.com/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2387749445439635456" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2387749445439635456"/>
+      <outline text="冻梨游研社|崩坏：星穹铁道" title="冻梨游研社|崩坏：星穹铁道" type="rss" 
+            xmlUrl="https://rsshub.rssforever.com/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2767905510162546689" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2767905510162546689"/>
+      <outline text="喷嚏图卦" title="喷嚏图卦" type="rss" 
+            xmlUrl="https://feedx.net/rss/pentitugua.xml" htmlUrl="http://dapenti.com"/>
+      <outline text="槽边往事" title="槽边往事" type="rss" 
+            xmlUrl="https://www.hecaitou.com/feeds/posts/default?alt=rss" htmlUrl="https://www.hecaitou.com/"/>
   </outline>
   <outline title="乐呵" text="乐呵">
-      <outline text="抽屉新热榜-168小时最热榜" title="抽屉新热榜-168小时最热榜" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/chouti/top/168" htmlUrl="https://dig.chouti.com/"/>
-      <outline text="V2EX - 好玩" title="V2EX - 好玩" type="rss" 
-            xmlUrl="https://v2ex.com/feed/tab/play.xml" htmlUrl="https://www.v2ex.com/"/>
-      <outline text="V2EX - 创意" title="V2EX - 创意" type="rss" 
-            xmlUrl="https://v2ex.com/feed/tab/creative.xml" htmlUrl="https://www.v2ex.com/"/>
-      <outline text="V2EX - 城市" title="V2EX - 城市" type="rss" 
-            xmlUrl="https://v2ex.com/feed/tab/city.xml" htmlUrl="https://www.v2ex.com/"/>
-      <outline text="V2EX - 问与答" title="V2EX - 问与答" type="rss" 
-            xmlUrl="https://v2ex.com/feed/tab/qna.xml" htmlUrl="https://www.v2ex.com/"/>
-      <outline text="V2EX - 技术" title="V2EX - 技术" type="rss" 
-            xmlUrl="https://v2ex.com/feed/tab/tech.xml" htmlUrl="https://www.v2ex.com/"/>
       <outline text="热榜 - 煎蛋" title="热榜 - 煎蛋" type="rss" 
             xmlUrl="https://rsshub.rssforever.com/jandan/top" htmlUrl="http://i.jandan.net/top"/>
-      <outline text="抽屉新热榜" title="抽屉新热榜" type="rss" 
-            xmlUrl="https://plink.anyfeeder.com/chouti/hot" htmlUrl="https://m.chouti.com/all/hot"/>
       <outline text="群友问🗳万事答 - Telegram Channel" title="群友问🗳万事答 - Telegram Channel" type="rss" 
             xmlUrl="https://rsshub.rssforever.com/telegram/channel/ShortcutsCN/" htmlUrl="https://t.me/s/ShortcutsCN"/>
   </outline>
@@ -73,12 +73,8 @@
             xmlUrl="http://www.appinn.com/feed/" htmlUrl="https://www.appinn.com"/>
   </outline>
   <outline title="产品" text="产品">
-      <outline text="Twitter @通往AGI之路" title="Twitter @通往AGI之路" type="rss" 
-            xmlUrl="https://rsshub.app/twitter/user/WaytoAGI/feed" htmlUrl="https://x.com/WaytoAGI"/>
       <outline text="Show HN" title="Show HN" type="rss" 
             xmlUrl="https://showhn.buzzing.cc/feed.xml" htmlUrl="https://showhn.buzzing.cc/"/>
-      <outline text="业余项目分享交流" title="业余项目分享交流" type="rss" 
-            xmlUrl="https://sideproject.buzzing.cc/feed.xml" htmlUrl="https://sideproject.buzzing.cc/"/>
       <outline text="ruanyf/weekly Issues" title="ruanyf/weekly Issues" type="rss" 
             xmlUrl="https://rsshub.app/github/issue/ruanyf/weekly" htmlUrl="https://github.com/ruanyf/weekly/issues"/>
       <outline text="Product Hunt 热门" title="Product Hunt 热门" type="rss" 
