@@ -14,6 +14,21 @@ if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
 
+// 清空输出目录
+const clearDirectory = (dir) => {
+  if (fs.existsSync(dir)) {
+    fs.readdirSync(dir).forEach(file => {
+      const filePath = path.join(dir, file);
+      if (fs.statSync(filePath).isDirectory()) {
+        clearDirectory(filePath);
+      } else {
+        fs.unlinkSync(filePath);
+      }
+    });
+    console.log(`Cleared: ${dir}`);
+  }
+};
+
 // 递归遍历目录
 const processDirectory = (dir) => {
   fs.readdir(dir, (err, files) => {
@@ -58,5 +73,18 @@ const processDirectory = (dir) => {
   });
 };
 
-// 开始处理输入目录
+// 监控 input 目录的变化
+const watchInputDirectory = (dir) => {
+  fs.watch(dir, { recursive: true }, (eventType, filename) => {
+    if (filename && path.extname(filename) === '.svg') {
+      console.log(`Detected change: ${filename}`);
+      clearDirectory(outputDir);
+      processDirectory(inputDir);
+    }
+  });
+};
+
+// 清空输出目录后开始处理输入目录并监控变化
+clearDirectory(outputDir);
 processDirectory(inputDir);
+watchInputDirectory(inputDir);
