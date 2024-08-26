@@ -22,117 +22,117 @@ www.deepl.com|[data-testid="translator-target-input"] .sentence_highlight|main
 # 谷歌翻译
 translate.google.com|[aria-live="polite"] span span span|.OPPzxe
 translate.google.cn|[aria-live="polite"] span span span|.OPPzxe
-`;
+`
 
-let cssLink = document.createElement("link");
-cssLink.rel = "stylesheet";
-cssLink.href = "https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css";
-document.head.appendChild(cssLink);
+let cssLink = document.createElement("link")
+cssLink.rel = "stylesheet"
+cssLink.href = "https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+document.head.appendChild(cssLink)
 
 async function copyToClipboard(content) {
   try {
-    await navigator.clipboard.writeText(content);
-    showToast(`✅ ${content} 复制成功`);
+    await navigator.clipboard.writeText(content)
+    showToast(`✅ ${content} 复制成功`)
   } catch (err) {
-    console.error("Failed to copy text to clipboard:", err);
+    console.error("Failed to copy text to clipboard:", err)
   }
 }
 
 class NamingConvention {
   constructor(variableName) {
-    this.initCommandMap();
-    this.originVariableName = variableName;
-    let words = [];
-    ["-", "_", " "].forEach((separator) => {
+    this.initCommandMap()
+    this.originVariableName = variableName
+    let words = []
+    ;["-", "_", " "].forEach((separator) => {
       if (variableName.indexOf(separator) > 0) {
-        words = variableName.split(separator);
+        words = variableName.split(separator)
       }
-    });
+    })
     if (words.length <= 0) {
-      words = variableName.match(/(^[A-Z]|^|[A-Z])([a-z]+)?/g);
+      words = variableName.match(/(^[A-Z]|^|[A-Z])([a-z]+)?/g)
     }
-    this.wordList = words?.join("-").toLocaleLowerCase().split("-");
+    this.wordList = words?.join("-").toLocaleLowerCase().split("-")
   }
 
   initCommandMap() {
-    this.commandMap = new Map();
-    this.commandMap.set("UpperCamelCase", this.toUpperCamelCase);
-    this.commandMap.set("CamelCase", this.toCamelCase);
-    this.commandMap.set("Snake", this.toSnake);
-    this.commandMap.set("Hyphen", this.toHyphen);
-    this.commandMap.set("Constant", this.toConstant);
-    this.commandMap.set("LocaleLowerCase", this.toLocaleLowerCase);
-    this.commandMap.set("LocaleUpperCase", this.toLocaleUpperCase);
-    this.commandMap.set("SpaceUpperCase", this.toSpaceUpperCase);
-    this.commandMap.set("SpaceLowerCase", this.toSpaceLowerCase);
-    this.commandMap.set("SpaceUpperCamelCase", this.toSpaceUpperCamelCase);
-    this.commandMap.set("SpaceCamelCase", this.toSpaceCamelCase);
+    this.commandMap = new Map()
+    this.commandMap.set("UpperCamelCase", this.toUpperCamelCase)
+    this.commandMap.set("CamelCase", this.toCamelCase)
+    this.commandMap.set("Snake", this.toSnake)
+    this.commandMap.set("Hyphen", this.toHyphen)
+    this.commandMap.set("Constant", this.toConstant)
+    this.commandMap.set("LocaleLowerCase", this.toLocaleLowerCase)
+    this.commandMap.set("LocaleUpperCase", this.toLocaleUpperCase)
+    this.commandMap.set("SpaceUpperCase", this.toSpaceUpperCase)
+    this.commandMap.set("SpaceLowerCase", this.toSpaceLowerCase)
+    this.commandMap.set("SpaceUpperCamelCase", this.toSpaceUpperCamelCase)
+    this.commandMap.set("SpaceCamelCase", this.toSpaceCamelCase)
   }
 
   toUpperCamelCase(separator) {
-    let words = [];
+    let words = []
     this.wordList?.forEach((word) => {
-      word = word.replace(/(^[a-z])/, (match) => match.toLocaleUpperCase());
-      words.push(word);
-    });
-    return words.join(separator || "");
+      word = word.replace(/(^[a-z])/, (match) => match.toLocaleUpperCase())
+      words.push(word)
+    })
+    return words.join(separator || "")
   }
 
   toCamelCase(separator) {
-    let words = [];
+    let words = []
     this.wordList?.forEach((word, index) => {
       if (index !== 0) {
-        word = word.replace(/(^[a-z])/, (match) => match.toLocaleUpperCase());
+        word = word.replace(/(^[a-z])/, (match) => match.toLocaleUpperCase())
       }
-      words.push(word);
-    });
-    return words.join(separator || "");
+      words.push(word)
+    })
+    return words.join(separator || "")
   }
 
   toSnake() {
-    return this.wordList?.join("_");
+    return this.wordList?.join("_")
   }
 
   toHyphen() {
-    return this.wordList?.join("-");
+    return this.wordList?.join("-")
   }
 
   toConstant() {
-    return this.wordList?.join("_").toLocaleUpperCase();
+    return this.wordList?.join("_").toLocaleUpperCase()
   }
 
   toLocaleLowerCase() {
-    return this.originVariableName.toLocaleLowerCase();
+    return this.originVariableName.toLocaleLowerCase()
   }
 
   toLocaleUpperCase() {
-    return this.originVariableName.toLocaleUpperCase();
+    return this.originVariableName.toLocaleUpperCase()
   }
 
   toSpaceLowerCase() {
-    return this.wordList?.join(" ").toLocaleLowerCase();
+    return this.wordList?.join(" ").toLocaleLowerCase()
   }
 
   toSpaceUpperCase() {
-    return this.wordList?.join(" ").toLocaleUpperCase();
+    return this.wordList?.join(" ").toLocaleUpperCase()
   }
 
   toSpaceUpperCamelCase() {
-    return this.toUpperCamelCase(" ");
+    return this.toUpperCamelCase(" ")
   }
 
   toSpaceCamelCase() {
-    return this.toCamelCase(" ");
+    return this.toCamelCase(" ")
   }
 
   convertTo(convertType, separator) {
-    const converter = this.commandMap.get(convertType);
-    return converter?.call(this, separator || "");
+    const converter = this.commandMap.get(convertType)
+    return converter?.call(this, separator || "")
   }
 }
 
-(function () {
-  "use strict";
+;(function () {
+  "use strict"
   const showToast = (text) => {
     Toastify({
       text,
@@ -140,48 +140,40 @@ class NamingConvention {
       close: true, // 显示关闭按钮
       gravity: "top", // 通知出现的位置（top 或 bottom）
       position: "right", // 通知出现的侧面（left 或 right）
-      backgroundColor: "linear-gradient(to right, #00b09b, #96c93d)", // 背景颜色或渐变
+      backgroundColor: "linear-gradient(to top, #6a85b6 0%, #bac8e0 100%);", // 背景颜色或渐变
       stopOnFocus: true, // 如果用户聚焦通知，则通知保持显示
-    }).showToast();
-  };
+    }).showToast()
+  }
   // 定义正则表达式
-  const regExp = /^([^\n|]+)\|(.+)\|(.+)$/gm;
+  const regExp = /^([^\n|]+)\|(.+)\|(.+)$/gm
 
   // 匹配字符串并提取数据
-  let matches;
-  console.log(
-    "%c [ matches ]-139",
-    "font-size:13px; background:pink; color:#bf2c9f;",
-    matches
-  );
+  let matches
+  console.log("%c [ matches ]-139", "font-size:13px; background:pink; color:#bf2c9f;", matches)
   while ((matches = regExp.exec(rules))) {
-    const domain = matches[1].trim();
-    const selector1 = matches[2].trim();
-    console.log(
-      "%c selector1 => ",
-      "font-size:13px; background:#464646; color:#EAEDC4;",
-      selector1
-    );
-    const selector2 = matches[3].trim();
+    const domain = matches[1].trim()
+    const selector1 = matches[2].trim()
+    console.log("%c selector1 => ", "font-size:13px; background:#464646; color:#EAEDC4;", selector1)
+    const selector2 = matches[3].trim()
     if (location.hostname === domain) {
       console.log(
         "%c 方法执行了，如果没有正常显示，请更换选择器配置，当前域名是 => ",
         "font-size:13px; background:#464646; color:#EAEDC4;",
         domain
-      );
-      let str = "";
+      )
+      let str = ""
 
       // Select the target node you want to observe
-      const targetNode = document.querySelector("body");
+      const targetNode = document.querySelector("body")
 
       // Create a new instance of MutationObserver
       const observer = new MutationObserver(() => {
-        const TRANSLATION_BOX = document.querySelector(selector1);
-        if (!TRANSLATION_BOX) return;
-        if (str === TRANSLATION_BOX.innerText) return;
-        str = TRANSLATION_BOX.innerText;
+        const TRANSLATION_BOX = document.querySelector(selector1)
+        if (!TRANSLATION_BOX) return
+        if (str === TRANSLATION_BOX.innerText) return
+        str = TRANSLATION_BOX.innerText
 
-        const testNaming = new NamingConvention(TRANSLATION_BOX.innerText);
+        const testNaming = new NamingConvention(TRANSLATION_BOX.innerText)
         const result = {
           upperCamelCase: {
             title: "大驼峰写法 (帕斯卡命名法)",
@@ -238,55 +230,48 @@ class NamingConvention {
             search: " xtf,kxtf,kongxiaotuofeng,konggexiaotuofeng",
             value: testNaming.convertTo("SpaceCamelCase"),
           },
-        };
+        }
 
-        const container = document.querySelector(selector2);
-        console.log(
-          "%c [ container ]-226",
-          "font-size:13px; background:pink; color:#bf2c9f;",
-          container
-        );
-        if (!container) return;
+        const container = document.querySelector(selector2)
+        console.log("%c [ container ]-226", "font-size:13px; background:pink; color:#bf2c9f;", container)
+        if (!container) return
 
-        let oldParagraph = container.querySelector(".paragraph");
+        let oldParagraph = container.querySelector(".paragraph")
 
-        if (oldParagraph) oldParagraph.remove();
+        if (oldParagraph) oldParagraph.remove()
 
         // 创建一个无序列表
-        const list = document.createElement("ul");
-        list.setAttribute("class", "paragraph");
+        const list = document.createElement("ul")
+        list.setAttribute("class", "paragraph")
 
         Object.values(result).forEach((item) => {
-          const listItem = document.createElement("li");
-          listItem.setAttribute(
-            "style",
-            "margin: 5px;padding: 5px;cursor: pointer;"
-          );
-          listItem.textContent = `${item.title}：${item.value}`;
+          const listItem = document.createElement("li")
+          listItem.setAttribute("style", "margin: 5px;padding: 5px;cursor: pointer;")
+          listItem.textContent = `${item.title}：${item.value}`
 
           // 为列表子项添加点击事件
           listItem.addEventListener("click", function () {
             // 将文本内容复制到剪贴板中
-            const content = item.value;
+            const content = item.value
             try {
-              GM_setClipboard(content, "text");
-              showToast(`🚀 ${content} 复制成功`);
+              GM_setClipboard(content, "text")
+              showToast(`🚀 ${content} 复制成功`)
             } catch (error) {
-              copyToClipboard(content);
+              copyToClipboard(content)
             }
-          });
+          })
 
-          list.appendChild(listItem);
-        });
+          list.appendChild(listItem)
+        })
 
-        container.appendChild(list);
-      });
+        container.appendChild(list)
+      })
 
       // Configure the observer to monitor child elements addition/removal
-      const config = { childList: true, subtree: true };
+      const config = { childList: true, subtree: true }
 
       // Start observing the target node with the configured options
-      observer.observe(targetNode, config);
+      observer.observe(targetNode, config)
     }
   }
-})();
+})()
