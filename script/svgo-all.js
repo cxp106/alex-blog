@@ -1,118 +1,71 @@
-const fs = require('fs');
-const path = require('path');
-const { optimize } = require('svgo');
-// 读取配置文件
-const config = require('./svgo.config');
+const fs = require("fs");
+const path = require("path");
+const { optimize } = require("svgo");
+const sharp = require("sharp"); // 引入 sharp 库
 
-// 输入和输出目录
-const inputDir = path.join(__dirname, 'input');
-const outputDir = path.join(__dirname, 'output');
+const config = require("./svgo.config");
 
-// 确保输出目录存在
+const inputDir = path.join(__dirname, "input");
+const outputDir = path.join(__dirname, "output");
+
 if (!fs.existsSync(outputDir)) {
   fs.mkdirSync(outputDir);
 }
 
-// 重试删除文件的函数
-const tryUnlinkSync = (filePath, retries = 5) => {
-  for (let i = 0; i < retries; i++) {
-    try {
-      fs.unlinkSync(filePath);
-      return;
-    } catch (err) {
-      if (err.code === 'EBUSY' || err.code === 'EPERM') {
-        console.log(`Retrying unlink for ${filePath}...`);
-        Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 100);
-      } else {
-        throw err;
-      }
-    }
-  }
-  throw new Error(`Failed to unlink ${filePath} after multiple retries`);
-};
-
-// 清空输出目录
 const clearDirectory = (dir) => {
-  if (fs.existsSync(dir)) {
-    fs.readdirSync(dir).forEach(file => {
-      const filePath = path.join(dir, file);
-      if (fs.statSync(filePath).isDirectory()) {
-        clearDirectory(filePath);
-      } else {
-        tryUnlinkSync(filePath);
-      }
-    });
-    console.log(`Cleared: ${dir}`);
+  try {
+    if (fs.existsSync(dir)) {
+      fs.readdirSync(dir).forEach((file) => {
+        const filePath = path.join(dir, file);
+        if (fs.statSync(filePath).isDirectory()) {
+          clearDirectory(filePath);
+        } else {
+          fs.unlinkSync(filePath);
+        }
+      });
+      fs.rmdirSync(dir);
+      console.log(`Cleared: ${dir}`);
+    }
+  } catch (error) {
+    console.error(`Error clearing directory ${dir}:`, error);
   }
 };
 
-// 处理 SVG 文件
 const processSvgFile = (filePath, outputFilePath) => {
-  fs.readFile(filePath, 'utf8', (err, data) => {
+  fs.readFile(filePath, "utf8", (err, data) => {
     if (err) throw err;
-
     const result = optimize(data, { path: filePath, ...config });
-
-    fs.writeFile(outputFilePath, result.data, err => {
+    fs.writeFile(outputFilePath, result.data, (err) => {
       if (err) throw err;
       console.log(`Optimized: ${filePath}`);
     });
   });
 };
 
-// 动态导入 imagemin 及其插件
-const loadImagemin = async () => {
-  const imagemin = (await import('imagemin')).default;
-  const imageminMozjpeg = (await import('imagemin-mozjpeg')).default;
-  const imageminPngquant = (await import('imagemin-pngquant')).default;
+const processImageFile = (filePath, outputFilePath) => {
+  const filename = path.basename(outputFilePath, path.extname(outputFilePath));
+  const outputDir = path.dirname(outputFilePath);
 
-  return { imagemin, imageminMozjpeg, imageminPngquant };
+  // 转换为 AVIF
+  sharp(filePath)
+    .avif({ quality: 96 })
+    .toFile(path.join(outputDir, `${filename}.avif`))
+    .then(() => console.log(`AVIF created: ${filename}.avif`))
+    .catch((err) => console.error(`Error creating AVIF: ${err}`));
+
+  // 转换为 WebP
+  sharp(filePath)
+    .webp({ quality: 96 })
+    .toFile(path.join(outputDir, `${filename}.webp`))
+    .then(() => console.log(`WebP created: ${filename}.webp`))
+    .catch((err) => console.error(`Error creating WebP: ${err}`));
 };
 
-// 处理 JPEG 文件
-const processJpegFile = async (filePath, outputFilePath) => {
-  const { imagemin, imageminMozjpeg } = await loadImagemin();
-
-  const compressedBuffer = await imagemin.buffer(fs.readFileSync(filePath), {
-    plugins: [
-      imageminMozjpeg({ quality: 80 })
-    ]
-  });
-
-  if (compressedBuffer.length < fs.statSync(filePath).size) {
-    fs.writeFileSync(outputFilePath, compressedBuffer);
-    console.log(`Compressed JPEG: ${filePath}`);
-  } else {
-    fs.copyFileSync(filePath, outputFilePath); // 如果压缩后更大，使用原文件
-    console.log(`Original JPEG retained: ${filePath}`);
-  }
-};
-
-// 处理PNG文件
-const processPngFile = async (filePath, outputFilePath) => {
-  const { imagemin, imageminPngquant } = await loadImagemin();
-
-  const compressedBuffer = await imagemin.buffer(fs.readFileSync(filePath), {
-    plugins: [
-      imageminPngquant({ quality: [0.6, 0.8] })
-    ]
-  });
-
-  if (compressedBuffer.length < fs.statSync(filePath).size) {
-    fs.writeFileSync(outputFilePath, compressedBuffer);
-    console.log(`Compressed PNG: ${filePath}`);
-  } else {
-    fs.copyFileSync(filePath, outputFilePath); // 如果压缩后更大，使用原文件
-    console.log(`Original PNG retained: ${filePath}`);
-  }
-};
-
-// 递归遍历目录并处理文件
 const processDirectory = (dir) => {
   fs.readdir(dir, (err, files) => {
     if (err) throw err;
 
-    files.forEach(file => {
+    files.forEach((file) => {
       const filePath = path.join(dir, file);
 
       fs.stat(filePath, (err, stats) => {
@@ -130,12 +83,28 @@ const processDirectory = (dir) => {
           }
 
           const ext = path.extname(file).toLowerCase();
-          if (ext === '.svg') {
+          if (ext === ".svg") {
             processSvgFile(filePath, outputFilePath);
-          } else if (ext === '.jpg' || ext === '.jpeg') {
-            processJpegFile(filePath, outputFilePath);
-          } else if (ext === '.png') {
-            processPngFile(filePath, outputFilePath);
+          } else if (ext === ".jpg" || ext === ".jpeg" || ext === ".png") {
+            // 这里将图片转换成多种格式，不进行原格式的压缩
+            /**
+             * css 使用
+             * background-image: image-set(
+             *   url("/path/to/hero-image.avif") type("image/avif"),
+             *   url("/path/to/hero-image.webp") type("image/webp"),
+             *   url("/path/to/hero-image.png") type("image/png"),
+             *   url("/path/to/hero-image.jpg") type("image/jpeg")
+             * );
+             */
+            /**
+             * html 使用
+             * <picture>
+             *   <source srcSet="/path/to/hero-image.avif" type="image/avif" />
+             *   <source srcSet="/path/to/hero-image.webp" type="image/webp" />
+             *   <img src="/path/to/hero-image.jpg" alt="Hero" />
+             * </picture>
+             */
+            processImageFile(filePath, outputFilePath);
           }
         }
       });
@@ -143,7 +112,6 @@ const processDirectory = (dir) => {
   });
 };
 
-// 监控 input 目录的变化
 const watchInputDirectory = (dir) => {
   fs.watch(dir, { recursive: true }, (eventType, filename) => {
     if (filename) {
@@ -154,7 +122,6 @@ const watchInputDirectory = (dir) => {
   });
 };
 
-// 清空输出目录后开始处理输入目录并监控变化
 clearDirectory(outputDir);
 processDirectory(inputDir);
 watchInputDirectory(inputDir);

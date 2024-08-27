@@ -16,18 +16,36 @@ if (!fs.existsSync(outputDir)) {
 
 // 清空输出目录
 const clearDirectory = (dir) => {
-  if (fs.existsSync(dir)) {
-    fs.readdirSync(dir).forEach(file => {
-      const filePath = path.join(dir, file);
-      if (fs.statSync(filePath).isDirectory()) {
-        clearDirectory(filePath);
-      } else {
-        fs.unlinkSync(filePath);
-      }
-    });
-    console.log(`Cleared: ${dir}`);
+  try {
+    if (fs.existsSync(dir)) {
+      // 读取目录中的所有文件和子目录
+      fs.readdirSync(dir).forEach((file) => {
+        const filePath = path.join(dir, file);
+
+        // 递归删除子目录
+        if (fs.statSync(filePath).isDirectory()) {
+          clearDirectory(filePath);
+        } else {
+          // 删除文件
+          fs.unlinkSync(filePath);
+        }
+      });
+
+      // 删除空目录
+      fs.rmdirSync(dir);
+      console.log(`Cleared: ${dir}`);
+    }
+  } catch (error) {
+    console.error(`Error clearing directory ${dir}:`, error);
   }
 };
+
+const getByteLength=(str)=>{
+  // const encoder = new TextDecoder()
+  // const encoded = encoder.encode(str)
+  // return encoded.length
+  return Buffer.byteLength(str,'utf8')
+}
 
 // 递归遍历目录
 const processDirectory = (dir) => {
@@ -64,7 +82,9 @@ const processDirectory = (dir) => {
             // 将优化后的 SVG 文件写入输出目录
             fs.writeFile(outputFilePath, result.data, err => {
               if (err) throw err;
-              console.log(`Optimized: ${relativePath}`);
+              const oLen = getByteLength(data)
+              const cLen = getByteLength(result.data)
+              console.log(`${((1-(cLen/oLen)*100).toFixed(2))}% Optimized: ${relativePath}`);
             });
           });
         }
