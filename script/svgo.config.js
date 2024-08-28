@@ -40,5 +40,11 @@ module.exports = {
     // 'removeDimensions',
     // 'removeStyleElement',
     // 'removeScriptElement',
+    {
+      name: "removeAttrs",
+      params: {
+        attrs: "style",
+      },
+    },
   ],
 };

@@ -15,14 +15,10 @@
             xmlUrl="https://rsshub.rssforever.com/jike/topic/5523d164e4b0466c6563cd30" htmlUrl="https://m.okjike.com/topics/5523d164e4b0466c6563cd30"/>
       <outline text="真人范儿-羊毛优惠" title="真人范儿-羊毛优惠" type="rss" 
             xmlUrl="https://www.zrfan.com/feed/" htmlUrl="https://www.zrfan.com"/>
-      <outline text="其乐 Keylol - 谈天说地" title="其乐 Keylol - 谈天说地" type="rss" 
-            xmlUrl="https://keylol.com/forum.php?mod=rss&amp;fid=148&amp;auth=2451wNM%2BVYUOx8fZd2SEi9Bbo6%2BSiskYm6%2BM%2BjYRSSvHlvbpMzA1rXp7J10EyAn3zA" htmlUrl="https://keylol.com/f148-1"/>
   </outline>
   <outline title="关注" text="关注">
       <outline text="深圳本地宝焦点资讯" title="深圳本地宝焦点资讯" type="rss" 
             xmlUrl="https://rsshub.app/bendibao/news/sz" htmlUrl="http://sz.bendibao.com"/>
-      <outline text="中国气象爱好者的微博" title="中国气象爱好者的微博" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/weibo/user/1763864272" htmlUrl="https://weibo.com/1763864272/"/>
       <outline text="奇趣网站收藏家 - 即刻圈子" title="奇趣网站收藏家 - 即刻圈子" type="rss" 
             xmlUrl="https://rsshub.rssforever.com/jike/topic/55d81b4b60b296e5679785de" htmlUrl="https://m.okjike.com/topics/55d81b4b60b296e5679785de"/>
       <outline text="JitHub程序员 - 即刻圈子" title="JitHub程序员 - 即刻圈子" type="rss" 
@@ -33,16 +29,12 @@
             xmlUrl="https://weekly.tw93.fun/rss.xml" htmlUrl="https://weekly.tw93.fun/"/>
       <outline text="阮一峰的网络日志" title="阮一峰的网络日志" type="rss" 
             xmlUrl="https://feeds.feedburner.com/ruanyifeng" htmlUrl="http://www.ruanyifeng.com/blog/"/>
-      <outline text="1Link.Fun 科技周刊" title="1Link.Fun 科技周刊" type="rss" 
-            xmlUrl="https://1link.fun/index.xml" htmlUrl="https://1link.fun/"/>
       <outline text="冻梨游研社|绝区零" title="冻梨游研社|绝区零" type="rss" 
             xmlUrl="https://rsshub.rssforever.com/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2387749445439635456" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2387749445439635456"/>
       <outline text="冻梨游研社|崩坏：星穹铁道" title="冻梨游研社|崩坏：星穹铁道" type="rss" 
             xmlUrl="https://rsshub.rssforever.com/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2767905510162546689" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2767905510162546689"/>
       <outline text="喷嚏图卦" title="喷嚏图卦" type="rss" 
             xmlUrl="https://feedx.net/rss/pentitugua.xml" htmlUrl="http://dapenti.com"/>
-      <outline text="槽边往事" title="槽边往事" type="rss" 
-            xmlUrl="https://www.hecaitou.com/feeds/posts/default?alt=rss" htmlUrl="https://www.hecaitou.com/"/>
   </outline>
   <outline title="乐呵" text="乐呵">
       <outline text="热榜 - 煎蛋" title="热榜 - 煎蛋" type="rss" 
@@ -51,6 +43,8 @@
             xmlUrl="https://rsshub.rssforever.com/telegram/channel/ShortcutsCN/" htmlUrl="https://t.me/s/ShortcutsCN"/>
   </outline>
   <outline title="资讯" text="资讯">
+      <outline text="中国气象爱好者的微博" title="中国气象爱好者的微博" type="rss" 
+            xmlUrl="https://rsshub.rssforever.com/weibo/user/1763864272" htmlUrl="https://weibo.com/1763864272/"/>
       <outline text="掘金前端本周最热" title="又有人在微博提到深圳了" type="rss" 
             xmlUrl="https://rsshub.rssforever.com/juejin/trending/frontend/weekly" htmlUrl="https://juejin.im/frontend?sort=weekly_hottest"/>
       <outline text="喷嚏-70" title="喷嚏-70" type="rss" 

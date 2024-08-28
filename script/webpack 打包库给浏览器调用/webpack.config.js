@@ -5,7 +5,7 @@ module.exports = {
   mode: "production", // 或 'production'
   entry: "./src/index.js", // 入口文件
   output: {
-    filename: "bundle.js", // 输出文件名
+    filename: "w.my-tools.js", // 输出文件名
     path: path.resolve(__dirname, "dist"),
     library: "Qchh", // 设置全局变量名
     libraryTarget: "umd", // 允许在 CommonJS、AMD 和全局环境中使用
