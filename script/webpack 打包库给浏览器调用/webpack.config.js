@@ -1,7 +1,8 @@
 const path = require("path");
 
 module.exports = {
-  mode: "development", // 或 'production'
+  devtool: false,
+  mode: "production", // 或 'production'
   entry: "./src/index.js", // 入口文件
   output: {
     filename: "bundle.js", // 输出文件名
