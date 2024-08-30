@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         Easy Web Page to Markdown
-// @name:zh      网页转Markdown工具
+// @name:zh      网页转 Markdown 工具
 // @namespace    http://tampermonkey.net/
 // @version      0.3.7
 // @description  Convert selected HTML to Markdown
-// @description:zh 将选定的HTML转换为Markdown
+// @description:zh 将选定的 HTML 转换为 Markdown
 // @author       千川汇海
 // @match        *://*/*
 // @grant        GM_addStyle
@@ -17,6 +17,8 @@
 // @require      https://unpkg.com/turndown/dist/turndown.js
 // @require      https://unpkg.com/@guyplusplus/turndown-plugin-gfm/dist/turndown-plugin-gfm.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.0/marked.min.js
+// @updateURL    https://cxp.netlify.app/script/ConvertWebPageToMarkdown.user.user.js
+// @downloadURL  https://cxp.netlify.app/script/ConvertWebPageToMarkdown.user.user.js
 // @license      AGPL-3.0
 // @run-at       context-menu
 // ==/UserScript==
@@ -66,7 +68,7 @@
   } else if (storedShortCutConfig) {
     shortCutConfig = JSON.parse(storedShortCutConfig);
   }
-  // 初始化Obsidian配置
+  // 初始化 Obsidian 配置
   let storedObsidianConfig = GM_getValue("obsidianConfig");
   if (Object.keys(obsidianUserConfig).length !== 0) {
     GM_setValue("obsidianConfig", JSON.stringify(obsidianUserConfig));
@@ -283,7 +285,7 @@
   //         return '';
   //     }
   // });
-  // 添加CSS样式
+  // 添加 CSS 样式
   GM_addStyle(`
         .h2m-selection-box {
             border: 2px dashed #f00;
@@ -459,7 +461,7 @@
               selectedElement.tagName === "HTML" ||
               selectedElement.tagName === "BODY"
             ) {
-              // 排除HTML 和 BODY
+              // 排除 HTML 和 BODY
               selectedElement = selectedElement.firstElementChild;
             }
             break;
