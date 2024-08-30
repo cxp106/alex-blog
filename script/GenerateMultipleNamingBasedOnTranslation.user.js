@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         网页翻译生成命名
 // @namespace    http://tampermonkey.net/
-// @version      1.0.3
+// @version      1.0.3-
 // @description  通过该插件可以将一个网页上翻译好的文本转换为不同的命名方式，如大驼峰命名法、小驼峰命名法、下划线命名法等。
 // @author       Radiant Moon
 // @match        *://www.deepl.com/*
