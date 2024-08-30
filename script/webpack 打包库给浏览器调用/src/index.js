@@ -57,5 +57,10 @@ const compressHTML = (html) => {
 // if (typeof window !== "undefined") {
 //   window.toast = toast;
 // }
+const htmlToMd = require("html-to-md")
 
-export { cleanUpSvg, toast, compressHTML }
+const html2md = (html) => {
+  return htmlToMd(html)
+}
+
+export { cleanUpSvg, toast, compressHTML, html2md }

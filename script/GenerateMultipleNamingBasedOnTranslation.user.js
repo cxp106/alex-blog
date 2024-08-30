@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         网页翻译生成命名
 // @namespace    http://tampermonkey.net/
-// @version      1.0.2
+// @version      1.0.3
 // @description  通过该插件可以将一个网页上翻译好的文本转换为不同的命名方式，如大驼峰命名法、小驼峰命名法、下划线命名法等。
 // @author       Radiant Moon
 // @match        *://www.deepl.com/*
@@ -11,7 +11,7 @@
 // @grant        GM_setClipboard
 // @updateURL    https://cxp.netlify.app/script/GenerateMultipleNamingBasedOnTranslation.user.js
 // @downloadURL  https://cxp.netlify.app/script/GenerateMultipleNamingBasedOnTranslation.user.js
-// @require      https://cxp.netlify.app/script/w.my-tools.js
+// @require      https://cxp.netlify.app/script/tools/toast.min.js
 // ==/UserScript==
 
 const rules = `
@@ -131,7 +131,7 @@ class NamingConvention {
 ;(function () {
   "use strict"
   const showToast = (text) => {
-    Qchh.toast(text)
+    toast(text)
   }
   // 定义正则表达式
   const regExp = /^([^\n|]+)\|(.+)\|(.+)$/gm
