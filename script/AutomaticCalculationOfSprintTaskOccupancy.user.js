@@ -1,4 +1,4 @@
-// ==UserScript==
+﻿// ==UserScript==
 // @name         自动算 Sprint 占用时间
 // @namespace    http://tampermonkey.net/
 // @version      0.1
