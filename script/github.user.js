@@ -139,7 +139,7 @@
 	registerMenuCommand();
 	// 注册脚本菜单
 	function registerMenuCommand() {
-		// 如果反馈菜单 ID 不是 null，则删除所有脚本菜单
+		// 如果反馈菜单ID不是 null，则删除所有脚本菜单
 		if (menu_feedBack_ID) {GM_unregisterMenuCommand(menu_rawFast_ID); GM_unregisterMenuCommand(menu_rawDownLink_ID); GM_unregisterMenuCommand(menu_gitClone_ID); GM_unregisterMenuCommand(menu_feedBack_ID); menu_rawFast = GM_getValue('xiu2_menu_raw_fast');}
 		// 避免在减少 raw 数组后，用户储存的数据大于数组而报错
 		if (menu_rawFast > raw_url.length - 1) menu_rawFast = 0

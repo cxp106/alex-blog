@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        浏览Github项目
+// @name        浏览 Github 项目
 // @author      南风
-// @description 浏览github项目的时候添加sourcegraph、github1s的链接
+// @description 浏览 github 项目的时候添加 sourcegraph、github1s 的链接
 // @version     6.6.6
 // @namespace   https://nanfeng.com/
 // @match       https://github.com/*/*
