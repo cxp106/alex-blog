@@ -10,16 +10,17 @@ module.exports = {
   mode: "production",
   target: "web",
   parallelism: 5,
-  optimization: {
-    minimize: true,
-    minimizer: [
-      new TerserPlugin({
-        terserOptions: {
-          compress: {
-            drop_console: true,
-          },
-        },
-      }),
-    ],
-  },
+  // optimization: {
+  //   minimize: true,
+  //   minimizer: [
+  //     new TerserPlugin({
+  //       terserOptions: {
+  //         compress: {
+  //           drop_console: true,
+  //           // removeComments: true,
+  //         },
+  //       },
+  //     }),
+  //   ],
+  // },
 };
