@@ -23,10 +23,11 @@ const event = new MouseEvent("click", {
 let xuanzhong = 1
 // 不要选漏
 let resultCount = 0
-// 页面停留 60 秒不对劲就刷新
+// 不要选漏
 let examTime = 0
 
 const download = (dataArray) => {
+  return
   // 将数组数据转换为 JSON 字符串
   const jsonData = JSON.stringify(dataArray, null, 2)
 
@@ -72,7 +73,7 @@ function selectAnswers(_, observer) {
     console.log("%c questionContent => ", "font-size:13px; background:#baccd9; color:#000;", questionContent)
 
     // 调用查询函数，获取答案列表（假设返回一个数组）
-    const correctAnswers = questionContent ? search(questionContent).filter((item) => item.score < 0.36) : []
+    const correctAnswers = questionContent ? search(questionContent) : []
     console.log("%c correctAnswers => ", "font-size:13px; background:#baccd9; color:#000;", correctAnswers)
 
     if (correctAnswers.length > 0) {
@@ -88,7 +89,7 @@ function selectAnswers(_, observer) {
       //   console.log("%c item => ", "font-size:13px; background:#baccd9; color:#000;", item)
       const xuanzhongItem = correctAnswers[Math.floor(xuanzhong++ / 5)]
       console.log("%c xuanzhong => ", "font-size:13px; background:#baccd9; color:#000;", xuanzhong)
-      if (!xuanzhongItem) {
+      if (!xuanzhongItem || xuanzhong > 50) {
         xuanzhong = 1
         location.reload()
       }
@@ -124,7 +125,7 @@ function selectAnswers(_, observer) {
                   calculateSimilarity(ans, a.querySelector(".content").innerText.trim())
               )
             console.log("%c answerItems => ", "font-size:13px; background:#baccd9; color:#000;", result[0])
-            if (!result[0].classList.contains("active")) {
+            if (result.length && !result[0].classList.contains("active")) {
               result[0].dispatchEvent(event)
             }
           })
@@ -155,6 +156,7 @@ let mainListTotal = localStorage.getItem("mainListTotal") || 0
 let currentStudy = null
 let videoList = []
 let errorExam = null
+let nowStudy = ""
 
 ;(function () {
   const originalXHR = window.XMLHttpRequest
@@ -164,11 +166,52 @@ let errorExam = null
     const originalSend = xhr.send
 
     xhr.open = function () {
-      console.log("XHR 请求：", arguments)
+      // if (Array.from(arguments).some((item) => typeof item === 'string' && item.includes("calcStudyProcess"))) {
+      // console.log("XHR 请求：", arguments)
+      // }
+      // // 爬题
+      // // 保存请求方法和 URL
+      // this._method = arguments[0]
+      // this._url = arguments[1]
+      // console.log("%c this._url => ", "font-size:13px; background:#baccd9; color:#000;", this._url)
+
+      // // 如果请求是 GET 请求且 URL 匹配目标地址
+      // if (this._method === "GET" && this._url.includes("listQuestionByMode")) {
+      //   // 解析 URL 和查询参数
+      //   const url = new URL("https://service.cpma.org.cn" + this._url)
+      //   const params = new URLSearchParams(url.search)
+      //   console.log("%c params => ", "font-size:13px; background:#baccd9; color:#000;", params)
+
+      //   // 修改 pageSize 参数
+      //   params.set("pageSize", "500")
+
+      //   // 重新构建修改后的 URL
+      //   url.search = params.toString()
+      //   this._url = url.toString()
+      //   console.log("%c this._url => ", "font-size:13px; background:#baccd9; color:#000;", this._url)
+      // }
+      // return originalOpen.apply(this, [this._method, this._url, ...Array.prototype.slice.call(arguments, 2)])
       return originalOpen.apply(this, arguments)
     }
 
-    xhr.send = function () {
+    xhr.send = function (body) {
+      // console.warn("%c body => ", "font-size:13px; background:#baccd9; color:#000;", body)
+      // // 检查请求方法是否是 POST 且 URL 是否匹配
+      // if (body) {
+      //   // 将请求数据转换为对象
+      //   let data = JSON.parse(body)
+
+      //   // 修改 viewProcess 字段
+      //   if (data.repositoryId !== undefined) {
+      //     data.pageSize = 500
+      //   }
+
+      //   // 重新序列化数据
+      //   body = JSON.stringify(data)
+      // }
+      // // 调用原始的 send 方法
+      // return originalSend.call(this, body)
+
       this.addEventListener("load", function () {
         console.log("XHR 响应：", {
           url: this.responseURL,
@@ -194,8 +237,28 @@ let errorExam = null
         } else if (this.responseURL.includes("userExamResultDetail")) {
           console.log("%c errorExam => ", "font-size:13px; background:#baccd9; color:#000;", JSON.parse(this.response).result)
           errorExam = JSON.parse(this.response).result
+        } else if (this.responseURL.includes("course/userCourseList")) {
+          console.log("%c errorExam => ", "font-size:13px; background:#baccd9; color:#000;", JSON.parse(this.response).result)
+          const studyed = JSON.parse(this.response).result.records.map((item) => item.id)
+          mainList = mainList.filter((item) => !studyed.includes(item))
+          localStorage.setItem("mainList", JSON.stringify(mainList))
+        } else if (this.responseURL.includes("listQuestionByMode")) {
+          // // 爬题
+          // const result = JSON.parse(this.response).result
+          // console.log("%c result => ", "font-size:13px; background:#baccd9; color:#000;", result)
+          // download(result)
+          // if (mainList.length > 1) {
+          //   throttle(() => {
+          //     nowStudy = mainList.shift()
+          //   }, 3000)()
+          //   localStorage.setItem("mainList", JSON.stringify(mainList))
+          //   jumpCourseDetails(mainList[0])
+          // } else {
+          //   localStorage.setItem("mainList", JSON.stringify([]))
+          // }
         }
       })
+
       return originalSend.apply(this, arguments)
     }
 
@@ -258,14 +321,18 @@ window.open = function (url, target, features) {
 const jumpCourseDetails = (id) => {
   window.location.href = `https://service.cpma.org.cn/edu/course/courseDetails/${id}`
 }
-let nowStudy = ""
+const jumpOnlineStudy = (id) => {
+  window.location.href = `https://service.cpma.org.cn/edu/course/onlineStudy/${id}`
+}
 setInterval(() => {
   const currentPage = window.location.pathname
   console.log("%c currentPage => ", "font-size:13px; background:#baccd9; color:#000;", currentPage)
   if (currentPage.includes("course/study")) {
     console.log("%c  => ", "font-size:13px; background:#baccd9; color:#000;", "列表页", mainListTotal, mainList.length)
     if (mainListTotal && mainListTotal <= mainList.length) {
-      jumpCourseDetails(mainList[0])
+      // 跳转视频
+      // jumpOnlineStudy(mainList[0])
+      window.location.href = "https://service.cpma.org.cn/edu/system/person"
     } else {
       document.querySelector(".ant-pagination-next")?.click()
     }
@@ -291,6 +358,12 @@ setInterval(() => {
     //   }
     // } else {
     if (!currentStudy) return
+
+    // // 爬题
+    // document.querySelector("#rc-tabs-0-tab-practice")?.click()
+    // document.querySelector(".ant-table-cell .ant-btn-link")?.click()
+    // nowStudy = mainList[0]
+    // return
     if (currentStudy?.finishNum < currentStudy?.catalogList.length) {
       window.location.href = `https://service.cpma.org.cn/edu/course/onlineStudy/${mainList[0]}`
     }
@@ -316,9 +389,12 @@ setInterval(() => {
             btnWarn.dispatchEvent(event)
             if (document.querySelector(".ant-card-body .ant-tag").innerText.trim() === "通过") {
               if (mainList.length > 1) {
-                nowStudy = mainList.shift()
+                throttle(() => {
+                  nowStudy = mainList.shift()
+                }, 3000)()
                 localStorage.setItem("mainList", JSON.stringify(mainList))
-                jumpCourseDetails(mainList[0])
+                console.warn("%c mainList => ", "font-size:13px; background:#baccd9; color:#000;", mainList)
+                jumpOnlineStudy(mainList[0])
               } else {
                 localStorage.setItem("mainList", JSON.stringify([]))
               }
@@ -343,31 +419,43 @@ setInterval(() => {
       videoList = [...document.querySelectorAll(".double-layer .section-title")]
     }
 
-    if (video && (video.paused || video.playbackRate !== 16)) {
+    if (video) {
       console.log("%c video => ", "font-size:13px; background:#baccd9; color:#000;", video)
-      video.volume = 0
-      video.playbackRate = 16
-      video.play()
+      const speed = 16
+      if (video.paused || video.playbackRate !== speed) {
+        video.volume = 0
+        video.playbackRate = speed
+        video.play()
+      }
 
       const fastForwardInterval = setInterval(() => {
-        if (video.currentTime + 300 < video.duration) {
-          video.currentTime += 300
+        if (video.currentTime + 30 < video.duration) {
+          video.currentTime += 30
         } else {
           video.currentTime = video.duration
           clearInterval(fastForwardInterval)
         }
+        // if (video.duration) {
+        //   video.currentTime = video.duration - 1
+        // }
       }, 1000)
 
-      video.addEventListener("ended", () => {
+      function nextVideo() {
         const next = videoList.shift()
         console.log("%c next => ", "font-size:13px; background:#baccd9; color:#000;", next)
-        if (next && !next.querySelector(".task-hour").innerText.includes("已学完")) {
-          next.click()
+        if (next) {
+          if (next.querySelector(".task-hour").innerText.includes("已学完")) {
+            nextVideo()
+          } else {
+            next.click()
+          }
         } else {
           mainList[0] && jumpCourseDetails(mainList[0])
           console.log("%c  => ", "font-size:13px; background:#baccd9; color:#000;", "学完了")
         }
-      })
+      }
+
+      video.addEventListener("ended", nextVideo)
     }
   } else if (currentPage.includes("exam/userexamresult")) {
     // exam/userexamresult/ExamDetail
@@ -382,12 +470,12 @@ setInterval(() => {
           // localStorage.setItem("errorStudys", JSON.stringify(error))
           document.querySelector(".score-card").addEventListener("click", () => {
             nowStudy = mainList[0]
-            jumpCourseDetails(mainList[0])
+            jumpOnlineStudy(mainList[0])
           })
           setTimeout(() => {
             if ([...document.querySelectorAll(".score-box span")].some((item) => item.innerText.trim() === "通过")) {
               nowStudy = mainList[0]
-              jumpCourseDetails(mainList[0])
+              jumpOnlineStudy(mainList[0])
             }
           }, 1000)
         } else {
@@ -401,7 +489,7 @@ setInterval(() => {
           }
           setTimeout(() => {
             nowStudy = mainList[0]
-            jumpCourseDetails(mainList[0])
+            jumpOnlineStudy(mainList[0])
           }, 1000)
         }
       }, 10000)()
@@ -436,5 +524,21 @@ setInterval(() => {
         document.querySelector(".all-box-right .ant-btn.ant-btn-primary").click()
       }, 2000)()
     }
+  } else if (currentPage.includes("system/person")) {
+    ;[...document.querySelectorAll(".ant-tabs-nav-list .ant-tabs-tab")].find((item) => item.innerText.includes("已学课程"))?.click()
+    const next = document.querySelector(".ant-pagination-next")
+    next?.click()
+    const prev = document.querySelector(".ant-pagination-prev")
+
+    if ((prev && next.getAttribute("aria-disabled") === "true") || document.querySelector(".ant-empty-image")) {
+      // // 爬题
+      // jumpOnlineStudy(mainList[0])
+      jumpCourseDetails(mainList[0])
+    }
+  } else if (currentPage.includes("practice/mode")) {
+    // 爬題
+    // document.querySelector(".text-wrap")?.click()
+  } else if (currentPage.includes("practice/onlinePractice")) {
+    // 爬題
   }
-}, 2000)
+}, 1000)

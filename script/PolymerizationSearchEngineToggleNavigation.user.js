@@ -1,10 +1,12 @@
 // ==UserScript==
 // @name         聚合搜索引擎切换导航
 // @namespace    http://tampermonkey.net/
-// @version      2024.06.19
+// @version      1.0.2
 // @description  在搜索顶部显示一个聚合搜索引擎切换导航，综合搜索引擎。专注手机网页搜索引擎切换，纯粹的搜索。SearchJumper、搜索跳转、聚合搜索、All Search、Punk Search、搜索切换、搜索酱。
 // @author       千川汇海
 // @match        *://*/*
+// @updateURL    https://cxp.netlify.app/script/PolymerizationSearchEngineToggleNavigation.user.js
+// @downloadURL  https://cxp.netlify.app/script/PolymerizationSearchEngineToggleNavigation.user.js
 // @grant        unsafeWindow
 // @grant        GM_getValue
 // @grant        GM_setValue
@@ -12,16 +14,17 @@
 // @license     MIT
 // ==/UserScript==
 
-const punkDeafultMark = 'Bing-Metaso-Baidu-Google-Toutiao-Fsou-Quark-Sougou-360';
+const punkDeafultMark = 'Bing-Metaso-Searchgptool-Baidu-Google-Toutiao-Fsou-Quark-Sougou-360';
 const punkAllSearchMark = 'Bing-Metaso-Baidu-Google-Zhihu-Fsou-360-Quark-Sougou-Toutiao-Yandex-Ecosia-DuckDuckGo-QwantLite-Swisscows';
 
 const searchUrlMap = [
   { name: '必应', searchUrl: 'https://www.bing.com/search?q=', searchkeyName: ['q'], matchUrl: /bing\.com.*?search\?q=?/g, mark: 'Bing' },
   { name: '秘塔', searchUrl: 'https://metaso.cn/?q=', searchkeyName: ['q'], matchUrl: /metaso\.cn.*\?q=?/g, mark: 'Metaso' },
+  { name: 'Gpt', searchUrl: 'hhttps://searchgptool.ai/search?q=', searchkeyName: ['q'], matchUrl: /searchgptool\.ai.*\?q=?/g, mark: 'Searchgptool' },
   { name: '百度', searchUrl: 'https://baidu.com/s?wd=', searchkeyName: ['wd', 'word'], matchUrl: /baidu\.com.*?w(or)?d=?/g, mark: 'Baidu' },
   { name: '谷歌', searchUrl: 'https://www.google.com/search?q=', searchkeyName: ['q'], matchUrl: /google\.com.*?search.*?q=/g, mark: 'Google' },
   { name: '知乎', searchUrl: 'https://www.zhihu.com/search?q=', searchkeyName: ['q'], matchUrl: /zhihu\.com\/search.*?q=/g, mark: 'Zhihu' },
-  { name: 'F搜', searchUrl: 'https://fsoufsou.com/search?q=', searchkeyName: ['q'], matchUrl: /fsoufsou\.com\/.*?q=/g, mark: 'Fsou' },
+  { name: 'F 搜', searchUrl: 'https://fsoufsou.com/search?q=', searchkeyName: ['q'], matchUrl: /fsoufsou\.com\/.*?q=/g, mark: 'Fsou' },
   { name: '360', searchUrl: 'https://www.so.com/s?q=', searchkeyName: ['q'], matchUrl: /\.so\.com.*?q=/g, mark: '360' },
   { name: '夸克', searchUrl: 'https://quark.sm.cn/s?q=', searchkeyName: ['q'], matchUrl: /sm\.cn.*?q=/g, mark: 'Quark' },
   {
@@ -75,7 +78,7 @@ const punkSocialMap = [
       { name: 'ApkPure', searchUrl: 'https://m.apkpure.com/search?q=' },
       { name: '安娜的档案', searchUrl: 'https://annas-archive.org/search?q=' },
       { name: '人人影视', searchUrl: 'https://www.renren.pro/search?wd=' },
-      { name: '豌豆Pro', searchUrl: 'https://wandou.la/search/' },
+      { name: '豌豆 Pro', searchUrl: 'https://wandou.la/search/' },
     ],
   },
   {
@@ -109,7 +112,7 @@ const punkSocialMap = [
       { name: '百度翻译', searchUrl: 'https://fanyi.baidu.com/#zh/en/' },
       { name: '谷歌翻译', searchUrl: 'https://translate.google.com/?q=' },
       { name: '火山翻译', searchUrl: 'https://translate.volcengine.com/mobile?text=' },
-      { name: 'DeepL翻译', searchUrl: 'https://www.deepl.com/translator-mobile#zh/en/' },
+      { name: 'DeepL 翻译', searchUrl: 'https://www.deepl.com/translator-mobile#zh/en/' },
     ],
   },
   {
@@ -155,7 +158,7 @@ function addTabfunction() {
 function addSingleTab(node, tabList) {
   const ulList = document.createElement('ul');
   node.appendChild(ulList);
-  const fragment = document.createDocumentFragment(); // 创建一个文档碎片，减少DOM渲染次数
+  const fragment = document.createDocumentFragment(); // 创建一个文档碎片，减少 DOM 渲染次数
 
   tabList.forEach((item) => {
     const liItem = document.createElement('li');
@@ -314,7 +317,7 @@ function addSearchBox() {
   const ulList = document.createElement('ul');
   appBoxDiv.appendChild(ulList);
 
-  const fragment = document.createDocumentFragment(); // 创建一个文档碎片，减少DOM渲染次数
+  const fragment = document.createDocumentFragment(); // 创建一个文档碎片，减少 DOM 渲染次数
 
   const showList = GM_getValue('punk_setup_search').split('-');
   const currentUrl = window.location.href;
@@ -452,7 +455,7 @@ function initHorizontalScroll() {
 
 function handleWheelEvent(event) {
   if (event.deltaY !== 0) {
-    ulElement.scrollLeft += event.deltaY > 0 ? 50 : -50; // 根据滚动方向调整scrollLeft
+    ulElement.scrollLeft += event.deltaY > 0 ? 50 : -50; // 根据滚动方向调整 scrollLeft
     event.preventDefault(); // 阻止默认的滚动行为
   }
 }

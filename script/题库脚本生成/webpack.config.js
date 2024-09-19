@@ -16,10 +16,14 @@ module.exports = {
   //     new TerserPlugin({
   //       terserOptions: {
   //         compress: {
-  //           drop_console: true,
-  //           // removeComments: true,
+  //           drop_console: true, // 移除 console
+  //         },
+  //         mangle: true, // 开启混淆
+  //         output: {
+  //           comments: false, // 移除注释
   //         },
   //       },
+  //       extractComments: false, // 确保不会生成单独的注释文件
   //     }),
   //   ],
   // },

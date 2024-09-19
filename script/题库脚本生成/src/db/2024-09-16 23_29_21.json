@@ -1,0 +1,7277 @@
+{
+  "records": [
+    {
+      "id": "1807415912882638848",
+      "type": 3,
+      "level": 2,
+      "content": "临时接种点由于条件相对简单，可以不装配免疫规划信息系统。",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915315322882",
+          "questionId": "1807415912882638848",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915336294401",
+          "questionId": "1807415912882638848",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833152",
+      "type": 3,
+      "level": 2,
+      "content": "产科为新生儿接种首剂乙肝疫苗和卡介苗后，需为新生儿在免疫规划信息系统建立档案后，以及填写“新生儿产科预防接种记录单”。",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915340488706",
+          "questionId": "1807415912886833152",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915348877313",
+          "questionId": "1807415912886833152",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833153",
+      "type": 3,
+      "level": 2,
+      "content": "对存在来源不明、包装无法识别、储存温度不符合要求、超过有效期等问题的疫苗应采取隔离存放、标注警示标志等措施，并按照医疗废物管理要求进行处置。",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915353071617",
+          "questionId": "1807415912886833153",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915361460225",
+          "questionId": "1807415912886833153",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833154",
+      "type": 3,
+      "level": 2,
+      "content": "成人接种疫苗后，接种单位可提供纸质或电子接种凭证",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915365654529",
+          "questionId": "1807415912886833154",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915374043138",
+          "questionId": "1807415912886833154",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833155",
+      "type": 3,
+      "level": 2,
+      "content": "国家级、省级需每2~3年组织1次评价，市、县级每2年组织1次评价",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915378237442",
+          "questionId": "1807415912886833155",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915382431745",
+          "questionId": "1807415912886833155",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833156",
+      "type": 1,
+      "level": 2,
+      "content": "各级疾控主管部门和卫生健康主管部门按照“_______”的原则，做好国家免疫规划的组织实施、综合监督和接种单位及人员管理工作。",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915390820354",
+          "questionId": "1807415912886833156",
+          "content": "中央统筹、点面结合、横纵并行、强化协调",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915395014657",
+          "questionId": "1807415912886833156",
+          "content": "归口统筹、点面结合、多方并进、强化协调",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915403403266",
+          "questionId": "1807415912886833156",
+          "content": "归口统筹、点面结合、横纵并行、强化协调",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915407597570",
+          "questionId": "1807415912886833156",
+          "content": "归口统筹、整体兼顾、横纵并行、强化协调",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833157",
+      "type": 1,
+      "level": 2,
+      "content": "有关接种单位设置，下列哪一项说法错误？",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915411791873",
+          "questionId": "1807415912886833157",
+          "content": "城市地区的接种单位服务半径原则上不超过5公里，农村地区的接种单位服务半径原则上不超过10公里",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915420180482",
+          "questionId": "1807415912886833157",
+          "content": "接种单位应具有符合疫苗储存运输要求的冷链设备",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915424374786",
+          "questionId": "1807415912886833157",
+          "content": "在农村，只能由乡镇卫生院提供疫苗接种",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915428569090",
+          "questionId": "1807415912886833157",
+          "content": "接种单位要有醒目标识，各功能区、接种台要有明显标识",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833158",
+      "type": 1,
+      "level": 2,
+      "content": "疾控机构承担非免疫规划疫苗配送工作，可向______收取非免疫规划储存运输费？",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915436957698",
+          "questionId": "1807415912886833158",
+          "content": "受种者",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915441152001",
+          "questionId": "1807415912886833158",
+          "content": "疫苗上市许可持有人",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915449540610",
+          "questionId": "1807415912886833158",
+          "content": "所配送的接种单位",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915453734914",
+          "questionId": "1807415912886833158",
+          "content": "当地卫生行政部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833159",
+      "type": 1,
+      "level": 2,
+      "content": "下列哪种疫苗可以正常使用？",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915457929217",
+          "questionId": "1807415912886833159",
+          "content": "冷藏储运的疫苗，动态监测温度在0~2℃，冻干疫苗累计时间≤72小时",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915466317825",
+          "questionId": "1807415912886833159",
+          "content": "冷藏储运的疫苗，动态监测温度在8~15℃，48小时≤累计时间≤72小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915470512129",
+          "questionId": "1807415912886833159",
+          "content": "冷冻储运的疫苗，动态监测温度在-15~0℃，48小时≤累计时间≤72小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915474706434",
+          "questionId": "1807415912886833159",
+          "content": "冷冻储运的疫苗，动态监测温度在0~25℃，48小时≤累计时间≤72小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833160",
+      "type": 1,
+      "level": 2,
+      "content": "在既往接种率报告基础上，增加了基于免疫规划信息系统受种者电子档案的队列接种率报告和研判的监测内容，不包括以下哪一项？",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915483095042",
+          "questionId": "1807415912886833160",
+          "content": "时段接种率",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915491483650",
+          "questionId": "1807415912886833160",
+          "content": "出生队列接种率",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915495677954",
+          "questionId": "1807415912886833160",
+          "content": "出生队列接种率＞90%的乡镇比例",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915499872257",
+          "questionId": "1807415912886833160",
+          "content": "分年龄接种率",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833161",
+      "type": 2,
+      "level": 2,
+      "content": "根据疫苗管理法规定，接种单位需要具备的条件包括以下哪些？",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915508260866",
+          "questionId": "1807415912886833161",
+          "content": "取得医疗机构执业许可证",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915512455170",
+          "questionId": "1807415912886833161",
+          "content": "具有经过县级人民政府疾控主管部门和卫生健康主管部门组织的预防接种专业培训并考核合格的医师、护士或者乡村医生",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915516649474",
+          "questionId": "1807415912886833161",
+          "content": "具有符合《疫苗储存、运输管理规范》的冷藏设施、设备以及相应的冷藏保管制度",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915525038082",
+          "questionId": "1807415912886833161",
+          "content": "免疫规划信息系统",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833162",
+      "type": 2,
+      "level": 2,
+      "content": "关于接种单位分级管理，下列哪些说法是正确的？",
+      "createTime": "2024-06-30 22:08:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915529232385",
+          "questionId": "1807415912886833162",
+          "content": "分级内容可分为一级、二级、三级（合格、规范、示范）",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915537620994",
+          "questionId": "1807415912886833162",
+          "content": "各省每1年综合评估一次",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915541815298",
+          "questionId": "1807415912886833162",
+          "content": "评估内容包括人员、房屋、冷链、信息系统、工作制度、工作质量、差错事故和群众满意度",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915546009601",
+          "questionId": "1807415912886833162",
+          "content": "各省制定评估实施办法",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912886833163",
+      "type": 2,
+      "level": 2,
+      "content": "<p>制定疫苗计划的依据包括以下哪几项？</p>",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": "2024-07-03 11:28:33",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1808342035527114754",
+          "questionId": "1807415912886833163",
+          "content": "免疫程序、应种人数、库存",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1808342035552280578",
+          "questionId": "1807415912886833163",
+          "content": "疫情防控",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1808342035556474882",
+          "questionId": "1807415912886833163",
+          "content": "非免疫规划疫苗替代国家免疫规划疫苗接种数量",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1808342035564863490",
+          "questionId": "1807415912886833163",
+          "content": "疫苗损耗系数与其他因素",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912891027456",
+      "type": 2,
+      "level": 2,
+      "content": "预防接种组织形式包括以下哪几项？",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915575369730",
+          "questionId": "1807415912891027456",
+          "content": "常规接种",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915583758338",
+          "questionId": "1807415912891027456",
+          "content": "群体性预防接种",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915587952641",
+          "questionId": "1807415912891027456",
+          "content": "应急接种",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915596341249",
+          "questionId": "1807415912891027456",
+          "content": "根据不同组织形式，有定点接种、设立临时接种单位、入户接种等方式",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912891027457",
+      "type": 2,
+      "level": 2,
+      "content": "提高预防接种预约管理质量措施主要包括______？",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415915600535553",
+          "questionId": "1807415912891027457",
+          "content": "分时段预约",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915604729857",
+          "questionId": "1807415912891027457",
+          "content": "限量预约",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915613118466",
+          "questionId": "1807415912891027457",
+          "content": "多渠道预约",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415915617312770",
+          "questionId": "1807415912891027457",
+          "content": "通过信息化系统、其他资料等查找迟种或漏种对象",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912920387584",
+      "type": 1,
+      "level": 2,
+      "content": "做好预防接种沟通工作的基础是",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415917383114753",
+          "questionId": "1807415912920387584",
+          "content": "物质奖励",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917387309058",
+          "questionId": "1807415912920387584",
+          "content": "建立信任关系",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917395697665",
+          "questionId": "1807415912920387584",
+          "content": "行政部门支持",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917399891969",
+          "questionId": "1807415912920387584",
+          "content": "能言善辩",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912920387585",
+      "type": 1,
+      "level": 2,
+      "content": "健康科普信息生成原则主要指",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415917404086274",
+          "questionId": "1807415912920387585",
+          "content": "科学性与有趣性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917412474881",
+          "questionId": "1807415912920387585",
+          "content": "科学性与适用性",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917416669185",
+          "questionId": "1807415912920387585",
+          "content": "创新性与趣味性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917420863489",
+          "questionId": "1807415912920387585",
+          "content": "适用性与创新性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912920387586",
+      "type": 2,
+      "level": 2,
+      "content": "宣传沟通在预防接种工作中所起的作用包括",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415917425057794",
+          "questionId": "1807415912920387586",
+          "content": "减少认识误区、消除疫苗犹豫；",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917433446402",
+          "questionId": "1807415912920387586",
+          "content": "正确认知接种疫苗收益与风险；",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917437640705",
+          "questionId": "1807415912920387586",
+          "content": "增进理解互信，构建和谐的接种氛围；",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917446029313",
+          "questionId": "1807415912920387586",
+          "content": "提升社会及公众对疫苗接种的信心。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912920387587",
+      "type": 2,
+      "level": 2,
+      "content": "预防接种工作中传播信息应当：",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415917450223618",
+          "questionId": "1807415912920387587",
+          "content": "针对受众量身定做；",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917458612226",
+          "questionId": "1807415912920387587",
+          "content": "简单易懂；",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917462806529",
+          "questionId": "1807415912920387587",
+          "content": "语言尊重、无偏见；",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415917467000834",
+          "questionId": "1807415912920387587",
+          "content": "杜绝错误、混淆信息；",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717702",
+      "type": 1,
+      "level": 2,
+      "content": "人类应用的最早疫苗",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696853377025",
+          "questionId": "1809063692130717702",
+          "content": "人痘疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696857571330",
+          "questionId": "1809063692130717702",
+          "content": "脊灰疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696861765633",
+          "questionId": "1809063692130717702",
+          "content": "狂犬疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696870154242",
+          "questionId": "1809063692130717702",
+          "content": "霍乱疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717703",
+      "type": 1,
+      "level": 2,
+      "content": "现代概念最早的疫苗",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696874348546",
+          "questionId": "1809063692130717703",
+          "content": "狂犬疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696878542850",
+          "questionId": "1809063692130717703",
+          "content": "炭疽疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696882737154",
+          "questionId": "1809063692130717703",
+          "content": "牛痘疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696886931458",
+          "questionId": "1809063692130717703",
+          "content": "霍乱疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717704",
+      "type": 1,
+      "level": 2,
+      "content": "人类第一个消灭传染病",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696895320066",
+          "questionId": "1809063692130717704",
+          "content": "脊髓灰质炎",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696899514369",
+          "questionId": "1809063692130717704",
+          "content": "疟疾",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696903708673",
+          "questionId": "1809063692130717704",
+          "content": "新生儿破伤风",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696907902978",
+          "questionId": "1809063692130717704",
+          "content": "天花",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717705",
+      "type": 1,
+      "level": 2,
+      "content": "全球EPI从哪年开始",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696916291585",
+          "questionId": "1809063692130717705",
+          "content": "1972年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696920485889",
+          "questionId": "1809063692130717705",
+          "content": "1974年",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696924680193",
+          "questionId": "1809063692130717705",
+          "content": "1978年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696933068802",
+          "questionId": "1809063692130717705",
+          "content": "2007年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717706",
+      "type": 1,
+      "level": 2,
+      "content": "天花是哪年证实消灭的",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696937263106",
+          "questionId": "1809063692130717706",
+          "content": "1977年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696945651713",
+          "questionId": "1809063692130717706",
+          "content": "1978年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696949846017",
+          "questionId": "1809063692130717706",
+          "content": "1980年",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696954040321",
+          "questionId": "1809063692130717706",
+          "content": "1984年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717707",
+      "type": 2,
+      "level": 2,
+      "content": "目前哪个型脊灰已消灭",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696958234625",
+          "questionId": "1809063692130717707",
+          "content": "Ⅰ型",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696962428929",
+          "questionId": "1809063692130717707",
+          "content": "Ⅱ型",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696966623234",
+          "questionId": "1809063692130717707",
+          "content": "Ⅲ型",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696970817538",
+          "questionId": "1809063692130717707",
+          "content": "Ⅰ+Ⅱ+Ⅲ型",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717708",
+      "type": 2,
+      "level": 2,
+      "content": "WHO在EPI初期纳入的疫苗",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696979206146",
+          "questionId": "1809063692130717708",
+          "content": "BCG",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696983400450",
+          "questionId": "1809063692130717708",
+          "content": "脊灰疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696987594753",
+          "questionId": "1809063692130717708",
+          "content": "麻疹疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696995983362",
+          "questionId": "1809063692130717708",
+          "content": "DPT",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717709",
+      "type": 2,
+      "level": 2,
+      "content": "WHO目前推荐纳入EPI疫苗",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697000177665",
+          "questionId": "1809063692130717709",
+          "content": "轮状病毒",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697004371969",
+          "questionId": "1809063692130717709",
+          "content": "HPV疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697008566273",
+          "questionId": "1809063692130717709",
+          "content": "Hib疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697012760577",
+          "questionId": "1809063692130717709",
+          "content": "肺炎球菌结合疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717710",
+      "type": 2,
+      "level": 2,
+      "content": "WHO2030年要消除的疾病",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697021149186",
+          "questionId": "1809063692130717710",
+          "content": "麻疹",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697025343490",
+          "questionId": "1809063692130717710",
+          "content": "风疹",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697029537793",
+          "questionId": "1809063692130717710",
+          "content": "病毒性肝炎",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697033732098",
+          "questionId": "1809063692130717710",
+          "content": "流感",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717711",
+      "type": 2,
+      "level": 2,
+      "content": "体内表达抗原的疫苗",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697037926402",
+          "questionId": "1809063692130717711",
+          "content": "mRNA疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697046315010",
+          "questionId": "1809063692130717711",
+          "content": "DNA疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697050509314",
+          "questionId": "1809063692130717711",
+          "content": "病毒载体疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697054703617",
+          "questionId": "1809063692130717711",
+          "content": "减毒或疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717712",
+      "type": 3,
+      "level": 2,
+      "content": "<p>脊髓灰质炎已经消灭</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:32:52",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816028762349858817",
+          "questionId": "1809063692130717712",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816028762362441729",
+          "questionId": "1809063692130717712",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717713",
+      "type": 3,
+      "level": 2,
+      "content": "<p>我国新生儿破伤风已消除</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:33:32",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816028932047204353",
+          "questionId": "1809063692130717713",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816028932063981570",
+          "questionId": "1809063692130717713",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717714",
+      "type": 3,
+      "level": 2,
+      "content": "<p>未来免疫规划疫苗全程覆盖率是90%</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:33:55",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816029025697624066",
+          "questionId": "1809063692130717714",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816029025710206977",
+          "questionId": "1809063692130717714",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717716",
+      "type": 3,
+      "level": 2,
+      "content": "2021-2030年，期望接种实现避免3000万人死亡？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697100840962",
+          "questionId": "1809063692130717716",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697105035265",
+          "questionId": "1809063692130717716",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717717",
+      "type": 1,
+      "level": 2,
+      "content": "下面哪种情况不属于疫苗损耗？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697109229569",
+          "questionId": "1809063692130717717",
+          "content": "储存和运输过程中发生的疫苗瓶破损；",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697117618177",
+          "questionId": "1809063692130717717",
+          "content": "单支多剂次疫苗打开后超过规定时间；",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697121812481",
+          "questionId": "1809063692130717717",
+          "content": "疫苗超过有效期；",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697126006785",
+          "questionId": "1809063692130717717",
+          "content": "疫苗召回",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912000",
+      "type": 1,
+      "level": 2,
+      "content": "关于疫苗供应，下面哪种说法是正确的？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697130201090",
+          "questionId": "1809063692134912000",
+          "content": "疫苗上市许可持有人可以向接种单位直接供应疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697138589698",
+          "questionId": "1809063692134912000",
+          "content": "疾控机构可以向接种单位直接供应疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697142784001",
+          "questionId": "1809063692134912000",
+          "content": "疫苗批发企业可以向接种单位供应疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697146978305",
+          "questionId": "1809063692134912000",
+          "content": "接种单位可以直接向疫苗上市许可持有人购买疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912001",
+      "type": 1,
+      "level": 2,
+      "content": "关于疫苗配送，下面哪种说法是错误的？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697151172609",
+          "questionId": "1809063692134912001",
+          "content": "疫苗上市许可持有人必须自行配送疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697155366913",
+          "questionId": "1809063692134912001",
+          "content": "配送疫苗要遵循“近效期先出”的原则",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697159561217",
+          "questionId": "1809063692134912001",
+          "content": "疾控机构可以委托配送企业配送疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697163755522",
+          "questionId": "1809063692134912001",
+          "content": "疫苗上市许可持有人可以向疾控机构指定的接种单位直接配送疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912002",
+      "type": 1,
+      "level": 2,
+      "content": "下面哪种入库类型提示疫苗账物不符，需进一步查找问题？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697172144130",
+          "questionId": "1809063692134912002",
+          "content": "采购入库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697176338434",
+          "questionId": "1809063692134912002",
+          "content": "供应入库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697180532737",
+          "questionId": "1809063692134912002",
+          "content": "盘盈入库",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697184727041",
+          "questionId": "1809063692134912002",
+          "content": "报废入库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912003",
+      "type": 1,
+      "level": 2,
+      "content": "疾控系统内常规逐级供应疫苗时，发货单位应选择哪种出库类型？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697193115649",
+          "questionId": "1809063692134912003",
+          "content": "使用出库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697197309953",
+          "questionId": "1809063692134912003",
+          "content": "供应出库",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697201504258",
+          "questionId": "1809063692134912003",
+          "content": "盘亏出库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697209892866",
+          "questionId": "1809063692134912003",
+          "content": "调拨出库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912004",
+      "type": 1,
+      "level": 2,
+      "content": "下面哪种出库类型仅发生在接种单位？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697214087169",
+          "questionId": "1809063692134912004",
+          "content": "供应出库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697222475777",
+          "questionId": "1809063692134912004",
+          "content": "使用出库",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697226670081",
+          "questionId": "1809063692134912004",
+          "content": "损坏出库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697230864385",
+          "questionId": "1809063692134912004",
+          "content": "销毁出库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912005",
+      "type": 2,
+      "level": 2,
+      "content": "接收疫苗时需要查验下面哪些材料？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697235058690",
+          "questionId": "1809063692134912005",
+          "content": "加盖疫苗上市许可持有人印章的《生物制品批签发合格证》复印件或电子文件",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697239252993",
+          "questionId": "1809063692134912005",
+          "content": "本次运输、储存全过程温度监测记录或电子文档",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697243447298",
+          "questionId": "1809063692134912005",
+          "content": "疫苗种类、数量、有效期等",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697247641602",
+          "questionId": "1809063692134912005",
+          "content": "疫苗上市许可持有人的药品生成许可证和注册批件复印件或电子文件",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912006",
+      "type": 2,
+      "level": 2,
+      "content": "下面哪些情况下疫苗需要报废处理？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697256030210",
+          "questionId": "1809063692134912006",
+          "content": "包装无法识别的疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697260224514",
+          "questionId": "1809063692134912006",
+          "content": "储存温度不符合要求的疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697264418817",
+          "questionId": "1809063692134912006",
+          "content": "超过有效期的疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697268613122",
+          "questionId": "1809063692134912006",
+          "content": "近效期疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912007",
+      "type": 2,
+      "level": 2,
+      "content": "疾控机构常用的入库类型有哪些？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697277001730",
+          "questionId": "1809063692134912007",
+          "content": "采购入库",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697281196034",
+          "questionId": "1809063692134912007",
+          "content": "供应入库",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697285390338",
+          "questionId": "1809063692134912007",
+          "content": "盘盈入库",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697289584642",
+          "questionId": "1809063692134912007",
+          "content": "生成入库",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912008",
+      "type": 2,
+      "level": 2,
+      "content": "关于疫苗全程电子追溯，下面说法正确的是？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697293778946",
+          "questionId": "1809063692134912008",
+          "content": "国家实行疫苗全程电子追溯制度",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697302167553",
+          "questionId": "1809063692134912008",
+          "content": "疫苗上市许可持有人应建立疫苗电子追溯系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697306361857",
+          "questionId": "1809063692134912008",
+          "content": "国家药监局会同卫生部门制定统一的疫苗追溯标准和规范",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697310556161",
+          "questionId": "1809063692134912008",
+          "content": "疾控机构和接种单位应如实记录疫苗流通信息和接种信息",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912009",
+      "type": 3,
+      "level": 2,
+      "content": "疫苗短时间的运输情况下，可在冷链外进行",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697314750466",
+          "questionId": "1809063692134912009",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697318944769",
+          "questionId": "1809063692134912009",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912010",
+      "type": 3,
+      "level": 2,
+      "content": "疫苗可以暂时存放在保存其他药品的冰箱中",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697327333378",
+          "questionId": "1809063692134912010",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697331527681",
+          "questionId": "1809063692134912010",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912011",
+      "type": 3,
+      "level": 2,
+      "content": "疫苗应整齐摆放在冰箱内部或冰箱门架上",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697335721985",
+          "questionId": "1809063692134912011",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697339916289",
+          "questionId": "1809063692134912011",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912012",
+      "type": 3,
+      "level": 2,
+      "content": "疫苗冷链设备应每天至少记录一次温度",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697348304898",
+          "questionId": "1809063692134912012",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697352499201",
+          "questionId": "1809063692134912012",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912013",
+      "type": 3,
+      "level": 2,
+      "content": "疫苗运输时需间隔1小时记录一次温度",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697356693506",
+          "questionId": "1809063692134912013",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697360887809",
+          "questionId": "1809063692134912013",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912014",
+      "type": 1,
+      "level": 2,
+      "content": "按照疫苗管理法规定，国家加强预防接种异常反应监测，预防接种异常反应监测方案由哪些部门制定？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697365082114",
+          "questionId": "1809063692134912014",
+          "content": "国务院卫生健康主管部门制定",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697369276417",
+          "questionId": "1809063692134912014",
+          "content": "国务院药品监督管理部门制定",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697377665026",
+          "questionId": "1809063692134912014",
+          "content": "国务院卫生健康主管部门会同国务院药品监督管理部门制定",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912015",
+      "type": 1,
+      "level": 2,
+      "content": "下列机构中哪些不是疑似预防接种异常反应的责任报告单位？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697381859330",
+          "questionId": "1809063692134912015",
+          "content": "接种单位",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697386053634",
+          "questionId": "1809063692134912015",
+          "content": "医学会",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697390247938",
+          "questionId": "1809063692134912015",
+          "content": "医疗机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697394442241",
+          "questionId": "1809063692134912015",
+          "content": "疾控机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697402830849",
+          "questionId": "1809063692134912015",
+          "content": "药品不良反应监测机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912016",
+      "type": 1,
+      "level": 2,
+      "content": "在发现怀疑与预防接种有关的死亡、严重残疾、群体性疑似预防接种异常反应、对社会有重大影响的疑似预防接种异常反应时，应当在多长时间内进行报告？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697407025153",
+          "questionId": "1809063692134912016",
+          "content": "立即",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697411219457",
+          "questionId": "1809063692134912016",
+          "content": "2小时",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697415413761",
+          "questionId": "1809063692134912016",
+          "content": "24小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697423802370",
+          "questionId": "1809063692134912016",
+          "content": "48小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912017",
+      "type": 1,
+      "level": 2,
+      "content": "哪些机构负责组织开展预防接种异常反应的调查诊断？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697427996673",
+          "questionId": "1809063692134912017",
+          "content": "预防医学会",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697432190978",
+          "questionId": "1809063692134912017",
+          "content": "医学会",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697436385282",
+          "questionId": "1809063692134912017",
+          "content": "疾控机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697444773890",
+          "questionId": "1809063692134912017",
+          "content": "药品监管部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912018",
+      "type": 1,
+      "level": 2,
+      "content": "哪些机构的人员按照规定不可以进入预防接种异常反应调查诊断专家组？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697448968193",
+          "questionId": "1809063692134912018",
+          "content": "医疗机构和疾控机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697453162497",
+          "questionId": "1809063692134912018",
+          "content": "疾控机构和高校科研机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697457356801",
+          "questionId": "1809063692134912018",
+          "content": "疾控机构和药品不良反应监测机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697465745410",
+          "questionId": "1809063692134912018",
+          "content": "药品不良反应监测机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912019",
+      "type": 1,
+      "level": 2,
+      "content": "当受种方、接种单位、疫苗上市许可持有人对疑似预防接种异常反应调查诊断结论有争议时，应当向哪些机构或部门申请预防接种异常反应的鉴定？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697469939713",
+          "questionId": "1809063692134912019",
+          "content": "预防医学会",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697474134017",
+          "questionId": "1809063692134912019",
+          "content": "医学会",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697478328322",
+          "questionId": "1809063692134912019",
+          "content": "疾控机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697482522625",
+          "questionId": "1809063692134912019",
+          "content": "药品监管部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912020",
+      "type": 1,
+      "level": 2,
+      "content": "我国免疫规划疫苗所导致的预防接种异常反应补偿经费依法应当由谁来承担？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697486716930",
+          "questionId": "1809063692134912020",
+          "content": "由接种单位承担",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697495105538",
+          "questionId": "1809063692134912020",
+          "content": "由疾控机构承担",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697499299841",
+          "questionId": "1809063692134912020",
+          "content": "由省、自治区、直辖市人民政府财政部门在预防接种经费中安排",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697503494146",
+          "questionId": "1809063692134912020",
+          "content": "由疫苗上市许可持有人承担",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692134912021",
+      "type": 1,
+      "level": 2,
+      "content": "我国非免疫规划疫苗所导致的预防接种异常反应补偿经费依法应当由谁来承担？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697511882754",
+          "questionId": "1809063692134912021",
+          "content": "由接种单位承担",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697516077057",
+          "questionId": "1809063692134912021",
+          "content": "由疾控机构承担",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697520271361",
+          "questionId": "1809063692134912021",
+          "content": "由省、自治区、直辖市人民政府财政部门在预防接种经费中安排",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697524465666",
+          "questionId": "1809063692134912021",
+          "content": "由疫苗上市许可持有人承担",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692139106304",
+      "type": 2,
+      "level": 2,
+      "content": "下列哪些情形属于严重的疑似预防接种异常反应？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697532854274",
+          "questionId": "1809063692139106304",
+          "content": "需住院治疗或者延长已在住院治疗的时间",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697537048577",
+          "questionId": "1809063692139106304",
+          "content": "危及生命",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697541242882",
+          "questionId": "1809063692139106304",
+          "content": "持续的或者显著的人体伤残/失能",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697549631490",
+          "questionId": "1809063692139106304",
+          "content": "死亡",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692139106305",
+      "type": 2,
+      "level": 2,
+      "content": "在下列怀疑因预防接种导致受种者损害的情形中，哪些应当是由设区的市级以上人民政府卫生健康主管部门、药品监督管理部门按照各自职责组织调查、处理的？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697553825793",
+          "questionId": "1809063692139106305",
+          "content": "非严重事件",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697558020097",
+          "questionId": "1809063692139106305",
+          "content": "死亡",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697562214401",
+          "questionId": "1809063692139106305",
+          "content": "严重残疾",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697566408705",
+          "questionId": "1809063692139106305",
+          "content": "群体性疑似预防接种异常反应",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697570603009",
+          "questionId": "1809063692139106305",
+          "content": "其他对社会有重大影响的疑似预防接种异常反应",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692139106306",
+      "type": 2,
+      "level": 2,
+      "content": "下列哪些情形应当由设区的市或者省级预防接种异常反应调查诊断专家组进行调查诊断？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697578991617",
+          "questionId": "1809063692139106306",
+          "content": "受种者死亡",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697583185922",
+          "questionId": "1809063692139106306",
+          "content": "受种者严重残疾",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697587380226",
+          "questionId": "1809063692139106306",
+          "content": "群体性疑似预防接种异常反应",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697591574529",
+          "questionId": "1809063692139106306",
+          "content": "对社会有重大影响的疑似预防接种异常反应",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692139106307",
+      "type": 3,
+      "level": 2,
+      "content": "疑似预防接种异常反应是指在预防接种后发生的与预防接种有关的反应或事件。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697599963138",
+          "questionId": "1809063692139106307",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697604157441",
+          "questionId": "1809063692139106307",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692139106308",
+      "type": 3,
+      "level": 2,
+      "content": "预防接种异常反应是指合格的疫苗在实施规范接种过程中或者实施规范接种后造成受种者机体组织器官、功能损害，相关各方均无过错的药品不良反应。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697608351745",
+          "questionId": "1809063692139106308",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697612546049",
+          "questionId": "1809063692139106308",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692139106309",
+      "type": 3,
+      "level": 2,
+      "content": "疫苗上市许可持有人应当配备兼职人员，主动收集、跟踪分析疑似预防接种异常反应。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697620934657",
+          "questionId": "1809063692139106309",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697625128962",
+          "questionId": "1809063692139106309",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692139106310",
+      "type": 3,
+      "level": 2,
+      "content": "只要受种者接种疫苗后发生了属于《预防接种异常反应补偿范围参考目录（2020年版）》中的疾病，就属于或不能排除预防接种异常反应。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063697629323265",
+          "questionId": "1809063692139106310",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063697633517570",
+          "questionId": "1809063692139106310",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692218798099",
+      "type": 1,
+      "level": 2,
+      "content": "关于疫苗，以下概念正确的是（）。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704973549569",
+          "questionId": "1809063692218798099",
+          "content": "用于人体免疫接种的预防性生物制品",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704977743873",
+          "questionId": "1809063692218798099",
+          "content": "含有火活或减毒的病原体",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704981938178",
+          "questionId": "1809063692218798099",
+          "content": "本质是让人体产生主动免疫",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704986132481",
+          "questionId": "1809063692218798099",
+          "content": "不属于药品",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692218798100",
+      "type": 1,
+      "level": 2,
+      "content": "接种免疫规划疫苗所需的补偿费用，由（）承担？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704990326785",
+          "questionId": "1809063692218798100",
+          "content": "上市许可持有人",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704994521089",
+          "questionId": "1809063692218798100",
+          "content": "县级人民政府",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704998715393",
+          "questionId": "1809063692218798100",
+          "content": "市级人民政府",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705002909698",
+          "questionId": "1809063692218798100",
+          "content": "省、自治区、直辖市人民政府",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692218798101",
+      "type": 1,
+      "level": 2,
+      "content": "承担预防接种工作的医疗卫生机构/接种单位由哪个部门指定()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705011298306",
+          "questionId": "1809063692218798101",
+          "content": "市级以上人民政府卫生主管部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705015492609",
+          "questionId": "1809063692218798101",
+          "content": "市级以上疾病预防控制机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705019686913",
+          "questionId": "1809063692218798101",
+          "content": "县级以上人民政府卫生主管部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705023881218",
+          "questionId": "1809063692218798101",
+          "content": "县级以上疾病预防控制机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992384",
+      "type": 1,
+      "level": 2,
+      "content": "下列关于接种单位的说法错误的是()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705028075521",
+          "questionId": "1809063692222992384",
+          "content": "接种单位应具有经过县级人民政府卫生主管部门组织的预防接种专业培训并考核合格的执业医师、执业助理医师、护士或者乡村医生。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705032269825",
+          "questionId": "1809063692222992384",
+          "content": "接种单位应具有符合疫苗储存、运输管理规范的冷藏设施、设备和冷藏保管制度。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705036464130",
+          "questionId": "1809063692222992384",
+          "content": "接种单位应当承担责任区域内的预防接种工作，并接受所在地的县级疾病预防控制机构的技术指导。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705040658434",
+          "questionId": "1809063692222992384",
+          "content": "县级疾病预防控制机构应当根据预防接种工作的需要，制定制定本行政区域免疫规划疫苗使用计划，并只需要向市级疾病预防控制机构报告。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992385",
+      "type": 1,
+      "level": 2,
+      "content": "疫苗质量和流通的监督管理工作由负责()。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705044852738",
+          "questionId": "1809063692222992385",
+          "content": "卫生行政部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705049047041",
+          "questionId": "1809063692222992385",
+          "content": "药品监督管理部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705053241345",
+          "questionId": "1809063692222992385",
+          "content": "各级疾控机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705057435649",
+          "questionId": "1809063692222992385",
+          "content": "卫生行政部门和药品监督管理部门共同负责",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992386",
+      "type": 1,
+      "level": 2,
+      "content": "《疫苗管理法》规定，医疗卫生机构是否可以向接种单位以外的其他单位或者个人分发免疫规划疫苗()。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705061629954",
+          "questionId": "1809063692222992386",
+          "content": "可以",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705065824258",
+          "questionId": "1809063692222992386",
+          "content": "不可以",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992387",
+      "type": 1,
+      "level": 2,
+      "content": "预防接种单位由()指定并明确其责任区域",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705070018561",
+          "questionId": "1809063692222992387",
+          "content": "省级以上人民政府卫生主管部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705074212865",
+          "questionId": "1809063692222992387",
+          "content": "市级以上人民政府卫生主管部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705078407169",
+          "questionId": "1809063692222992387",
+          "content": "县级以上地方人民政府卫生主管部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705082601473",
+          "questionId": "1809063692222992387",
+          "content": "县级以上疾病预防控制机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992388",
+      "type": 1,
+      "level": 2,
+      "content": "因预防接种导致受种者死亡、严重残疾，或者群体性疑似预防接种异常反应等对社会有重大影响的疑似预防接种异常反应，由（）按照职责组织调查、处理。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705086795778",
+          "questionId": "1809063692222992388",
+          "content": "设区的市级以上人民政府卫生健康主管部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705090990081",
+          "questionId": "1809063692222992388",
+          "content": "设区的市级以上药品监督管理部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705095184386",
+          "questionId": "1809063692222992388",
+          "content": "县级以上地方人民政府卫生主管部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705099378689",
+          "questionId": "1809063692222992388",
+          "content": "县级以上地方药品监督管理部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992389",
+      "type": 1,
+      "level": 2,
+      "content": "医疗卫生人员应当按照国务院卫生健康主管部门的规定，保存接种记录应当至疫苗有效期满后不少于（）备查。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705103572993",
+          "questionId": "1809063692222992389",
+          "content": "两年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705107767297",
+          "questionId": "1809063692222992389",
+          "content": "三年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705111961601",
+          "questionId": "1809063692222992389",
+          "content": "四年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705116155906",
+          "questionId": "1809063692222992389",
+          "content": "五年",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992390",
+      "type": 1,
+      "level": 2,
+      "content": "生产、销售假药的，不包括哪项处罚：（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705120350209",
+          "questionId": "1809063692222992390",
+          "content": "没收违法生产、销售的药品和违法所得",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705124544513",
+          "questionId": "1809063692222992390",
+          "content": "责令停产停业整顿",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705132933121",
+          "questionId": "1809063692222992390",
+          "content": "吊销药品批准证明文件",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705137127426",
+          "questionId": "1809063692222992390",
+          "content": "违法生产、销售的药品货值金额十倍以上十五倍以下的罚款",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992391",
+      "type": 2,
+      "level": 2,
+      "content": "医疗卫生人员实施接种，应当告知的对象和内容包括（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705141321729",
+          "questionId": "1809063692222992391",
+          "content": "受种者监护人",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705145516034",
+          "questionId": "1809063692222992391",
+          "content": "受种者",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705149710337",
+          "questionId": "1809063692222992391",
+          "content": "接种疫苗的品种、作用、禁忌、不良反应",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705153904641",
+          "questionId": "1809063692222992391",
+          "content": "接种疫苗的现场留观等注意事项",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992392",
+      "type": 2,
+      "level": 2,
+      "content": "依照2019年修订的《药品管理法》，下列哪些情形为假药：（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705158098945",
+          "questionId": "1809063692222992392",
+          "content": "药品所含成份与国家药品标准规定的成份不符的",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705162293250",
+          "questionId": "1809063692222992392",
+          "content": "以非药品冒充药品或者以他种药品冒充此种药品的",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705166487553",
+          "questionId": "1809063692222992392",
+          "content": "被污染的药品",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705174876162",
+          "questionId": "1809063692222992392",
+          "content": "变质的药品",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992393",
+      "type": 2,
+      "level": 2,
+      "content": "依照2019年修订的《药品管理法》，下列哪些情形为劣药：（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705179070466",
+          "questionId": "1809063692222992393",
+          "content": "未标明有效期或者更改有效期的",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705183264769",
+          "questionId": "1809063692222992393",
+          "content": "不注明或者更改生产批号的",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705187459073",
+          "questionId": "1809063692222992393",
+          "content": "超过有效期的",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705191653378",
+          "questionId": "1809063692222992393",
+          "content": "直接接触药品的包装材料和容器未经批准的",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992394",
+      "type": 2,
+      "level": 2,
+      "content": "疾病预防控制机构、接种单位接收或者购进疫苗时，对不能提供本次运输、储存全过程温度监测记录或者温度控制不符合要求的，不得接收或者购进，并应当立即向哪个部门报告()。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705195847681",
+          "questionId": "1809063692222992394",
+          "content": "县级疾控机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705200041986",
+          "questionId": "1809063692222992394",
+          "content": "县级以上地方人民政府药品监督管理部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705204236289",
+          "questionId": "1809063692222992394",
+          "content": "县级以上地方人民政府卫生主管部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705208430594",
+          "questionId": "1809063692222992394",
+          "content": "县级以上地方人民政府环保部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992395",
+      "type": 2,
+      "level": 2,
+      "content": "<p>以下哪些情形应当查验预防接种证</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:47:52",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816032536351043585",
+          "questionId": "1809063692222992395",
+          "content": "儿童入托的托幼机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816032536376209410",
+          "questionId": "1809063692222992395",
+          "content": "儿童入学的学校",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816032536376209411",
+          "questionId": "1809063692222992395",
+          "content": "儿童进入医疗机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816032536384598017",
+          "questionId": "1809063692222992395",
+          "content": "儿童办理住院手续",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992405",
+      "type": 1,
+      "level": 2,
+      "content": "免疫系统是指:()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705376202754",
+          "questionId": "1809063692222992405",
+          "content": "中枢免疫器官和外周免疫器官",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705380397057",
+          "questionId": "1809063692222992405",
+          "content": "免疫器官和免疫细胞",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705384591361",
+          "questionId": "1809063692222992405",
+          "content": "免疫细胞和免疫分子",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705392979970",
+          "questionId": "1809063692222992405",
+          "content": "免疫器官，免疫细胞和免疫分子",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705397174273",
+          "questionId": "1809063692222992405",
+          "content": "细胞因子",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692222992406",
+      "type": 1,
+      "level": 2,
+      "content": "非特异性免疫是:（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705401368578",
+          "questionId": "1809063692222992406",
+          "content": "感染后机体产生的非特异性免疫力",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705405562882",
+          "questionId": "1809063692222992406",
+          "content": "由于感染而不断加强的免疫力",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705409757185",
+          "questionId": "1809063692222992406",
+          "content": "种系进化过程中形成的免疫力",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705413951490",
+          "questionId": "1809063692222992406",
+          "content": "胎儿从母体获得免疫力",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705418145793",
+          "questionId": "1809063692222992406",
+          "content": "以上都不对",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186688",
+      "type": 1,
+      "level": 2,
+      "content": "免疫细胞产生、发育、分化成熟的场所是：（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705422340098",
+          "questionId": "1809063692227186688",
+          "content": "胸腺",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705426534402",
+          "questionId": "1809063692227186688",
+          "content": "淋巴结",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705430728705",
+          "questionId": "1809063692227186688",
+          "content": "脾",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705434923009",
+          "questionId": "1809063692227186688",
+          "content": "骨髓和胸腺",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705439117313",
+          "questionId": "1809063692227186688",
+          "content": "淋巴结和脾脏",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186689",
+      "type": 1,
+      "level": 2,
+      "content": "关于佐剂表述正确的是：（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705447505921",
+          "questionId": "1809063692227186689",
+          "content": "所有疫苗均有佐剂",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705451700225",
+          "questionId": "1809063692227186689",
+          "content": "佐剂可分为无机佐剂、有机佐剂和复合佐剂等",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705455894530",
+          "questionId": "1809063692227186689",
+          "content": "针对统一病原体的疫苗使用的佐剂是一样的",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705460088833",
+          "questionId": "1809063692227186689",
+          "content": "以上都正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186690",
+      "type": 1,
+      "level": 2,
+      "content": "下列那个疫苗不属于减毒活疫苗？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705464283138",
+          "questionId": "1809063692227186690",
+          "content": "伤寒疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705468477441",
+          "questionId": "1809063692227186690",
+          "content": "卡介苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705472671745",
+          "questionId": "1809063692227186690",
+          "content": "麻腮风疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705476866049",
+          "questionId": "1809063692227186690",
+          "content": "脊髓灰质炎糖丸疫苗",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705489448962",
+          "questionId": "1809063692227186690",
+          "content": "无细胞百白破疫苗",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186691",
+      "type": 1,
+      "level": 2,
+      "content": "对灭活疫苗叙述有误的是：（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705489448963",
+          "questionId": "1809063692227186691",
+          "content": "用病原体灭活制成",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705493643265",
+          "questionId": "1809063692227186691",
+          "content": "需多次免疫",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705497837570",
+          "questionId": "1809063692227186691",
+          "content": "免疫原性弱",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705502031874",
+          "questionId": "1809063692227186691",
+          "content": "有毒性逆转风险",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705506226177",
+          "questionId": "1809063692227186691",
+          "content": "稳定性好",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186692",
+      "type": 2,
+      "level": 2,
+      "content": "机体的免疫功能主要包括：（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705510420481",
+          "questionId": "1809063692227186692",
+          "content": "免疫防御",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705514614786",
+          "questionId": "1809063692227186692",
+          "content": "免疫稳定",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705523003394",
+          "questionId": "1809063692227186692",
+          "content": "免疫监视",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705527197697",
+          "questionId": "1809063692227186692",
+          "content": "免疫抑制",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186693",
+      "type": 2,
+      "level": 2,
+      "content": "以下描述中，哪项属于疫苗接种的例子？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705531392001",
+          "questionId": "1809063692227186693",
+          "content": "给一个人接种牛痘预防天花",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705535586306",
+          "questionId": "1809063692227186693",
+          "content": "取白喉毒素致敏的动物的血清，注射给感染白喉毒素的患者，从而防止白喉毒素的有害影响",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705539780609",
+          "questionId": "1809063692227186693",
+          "content": "细菌感染引起的补体激活和病原破坏",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705543974914",
+          "questionId": "1809063692227186693",
+          "content": "一个曾经感染水痘病毒的人，由于产生了对水痘病毒的免疫记忆不会再次发生水痘",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186694",
+      "type": 2,
+      "level": 2,
+      "content": "以下哪项是对免疫记忆的恰当的定义？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705548169217",
+          "questionId": "1809063692227186694",
+          "content": "一种防止个体针对其自身组织产生免疫应答的机制",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705552363521",
+          "questionId": "1809063692227186694",
+          "content": "一种防止个体接触到微生物的机制",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705556557826",
+          "questionId": "1809063692227186694",
+          "content": "个体在经过初次感染清除病原后，识别该病原的淋巴细胞，以及针对该病原的特异性抗体仍然持续存在，从而对二次感染起预防作用",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705564946434",
+          "questionId": "1809063692227186694",
+          "content": "抑制或者清除病原的过程\t",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186695",
+      "type": 2,
+      "level": 2,
+      "content": "影响疫苗免疫效果的因素有哪些？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705569140737",
+          "questionId": "1809063692227186695",
+          "content": "病原体",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705573335042",
+          "questionId": "1809063692227186695",
+          "content": "疫苗种类、疫苗质量及免疫程序",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705577529346",
+          "questionId": "1809063692227186695",
+          "content": "宿主的年龄及身体状态",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705581723649",
+          "questionId": "1809063692227186695",
+          "content": "公众沟通及疫苗犹豫",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186696",
+      "type": 3,
+      "level": 2,
+      "content": "巨噬细胞分布于皮肤、消化道、呼吸道等很多上皮组织及淋巴器官内，具有强大的吞噬、呈递抗原功能。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705585917954",
+          "questionId": "1809063692227186696",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705590112257",
+          "questionId": "1809063692227186696",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186697",
+      "type": 3,
+      "level": 2,
+      "content": "抗原是一种免疫活性物质，能随血液循环和淋巴循环到达身体的各个部位。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705594306561",
+          "questionId": "1809063692227186697",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705598500866",
+          "questionId": "1809063692227186697",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186698",
+      "type": 3,
+      "level": 2,
+      "content": "适应性免疫系统包括体液免疫和细胞免疫。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705602695170",
+          "questionId": "1809063692227186698",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705606889473",
+          "questionId": "1809063692227186698",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186699",
+      "type": 3,
+      "level": 2,
+      "content": "佐剂是一种非特异性免疫增强剂，预先或同抗原一齐注射到机体，能增强对该抗原的免疫应答或改变免疫应答的类型。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705611083777",
+          "questionId": "1809063692227186699",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705615278081",
+          "questionId": "1809063692227186699",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186700",
+      "type": 3,
+      "level": 2,
+      "content": "序贯免疫是指既通过自然感染又通过接种疫苗获得了免疫。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705619472385",
+          "questionId": "1809063692227186700",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705627860993",
+          "questionId": "1809063692227186700",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186701",
+      "type": 3,
+      "level": 2,
+      "content": "疾病预防控制机构、接种单位应当依法如实记录疫苗的流通、预防接种等情况，并按照规定向全国疫苗电子追溯协同平台提供追溯信息。()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705632055298",
+          "questionId": "1809063692227186701",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705636249602",
+          "questionId": "1809063692227186701",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186702",
+      "type": 3,
+      "level": 2,
+      "content": "国务院卫生健康主管部门制定统一的疫苗追溯标准和规范，建立全国疫苗电子追溯协同平台，整合疫苗生产、流通、使用等全过程追溯信息，实现疫苗可追溯。()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "国务院药品监督管理部门",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705640443906",
+          "questionId": "1809063692227186702",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705644638210",
+          "questionId": "1809063692227186702",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186703",
+      "type": 3,
+      "level": 2,
+      "content": "疾控机构、接种单位未按照规定提供追溯信息，对主要负责人、直接负责的主管人员和其他直接责任人员依法给予警告直至撤职处分，责令负有责任的医疗卫生人员暂停二年执业活动()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "暂停六个月以上一年以下执业活动",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705648832514",
+          "questionId": "1809063692227186703",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705653026817",
+          "questionId": "1809063692227186703",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186704",
+      "type": 3,
+      "level": 2,
+      "content": "免疫规划信息系统建设目标是落实《疫苗管理法》全程电子追溯要求，实现疫苗来源可查、去向可追()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705657221122",
+          "questionId": "1809063692227186704",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705661415426",
+          "questionId": "1809063692227186704",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186705",
+      "type": 3,
+      "level": 2,
+      "content": "受种者预防接种信息应在实际接种完成后48小时内，上传国家免疫规划信息系统()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "24小时内",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705669804033",
+          "questionId": "1809063692227186705",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705673998338",
+          "questionId": "1809063692227186705",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186706",
+      "type": 2,
+      "level": 2,
+      "content": "疾控机构要在提高信息化和大数据应用等哪几个方面做好能力建设。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705678192642",
+          "questionId": "1809063692227186706",
+          "content": "创新服务模式，拓展免疫规划信息化涵盖内容;",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705682386946",
+          "questionId": "1809063692227186706",
+          "content": "加强预防接种数字化服务标准和规范建设",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705686581250",
+          "questionId": "1809063692227186706",
+          "content": "加强疫苗和冷链设备数字化管理;",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705690775553",
+          "questionId": "1809063692227186706",
+          "content": "开展精准预约、接种提醒、科普教育等智慧化服务",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705694969858",
+          "questionId": "1809063692227186706",
+          "content": "构建基于免疫规划信息系统个案的接种率监测、评价和反馈机制。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186707",
+      "type": 3,
+      "level": 2,
+      "content": "全国免疫规划信息系统规划为分级建设，国家和省两级平台，统一标准，实现接种信息跨地区交换共享和对疫苗流通和预防接种全过程实行电子化管理()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705699164161",
+          "questionId": "1809063692227186707",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705703358465",
+          "questionId": "1809063692227186707",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186708",
+      "type": 3,
+      "level": 2,
+      "content": "国家免疫规划疫苗接种率和非免疫规划疫苗接种数的报告应遵循“谁接种、谁统计、谁报告”的原则。()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705707552769",
+          "questionId": "1809063692227186708",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705711747073",
+          "questionId": "1809063692227186708",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186709",
+      "type": 3,
+      "level": 2,
+      "content": "接种单位在每月10日前，统计本单位上月疫苗接种情况，填写“国家免疫规划疫苗接种率月报表”和“非免疫规划疫苗接种数月报表”，通过免疫规划信息系统进行报告。()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "每月5日前",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705720135681",
+          "questionId": "1809063692227186709",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705724329985",
+          "questionId": "1809063692227186709",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186710",
+      "type": 3,
+      "level": 2,
+      "content": "国家免疫规划疫苗接种率统计对象为接种单位辖区内0～7岁儿童，以及补种国家免疫规划疫苗的小于18周岁人群。()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "0～6岁儿童",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705728524290",
+          "questionId": "1809063692227186710",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705732718593",
+          "questionId": "1809063692227186710",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692227186711",
+      "type": 3,
+      "level": 2,
+      "content": "在接种单位辖区居住≥6个月的适龄儿童，均应纳入该接种单位接种率统计。()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "≥3个月儿童",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705736912898",
+          "questionId": "1809063692227186711",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705741107202",
+          "questionId": "1809063692227186711",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692231380992",
+      "type": 3,
+      "level": 2,
+      "content": "接种率统计适用于国家免疫规划疫苗和补充免疫疫苗接种剂次。()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "不包括补充免疫接种剂次",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705745301505",
+          "questionId": "1809063692231380992",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705749495809",
+          "questionId": "1809063692231380992",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692231380993",
+      "type": 2,
+      "level": 2,
+      "content": "免疫规划必须具备的要素包括：()",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705753690113",
+          "questionId": "1809063692231380993",
+          "content": "控制乃至消灭针对传染病的目标",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705757884417",
+          "questionId": "1809063692231380993",
+          "content": "科学的免疫策略和技术措施、",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705766273026",
+          "questionId": "1809063692231380993",
+          "content": "有效的组织实施系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705770467330",
+          "questionId": "1809063692231380993",
+          "content": "高水平的接种率和免疫成功率",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705774661634",
+          "questionId": "1809063692231380993",
+          "content": "有效的接种率和针对疾病监测系统。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692231380994",
+      "type": 3,
+      "level": 2,
+      "content": "有接种禁忌适龄儿童原则上不纳入国家免疫规划疫苗接种率应种人数统计。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "纳入统计",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705783050242",
+          "questionId": "1809063692231380994",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705787244545",
+          "questionId": "1809063692231380994",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692231380995",
+      "type": 3,
+      "level": 2,
+      "content": "国家免疫规划疫苗出生队列接种率统计遵循“谁接种、谁统计”的原则。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "遵循谁管理谁统计原则",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705791438850",
+          "questionId": "1809063692231380995",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705795633154",
+          "questionId": "1809063692231380995",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692231380996",
+      "type": 3,
+      "level": 2,
+      "content": "通常采用组群抽样法评价乡镇接种率＞90%的目标完成情况。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "采用批质量保证抽样方法",
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063705799827457",
+          "questionId": "1809063692231380996",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063705804021761",
+          "questionId": "1809063692231380996",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817060859806003201",
+      "type": 1,
+      "level": 2,
+      "content": "<p>&ldquo;计划免疫&rdquo;在我国是哪一年提出的？</p>",
+      "createTime": "2024-07-27 12:54:03",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817060859864723457",
+          "questionId": "1817060859806003201",
+          "content": "1950年  ",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817060859885694977",
+          "questionId": "1817060859806003201",
+          "content": "1978年",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817060859889889282",
+          "questionId": "1817060859806003201",
+          "content": "2000年",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817060859894083585",
+          "questionId": "1817060859806003201",
+          "content": "1976年",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817061112546373633",
+      "type": 1,
+      "level": 2,
+      "content": "<p>建国后，我国群众普遍接种哪个疫苗？</p>",
+      "createTime": "2024-07-27 12:55:03",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817061112600899586",
+          "questionId": "1817061112546373633",
+          "content": "卡介苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817061112621871105",
+          "questionId": "1817061112546373633",
+          "content": "霍乱疫苗 ",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817061112626065410",
+          "questionId": "1817061112546373633",
+          "content": "天花疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817061112630259714",
+          "questionId": "1817061112546373633",
+          "content": "狂犬疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817061677099692033",
+      "type": 1,
+      "level": 2,
+      "content": "<p>国务院哪年颁布了《疫苗流通和预防接种管理条例》？</p>",
+      "createTime": "2024-07-27 12:57:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817061677150023681",
+          "questionId": "1817061677099692033",
+          "content": "2019年",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817061677166800897",
+          "questionId": "1817061677099692033",
+          "content": "2000年",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817061677175189506",
+          "questionId": "1817061677099692033",
+          "content": "2005年",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817061677179383809",
+          "questionId": "1817061677099692033",
+          "content": "2007年",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817061878875074562",
+      "type": 1,
+      "level": 2,
+      "content": "<p>2002年，我国将哪个疫苗纳入计划免疫？</p>",
+      "createTime": "2024-07-27 12:58:06",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817061878929600514",
+          "questionId": "1817061878875074562",
+          "content": "甲肝疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817061878942183425",
+          "questionId": "1817061878875074562",
+          "content": "乙脑疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817061878950572034",
+          "questionId": "1817061878875074562",
+          "content": "流脑疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817061878950572035",
+          "questionId": "1817061878875074562",
+          "content": "乙肝疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817062062023553026",
+      "type": 1,
+      "level": 2,
+      "content": "<p>我国第一个基因工程疫苗是哪个疫苗？</p>",
+      "createTime": "2024-07-27 12:58:50",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817062062069690369",
+          "questionId": "1817062062023553026",
+          "content": "麻疹疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817062062086467585",
+          "questionId": "1817062062023553026",
+          "content": "乙肝疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817062062090661890",
+          "questionId": "1817062062023553026",
+          "content": "脊灰疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817062062094856194",
+          "questionId": "1817062062023553026",
+          "content": "百白破疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817062234912763906",
+      "type": 1,
+      "level": 2,
+      "content": "<p>下列哪一类疫苗通常不适用于免疫缺陷人群？</p>",
+      "createTime": "2024-07-27 12:59:31",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817062234963095554",
+          "questionId": "1817062234912763906",
+          "content": "减毒活疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817062234979872769",
+          "questionId": "1817062234912763906",
+          "content": "灭活疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817062234984067073",
+          "questionId": "1817062234912763906",
+          "content": "重组亚单位疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817062234988261378",
+          "questionId": "1817062234912763906",
+          "content": "重组病毒样颗粒疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817062393688141825",
+      "type": 1,
+      "level": 2,
+      "content": "<p>下列哪一种疫苗接种后可诱导机体产生粘膜IgA抗体？</p>",
+      "createTime": "2024-07-27 13:00:09",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817062393738473473",
+          "questionId": "1817062393688141825",
+          "content": "麻疹减毒活疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817062393751056385",
+          "questionId": "1817062393688141825",
+          "content": "甲肝减毒活疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817062393763639297",
+          "questionId": "1817062393688141825",
+          "content": "脊灰减毒活疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817062393767833602",
+          "questionId": "1817062393688141825",
+          "content": "脊灰灭活疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817062591751565314",
+      "type": 1,
+      "level": 2,
+      "content": "<p>中国所在的WHO西太区哪一年实现无脊髓灰质炎目标</p>",
+      "createTime": "2024-07-27 13:00:56",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817062591801896961",
+          "questionId": "1817062591751565314",
+          "content": "1978年",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817062591814479874",
+          "questionId": "1817062591751565314",
+          "content": "1994年",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817062591818674178",
+          "questionId": "1817062591751565314",
+          "content": "2000年",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817062591822868482",
+          "questionId": "1817062591751565314",
+          "content": "2010年",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817062936577880066",
+      "type": 2,
+      "level": 2,
+      "content": "<p>根据《中华人民共和国疫苗管理法》相关规定，下列哪些说法是正确的</p>",
+      "createTime": "2024-07-27 13:02:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817062936628211713",
+          "questionId": "1817062936577880066",
+          "content": "国家坚持疫苗产品的战略性和公益性",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817062936644988929",
+          "questionId": "1817062936577880066",
+          "content": "国家实行免疫规划制度",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817062936649183234",
+          "questionId": "1817062936577880066",
+          "content": "国家实行疫苗全程电子追溯制度",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817062936653377537",
+          "questionId": "1817062936577880066",
+          "content": "居住在中国境内的公民，依法享有接种免疫规划疫苗的权利",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817063115334922241",
+      "type": 2,
+      "level": 2,
+      "content": "<p>关于免疫规划疫苗，说法正确的是</p>",
+      "createTime": "2024-07-27 13:03:01",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817063115385253889",
+          "questionId": "1817063115334922241",
+          "content": "国家免疫规划疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817063115406225410",
+          "questionId": "1817063115334922241",
+          "content": "国产疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817063115410419713",
+          "questionId": "1817063115334922241",
+          "content": "省级人民政府增加的免疫规划疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817063115414614018",
+          "questionId": "1817063115334922241",
+          "content": "群体性预防接种疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817063287171362817",
+      "type": 2,
+      "level": 2,
+      "content": "<p>实现群体免疫的前提条件有哪些？</p>",
+      "createTime": "2024-07-27 13:03:42",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817063287221694466",
+          "questionId": "1817063287171362817",
+          "content": "自然感染或疫苗接种均可获得持久保护",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817063287242665985",
+          "questionId": "1817063287171362817",
+          "content": "疫苗接种或疫苗接种的保护作用可有效预防感染",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817063287246860290",
+          "questionId": "1817063287171362817",
+          "content": "乙脑疫苗纳入免疫规划实现了群体免疫",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817063287251054594",
+          "questionId": "1817063287171362817",
+          "content": "病原体仅在人间传播",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817063453181915138",
+      "type": 2,
+      "level": 2,
+      "content": "<p>目前国家免疫规划儿童用疫苗分别有哪些技术路线的疫苗？</p>",
+      "createTime": "2024-07-27 13:04:21",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817063453236441090",
+          "questionId": "1817063453181915138",
+          "content": "减毒活疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817063453249024002",
+          "questionId": "1817063453181915138",
+          "content": "灭活疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817063453253218305",
+          "questionId": "1817063453181915138",
+          "content": "基因重组疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817063453261606913",
+          "questionId": "1817063453181915138",
+          "content": "病毒载体疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817063618231971842",
+      "type": 2,
+      "level": 2,
+      "content": "<p>预防下列哪些疾病的疫苗已纳入我国国家免疫规划？</p>",
+      "createTime": "2024-07-27 13:05:01",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817063618286497793",
+          "questionId": "1817063618231971842",
+          "content": "水痘",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817063618303275010",
+          "questionId": "1817063618231971842",
+          "content": "乙肝",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1817063618307469313",
+          "questionId": "1817063618231971842",
+          "content": "麻疹",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1817063618311663617",
+          "questionId": "1817063618231971842",
+          "content": "乙脑",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818599343855267842",
+      "type": 1,
+      "level": 2,
+      "content": "<p>哪种疾病目前可以通过疫苗有效预防？</p>",
+      "createTime": "2024-07-31 18:47:26",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818599343976902657",
+          "questionId": "1818599343855267842",
+          "content": "糖尿病",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818599344002068481",
+          "questionId": "1818599343855267842",
+          "content": "流感",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818599344006262785",
+          "questionId": "1818599343855267842",
+          "content": "骨关节炎",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818599344010457089",
+          "questionId": "1818599343855267842",
+          "content": "高血压",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818599551867580418",
+      "type": 1,
+      "level": 2,
+      "content": "<p>下列哪种疫苗是针对麻疹的？</p>",
+      "createTime": "2024-07-31 18:48:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818599551930494977",
+          "questionId": "1818599551867580418",
+          "content": "HPV疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818599551955660802",
+          "questionId": "1818599551867580418",
+          "content": "流感疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818599551964049410",
+          "questionId": "1818599551867580418",
+          "content": "麻疹-腮腺炎-风疹(MMR)疫苗",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818599551968243714",
+          "questionId": "1818599551867580418",
+          "content": "肺炎球菌疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818599691714064386",
+      "type": 1,
+      "level": 2,
+      "content": "<p>在监测疫苗可预防疾病的流行趋势时，最常用的指标是什么？</p>",
+      "createTime": "2024-07-31 18:48:49",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818599691772784642",
+          "questionId": "1818599691714064386",
+          "content": "发病率",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818599691789561858",
+          "questionId": "1818599691714064386",
+          "content": "死亡率",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818599691793756161",
+          "questionId": "1818599691714064386",
+          "content": "接种率",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818599691797950465",
+          "questionId": "1818599691714064386",
+          "content": "康复率",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818599874988371970",
+      "type": 1,
+      "level": 2,
+      "content": "<p>疫苗接种的主要目的是：</p>",
+      "createTime": "2024-07-31 18:49:33",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818599875042897921",
+          "questionId": "1818599874988371970",
+          "content": "提高个人免疫力",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818599875059675138",
+          "questionId": "1818599874988371970",
+          "content": "减少社会医疗支出",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818599875063869442",
+          "questionId": "1818599874988371970",
+          "content": "控制疫苗可预防疾病的传播",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818599875072258050",
+          "questionId": "1818599874988371970",
+          "content": "促进经济发展",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818600109395439617",
+      "type": 1,
+      "level": 2,
+      "content": "<p>下列哪一种措施可以提高疫苗接种率？</p>",
+      "createTime": "2024-07-31 18:50:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818600109445771265",
+          "questionId": "1818600109395439617",
+          "content": "限制疫苗接种时间",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818600109462548482",
+          "questionId": "1818600109395439617",
+          "content": "提供便捷的接种服务",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818600109466742786",
+          "questionId": "1818600109395439617",
+          "content": "随意更改疫苗接种计划",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818600109470937090",
+          "questionId": "1818600109395439617",
+          "content": "增加疫苗费用",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818600262831468545",
+      "type": 2,
+      "level": 2,
+      "content": "<p>以下哪些疾病可以通过疫苗进行预防？</p>",
+      "createTime": "2024-07-31 18:51:05",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818600262881800193",
+          "questionId": "1818600262831468545",
+          "content": "麻疹",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818600262898577409",
+          "questionId": "1818600262831468545",
+          "content": "流行性乙型脑炎",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818600262902771714",
+          "questionId": "1818600262831468545",
+          "content": "乙型肝炎",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818600262906966017",
+          "questionId": "1818600262831468545",
+          "content": "HPV（人乳头状瘤病毒）感染",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818600439763988482",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在疫苗不良反应监测中，以下哪些措施是常见的？</p>",
+      "createTime": "2024-07-31 18:51:47",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818600439814320130",
+          "questionId": "1818600439763988482",
+          "content": "及时报告不良反应",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818600439826903041",
+          "questionId": "1818600439763988482",
+          "content": "进行接种后的随访",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818600439835291649",
+          "questionId": "1818600439763988482",
+          "content": "隐瞒不良反应以保护疫苗的形象",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818600439839485953",
+          "questionId": "1818600439763988482",
+          "content": "建立不良反应监测系统",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818600578708697089",
+      "type": 2,
+      "level": 2,
+      "content": "<p>以下哪些因素可能影响疫苗接种率？</p>",
+      "createTime": "2024-07-31 18:52:21",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818600578759028738",
+          "questionId": "1818600578708697089",
+          "content": "公众对疫苗的认知",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818600578775805953",
+          "questionId": "1818600578708697089",
+          "content": "接种服务的可及性",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818600578780000257",
+          "questionId": "1818600578708697089",
+          "content": "疫苗的价格",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818600578788388866",
+          "questionId": "1818600578708697089",
+          "content": "气候变化",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818600740222955521",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在疫苗提供的免疫保护中，以下哪些情况可以导致免疫失败？</p>",
+      "createTime": "2024-07-31 18:52:59",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818600740273287170",
+          "questionId": "1818600740222955521",
+          "content": "接种时间不当",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818600740290064385",
+          "questionId": "1818600740222955521",
+          "content": "疫苗储存不当",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818600740294258690",
+          "questionId": "1818600740222955521",
+          "content": "个体免疫系统状况差",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818600740298452994",
+          "questionId": "1818600740222955521",
+          "content": "疫苗成分的改变",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818600890580365313",
+      "type": 2,
+      "level": 2,
+      "content": "<p>疫苗接种的优势包括哪些？</p>",
+      "createTime": "2024-07-31 18:53:35",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818600890634891266",
+          "questionId": "1818600890580365313",
+          "content": "降低传播疾病的风险",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818600890651668481",
+          "questionId": "1818600890580365313",
+          "content": "产生群体免疫",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818600890655862786",
+          "questionId": "1818600890580365313",
+          "content": "促进国际旅行",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818600890660057089",
+          "questionId": "1818600890580365313",
+          "content": "提高社会经济效益",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818600994930454530",
+      "type": 3,
+      "level": 2,
+      "content": "<p>疫苗接种可以有效预防部分传染病的传播。</p>",
+      "createTime": "2024-07-31 18:54:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818600994980786177",
+          "questionId": "1818600994930454530",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818600994997563394",
+          "questionId": "1818600994930454530",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818601053885591553",
+      "type": 3,
+      "level": 2,
+      "content": "<p>所有人都应该在相同的时间接种所有疫苗。</p>",
+      "createTime": "2024-07-31 18:54:14",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818601053935923202",
+          "questionId": "1818601053885591553",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818601053952700418",
+          "questionId": "1818601053885591553",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818601111368527874",
+      "type": 3,
+      "level": 2,
+      "content": "<p>接种疫苗后，如果出现不良反应，应立即停止所有疫苗的接种。</p>",
+      "createTime": "2024-07-31 18:54:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818601111418859522",
+          "questionId": "1818601111368527874",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818601111435636738",
+          "questionId": "1818601111368527874",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818601174081761282",
+      "type": 3,
+      "level": 2,
+      "content": "<p>自然感染的免疫力通常比通过疫苗获得的免疫力更强。</p>",
+      "createTime": "2024-07-31 18:54:43",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807276215158038529",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818601174136287233",
+          "questionId": "1818601174081761282",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818601174153064450",
+          "questionId": "1818601174081761282",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    }
+  ],
+  "total": 136,
+  "size": 500,
+  "current": 1,
+  "orders": [],
+  "optimizeCountSql": true,
+  "searchCount": true,
+  "maxLimit": null,
+  "countId": null,
+  "pages": 1
+}

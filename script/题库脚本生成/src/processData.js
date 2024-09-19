@@ -27,11 +27,10 @@ async function processFiles() {
         const jsonData = JSON.parse(data)
 
         // 解析数据
-        jsonData.userExamQuestionList.forEach((item) => {
-          const question = item.question
+        jsonData.records.forEach((question) => {
 
           // 移除 HTML 标签，提取题目内容
-          const questionText = question.content.replace(/<\/?[^>]+(>|$)/g, "")
+          const questionText = question.content.replace(/<\/?[^>]+(>|$)/g, "").trim()
 
           // 确定题目类型
           //   let questionType;
@@ -49,19 +48,23 @@ async function processFiles() {
           // 提取选项
           let options = []
           if (question.answerList) {
-            options = question.answerList.map((option) => option.content)
+            options = question.answerList.map((option) => option.content.trim())
           }
 
           // 提取正确答案
-          const correctAnswer = question.answerList.filter((option) => option.isRight).map(item=>item.content)
+          const correctAnswer = question.answerList.filter((option) => option.isRight).map((item) => item.content.trim())
 
           // 将解析后的数据推入到 parsedData 数组中
-          parsedData.push({
-            question: questionText,
-            type: item.questionTypeName,
-            options: options, // 如果不是选择题，数组为空
-            answer: item.questionTypeName === "填空题" ? options : correctAnswer,
-          })
+          const hasData = parsedData.some(
+            (item) => item.question === questionText && item.options.every((item1) => options.includes(item1))
+          )
+          !hasData &&
+            parsedData.push({
+              question: questionText,
+              type: question.type_dictText,
+              options: options, // 如果不是选择题，数组为空
+              answer: question.type_dictText === "填空题" ? options : correctAnswer,
+            })
         })
 
         console.log(`处理完文件：${file}`)
@@ -73,7 +76,7 @@ async function processFiles() {
     // 所有文件处理完成后，将数据写入新的 result.json 文件
     const outputJsonFilePath = path.join(__dirname, `data/db.json`)
     await fs.writeFile(outputJsonFilePath, JSON.stringify(parsedData, null, 2), "utf8")
-    console.log('%c parsedData => ', 'font-size:13px; background:#baccd9; color:#000;', parsedData.length)
+    console.log("%c parsedData => ", "font-size:13px; background:#baccd9; color:#000;", parsedData.length)
     console.log(`Json 解析后的数据已成功写入 ${outputJsonFilePath}`)
     const jsonContent = JSON.stringify(parsedData)
     const compressData = pako.gzip(jsonContent)
