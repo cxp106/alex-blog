@@ -12,6 +12,8 @@
 // @grant        GM_setClipboard
 // @grant        GM_setValue
 // @grant        GM_getValue
+// @updateURL    https://cxp.netlify.app/script/ConvertWebPageToMarkdown.user.js
+// @downloadURL  https://cxp.netlify.app/script/ConvertWebPageToMarkdown.user.js
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // @require      https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js
 // @require      https://unpkg.com/turndown/dist/turndown.js
