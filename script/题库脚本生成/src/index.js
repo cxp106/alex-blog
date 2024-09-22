@@ -77,7 +77,6 @@ function selectAnswers(_, observer) {
     console.log("%c correctAnswers => ", "font-size:13px; background:#baccd9; color:#000;", correctAnswers)
 
     if (correctAnswers.length > 0) {
-      observer?.disconnect()
       // 找到对应的 qu-answer 容器
       const answerContainer = document.querySelector(".qu-answer")
       console.log("%c answerContainer => ", "font-size:13px; background:#baccd9; color:#000;", answerContainer)
@@ -156,6 +155,8 @@ let mainListTotal = localStorage.getItem("mainListTotal") || 0
 let currentStudy = null
 let videoList = []
 let errorExam = null
+let nowExam = null
+let examAnswers = []
 let nowStudy = ""
 
 ;(function () {
@@ -202,15 +203,15 @@ let nowStudy = ""
       //   let data = JSON.parse(body)
 
       //   // 修改 viewProcess 字段
-      //   if (data.repositoryId !== undefined) {
-      //     data.pageSize = 500
-      //   }
+      //   if (data.examAnswers !== undefined) {
+      //     data.examAnswers = examAnswers
 
-      //   // 重新序列化数据
-      //   body = JSON.stringify(data)
+      //     // 重新序列化数据
+      //     body = JSON.stringify(data)
+      //     // 调用原始的 send 方法
+      //     return originalSend.call(this, body)
+      //   }
       // }
-      // // 调用原始的 send 方法
-      // return originalSend.call(this, body)
 
       this.addEventListener("load", function () {
         console.log("XHR 响应：", {
@@ -234,6 +235,8 @@ let nowStudy = ""
         } else if (this.responseURL.includes("exam-boot/course/getCourseStudyDetail")) {
           console.log("%c currentStudy => ", "font-size:13px; background:#baccd9; color:#000;", JSON.parse(this.response))
           currentStudy = JSON.parse(this.response).result
+        } else if (this.responseURL.includes("exam/examDetail")) {
+          nowExam = JSON.parse(this.response).result
         } else if (this.responseURL.includes("userExamResultDetail")) {
           console.log("%c errorExam => ", "font-size:13px; background:#baccd9; color:#000;", JSON.parse(this.response).result)
           errorExam = JSON.parse(this.response).result
@@ -435,9 +438,9 @@ setInterval(() => {
           video.currentTime = video.duration
           clearInterval(fastForwardInterval)
         }
-        // if (video.duration) {
-        //   video.currentTime = video.duration - 1
-        // }
+        if (video.duration) {
+          video.currentTime = video.duration - 1
+        }
       }, 1000)
 
       function nextVideo() {
@@ -464,7 +467,7 @@ setInterval(() => {
       throttle(() => {
         // 收集数据专用
         if (!noError) {
-          download(errorExam)
+          // download(errorExam)
           console.log("%c  => ", "font-size:13px; background:#baccd9; color:#000;")
           // const error = (JSON.parse(localStorage.getItem("errorStudys")) || []).push(nowStudy)
           // localStorage.setItem("errorStudys", JSON.stringify(error))
@@ -499,17 +502,54 @@ setInterval(() => {
     //   // jumpCourseDetails(mainList[0])
     // }
   } else if (currentPage.includes("exam/onlineExam")) {
+    console.log("%c nowExam => ", "font-size:13px; background:#baccd9; color:#000;", nowExam)
+    const num = document.querySelector(".qu-item .num")
+    if (nowExam && num) {
+      const index = +num?.innerText.trim() - 1
+      // examAnswers = []
+      const now = nowExam.userExamQuestionList[index]
+      console.log("%c nowExam.userExamQuestionList => ", "font-size:13px; background:#baccd9; color:#000;", nowExam.userExamQuestionList)
+      const result = search(now.questionId)
+      const answerList = now.question.answerList.filter((qus) => result[0].item.answerId.includes(qus.id))
+      const answerIndex = []
+      answerList.forEach((ans) => {
+        answerIndex.push(ans.sort - 1)
+      })
+      console.log("%c answerIndex => ", "font-size:13px; background:#baccd9; color:#000;", answerIndex)
+      ;[...document.querySelectorAll(".qu-answer .item")].forEach((item, index) => {
+        if (result[0].item.type === "填空题") {
+          const input = item.querySelector("input")
+          input.focus()
+          input.value = result[0].item.answer[index]
+          const event = new Event("change", { bubbles: true })
+          input.dispatchEvent(event)
+          input.blur()
+        } else {
+          if (answerIndex.includes(index) && !item.classList.contains("active")) {
+            item.click()
+          }
+          if (!answerIndex.includes(index) && item.classList.contains("active")) {
+            item.click()
+          }
+        }
+      })
+      if ([...document.querySelectorAll(".qu-answer .active")].length === answerIndex.length) {
+        document.querySelector(".ant-btn.ant-btn-warning")?.click()
+      }
+    }
+
     // if (++examTime === 60) {
     //   location.reload() // 刷新页面
     // }
-    selectAnswers()
-    const itemList = document.querySelectorAll(".qu-answer .item")
-    const activeList = itemList && [...itemList]?.filter((item) => item.classList.contains("active") || item.querySelector("input")?.value)
-    if (activeList.length && activeList.length === resultCount) {
-      document.querySelector(".ant-btn.ant-btn-warning")?.click()
-      xuanzhong = 1
-      resultCount = 0
-    }
+
+    // selectAnswers()
+    // const itemList = document.querySelectorAll(".qu-answer .item")
+    // const activeList = itemList && [...itemList]?.filter((item) => item.classList.contains("active") || item.querySelector("input")?.value)
+    // if (activeList.length && activeList.length === resultCount) {
+    //   document.querySelector(".ant-btn.ant-btn-warning")?.click()
+    //   xuanzhong = 1
+    //   resultCount = 0
+    // }
 
     if (document.querySelector(".ant-progress-text svg")) {
       throttle(() => {

@@ -6,7 +6,9 @@ import Pako from "pako"
 // 配置 Fuse 选项
 const options = {
   includeScore: true,
-  keys: ["question"],
+  // keys: ["question"],
+  keys: ["id"],
+  threshold:0, // 用 id 搜索的话就精确搜索
   useExtendedSearch: true,
 }
 

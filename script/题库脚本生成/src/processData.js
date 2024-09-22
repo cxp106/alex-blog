@@ -28,7 +28,6 @@ async function processFiles() {
 
         // 解析数据
         jsonData.records.forEach((question) => {
-
           // 移除 HTML 标签，提取题目内容
           const questionText = question.content.replace(/<\/?[^>]+(>|$)/g, "").trim()
 
@@ -53,17 +52,21 @@ async function processFiles() {
 
           // 提取正确答案
           const correctAnswer = question.answerList.filter((option) => option.isRight).map((item) => item.content.trim())
+          const correctAnswerId = question.answerList.filter((option) => option.isRight).map((item) => item.id)
 
           // 将解析后的数据推入到 parsedData 数组中
-          const hasData = parsedData.some(
-            (item) => item.question === questionText && item.options.every((item1) => options.includes(item1))
-          )
+          // const hasData = parsedData.some(
+          //   (item) => item.question === questionText && item.options.every((item1) => options.includes(item1))
+          // )
+          const hasData = parsedData.some((item) => item.id === question.id)
           !hasData &&
             parsedData.push({
+              id: question.id,
               question: questionText,
               type: question.type_dictText,
               options: options, // 如果不是选择题，数组为空
               answer: question.type_dictText === "填空题" ? options : correctAnswer,
+              answerId: question.type_dictText === "填空题" ? options : correctAnswerId,
             })
         })
 
