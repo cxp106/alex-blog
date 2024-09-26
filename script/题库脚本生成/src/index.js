@@ -27,7 +27,6 @@ let resultCount = 0
 let examTime = 0
 
 const download = (dataArray) => {
-  return
   // 将数组数据转换为 JSON 字符串
   const jsonData = JSON.stringify(dataArray, null, 2)
 
@@ -246,7 +245,7 @@ let nowStudy = ""
           mainList = mainList.filter((item) => !studyed.includes(item))
           localStorage.setItem("mainList", JSON.stringify(mainList))
         } else if (this.responseURL.includes("listQuestionByMode")) {
-          // // 爬题
+          // 爬题
           // const result = JSON.parse(this.response).result
           // console.log("%c result => ", "font-size:13px; background:#baccd9; color:#000;", result)
           // download(result)
@@ -362,13 +361,14 @@ setInterval(() => {
     // } else {
     if (!currentStudy) return
 
-    // // 爬题
+    // 爬题
     // document.querySelector("#rc-tabs-0-tab-practice")?.click()
     // document.querySelector(".ant-table-cell .ant-btn-link")?.click()
     // nowStudy = mainList[0]
     // return
     if (currentStudy?.finishNum < currentStudy?.catalogList.length) {
-      window.location.href = `https://service.cpma.org.cn/edu/course/onlineStudy/${mainList[0]}`
+      jumpOnlineStudy(mainList[0])
+      // window.location.href = `https://service.cpma.org.cn/edu/course/onlineStudy/${mainList[0]}`
     }
 
     if (currentStudy?.courseStudyProcess === 1) {
@@ -397,7 +397,7 @@ setInterval(() => {
                 }, 3000)()
                 localStorage.setItem("mainList", JSON.stringify(mainList))
                 console.warn("%c mainList => ", "font-size:13px; background:#baccd9; color:#000;", mainList)
-                jumpOnlineStudy(mainList[0])
+                jumpCourseDetails(mainList[0])
               } else {
                 localStorage.setItem("mainList", JSON.stringify([]))
               }
@@ -473,12 +473,12 @@ setInterval(() => {
           // localStorage.setItem("errorStudys", JSON.stringify(error))
           document.querySelector(".score-card").addEventListener("click", () => {
             nowStudy = mainList[0]
-            jumpOnlineStudy(mainList[0])
+            jumpCourseDetails(mainList[0])
           })
           setTimeout(() => {
             if ([...document.querySelectorAll(".score-box span")].some((item) => item.innerText.trim() === "通过")) {
               nowStudy = mainList[0]
-              jumpOnlineStudy(mainList[0])
+              jumpCourseDetails(mainList[0])
             }
           }, 1000)
         } else {
@@ -492,7 +492,7 @@ setInterval(() => {
           }
           setTimeout(() => {
             nowStudy = mainList[0]
-            jumpOnlineStudy(mainList[0])
+            jumpCourseDetails(mainList[0])
           }, 1000)
         }
       }, 10000)()
@@ -560,7 +560,10 @@ setInterval(() => {
         // } else {
         //   localStorage.setItem("mainList", JSON.stringify([]))
         // }
-        examTime = 0
+        if (++examTime > 3) {
+          examTime = 0
+          jumpCourseDetails(mainList[0])
+        }
         document.querySelector(".all-box-right .ant-btn.ant-btn-primary").click()
       }, 2000)()
     }
@@ -582,3 +585,25 @@ setInterval(() => {
     // 爬題
   }
 }, 1000)
+
+setInterval(() => {
+  const xxx =
+    document.querySelector(
+      "#app > section > section > section > div.jeecg-layout-content.full > div.ant-spin-nested-loading > div > div > div.section-main > section > div > div.ant-card-body > p > div > div > div > div > div:nth-child(2) > div.ant-card-body > div > div:nth-child(3) > div:nth-child(3) > span"
+    )?.innerText || 0
+  if (+xxx > 49) {
+    if (mainList.includes(nowStudy)) {
+      if (mainList.length > 1) {
+        mainList.shift()
+        localStorage.setItem("mainList", JSON.stringify(mainList))
+      } else {
+        localStorage.setItem("mainList", JSON.stringify([]))
+      }
+    }
+    setTimeout(() => {
+      nowStudy = mainList[0]
+      jumpCourseDetails(mainList[0])
+    }, 1000)
+  }
+  location.reload()
+}, 60000)
