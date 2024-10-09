@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         聚合搜索引擎切换导航
 // @namespace    http://tampermonkey.net/
-// @version      1.0.3
+// @version      1.0.4
 // @description  在搜索顶部显示一个聚合搜索引擎切换导航，综合搜索引擎。专注手机网页搜索引擎切换，纯粹的搜索。SearchJumper、搜索跳转、聚合搜索、All Search、Punk Search、搜索切换、搜索酱。
 // @author       千川汇海
 // @match        *://*/*
@@ -14,7 +14,7 @@
 // @license     MIT
 // ==/UserScript==
 
-const punkDeafultMark = "Bing-Metaso-Searchgptool-Baidu-Google-Toutiao-Fsou-Quark-Sougou-360"
+const punkDeafultMark = "Luxirty-Bing-Metaso-Searchgptool-Baidu-Google-Toutiao-Fsou-Quark-Sougou-360"
 const punkAllSearchMark = "Bing-Metaso-Baidu-Google-Zhihu-Fsou-360-Quark-Sougou-Toutiao-Yandex-Ecosia-DuckDuckGo-QwantLite-Swisscows"
 
 const searchUrlMap = [
@@ -26,6 +26,13 @@ const searchUrlMap = [
     searchkeyName: ["q"],
     matchUrl: /searchgptool\.ai.*\?q=?/g,
     mark: "Searchgptool",
+  },
+  {
+    name: "Luxirty",
+    searchUrl: "https://search.luxirty.com/search?q=",
+    searchkeyName: ["q"],
+    matchUrl: /luxirty\.com.*\?q=?/g,
+    mark: "Luxirty",
   },
   { name: "百度", searchUrl: "https://baidu.com/s?wd=", searchkeyName: ["wd", "word"], matchUrl: /baidu\.com.*?w(or)?d=?/g, mark: "Baidu" },
   {
