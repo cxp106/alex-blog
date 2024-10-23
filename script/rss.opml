@@ -10,53 +10,51 @@
       <outline text="薅羊毛小伙伴" title="薅羊毛小伙伴" type="rss" 
             xmlUrl="https://www.yangmaodang.club/rss" htmlUrl="https://www.yangmaodang.club"/>
       <outline text="有什么好东西值得买 - 即刻圈子" title="有什么好东西值得买 - 即刻圈子" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/jike/topic/5540e181e4b063749a7abfd9" htmlUrl="https://m.okjike.com/topics/5540e181e4b063749a7abfd9"/>
+            xmlUrl="https://rss.injahow.cn/jike/topic/5540e181e4b063749a7abfd9" htmlUrl="https://m.okjike.com/topics/5540e181e4b063749a7abfd9"/>
       <outline text="薅羊毛小分队 - 即刻圈子" title="薅羊毛小分队 - 即刻圈子" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/jike/topic/5523d164e4b0466c6563cd30" htmlUrl="https://m.okjike.com/topics/5523d164e4b0466c6563cd30"/>
+            xmlUrl="https://rss.injahow.cn/jike/topic/5523d164e4b0466c6563cd30" htmlUrl="https://m.okjike.com/topics/5523d164e4b0466c6563cd30"/>
       <outline text="真人范儿-羊毛优惠" title="真人范儿-羊毛优惠" type="rss" 
             xmlUrl="https://www.zrfan.com/feed/" htmlUrl="https://www.zrfan.com"/>
   </outline>
   <outline title="关注" text="关注">
       <outline text="深圳本地宝焦点资讯" title="深圳本地宝焦点资讯" type="rss" 
-            xmlUrl="https://rsshub.app/bendibao/news/sz" htmlUrl="http://sz.bendibao.com"/>
+            xmlUrl="https://rss.injahow.cn/bendibao/news/sz" htmlUrl="http://sz.bendibao.com"/>
       <outline text="奇趣网站收藏家 - 即刻圈子" title="奇趣网站收藏家 - 即刻圈子" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/jike/topic/55d81b4b60b296e5679785de" htmlUrl="https://m.okjike.com/topics/55d81b4b60b296e5679785de"/>
+            xmlUrl="https://rss.injahow.cn/jike/topic/55d81b4b60b296e5679785de" htmlUrl="https://m.okjike.com/topics/55d81b4b60b296e5679785de"/>
       <outline text="JitHub程序员 - 即刻圈子" title="JitHub程序员 - 即刻圈子" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/jike/topic/55e02198dcef9f0e00d7b3c3" htmlUrl="https://m.okjike.com/topics/55e02198dcef9f0e00d7b3c3"/>
+            xmlUrl="https://rss.injahow.cn/jike/topic/55e02198dcef9f0e00d7b3c3" htmlUrl="https://m.okjike.com/topics/55e02198dcef9f0e00d7b3c3"/>
       <outline text="生活小姿势 - 即刻圈子" title="生活小姿势 - 即刻圈子" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/jike/topic/567b9036fb179d1100f8cbe1" htmlUrl="https://m.okjike.com/topics/567b9036fb179d1100f8cbe1"/>
+            xmlUrl="https://rss.injahow.cn/jike/topic/567b9036fb179d1100f8cbe1" htmlUrl="https://m.okjike.com/topics/567b9036fb179d1100f8cbe1"/>
       <outline text="潮流周刊" title="潮流周刊" type="rss" 
             xmlUrl="https://weekly.tw93.fun/rss.xml" htmlUrl="https://weekly.tw93.fun/"/>
       <outline text="阮一峰的网络日志" title="阮一峰的网络日志" type="rss" 
             xmlUrl="https://feeds.feedburner.com/ruanyifeng" htmlUrl="http://www.ruanyifeng.com/blog/"/>
       <outline text="冻梨游研社|绝区零" title="冻梨游研社|绝区零" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2387749445439635456" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2387749445439635456"/>
+            xmlUrl="https://rss.injahow.cn/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2387749445439635456" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2387749445439635456"/>
       <outline text="冻梨游研社|崩坏：星穹铁道" title="冻梨游研社|崩坏：星穹铁道" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2767905510162546689" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2767905510162546689"/>
+            xmlUrl="https://rss.injahow.cn/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2767905510162546689" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2767905510162546689"/>
       <outline text="喷嚏图卦" title="喷嚏图卦" type="rss" 
             xmlUrl="https://feedx.net/rss/pentitugua.xml" htmlUrl="http://dapenti.com"/>
+      <outline text="信息差——独立开发者出海周刊" title="信息差——独立开发者出海周刊" type="rss" 
+            xmlUrl="https://gapis.money/rss.xml" htmlUrl="https://gapis.money"/>
+      <outline text="新浪微博CEO-来去之间的微博" title="新浪微博CEO-来去之间的微博" type="rss" 
+            xmlUrl="https://rss.injahow.cn/weibo/user/1111681197" htmlUrl="https://weibo.com/1111681197/"/>
   </outline>
   <outline title="乐呵" text="乐呵">
       <outline text="热榜 - 煎蛋" title="热榜 - 煎蛋" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/jandan/top" htmlUrl="http://i.jandan.net/top"/>
+            xmlUrl="https://rss.injahow.cn/jandan/top" htmlUrl="http://i.jandan.net/top"/>
       <outline text="群友问🗳万事答 - Telegram Channel" title="群友问🗳万事答 - Telegram Channel" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/telegram/channel/ShortcutsCN/" htmlUrl="https://t.me/s/ShortcutsCN"/>
+            xmlUrl="https://rss.injahow.cn/telegram/channel/ShortcutsCN/"/>
   </outline>
   <outline title="资讯" text="资讯">
       <outline text="中国气象爱好者的微博" title="中国气象爱好者的微博" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/weibo/user/1763864272" htmlUrl="https://weibo.com/1763864272/"/>
+            xmlUrl="https://rss.injahow.cn/weibo/user/1763864272" htmlUrl="https://weibo.com/1763864272/"/>
       <outline text="掘金前端本周最热" title="又有人在微博提到深圳了" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/juejin/trending/frontend/weekly" htmlUrl="https://juejin.im/frontend?sort=weekly_hottest"/>
+            xmlUrl="https://rss.injahow.cn/juejin/trending/frontend/weekly" htmlUrl="https://juejin.im/frontend?sort=weekly_hottest"/>
       <outline text="喷嚏-70" title="喷嚏-70" type="rss" 
             xmlUrl="https://plink.anyfeeder.com/pentitugua" htmlUrl="https://www.dapenti.com/blog/blog.asp?name=xilei&amp;subjectid=70"/>
-      <outline text="9527🌈 - Telegram Channel" title="9527🌈 - Telegram Channel" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/telegram/channel/fku0007/" htmlUrl="https://t.me/s/fku0007"/>
-      <outline text="🆕 科技新闻投稿📮 - Telegram Channel" title="🆕 科技新闻投稿📮 - Telegram Channel" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/telegram/channel/TestFlightCN/" htmlUrl="https://t.me/s/TestFlightCN"/>
       <outline text="又有人在微博提到西丽了" title="又有人在微博提到西丽了" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/weibo/keyword/%E8%A5%BF%E4%B8%BD" htmlUrl="http://s.weibo.com/weibo/%E8%A5%BF%E4%B8%BD&amp;b=1&amp;nodup=1"/>
-      <outline text="即刻精选 - Telegram Channel" title="即刻精选 - Telegram Channel" type="rss" 
-            xmlUrl="https://rsshub.rssforever.com/telegram/channel/jike_collection/" htmlUrl="https://t.me/s/jike_collection"/>
+            xmlUrl="https://rss.injahow.cn/weibo/keyword/%E8%A5%BF%E4%B8%BD" htmlUrl="http://s.weibo.com/weibo/%E8%A5%BF%E4%B8%BD&amp;b=1&amp;nodup=1"/>
       <outline text="V2方圆" title="V2方圆" type="rss" 
             xmlUrl="https://v2fy.com/?feed=rss" htmlUrl="https://v2fy.com"/>
   </outline>
@@ -70,11 +68,11 @@
       <outline text="Show HN" title="Show HN" type="rss" 
             xmlUrl="https://showhn.buzzing.cc/feed.xml" htmlUrl="https://showhn.buzzing.cc/"/>
       <outline text="ruanyf/weekly Issues" title="ruanyf/weekly Issues" type="rss" 
-            xmlUrl="https://rsshub.app/github/issue/ruanyf/weekly" htmlUrl="https://github.com/ruanyf/weekly/issues"/>
+            xmlUrl="https://rss.injahow.cn/github/issue/ruanyf/weekly" htmlUrl="https://github.com/ruanyf/weekly/issues"/>
       <outline text="Product Hunt 热门" title="Product Hunt 热门" type="rss" 
             xmlUrl="https://ph.buzzing.cc/feed.xml" htmlUrl="https://ph.buzzing.cc/"/>
       <outline text="Huggingface Daily Papers" title="Huggingface Daily Papers" type="rss" 
-            xmlUrl="https://rsshub.app/huggingface/daily-papers" htmlUrl="https://huggingface.co/papers"/>
+            xmlUrl="https://rss.injahow.cn/huggingface/daily-papers"/>
       <outline text="Being towards death" title="Being towards death" type="rss" 
             xmlUrl="https://andrewji8-9527.xlog.app/feed" htmlUrl="https://andrewji8-9527.xlog.app"/>
       <outline text="分享创造" title="分享创造" type="rss" 
