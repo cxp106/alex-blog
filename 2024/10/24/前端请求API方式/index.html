@@ -1,0 +1,1322 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <!-- 加入字体 -->
+  <link rel="stylesheet" href="/font/result.css" />
+  <title>前端请求 API 方式 - Radiant Moon</title>
+
+  
+    <meta name="description" content="API 集中学习一下">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端请求 API 方式">
+<meta property="og:url" content="https://cxp.netlify.app/2024/10/24/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82API%E6%96%B9%E5%BC%8F/index.html">
+<meta property="og:site_name" content="Radiant Moon">
+<meta property="og:description" content="API 集中学习一下">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/a28f01ea0a5d43758e58d83284e571e5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=+97l0WvcmsKE258mVSsg9D8v3vA=">
+<meta property="og:image" content="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/4fb14e510cb54d44a5d23138fe54d5f4~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=XVyI56Naj0zT6z4+0sGSVgDFC+k=">
+<meta property="og:image" content="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/1e82f48e45144b67bd2b2cdc0815e64f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=UBRGw8SPL0eRfMDU1FDINAvKjV0=">
+<meta property="og:image" content="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/fcc5d5f6fbc249e4ae9095bab9d38bc7~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=R7go4qNYsL/4JCWh9rc8sQb23U8=">
+<meta property="article:published_time" content="2024-10-24T09:28:34.981Z">
+<meta property="article:modified_time" content="2024-11-06T07:43:36.008Z">
+<meta property="article:author" content="Radiant Moon">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/a28f01ea0a5d43758e58d83284e571e5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=+97l0WvcmsKE258mVSsg9D8v3vA=">
+  
+  
+  
+  <meta name="keywords" content="前端">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Radiant Moon" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/favicon.ico" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Radiant Moon</div><div class="sub cap">Embracing the Fortune of Light</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/07/31/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"><span class="title">工具资源</span></a><a class="item title" href="/2024/11/08/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97%202024/"><span class="title">独立开发心得 2024</span></a><a class="item title" href="/2024/10/24/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82API%E6%96%B9%E5%BC%8F/"><span class="title">前端请求 API 方式</span></a><a class="item title" href="/2024/07/31/Chatgpt%20%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/"><span class="title">Chatgpt 提示工程</span></a><a class="item title" href="/2024/08/01/%E7%94%9F%E6%B4%BB%E5%A6%99%E6%8B%9B/"><span class="title">生活妙招</span></a><a class="item title" href="/2024/07/31/JavaScript%20%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/"><span class="title">JavaScript 常用代码片段</span></a><a class="item title" href="/2024/10/11/%E8%82%B2%E5%84%BF%E5%A4%87%E5%BF%98/"><span class="title">育儿备忘</span></a><a class="item title" href="/2024/08/01/%E8%B4%AD%E7%89%A9%E6%B8%85%E5%8D%95/"><span class="title">购物清单</span></a><a class="item title" href="/2024/07/31/Github%20%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/"><span class="title">Github 使用备忘</span></a><a class="item title" href="/2024/07/31/%E7%AF%A1%E6%94%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/"><span class="title">篡改猴脚本</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-10-24T09:28:34.981Z">2024-10-24</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-11-06T07:43:36.008Z">2024-11-06</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>前端请求 API 方式</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>浏览器中用于发起网络请求的 API 主要包括以下几种：</p>
+<ol>
+<li><p><strong>XMLHttpRequest</strong>：这是一个老牌的 API，用于在浏览器和服务器之间发送 HTTP 请求。它支持异步请求，并可以通过设置回调函数来处理响应。尽管它已经被更现代的 API 取代，但在一些旧的浏览器或特定的场景中仍然有用。</p>
+<p><em>对于前端开发的我们来说，这个 API 再熟悉不过了，XHR 是最早接触到的网络请求 API，可以说是“老朋友”了。在很多老项目中，我们和后端沟通基本都用它。在我们平常所接触到的项目中，很多都是使用的 Axios，在浏览器中，Axios 底层也是使用了 XMLHttpRequest 对象来发送 HTTP 请求。</em></p>
+</li>
+<li><p><strong>Fetch</strong>：Fetch 是一个现代、功能强大的网络 API，它使用 Promise 使异步操作更加容易。Fetch 提供了更简洁的语法和更好的错误处理机制，并支持发送和接收各种类型的数据（如 JSON、文本、Blob 等）。</p>
+<p><em>Fetch 可以说是网络请求的“新宠”，不仅语法简洁优雅，性能也非常出色。很多开发者都选择 Fetch 作为 XMLHTTPRequest 的替代方案，特别是在处理复杂的异步操作时，Fetch 显得更加得心应手。值得一提的是，Fetch 的性能是要强于 XMLHttpRequest,axios 的默认请求方式已经改为了 Fetch。</em></p>
+</li>
+<li><p><strong>Beacon API</strong>：<code>navigator.sendBeacon()</code> 方法允许异步地发送少量数据到服务器，通常用于在页面卸载时发送分析或诊断信息。这个方法确保数据发送成功，即使页面已经关闭或用户已经导航到其他页面。</p>
+<p><em>Beacon API 可以说是“默默无闻”的小帮手，特别适合在页面关闭或跳转时发送一些统计数据。不过，我自己学过但还没用过，希望以后有机会实践一下。</em></p>
+</li>
+<li><p><strong>WebSocket API</strong>：WebSocket 提供了一个全双工的通信通道，允许浏览器和服务器之间进行长时间的实时数据交换。这不同于传统的 HTTP 请求，HTTP 请求通常是客户端发起并等待服务器响应的模式。</p>
+<p><em>实时通信，像我们一些告警需求，不是用的轮询就是用的 WebSockets。</em></p>
+</li>
+<li><p><strong>Server-Sent Events (SSE)</strong> ：服务器发送事件允许服务器向客户端推送实时事件。与 WebSockets 不同，SSE 是单向的，只允许服务器向客户端发送数据。SSE 基于 HTTP，因此它们比 WebSockets 更简单，并且能够在现有的 HTTP 基础设施上工作。</p>
+<p><em>SSE 是一个简单实用的好方案，对于需要服务器单向推送数据的场景非常合适，比如实时更新股票价格。比起轮询和 WebSocket，SSE 的实现更简单，而且性能也不错。</em></p>
+</li>
+<li><p><strong>XMLHttpRequest Level 2</strong>（包括 FormData 和 Blob 对象）：虽然这仍然是 XMLHttpRequest 的一部分，但值得注意的是，XMLHttpRequest Level 2 引入了一些改进和新功能，如 FormData 和 Blob 对象，它们使得发送表单数据和二进制数据更加容易。</p>
+<p><em>XMLHttpRequest Level 2 是老朋友的“进阶版”，增加了很多实用功能。虽然它已经不再是最热门的选择，但在处理文件上传和复杂数据提交时，仍然是一个不错的工具。</em></p>
+</li>
+<li><p><strong>WebRTC (Web Real-Time Communication)</strong> ：虽然 WebRTC 主要用于实时音频、视频和数据通信，但它也可以用于在浏览器之间建立点对点（peer-to-peer）的连接，并通过这些连接发送数据。这不是一个典型的“请求 - 响应”模型，而是一种更复杂的通信协议。</p>
+<p><em>WebRTC，大多数都用于音视频，有去了解过这方面的知识，给我的感觉就是，和前端开发不像是一个赛道，但是还是挺好玩的，</em></p>
+</li>
+</ol>
+<h2 id="1-XMLHttpRequest"><a href="#1-XMLHttpRequest" class="headerlink" title="1. XMLHttpRequest"></a>1. XMLHttpRequest</h2><p>XMLHttpRequest (XHR) 是 JavaScript 中用于与服务器进行异步通信的 API。它允许我们在不刷新页面的情况下从服务器获取数据或向服务器发送数据。</p>
+<p>XHR 对象可用于执行以下操作：</p>
+<ul>
+<li>从服务器获取数据</li>
+<li>向服务器发送数据</li>
+<li>上传文件</li>
+<li>监控请求进度</li>
+<li>处理服务器响应</li>
+</ul>
+<blockquote>
+<p>这些也是与服务器进行异步通信的 API 的基础功能。</p>
+</blockquote>
+<h3 id="1-1-XHR-的优点"><a href="#1-1-XHR-的优点" class="headerlink" title="1.1 XHR 的优点"></a>1.1 XHR 的优点</h3><p>XHR 具有以下优点：</p>
+<ul>
+<li><p>异步：XHR 请求不会阻塞页面渲染</p>
+</li>
+<li><p>灵活：XHR 可用于执行各种操作</p>
+</li>
+<li><p>强大：XHR 可用于上传文件和监控请求进度</p>
+</li>
+</ul>
+<h3 id="1-2-XHR-的缺点"><a href="#1-2-XHR-的缺点" class="headerlink" title="1.2 XHR 的缺点"></a>1.2 XHR 的缺点</h3><p>XHR 具有以下缺点：</p>
+<ul>
+<li>复杂：XHR 的 API 比较复杂</li>
+<li>不支持跨域请求：XHR 默认不支持跨域请求</li>
+</ul>
+<blockquote>
+<p>默认不支持跨域请求的原因是浏览器为了安全，实施了同源策略（Same-origin policy）。</p>
+</blockquote>
+<p>**<br>**</p>
+<p><strong>XHR 还支持以下高级用法：</strong></p>
+<ul>
+<li><p>跨域请求：使用 CORS 允许跨域请求</p>
+</li>
+<li><p>上传文件：使用 FormData 对象上传文件</p>
+</li>
+<li><p>监控请求进度：使用 xhr.upload 对象监控请求进度</p>
+</li>
+</ul>
+<h3 id="1-3-创建-XMLHttpRequest-对象"><a href="#1-3-创建-XMLHttpRequest-对象" class="headerlink" title="1.3 创建 XMLHttpRequest 对象"></a>1.3 创建 XMLHttpRequest 对象</h3><p>这是使用 <code>XMLHttpRequest</code> 的第一步。通过 <code>new XMLHttpRequest()</code> 可以创建一个新的 <code>XMLHttpRequest</code> 对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-初始化请求"><a href="#1-4-初始化请求" class="headerlink" title="1.4 初始化请求"></a>1.4 初始化请求</h3><p>使用 <code>open</code> 方法来初始化请求。它有三个主要参数：请求方法（GET, POST 等）、请求 URL，以及是否异步（布尔值）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#x27;GET&#x27;, &#x27;https://www.feng.com/data&#x27;, true);</span><br></pre></td></tr></table></figure>
+
+<p><strong>参数说明</strong></p>
+<ol>
+<li><p><strong>method</strong>:</p>
+<ul>
+<li><p>指定 HTTP 请求方法。</p>
+</li>
+<li><p>常用方法包括：</p>
+<ul>
+<li>“GET”：从服务器获取数据。</li>
+<li>“POST”：向服务器发送数据。</li>
+<li>“PUT”：更新服务器上的数据。</li>
+<li>“DELETE”：删除服务器上的数据。</li>
+<li>“HEAD”：与 GET 类似，但只请求响应头。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>url</strong>:</p>
+<ul>
+<li>指定请求的目标 URL。</li>
+<li>可以是相对路径（如 <code>/data</code>）或者绝对路径（如 <code>https://api.example.com/data</code>）。</li>
+</ul>
+</li>
+<li><p><strong>async</strong>:</p>
+<ul>
+<li>一个布尔值，指定请求是否异步执行。</li>
+<li>默认为 <code>true</code>。</li>
+<li>如果设置为 <code>false</code>，请求会同步执行，浏览器会在请求完成之前被阻塞（不推荐使用，因为会影响用户体验）。</li>
+</ul>
+</li>
+<li><p><strong>user</strong>:</p>
+<ul>
+<li>一个可选参数，用于指定 HTTP 身份验证的用户名。</li>
+</ul>
+</li>
+<li><p><strong>password</strong>:</p>
+</li>
+<li><ul>
+<li>一个可选参数，用于指定 HTTP 身份验证的密码。</li>
+</ul>
+</li>
+</ol>
+<p><strong>HTTP 请求方法</strong></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/a28f01ea0a5d43758e58d83284e571e5~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=+97l0WvcmsKE258mVSsg9D8v3vA=" alt="Image 1"></p>
+<h3 id="1-5-设置请求头"><a href="#1-5-设置请求头" class="headerlink" title="1.5 设置请求头"></a>1.5 设置请求头</h3><p>使用 <code>setRequestHeader</code> 方法来设置请求头，这在发送 POST 请求或需要特定的请求头时特别有用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>常用的请求头包括 <code>Content-Type</code>（指定请求体的媒体类型）、<code>Authorization</code>（授权信息）等。</li>
+</ul>
+<p><strong>常见 HTTP 请求头</strong></p>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/4fb14e510cb54d44a5d23138fe54d5f4~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=XVyI56Naj0zT6z4+0sGSVgDFC+k=" alt="Image 2"></p>
+<h3 id="1-6-发送请求"><a href="#1-6-发送请求" class="headerlink" title="1.6 发送请求"></a>1.6 发送请求</h3><p>使用 <code>send</code> 方法来发送请求。对于 GET 请求，可以不传递参数；对于 POST 请求，可以传递请求体数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<p>对于 POST 请求，传递请求体数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const data = JSON.stringify(&#123; name: &#x27;Feng&#x27;, age: 26 &#125;);</span><br><span class="line">xhr.send(data);</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-7-处理响应"><a href="#1-7-处理响应" class="headerlink" title="1.7 处理响应"></a>1.7 处理响应</h3><p>使用 <code>onreadystatechange</code> 事件处理响应。每当 <code>readyState</code> 属性改变时，<code>onreadystatechange</code> 事件会被触发。可以通过检查 <code>readyState</code> 和 <code>status</code> 来确定请求的状态和结果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if (xhr.readyState === 4) &#123; // 请求完成</span><br><span class="line">        if (xhr.status === 200) &#123; // 成功</span><br><span class="line">            console.log(xhr.responseText);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.error(&#x27;Error:&#x27;, xhr.statusText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p><strong>readyState 属性：</strong></p>
+<p><code>readyState</code> 属性表示请求的状态。它有五个可能的值：</p>
+<ul>
+<li><code>0</code> (UNSENT): 代理已被创建，但尚未调用 <code>open</code> 方法。</li>
+<li><code>1</code> (OPENED): <code>open</code> 方法已经被调用。</li>
+<li><code>2</code> (HEADERS_RECEIVED): <code>send</code> 方法已经被调用，并且头部和状态已经可获得。</li>
+<li><code>3</code> (LOADING): 下载中；<code>responseText</code> 属性已经包含部分数据。</li>
+<li><code>4</code> (DONE): 下载操作已完成。</li>
+</ul>
+<p><strong>status 属性：</strong></p>
+<p><code>status</code> 属性表示 HTTP 状态码。例如：</p>
+<ul>
+<li><code>200</code> (OK): 请求成功。</li>
+<li><code>404</code> (Not Found): 请求的资源未找到。</li>
+<li><code>500</code> (Internal Server Error): 服务器错误。</li>
+</ul>
+<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/1e82f48e45144b67bd2b2cdc0815e64f~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=UBRGw8SPL0eRfMDU1FDINAvKjV0=" alt="Image 3"></p>
+<h3 id="1-8-responseText-和-responseXML-属性"><a href="#1-8-responseText-和-responseXML-属性" class="headerlink" title="1.8 responseText 和 responseXML 属性"></a>1.8 responseText 和 responseXML 属性</h3><ul>
+<li><p><code>responseText</code>: 返回字符串形式的响应数据，适用于大多数情况。</p>
+</li>
+<li><p><code>responseXML</code>: 返回解析后的 XML 文档对象，适用于返回 XML 数据的情况。</p>
+</li>
+</ul>
+<h3 id="1-9-异步与同步请求"><a href="#1-9-异步与同步请求" class="headerlink" title="1.9 异步与同步请求"></a>1.9 异步与同步请求</h3><ul>
+<li><strong>异步请求</strong>: <code>open</code> 方法的 <code>async</code> 参数为 <code>true</code>。这是推荐的方式，因为它不会阻塞浏览器的 UI 线程。</li>
+<li><strong>同步请求</strong>: <code>open</code> 方法的 <code>async</code> 参数为 <code>false</code>。这种方式会阻塞浏览器的 UI 线程，直到请求完成，不推荐使用。</li>
+</ul>
+<blockquote>
+<p>同步请求很少用到，但是也不是没有使用场景。</p>
+</blockquote>
+<h3 id="1-10-处理错误"><a href="#1-10-处理错误" class="headerlink" title="1.10 处理错误"></a>1.10 处理错误</h3><p>可以在 <code>onreadystatechange</code> 事件处理程序中检查状态码，并处理可能的错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if (xhr.readyState === 4) &#123;</span><br><span class="line">        if (xhr.status === 200) &#123;</span><br><span class="line">            console.log(xhr.responseText);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.error(&#x27;Error:&#x27;, xhr.status, xhr.statusText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-11-其他常用方法和属性"><a href="#1-11-其他常用方法和属性" class="headerlink" title="1.11 其他常用方法和属性"></a>1.11 其他常用方法和属性</h3><ul>
+<li><p><code>abort()</code>: 取消当前请求。</p>
+</li>
+<li><p><code>getAllResponseHeaders()</code>: 获取所有响应头。</p>
+</li>
+<li><p><code>getResponseHeader(header)</code>: 获取指定的响应头。</p>
+</li>
+</ul>
+<h3 id="1-12-跨域请求"><a href="#1-12-跨域请求" class="headerlink" title="1.12 跨域请求"></a>1.12 跨域请求</h3><p>由于同源策略的限制，跨域请求需要服务器设置 CORS（Cross-Origin Resource Sharing）头。示例如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#x27;GET&#x27;, &#x27;https://www.feng.com/data&#x27;, true);</span><br><span class="line">xhr.setRequestHeader(&#x27;Origin&#x27;, &#x27;https://yourdomain.com&#x27;);</span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<p>服务器需要返回允许跨域的头部：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: https://yourdomain.com</span><br><span class="line">Access-Control-Allow-Methods: GET, POST</span><br><span class="line">Access-Control-Allow-Headers: Content-Type</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-13-示例代码"><a href="#1-13-示例代码" class="headerlink" title="1.13 示例代码"></a>1.13 示例代码</h3><h4 id="GET-请求示例"><a href="#GET-请求示例" class="headerlink" title="GET 请求示例"></a>GET 请求示例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&#x27;GET&#x27;, &#x27;https://www.feng.com/data&#x27;, true);</span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if (xhr.readyState === 4) &#123;</span><br><span class="line">        if (xhr.status === 200) &#123;</span><br><span class="line">            console.log(JSON.parse(xhr.responseText));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.error(&#x27;Error:&#x27;, xhr.statusText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<h4 id="POST-请求示例"><a href="#POST-请求示例" class="headerlink" title="POST 请求示例"></a>POST 请求示例</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&#x27;POST&#x27;, &#x27;https://www.feng.com/data&#x27;, true);</span><br><span class="line">xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);</span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if (xhr.readyState === 4) &#123;</span><br><span class="line">        if (xhr.status === 200) &#123;</span><br><span class="line">            console.log(JSON.parse(xhr.responseText));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.error(&#x27;Error:&#x27;, xhr.statusText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const data = JSON.stringify(&#123; name: &#x27;Feng&#x27;, age: 26 &#125;);</span><br><span class="line">xhr.send(data);</span><br></pre></td></tr></table></figure>
+
+<h2 id="2-Fetch-API"><a href="#2-Fetch-API" class="headerlink" title="2. Fetch API"></a>2. Fetch API</h2><p>Fetch API 是一种现代化的 JavaScript 接口，用于执行网络请求。它提供了一个更强大和灵活的方式来发出网络请求和处理响应，取代了旧有的 XMLHttpRequest（XHR）API。Fetch API 采用基于 Promise 的设计，使异步请求处理更加简洁和直观。</p>
+<blockquote>
+<p>很推荐大家有机会可以在项目里使用 Fetch。</p>
+</blockquote>
+<h3 id="2-1-Fetch-API-的优点"><a href="#2-1-Fetch-API-的优点" class="headerlink" title="2.1 Fetch API 的优点"></a>2.1 Fetch API 的优点</h3><ol>
+<li><p>简洁的语法：Fetch API 使用 Promise，大大简化了异步请求的代码。</p>
+</li>
+<li><p>支持更多功能：Fetch API 支持跨域请求、流媒体、请求和响应对象的完全控制等高级功能。</p>
+</li>
+<li><p>一致的接口：Fetch API 提供了一致且统一的请求和响应处理接口。</p>
+</li>
+<li><p>更好的错误处理：Promise 使得错误处理更加清晰和易于管理。</p>
+</li>
+</ol>
+<h3 id="2-2-Fetch-API-的缺点"><a href="#2-2-Fetch-API-的缺点" class="headerlink" title="2.2 Fetch API 的缺点"></a>2.2 Fetch API 的缺点</h3><ol>
+<li>不支持同步请求：Fetch API 只能用于异步请求，不支持同步请求。</li>
+<li>CORS 限制：Fetch API 遵循同源策略，跨域请求需要服务器配置 CORS（Cross-Origin Resource Sharing）。</li>
+<li>复杂的流媒体处理：对于流媒体处理，Fetch API 相比 XHR 需要更多的代码处理。</li>
+</ol>
+<blockquote>
+<p>有的小伙伴可能会想，是不是可以用 async 和 await 代替，但是呢，async 和 await 并不会让 fetch 请求变成同步，只是会让请求看起来像是同步的，这里的异步是指会在异步环境中运行，并不会堵塞其他代码。</p>
+</blockquote>
+<blockquote>
+<p>具体可以参考我的另一篇文章：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7039213171680215070" title="https://juejin.cn/post/7039213171680215070">juejin.cn&#x2F;post&#x2F;703921…</a></p>
+</blockquote>
+<h3 id="2-3-Fetch-API-的用法"><a href="#2-3-Fetch-API-的用法" class="headerlink" title="2.3 Fetch API 的用法"></a>2.3 Fetch API 的用法</h3><p>Fetch API 的基本用法涉及创建一个网络请求并处理响应。它返回一个 Promise，该 Promise 会在请求完成后解析为一个 Response 对象。</p>
+<h4 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;)</span><br><span class="line">  .then(response =&gt; &#123;</span><br><span class="line">    if (!response.ok) &#123;</span><br><span class="line">      throw new Error(&#x27;Network response was not ok&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    return response.json();</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(data =&gt; &#123;</span><br><span class="line">    console.log(data);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;There was a problem with the fetch operation:&#x27;, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="创建请求"><a href="#创建请求" class="headerlink" title="创建请求"></a>创建请求</h4><p>Fetch API 的 fetch 方法可以接受两个参数：请求的 URL 和可选的配置对象。配置对象允许指定请求方法、请求头、请求体等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;, &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  headers: &#123;</span><br><span class="line">    &#x27;Content-Type&#x27;: &#x27;application/json&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  body: JSON.stringify(&#123; name: &#x27;Feng&#x27;, age: 26 &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">.then(response =&gt; response.json())</span><br><span class="line">.then(data =&gt; console.log(data))</span><br><span class="line">.catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br></pre></td></tr></table></figure>
+
+<h4 id="请求方法"><a href="#请求方法" class="headerlink" title="请求方法"></a>请求方法</h4><p>Fetch API 支持各种 HTTP 请求方法，包括 GET、POST、PUT、DELETE 等。以下是一些常见的请求方法及其示例。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">// GET 请求</span><br><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;)</span><br><span class="line">  .then(response =&gt; response.json())</span><br><span class="line">  .then(data =&gt; console.log(data))</span><br><span class="line">  .catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br><span class="line"></span><br><span class="line">// POST 请求</span><br><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;, &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  headers: &#123;</span><br><span class="line">    &#x27;Content-Type&#x27;: &#x27;application/json&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  body: JSON.stringify(&#123; name: &#x27;Feng&#x27;, age: 26 &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">.then(response =&gt; response.json())</span><br><span class="line">.then(data =&gt; console.log(data))</span><br><span class="line">.catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br><span class="line"></span><br><span class="line">// PUT 请求</span><br><span class="line">fetch(&#x27;https://www.Feng.com/data/1&#x27;, &#123;</span><br><span class="line">  method: &#x27;PUT&#x27;,</span><br><span class="line">  headers: &#123;</span><br><span class="line">    &#x27;Content-Type&#x27;: &#x27;application/json&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  body: JSON.stringify(&#123; name: &#x27;Feng&#x27;, age: 26 &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">.then(response =&gt; response.json())</span><br><span class="line">.then(data =&gt; console.log(data))</span><br><span class="line">.catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br><span class="line"></span><br><span class="line">// DELETE 请求</span><br><span class="line">fetch(&#x27;https://www.Feng.com/data/1&#x27;, &#123;</span><br><span class="line">  method: &#x27;DELETE&#x27;</span><br><span class="line">&#125;)</span><br><span class="line">.then(response =&gt; response.json())</span><br><span class="line">.then(data =&gt; console.log(data))</span><br><span class="line">.catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br></pre></td></tr></table></figure>
+
+<h4 id="设置请求头"><a href="#设置请求头" class="headerlink" title="设置请求头"></a>设置请求头</h4><p>可以通过配置对象的 headers 属性来设置请求头。常用的请求头包括 Content-Type、Authorization 等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;, &#123;</span><br><span class="line">  method: &#x27;POST&#x27;,</span><br><span class="line">  headers: &#123;</span><br><span class="line">    &#x27;Content-Type&#x27;: &#x27;application/json&#x27;,</span><br><span class="line">    &#x27;Authorization&#x27;: &#x27;Bearer token&#x27;</span><br><span class="line">  &#125;,</span><br><span class="line">  body: JSON.stringify(&#123; name: &#x27;Feng&#x27;, age: 26 &#125;)</span><br><span class="line">&#125;)</span><br><span class="line">.then(response =&gt; response.json())</span><br><span class="line">.then(data =&gt; console.log(data))</span><br><span class="line">.catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br></pre></td></tr></table></figure>
+
+<h4 id="处理响应"><a href="#处理响应" class="headerlink" title="处理响应"></a>处理响应</h4><p>Fetch API 的 Response 对象提供了多种方法来处理响应数据。常用的方法包括 json()、text()、blob() 等。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 处理 JSON 响应</span><br><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;)</span><br><span class="line">  .then(response =&gt; response.json())</span><br><span class="line">  .then(data =&gt; console.log(data))</span><br><span class="line">  .catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br><span class="line"></span><br><span class="line">// 处理文本响应</span><br><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;)</span><br><span class="line">  .then(response =&gt; response.text())</span><br><span class="line">  .then(data =&gt; console.log(data))</span><br><span class="line">  .catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br><span class="line"></span><br><span class="line">// 处理 Blob 响应</span><br><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;)</span><br><span class="line">  .then(response =&gt; response.blob())</span><br><span class="line">  .then(blob =&gt; &#123;</span><br><span class="line">    const url = URL.createObjectURL(blob);</span><br><span class="line">    const img = document.createElement(&#x27;img&#x27;);</span><br><span class="line">    img.src = url;</span><br><span class="line">    document.body.appendChild(img);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br></pre></td></tr></table></figure>
+
+<h4 id="处理错误"><a href="#处理错误" class="headerlink" title="处理错误"></a>处理错误</h4><p>Fetch API 提供了一个清晰的方式来处理请求和响应中的错误。通过链式的 catch 方法，可以捕获和处理任何在请求过程中发生的错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;)</span><br><span class="line">  .then(response =&gt; &#123;</span><br><span class="line">    if (!response.ok) &#123;</span><br><span class="line">      throw new Error(&#x27;Network response was not ok&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    return response.json();</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(data =&gt; console.log(data))</span><br><span class="line">  .catch(error =&gt; console.error(&#x27;There was a problem with the fetch operation:&#x27;, error));</span><br></pre></td></tr></table></figure>
+
+<h4 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h4><p>Fetch API 遵循同源策略，但可以通过服务器配置 CORS 来允许跨域请求。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">fetch(&#x27;https://www.Feng.com/data&#x27;, &#123;</span><br><span class="line">  method: &#x27;GET&#x27;,</span><br><span class="line">  mode: &#x27;cors&#x27;, // 请求模式，默认是 &#x27;cors&#x27;</span><br><span class="line">  headers: &#123;</span><br><span class="line">    &#x27;Content-Type&#x27;: &#x27;application/json&#x27;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">.then(response =&gt; response.json())</span><br><span class="line">.then(data =&gt; console.log(data))</span><br><span class="line">.catch(error =&gt; console.error(&#x27;Error:&#x27;, error));</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-4-示例代码"><a href="#2-4-示例代码" class="headerlink" title="2.4 示例代码"></a>2.4 示例代码</h3><p>以下是一个完整的示例代码，展示了如何使用 Fetch API 来执行各种网络请求，并处理响应数据。</p>
+<p><strong>HTML：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;Fetch API Example&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;button id=&quot;getButton&quot;&gt;GET Data&lt;/button&gt;</span><br><span class="line">  &lt;button id=&quot;postButton&quot;&gt;POST Data&lt;/button&gt;</span><br><span class="line">  &lt;pre id=&quot;output&quot;&gt;&lt;/pre&gt;</span><br><span class="line">  &lt;script src=&quot;fetch.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>JavaScript：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">const getButton = document.getElementById(&#x27;getButton&#x27;);</span><br><span class="line">const postButton = document.getElementById(&#x27;postButton&#x27;);</span><br><span class="line">const output = document.getElementById(&#x27;output&#x27;);</span><br><span class="line"></span><br><span class="line">getButton.addEventListener(&#x27;click&#x27;, () =&gt; &#123;</span><br><span class="line">  fetch(&#x27;https://www.Feng.com/data&#x27;)</span><br><span class="line">    .then(response =&gt; &#123;</span><br><span class="line">      if (!response.ok) &#123;</span><br><span class="line">        throw new Error(&#x27;Network response was not ok&#x27;);</span><br><span class="line">      &#125;</span><br><span class="line">      return response.json();</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(data =&gt; &#123;</span><br><span class="line">      output.textContent = JSON.stringify(data, null, 2);</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(error =&gt; &#123;</span><br><span class="line">      console.error(&#x27;There was a problem with the fetch operation:&#x27;, error);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">postButton.addEventListener(&#x27;click&#x27;, () =&gt; &#123;</span><br><span class="line">  fetch(&#x27;https://www.Feng.com/data&#x27;, &#123;</span><br><span class="line">    method: &#x27;POST&#x27;,</span><br><span class="line">    headers: &#123;</span><br><span class="line">      &#x27;Content-Type&#x27;: &#x27;application/json&#x27;</span><br><span class="line">    &#125;,</span><br><span class="line">    body: JSON.stringify(&#123; name: &#x27;Feng&#x27;, age: 26 &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(response =&gt; &#123;</span><br><span class="line">    if (!response.ok) &#123;</span><br><span class="line">      throw new Error(&#x27;Network response was not ok&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    return response.json();</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(data =&gt; &#123;</span><br><span class="line">    output.textContent = JSON.stringify(data, null, 2);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;There was a problem with the fetch operation:&#x27;, error);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-5-安全性"><a href="#2-5-安全性" class="headerlink" title="2.5 安全性"></a>2.5 安全性</h3><p>Fetch API 提供了多种机制来确保请求和响应的安全性：</p>
+<ol>
+<li><strong>CORS</strong>：通过服务器配置 CORS 头，允许跨域请求，同时保护服务器免受未授权的访问。</li>
+<li><strong>HTTPS</strong>：始终使用 HTTPS 协议来加密请求和响应数据，防止中间人攻击。</li>
+<li><strong>请求验证</strong>：在请求头中包含授权信息，如 JWT（JSON Web Token）或 API 密钥，确保请求的合法性。</li>
+</ol>
+<h3 id="2-6-使用场景"><a href="#2-6-使用场景" class="headerlink" title="2.6 使用场景"></a>2.6 使用场景</h3><p>Fetch API 广泛应用于以下场景：</p>
+<ol>
+<li><strong>数据获取和提交</strong>：如获取用户数据、提交表单等。</li>
+<li><strong>文件上传和下载</strong>：如上传图片、下载文件等。</li>
+<li><strong>流媒体处理</strong>：如处理视频流、音频流等。</li>
+<li><strong>与第三方 API 交互</strong>：如与社交媒体 API、支付网关 API 等进行交互。</li>
+</ol>
+<h2 id="3-Beacon-API"><a href="#3-Beacon-API" class="headerlink" title="3. Beacon API"></a>3. Beacon API</h2><p>Beacon API 是一种专门用于从网页向服务器发送小量数据的 API，主要用于统计和诊断信息的传递。它在页面卸载（如页面关闭或导航到新页面）时特别有用，因为它能够确保数据在页面卸载前成功发送到服务器。</p>
+<h3 id="3-1-Beacon-API-的优点"><a href="#3-1-Beacon-API-的优点" class="headerlink" title="3.1 Beacon API 的优点"></a>3.1 Beacon API 的优点</h3><ul>
+<li><p>可靠性高：在页面卸载时，能够保证数据发送成功。</p>
+</li>
+<li><p>简洁易用：API 简单易用，只需调用一个方法即可发送数据。</p>
+</li>
+<li><p>非阻塞：不会阻塞页面的卸载操作，提升用户体验。</p>
+</li>
+<li><p>适用于传输小量数据：特别适合发送统计和诊断信息等小量数据。</p>
+</li>
+</ul>
+<h3 id="3-2-Beacon-API-的缺点"><a href="#3-2-Beacon-API-的缺点" class="headerlink" title="3.2 Beacon API 的缺点"></a>3.2 Beacon API 的缺点</h3><ul>
+<li><p>只适用于小量数据：不适合传输大文件或大量数据。</p>
+</li>
+<li><p>不支持自定义请求头：无法自定义请求头，限制了某些高级用法。</p>
+</li>
+<li><p>有限的错误处理：无法直接获取发送失败的反馈。</p>
+</li>
+</ul>
+<h3 id="3-3-Beacon-API-的用法"><a href="#3-3-Beacon-API-的用法" class="headerlink" title="3.3 Beacon API 的用法"></a>3.3 Beacon API 的用法</h3><h4 id="1-基本用法"><a href="#1-基本用法" class="headerlink" title="1. 基本用法"></a>1. 基本用法</h4><p>使用 <code>navigator.sendBeacon</code> 方法发送数据。它接受两个参数：目标 URL 和要发送的数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">const url = &#x27;https://www.example.com/log&#x27;;</span><br><span class="line">const data = JSON.stringify(&#123; event: &#x27;pageUnload&#x27;, timestamp: Date.now() &#125;);</span><br><span class="line">navigator.sendBeacon(url, data);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-发送数据类型"><a href="#2-发送数据类型" class="headerlink" title="2. 发送数据类型"></a>2. 发送数据类型</h4><p><code>sendBeacon</code> 方法支持发送多种类型的数据，包括字符串、Blob、ArrayBuffer 等。</p>
+<ul>
+<li>发送字符串数据：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const data = &#x27;event=pageUnload&amp;timestamp=&#x27; + Date.now();</span><br><span class="line">navigator.sendBeacon(url, data);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>发送 Blob 数据：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const blob = new Blob([&#x27;event=pageUnload&amp;timestamp=&#x27; + Date.now()], &#123; type: &#x27;application/x-www-form-urlencoded&#x27; &#125;);</span><br><span class="line">navigator.sendBeacon(url, blob);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>发送 ArrayBuffer 数据：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">const buffer = new ArrayBuffer(16);</span><br><span class="line">const view = new DataView(buffer);</span><br><span class="line">view.setUint32(0, Date.now());</span><br><span class="line">navigator.sendBeacon(url, buffer);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-4-使用场景"><a href="#3-4-使用场景" class="headerlink" title="3.4 使用场景"></a>3.4 使用场景</h3><p>Beacon API 主要用于以下场景：</p>
+<ul>
+<li><p><strong>用户行为分析</strong>：发送用户点击、页面浏览等行为数据。</p>
+</li>
+<li><p><strong>性能监控</strong>：发送页面加载时间、资源加载时间等性能数据。</p>
+</li>
+<li><p><strong>错误报告</strong>：发送 JavaScript 错误、网络错误等错误信息。</p>
+</li>
+<li><p><strong>应用诊断</strong>：发送应用状态、日志信息等诊断数据。</p>
+</li>
+</ul>
+<h3 id="3-5-兼容性"><a href="#3-5-兼容性" class="headerlink" title="3.5 兼容性"></a>3.5 兼容性</h3><p>Beacon API 支持的浏览器包括 Chrome、Firefox、Edge、Safari 等，但不支持 Internet Explorer。建议在使用前检查浏览器兼容性。</p>
+<h3 id="3-6-发送数据示例"><a href="#3-6-发送数据示例" class="headerlink" title="3.6 发送数据示例"></a>3.6 发送数据示例</h3><p>以下是一些使用 Beacon API 发送数据的示例代码：</p>
+<ul>
+<li><strong>发送用户行为数据</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&#x27;beforeunload&#x27;, function() &#123;</span><br><span class="line">    const url = &#x27;https://www.example.com/log&#x27;;</span><br><span class="line">    const data = JSON.stringify(&#123; event: &#x27;pageUnload&#x27;, timestamp: Date.now() &#125;);</span><br><span class="line">    navigator.sendBeacon(url, data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>发送性能监控数据</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&#x27;beforeunload&#x27;, function() &#123;</span><br><span class="line">    const url = &#x27;https://www.example.com/performance&#x27;;</span><br><span class="line">    const data = JSON.stringify(&#123;</span><br><span class="line">        loadTime: window.performance.timing.loadEventEnd - window.performance.timing.navigationStart,</span><br><span class="line">        resources: window.performance.getEntriesByType(&#x27;resource&#x27;)</span><br><span class="line">    &#125;);</span><br><span class="line">    navigator.sendBeacon(url, data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>发送错误报告</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&#x27;error&#x27;, function(event) &#123;</span><br><span class="line">    const url = &#x27;https://www.example.com/error&#x27;;</span><br><span class="line">    const data = JSON.stringify(&#123;</span><br><span class="line">        message: event.message,</span><br><span class="line">        source: event.filename,</span><br><span class="line">        line: event.lineno,</span><br><span class="line">        col: event.colno,</span><br><span class="line">        error: event.error</span><br><span class="line">    &#125;);</span><br><span class="line">    navigator.sendBeacon(url, data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>发送应用诊断数据</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">window.addEventListener(&#x27;beforeunload&#x27;, function() &#123;</span><br><span class="line">    const url = &#x27;https://www.example.com/diagnostics&#x27;;</span><br><span class="line">    const data = JSON.stringify(&#123;</span><br><span class="line">        state: app.getState(),</span><br><span class="line">        logs: app.getLogs()</span><br><span class="line">    &#125;);</span><br><span class="line">    navigator.sendBeacon(url, data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-7-数据传输的可靠性"><a href="#3-7-数据传输的可靠性" class="headerlink" title="3.7 数据传输的可靠性"></a>3.7 数据传输的可靠性</h3><p>Beacon API 通过使用 HTTP POST 方法，将数据以非阻塞的方式传输到服务器。它使用浏览器的传输队列来确保数据在页面卸载前发送成功。即使页面已经关闭，浏览器仍会尝试发送数据。</p>
+<h3 id="3-8-数据接收与处理"><a href="#3-8-数据接收与处理" class="headerlink" title="3.8 数据接收与处理"></a>3.8 数据接收与处理</h3><p>服务器端需要处理接收到的 Beacon 数据。以下是一个简单的服务器端处理示例（使用 Node.js 和 Express）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">const express = require(&#x27;express&#x27;);</span><br><span class="line">const app = express();</span><br><span class="line">app.use(express.json());</span><br><span class="line"></span><br><span class="line">app.post(&#x27;/log&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;Received log:&#x27;, req.body);</span><br><span class="line">    res.sendStatus(200);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.post(&#x27;/performance&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;Received performance data:&#x27;, req.body);</span><br><span class="line">    res.sendStatus(200);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.post(&#x27;/error&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;Received error report:&#x27;, req.body);</span><br><span class="line">    res.sendStatus(200);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.post(&#x27;/diagnostics&#x27;, (req, res) =&gt; &#123;</span><br><span class="line">    console.log(&#x27;Received diagnostics data:&#x27;, req.body);</span><br><span class="line">    res.sendStatus(200);</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">app.listen(3000, () =&gt; &#123;</span><br><span class="line">    console.log(&#x27;Server is listening on port 3000&#x27;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-9-使用最佳实践"><a href="#3-9-使用最佳实践" class="headerlink" title="3.9 使用最佳实践"></a>3.9 使用最佳实践</h3><ul>
+<li><p>最小化数据量：尽量减少发送的数据量，以确保数据在页面卸载前能够发送成功。</p>
+</li>
+<li><p>避免敏感信息：由于 Beacon API 无法自定义请求头，发送的数据不应包含敏感信息。</p>
+</li>
+<li><p>多次发送：对于重要数据，可以在页面生命周期中多次发送，以提高数据传输的可靠性。</p>
+</li>
+<li><p>合理使用 Blob：对于二进制数据，可以使用 Blob 对象进行传输。</p>
+</li>
+</ul>
+<h2 id="4-WebSocket-API"><a href="#4-WebSocket-API" class="headerlink" title="4. WebSocket API"></a>4. WebSocket API</h2><p>WebSocket API 是一种在单个 TCP 连接上进行全双工通信的协议，允许客户端和服务器之间实时数据交换。与传统的 HTTP 请求 - 响应模型不同，WebSocket 提供了持续的双向连接，使得数据可以在客户端和服务器之间即时传输，非常适合实时应用如在线聊天、实时更新、在线游戏等。</p>
+<blockquote>
+<p>这个我们也很熟悉了，比如面试经常会问的心跳机制。</p>
+</blockquote>
+<h3 id="4-1-WebSocket-API-的优点"><a href="#4-1-WebSocket-API-的优点" class="headerlink" title="4.1 WebSocket API 的优点"></a>4.1 WebSocket API 的优点</h3><ul>
+<li><p>实时通信：提供全双工通信，允许客户端和服务器之间实时传输数据。</p>
+</li>
+<li><p>低延迟：比 HTTP 轮询具有更低的延迟，减少了通信的开销。</p>
+</li>
+<li><p>效率高：在保持连接的情况下，可以持续发送和接收数据，无需每次都建立新的连接。</p>
+</li>
+<li><p>支持二进制数据：除了文本数据，还支持二进制数据传输。</p>
+</li>
+</ul>
+<h3 id="4-2-WebSocket-API-的缺点"><a href="#4-2-WebSocket-API-的缺点" class="headerlink" title="4.2 WebSocket API 的缺点"></a>4.2 WebSocket API 的缺点</h3><ul>
+<li><p>连接维持：需要维持一个持久连接，可能会占用更多的服务器资源。</p>
+</li>
+<li><p>复杂性：相比于 HTTP 请求，WebSocket 的实现和管理更为复杂。</p>
+</li>
+<li><p>防火墙问题：一些防火墙和代理服务器可能会阻止 WebSocket 连接。</p>
+</li>
+</ul>
+<h3 id="4-3-WebSocket-API-的用法"><a href="#4-3-WebSocket-API-的用法" class="headerlink" title="4.3 WebSocket API 的用法"></a>4.3 WebSocket API 的用法</h3><h4 id="1-创建-WebSocket-对象"><a href="#1-创建-WebSocket-对象" class="headerlink" title="1. 创建 WebSocket 对象"></a>1. 创建 WebSocket 对象</h4><p>创建 WebSocket 对象是使用 WebSocket 的第一步。通过 <code>new WebSocket(url)</code> 可以创建一个新的 WebSocket 连接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const socket = new WebSocket(&#x27;ws://www.example.com/socketserver&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-连接事件处理"><a href="#2-连接事件处理" class="headerlink" title="2. 连接事件处理"></a>2. 连接事件处理</h4><p>可以使用 <code>onopen</code> 事件处理程序来处理连接成功事件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">socket.onopen = function(event) &#123;</span><br><span class="line">    console.log(&#x27;WebSocket is open now.&#x27;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-发送数据"><a href="#3-发送数据" class="headerlink" title="3. 发送数据"></a>3. 发送数据</h4><p>使用 <code>send</code> 方法可以向服务器发送数据。数据可以是字符串或二进制数据（Blob、ArrayBuffer）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socket.send(&#x27;Hello Server!&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-接收数据"><a href="#4-接收数据" class="headerlink" title="4. 接收数据"></a>4. 接收数据</h4><p>使用 <code>onmessage</code> 事件处理程序来处理接收到的数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">socket.onmessage = function(event) &#123;</span><br><span class="line">    console.log(&#x27;Received data from server:&#x27;, event.data);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-关闭连接"><a href="#5-关闭连接" class="headerlink" title="5. 关闭连接"></a>5. 关闭连接</h4><p>使用 <code>close</code> 方法可以关闭 WebSocket 连接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">socket.close();</span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>onclose</code> 事件处理程序来处理连接关闭事件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">socket.onclose = function(event) &#123;</span><br><span class="line">    console.log(&#x27;WebSocket is closed now.&#x27;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-处理错误"><a href="#6-处理错误" class="headerlink" title="6. 处理错误"></a>6. 处理错误</h4><p>使用 <code>onerror</code> 事件处理程序来处理连接错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">socket.onerror = function(event) &#123;</span><br><span class="line">    console.error(&#x27;WebSocket error observed:&#x27;, event);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-4-WebSocket-连接管理"><a href="#4-4-WebSocket-连接管理" class="headerlink" title="4.4 WebSocket 连接管理"></a>4.4 WebSocket 连接管理</h3><h4 id="1-自动重连"><a href="#1-自动重连" class="headerlink" title="1. 自动重连"></a>1. 自动重连</h4><p>在实际应用中，WebSocket 连接可能会因为各种原因断开。为了提高应用的可靠性，可以实现自动重连机制。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">function createWebSocket(url) &#123;</span><br><span class="line">    let socket = new WebSocket(url);</span><br><span class="line"></span><br><span class="line">    socket.onopen = function(event) &#123;</span><br><span class="line">        console.log(&#x27;WebSocket is open now.&#x27;);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    socket.onmessage = function(event) &#123;</span><br><span class="line">        console.log(&#x27;Received data from server:&#x27;, event.data);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    socket.onclose = function(event) &#123;</span><br><span class="line">        console.log(&#x27;WebSocket is closed now. Reconnecting...&#x27;);</span><br><span class="line">        setTimeout(function() &#123;</span><br><span class="line">            createWebSocket(url);</span><br><span class="line">        &#125;, 1000);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    socket.onerror = function(event) &#123;</span><br><span class="line">        console.error(&#x27;WebSocket error observed:&#x27;, event);</span><br><span class="line">    &#125;;</span><br><span class="line"></span><br><span class="line">    return socket;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const socket = createWebSocket(&#x27;ws://www.example.com/socketserver&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-心跳机制"><a href="#2-心跳机制" class="headerlink" title="2. 心跳机制"></a>2. 心跳机制</h4><p>为了保持 WebSocket 连接的活跃，可以实现心跳机制，定期发送心跳消息到服务器。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">let socket;</span><br><span class="line">let heartBeatInterval;</span><br><span class="line"></span><br><span class="line">function startHeartBeat() &#123;</span><br><span class="line">    heartBeatInterval = setInterval(function() &#123;</span><br><span class="line">        if (socket.readyState === WebSocket.OPEN) &#123;</span><br><span class="line">            socket.send(&#x27;ping&#x27;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;, 30000); // 每 30 秒发送一次心跳消息</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function stopHeartBeat() &#123;</span><br><span class="line">    clearInterval(heartBeatInterval);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">socket.onopen = function(event) &#123;</span><br><span class="line">    console.log(&#x27;WebSocket is open now.&#x27;);</span><br><span class="line">    startHeartBeat();</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">socket.onclose = function(event) &#123;</span><br><span class="line">    console.log(&#x27;WebSocket is closed now.&#x27;);</span><br><span class="line">    stopHeartBeat();</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-5-WebSocket-数据传输"><a href="#4-5-WebSocket-数据传输" class="headerlink" title="4.5 WebSocket 数据传输"></a>4.5 WebSocket 数据传输</h3><h4 id="1-发送文本数据"><a href="#1-发送文本数据" class="headerlink" title="1. 发送文本数据"></a>1. 发送文本数据</h4><p>WebSocket 允许发送文本数据，例如 JSON 字符串。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const message = JSON.stringify(&#123; type: &#x27;greeting&#x27;, content: &#x27;Hello Server!&#x27; &#125;);</span><br><span class="line">socket.send(message);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-发送二进制数据"><a href="#2-发送二进制数据" class="headerlink" title="2. 发送二进制数据"></a>2. 发送二进制数据</h4><p>WebSocket 也支持发送二进制数据，例如 ArrayBuffer 和 Blob。</p>
+<ul>
+<li>发送 ArrayBuffer 数据：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const buffer = new ArrayBuffer(8);</span><br><span class="line">const view = new Uint8Array(buffer);</span><br><span class="line">view[0] = 0;</span><br><span class="line">view[1] = 1;</span><br><span class="line">view[2] = 2;</span><br><span class="line">socket.send(buffer);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>发送 Blob 数据：</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const blob = new Blob([&#x27;Hello, WebSocket!&#x27;], &#123; type: &#x27;text/plain&#x27; &#125;);</span><br><span class="line">socket.send(blob);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-接收文本数据"><a href="#3-接收文本数据" class="headerlink" title="3. 接收文本数据"></a>3. 接收文本数据</h4><p>接收到的消息可以是文本数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">socket.onmessage = function(event) &#123;</span><br><span class="line">    const data = event.data;</span><br><span class="line">    console.log(&#x27;Received data:&#x27;, data);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-接收二进制数据"><a href="#4-接收二进制数据" class="headerlink" title="4. 接收二进制数据"></a>4. 接收二进制数据</h4><p>可以处理接收到的二进制数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">socket.binaryType = &#x27;arraybuffer&#x27;;</span><br><span class="line">socket.onmessage = function(event) &#123;</span><br><span class="line">    const arrayBuffer = event.data;</span><br><span class="line">    console.log(&#x27;Received ArrayBuffer:&#x27;, arrayBuffer);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-6-安全性"><a href="#4-6-安全性" class="headerlink" title="4.6 安全性"></a>4.6 安全性</h3><p>WebSocket 可以通过 wss:&#x2F;&#x2F; 协议进行加密传输，类似于 HTTPS，确保数据传输的安全性。建议在传输敏感数据时使用 wss:&#x2F;&#x2F; 协议。</p>
+<h3 id="4-7-使用场景"><a href="#4-7-使用场景" class="headerlink" title="4.7 使用场景"></a>4.7 使用场景</h3><p>WebSocket 适用于以下场景：</p>
+<ul>
+<li><p>实时聊天：例如即时通讯应用、聊天室等。</p>
+</li>
+<li><p>实时更新：例如股票行情、体育比分等实时更新的数据。</p>
+</li>
+<li><p>在线游戏：例如多人在线游戏，实时传输游戏状态和操作。</p>
+</li>
+<li><p>实时协作：例如多人协作编辑文档、代码等。</p>
+</li>
+<li><p>物联网：例如传感器数据实时传输、设备控制等。</p>
+</li>
+</ul>
+<h3 id="4-8-兼容性"><a href="#4-8-兼容性" class="headerlink" title="4.8 兼容性"></a>4.8 兼容性</h3><p>WebSocket API 支持的大多数现代浏览器，包括 Chrome、Firefox、Edge、Safari 等，但需要确保服务器和客户端均支持 WebSocket 协议。</p>
+<h2 id="5-Server-Sent-Events-SSE"><a href="#5-Server-Sent-Events-SSE" class="headerlink" title="5. Server-Sent Events (SSE)"></a>5. Server-Sent Events (SSE)</h2><p>Server-Sent Events (SSE) 是一种服务器推送技术，使服务器能够主动向客户端发送更新，而不需要客户端发出请求。SSE 使用 HTTP 协议，通过一个持续打开的 HTTP 连接，服务器可以在其上不断发送数据更新到客户端。这种方式非常适合实时更新的应用场景，如新闻推送、股票行情、社交媒体更新等。</p>
+<blockquote>
+<p>小伙伴们是不是想到了 WebSocket 和轮询，我认为 SSE 很多方面都比这两种方法强。</p>
+</blockquote>
+<h3 id="5-1-SSE-的优点"><a href="#5-1-SSE-的优点" class="headerlink" title="5.1 SSE 的优点"></a>5.1 SSE 的优点</h3><ul>
+<li><p>简单实现：SSE 基于 HTTP 协议，使用起来非常简单，只需要服务器不断发送更新，客户端接收即可。</p>
+</li>
+<li><p>低开销：相比于轮询或 WebSocket，SSE 的开销较低，适合单向数据流的应用。</p>
+</li>
+<li><p>自动重连：SSE 支持自动重连机制，当连接断开时，浏览器会自动尝试重新连接。</p>
+</li>
+<li><p>浏览器支持好：现代主流浏览器如 Chrome、Firefox、Safari 等都支持 SSE。</p>
+</li>
+</ul>
+<h3 id="5-2-SSE-的缺点"><a href="#5-2-SSE-的缺点" class="headerlink" title="5.2 SSE 的缺点"></a>5.2 SSE 的缺点</h3><ul>
+<li><p>单向通信：SSE 仅支持服务器向客户端发送数据，不支持双向通信。如果需要双向通信，需要结合其他技术如 WebSocket。</p>
+</li>
+<li><p>受限于浏览器：某些旧版浏览器不支持 SSE，例如 IE 浏览器不支持 SSE。</p>
+</li>
+<li><p>连接数限制：每个浏览器对同一域名的并发连接数有限制，SSE 会占用一个连接。</p>
+</li>
+</ul>
+<h3 id="5-3-SSE-的用法"><a href="#5-3-SSE-的用法" class="headerlink" title="5.3 SSE 的用法"></a>5.3 SSE 的用法</h3><h4 id="1-创建-EventSource-对象"><a href="#1-创建-EventSource-对象" class="headerlink" title="1. 创建 EventSource 对象"></a>1. 创建 EventSource 对象</h4><p>创建 EventSource 对象是使用 SSE 的第一步。通过 <code>new EventSource(url)</code> 可以创建一个新的 SSE 连接。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const eventSource = new EventSource(&#x27;http://www.example.com/events&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-处理事件"><a href="#2-处理事件" class="headerlink" title="2. 处理事件"></a>2. 处理事件</h4><p>使用 <code>onmessage</code> 事件处理程序来处理服务器发送的消息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eventSource.onmessage = function(event) &#123;</span><br><span class="line">    console.log(&#x27;Received data from server:&#x27;, event.data);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-自定义事件"><a href="#3-自定义事件" class="headerlink" title="3. 自定义事件"></a>3. 自定义事件</h4><p>服务器可以发送自定义事件，客户端可以使用 <code>addEventListener</code> 来监听这些事件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eventSource.addEventListener(&#x27;customEvent&#x27;, function(event) &#123;</span><br><span class="line">    console.log(&#x27;Received custom event data:&#x27;, event.data);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-处理连接打开和关闭"><a href="#4-处理连接打开和关闭" class="headerlink" title="4. 处理连接打开和关闭"></a>4. 处理连接打开和关闭</h4><p>使用 <code>onopen</code> 和 <code>onerror</code> 事件处理程序来处理连接打开和关闭事件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">eventSource.onopen = function(event) &#123;</span><br><span class="line">    console.log(&#x27;Connection to server opened.&#x27;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">eventSource.onerror = function(event) &#123;</span><br><span class="line">    if (event.eventPhase === EventSource.CLOSED) &#123;</span><br><span class="line">        console.log(&#x27;Connection to server closed.&#x27;);</span><br><span class="line">    &#125; else &#123;</span><br><span class="line">        console.error(&#x27;Error occurred:&#x27;, event);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-4-SSE-数据格式"><a href="#5-4-SSE-数据格式" class="headerlink" title="5.4 SSE 数据格式"></a>5.4 SSE 数据格式</h3><p>SSE 的数据格式非常简单，服务器发送的数据格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data: This is a message\n\n</span><br></pre></td></tr></table></figure>
+
+<p>数据格式的详细说明：</p>
+<ul>
+<li><code>data</code>：发送的数据，可以多行。</li>
+<li><code>event</code>：自定义事件类型。</li>
+<li><code>id</code>：消息的唯一 ID。</li>
+<li><code>retry</code>：客户端重连的时间间隔（毫秒）。</li>
+</ul>
+<p>示例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">data: This is a message\n\n</span><br><span class="line">event: customEvent\ndata: Custom event data\n\n</span><br><span class="line">id: 123\ndata: This is a message with an ID\n\n</span><br><span class="line">retry: 5000\ndata: This is a message with retry interval\n\n</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-5-处理断开和重连"><a href="#5-5-处理断开和重连" class="headerlink" title="5.5 处理断开和重连"></a>5.5 处理断开和重连</h3><p>SSE 支持自动重连机制，客户端在连接断开后会自动尝试重新连接。服务器可以通过 <code>Last-Event-ID</code> 头部字段来处理客户端重连时的消息丢失问题。</p>
+<p>服务器发送消息时可以附带消息 ID：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id: 123\ndata: This is a message with an ID\n\n</span><br></pre></td></tr></table></figure>
+
+<p>客户端在重新连接时会发送 <code>Last-Event-ID</code> 头部字段，服务器可以根据此 ID 来确定从哪条消息开始发送。</p>
+<h3 id="5-6-SSE-的使用场景"><a href="#5-6-SSE-的使用场景" class="headerlink" title="5.6 SSE 的使用场景"></a>5.6 SSE 的使用场景</h3><ul>
+<li><p>实时更新：如新闻推送、股票行情、体育比分等实时数据更新。</p>
+</li>
+<li><p>通知系统：如邮件通知、系统消息通知等。</p>
+</li>
+<li><p>社交媒体：如社交媒体动态更新、评论实时更新等。</p>
+</li>
+<li><p>监控系统：如服务器监控、应用状态监控等。</p>
+</li>
+</ul>
+<h3 id="5-7-SSE-与-WebSocket-对比"><a href="#5-7-SSE-与-WebSocket-对比" class="headerlink" title="5.7 SSE 与 WebSocket 对比"></a>5.7 SSE 与 WebSocket 对比</h3><p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://p6-xtjj-sign.byteimg.com/tos-cn-i-73owjymdk6/fcc5d5f6fbc249e4ae9095bab9d38bc7~tplv-73owjymdk6-jj-mark-v1:0:0:0:0:5o6Y6YeR5oqA5pyv56S-5Yy6IEAg6buR6Imy55qE5p6r:q75.awebp?rk3s=f64ab15b&x-expires=1730080297&x-signature=R7go4qNYsL/4JCWh9rc8sQb23U8=" alt="Image 4"></p>
+<h3 id="5-8-SSE-兼容性"><a href="#5-8-SSE-兼容性" class="headerlink" title="5.8 SSE 兼容性"></a>5.8 SSE 兼容性</h3><p>SSE 支持的大多数现代浏览器，包括 Chrome、Firefox、Safari 等，但 IE 浏览器不支持 SSE。可以使用 polyfill 或者其他替代方案来实现 IE 的支持。</p>
+<h2 id="6-XMLHttpRequest-Level-2"><a href="#6-XMLHttpRequest-Level-2" class="headerlink" title="6. XMLHttpRequest Level 2"></a>6. XMLHttpRequest Level 2</h2><p><code>XMLHttpRequest Level 2</code> (XHR2) 是对原始 XMLHttpRequest API 的扩展，提供了一些新功能和改进，以满足现代 Web 开发的需求。它使开发者能够更方便地与服务器进行异步通信，处理文件上传，监控请求进度，并支持跨域请求 (CORS)。</p>
+<h3 id="6-1-XMLHttpRequest-Level-2-的优点"><a href="#6-1-XMLHttpRequest-Level-2-的优点" class="headerlink" title="6.1 XMLHttpRequest Level 2 的优点"></a>6.1 XMLHttpRequest Level 2 的优点</h3><ol>
+<li><p>跨域请求支持：通过 CORS，XHR2 可以跨域发送请求和接收响应。</p>
+</li>
+<li><p>文件上传支持：使用 FormData 对象，可以方便地上传文件。</p>
+</li>
+<li><p>进度事件：可以监控请求的进度，包括上传和下载。</p>
+</li>
+<li><p>Blob 和 ArrayBuffer 支持：可以发送和接收二进制数据。</p>
+</li>
+<li><p>超时设置：可以设置请求的超时时间。</p>
+</li>
+</ol>
+<h3 id="6-2-XMLHttpRequest-Level-2-的缺点"><a href="#6-2-XMLHttpRequest-Level-2-的缺点" class="headerlink" title="6.2 XMLHttpRequest Level 2 的缺点"></a>6.2 XMLHttpRequest Level 2 的缺点</h3><ol>
+<li><p>复杂性增加：虽然功能更强大，但使用起来比原始的 XMLHttpRequest 更复杂。</p>
+</li>
+<li><p>浏览器兼容性问题：虽然现代浏览器都支持 XHR2，但某些旧版浏览器可能不完全支持。</p>
+</li>
+<li><p>安全性问题：跨域请求可能带来安全风险，需要服务器正确配置 CORS。</p>
+</li>
+</ol>
+<h3 id="6-3-XMLHttpRequest-Level-2-的用法"><a href="#6-3-XMLHttpRequest-Level-2-的用法" class="headerlink" title="6.3 XMLHttpRequest Level 2 的用法"></a>6.3 XMLHttpRequest Level 2 的用法</h3><h4 id="1-创建-XMLHttpRequest-对象"><a href="#1-创建-XMLHttpRequest-对象" class="headerlink" title="1. 创建 XMLHttpRequest 对象"></a>1. 创建 XMLHttpRequest 对象</h4><p>这是使用 XMLHttpRequest 的第一步，通过 <code>new XMLHttpRequest()</code> 创建一个新的 XMLHttpRequest 对象。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-初始化请求"><a href="#2-初始化请求" class="headerlink" title="2. 初始化请求"></a>2. 初始化请求</h4><p>使用 <code>open</code> 方法来初始化请求。它有三个主要参数：请求方法（GET, POST 等）、请求 URL，以及是否异步（布尔值）。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#x27;GET&#x27;, &#x27;https://example.com/data&#x27;, true);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-设置请求头"><a href="#3-设置请求头" class="headerlink" title="3. 设置请求头"></a>3. 设置请求头</h4><p>使用 <code>setRequestHeader</code> 方法来设置请求头，这在发送 POST 请求或需要特定的请求头时特别有用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-发送请求"><a href="#4-发送请求" class="headerlink" title="4. 发送请求"></a>4. 发送请求</h4><p>使用 <code>send</code> 方法来发送请求。对于 GET 请求，可以不传递参数；对于 POST 请求，可以传递请求体数据。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<p>对于 POST 请求，传递请求体数据：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const data = JSON.stringify(&#123; name: &#x27;Feng&#x27;, age:26 &#125;);</span><br><span class="line">xhr.send(data);</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-处理响应"><a href="#5-处理响应" class="headerlink" title="5. 处理响应"></a>5. 处理响应</h4><p>使用 <code>onreadystatechange</code> 事件处理响应。每当 <code>readyState</code> 属性改变时，<code>onreadystatechange</code> 事件会被触发。可以通过检查 <code>readyState</code> 和 <code>status</code> 来确定请求的状态和结果。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if (xhr.readyState === 4) &#123; // 请求完成</span><br><span class="line">        if (xhr.status === 200) &#123; // 成功</span><br><span class="line">            console.log(xhr.responseText);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.error(&#x27;Error:&#x27;, xhr.statusText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-进度事件"><a href="#6-进度事件" class="headerlink" title="6. 进度事件"></a>6. 进度事件</h4><p>XHR2 引入了进度事件，可以用来监控请求的进度。这对于文件上传和下载特别有用。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">xhr.upload.onprogress = function(event) &#123;</span><br><span class="line">    if (event.lengthComputable) &#123;</span><br><span class="line">        const percentComplete = (event.loaded / event.total) * 100;</span><br><span class="line">        console.log(`Upload progress: $&#123;percentComplete&#125;%`);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.onprogress = function(event) &#123;</span><br><span class="line">    if (event.lengthComputable) &#123;</span><br><span class="line">        const percentComplete = (event.loaded / event.total) * 100;</span><br><span class="line">        console.log(`Download progress: $&#123;percentComplete&#125;%`);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-处理错误"><a href="#7-处理错误" class="headerlink" title="7. 处理错误"></a>7. 处理错误</h4><p>可以在 <code>onerror</code> 事件处理程序中处理网络错误。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xhr.onerror = function() &#123;</span><br><span class="line">    console.error(&#x27;Request failed&#x27;);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-跨域请求"><a href="#8-跨域请求" class="headerlink" title="8. 跨域请求"></a>8. 跨域请求</h4><p>XHR2 支持跨域请求，但需要服务器正确配置 CORS。服务器需要返回允许跨域的头部：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Access-Control-Allow-Origin: https://yourdomain.com</span><br><span class="line">Access-Control-Allow-Methods: GET, POST</span><br><span class="line">Access-Control-Allow-Headers: Content-Type</span><br></pre></td></tr></table></figure>
+
+<p>前端代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">xhr.open(&#x27;GET&#x27;, &#x27;https://example.com/data&#x27;, true);</span><br><span class="line">xhr.withCredentials = true; // 如果需要发送凭证</span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-文件上传"><a href="#9-文件上传" class="headerlink" title="9. 文件上传"></a>9. 文件上传</h4><p>使用 FormData 对象，可以方便地上传文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const formData = new FormData();</span><br><span class="line">formData.append(&#x27;file&#x27;, fileInput.files[0]);</span><br><span class="line"></span><br><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&#x27;POST&#x27;, &#x27;https://example.com/upload&#x27;, true);</span><br><span class="line"></span><br><span class="line">xhr.upload.onprogress = function(event) &#123;</span><br><span class="line">    if (event.lengthComputable) &#123;</span><br><span class="line">        const percentComplete = (event.loaded / event.total) * 100;</span><br><span class="line">        console.log(`Upload progress: $&#123;percentComplete&#125;%`);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.send(formData);</span><br></pre></td></tr></table></figure>
+
+<h4 id="10-Blob-和-ArrayBuffer-支持"><a href="#10-Blob-和-ArrayBuffer-支持" class="headerlink" title="10. Blob 和 ArrayBuffer 支持"></a>10. Blob 和 ArrayBuffer 支持</h4><p>XHR2 支持发送和接收二进制数据。</p>
+<p>发送 Blob：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const blob = new Blob([&#x27;Hello, world!&#x27;], &#123; type: &#x27;text/plain&#x27; &#125;);</span><br><span class="line"></span><br><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&#x27;POST&#x27;, &#x27;https://example.com/upload&#x27;, true);</span><br><span class="line">xhr.send(blob);</span><br></pre></td></tr></table></figure>
+
+<p>接收 ArrayBuffer：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">xhr.responseType = &#x27;arraybuffer&#x27;;</span><br><span class="line"></span><br><span class="line">xhr.onload = function() &#123;</span><br><span class="line">    if (xhr.status === 200) &#123;</span><br><span class="line">        const arrayBuffer = xhr.response;</span><br><span class="line">        console.log(arrayBuffer);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.open(&#x27;GET&#x27;, &#x27;https://example.com/data&#x27;, true);</span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-4-示例代码"><a href="#6-4-示例代码" class="headerlink" title="6.4 示例代码"></a>6.4 示例代码</h3><p>以下是一些完整的示例代码，展示如何使用 XMLHttpRequest Level 2 的不同功能。</p>
+<ul>
+<li><strong>GET 请求示例</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&#x27;GET&#x27;, &#x27;https://example.com/data&#x27;, true);</span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if (xhr.readyState === 4) &#123;</span><br><span class="line">        if (xhr.status === 200) &#123;</span><br><span class="line">            console.log(JSON.parse(xhr.responseText));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.error(&#x27;Error:&#x27;, xhr.statusText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>POST 请求示例</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&#x27;POST&#x27;, &#x27;https://example.com/data&#x27;, true);</span><br><span class="line">xhr.setRequestHeader(&#x27;Content-Type&#x27;, &#x27;application/json&#x27;);</span><br><span class="line"></span><br><span class="line">xhr.onreadystatechange = function() &#123;</span><br><span class="line">    if (xhr.readyState === 4) &#123;</span><br><span class="line">        if (xhr.status === 200) &#123;</span><br><span class="line">            console.log(JSON.parse(xhr.responseText));</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            console.error(&#x27;Error:&#x27;, xhr.statusText);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">const data = JSON.stringify(&#123; name: &#x27;Feng&#x27;, age: 26 &#125;);</span><br><span class="line">xhr.send(data);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>文件上传示例</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">const formData = new FormData();</span><br><span class="line">formData.append(&#x27;file&#x27;, fileInput.files[0]);</span><br><span class="line"></span><br><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&#x27;POST&#x27;, &#x27;https://example.com/upload&#x27;, true);</span><br><span class="line"></span><br><span class="line">xhr.upload.onprogress = function(event) &#123;</span><br><span class="line">    if (event.lengthComputable) &#123;</span><br><span class="line">        const percentComplete = (event.loaded / event.total) * 100;</span><br><span class="line">        console.log(`Upload progress: $&#123;percentComplete&#125;%`);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.send(formData);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>Blob 发送示例</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">const blob = new Blob([&#x27;Hello, world!&#x27;], &#123; type: &#x27;text/plain&#x27; &#125;);</span><br><span class="line"></span><br><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.open(&#x27;POST&#x27;, &#x27;https://example.com/upload&#x27;, true);</span><br><span class="line">xhr.send(blob);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><strong>ArrayBuffer 接收示例</strong></li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">const xhr = new XMLHttpRequest();</span><br><span class="line">xhr.responseType = &#x27;arraybuffer&#x27;;</span><br><span class="line"></span><br><span class="line">xhr.onload = function() &#123;</span><br><span class="line">    if (xhr.status === 200) &#123;</span><br><span class="line">        const arrayBuffer = xhr.response;</span><br><span class="line">        console.log(arrayBuffer);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xhr.open(&#x27;GET&#x27;, &#x27;https://example.com/data&#x27;, true);</span><br><span class="line">xhr.send();</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-5-安全性"><a href="#6-5-安全性" class="headerlink" title="6.5 安全性"></a>6.5 安全性</h3><p>使用 XHR2 时，必须注意安全性问题，特别是跨域请求。确保服务器正确配置了 CORS 头，以防止跨站脚本攻击。此外，可以使用 Content Security Policy (CSP) 来限制脚本的来源，防止恶意代码的执行。</p>
+<h3 id="6-6-常见问题"><a href="#6-6-常见问题" class="headerlink" title="6.6 常见问题"></a>6.6 常见问题</h3><ol>
+<li><p><strong>请求被阻止</strong>：确保服务器正确配置了 CORS 头。</p>
+</li>
+<li><p><strong>进度事件不触发</strong>：确保请求的 Content-Length 头已正确设置。</p>
+</li>
+<li><p><strong>Blob&#x2F;ArrayBuffer 不支持</strong>：检查浏览器的支持情况，并确保 <code>responseType</code> 设置正确。</p>
+</li>
+</ol>
+<h2 id="7-WebRTC"><a href="#7-WebRTC" class="headerlink" title="7. WebRTC"></a>7. WebRTC</h2><p>WebRTC（Web Real-Time Communication）是一项由 W3C（World Wide Web Consortium）和 IETF（Internet Engineering Task Force）共同制定的技术标准，用于实现浏览器和移动应用之间的实时音视频通信以及数据共享。WebRTC 提供了简单、强大且可扩展的 API，使开发者能够在其应用中轻松集成实时通信功能。</p>
+<h3 id="7-1-WebRTC-的优点"><a href="#7-1-WebRTC-的优点" class="headerlink" title="7.1 WebRTC 的优点"></a>7.1 WebRTC 的优点</h3><ol>
+<li><p>实时通信：WebRTC 提供低延迟、高质量的音视频通信，适合实时应用，如视频会议、在线教育等。</p>
+</li>
+<li><p>点对点连接：WebRTC 通过直接的点对点连接，减少了服务器负载和通信延迟。</p>
+</li>
+<li><p>跨平台支持：WebRTC 支持在多个平台上运行，包括桌面浏览器、移动设备和嵌入式系统。</p>
+</li>
+<li><p>开源免费：WebRTC 是一个开源项目，开发者可以免费使用并进行修改。</p>
+</li>
+<li><p>安全性：WebRTC 使用了 SRTP（Secure Real-time Transport Protocol）和 DTLS（Datagram Transport Layer Security）来加密音视频流和数据通道，确保通信的安全性。</p>
+</li>
+</ol>
+<h3 id="7-2-WebRTC-的缺点"><a href="#7-2-WebRTC-的缺点" class="headerlink" title="7.2 WebRTC 的缺点"></a>7.2 WebRTC 的缺点</h3><ol>
+<li><p>复杂性增加：WebRTC 的 API 复杂且涉及多种协议，开发和调试需要一定的学习成本。</p>
+</li>
+<li><p>网络条件依赖：WebRTC 的性能和稳定性依赖于网络质量，不良的网络条件可能导致通信质量下降。</p>
+</li>
+<li><p>兼容性问题：虽然现代浏览器都支持 WebRTC，但某些旧版浏览器或特定环境可能不完全支持。</p>
+</li>
+<li><p>NAT 和防火墙穿透：在一些网络环境下，实现 NAT（Network Address Translation）和防火墙穿透可能会遇到困难。</p>
+</li>
+</ol>
+<h3 id="7-3-WebRTC-的用法"><a href="#7-3-WebRTC-的用法" class="headerlink" title="7.3 WebRTC 的用法"></a>7.3 WebRTC 的用法</h3><p>WebRTC 的基本组成部分包括三个核心 API：<code>MediaStream</code>、<code>RTCPeerConnection</code> 和 <code>RTCDataChannel</code>。</p>
+<h4 id="1-MediaStream-API"><a href="#1-MediaStream-API" class="headerlink" title="1. MediaStream API"></a>1. MediaStream API</h4><p>MediaStream API 用于获取和操作媒体流（音频和视频）。可以使用 <code>getUserMedia</code> 方法来访问用户的摄像头和麦克风。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">navigator.mediaDevices.getUserMedia(&#123; video: true, audio: true &#125;)</span><br><span class="line">  .then(stream =&gt; &#123;</span><br><span class="line">    const videoElement = document.querySelector(&#x27;video&#x27;);</span><br><span class="line">    videoElement.srcObject = stream;</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;Error accessing media devices.&#x27;, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-RTCPeerConnection-API"><a href="#2-RTCPeerConnection-API" class="headerlink" title="2. RTCPeerConnection API"></a>2. RTCPeerConnection API</h4><p>RTCPeerConnection 是 WebRTC 的核心组件，用于建立和控制点对点连接。</p>
+<h5 id="创建-RTCPeerConnection"><a href="#创建-RTCPeerConnection" class="headerlink" title="创建 RTCPeerConnection"></a>创建 RTCPeerConnection</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">const configuration = &#123;</span><br><span class="line">  iceServers: [</span><br><span class="line">    &#123; urls: &#x27;stun:stun.l.google.com:19302&#x27; &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br><span class="line">const peerConnection = new RTCPeerConnection(configuration);</span><br></pre></td></tr></table></figure>
+
+<h5 id="添加媒体流到连接"><a href="#添加媒体流到连接" class="headerlink" title="添加媒体流到连接"></a>添加媒体流到连接</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">navigator.mediaDevices.getUserMedia(&#123; video: true, audio: true &#125;)</span><br><span class="line">  .then(stream =&gt; &#123;</span><br><span class="line">    stream.getTracks().forEach(track =&gt; peerConnection.addTrack(track, stream));</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;Error accessing media devices.&#x27;, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h5 id="处理-ICE-候选"><a href="#处理-ICE-候选" class="headerlink" title="处理 ICE 候选"></a>处理 ICE 候选</h5><p>ICE（Interactive Connectivity Establishment）候选是 WebRTC 用于寻找最佳路径以建立点对点连接的机制。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">peerConnection.onicecandidate = event =&gt; &#123;</span><br><span class="line">  if (event.candidate) &#123;</span><br><span class="line">    // 发送 ICE 候选到远端对等体</span><br><span class="line">    sendCandidateToRemote(event.candidate);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="创建和交换-SDP"><a href="#创建和交换-SDP" class="headerlink" title="创建和交换 SDP"></a>创建和交换 SDP</h5><p>SDP（Session Description Protocol）是用于描述多媒体通信会话的格式。对等体之间需要交换 SDP 信息来建立连接。</p>
+<h6 id="创建-Offer"><a href="#创建-Offer" class="headerlink" title="创建 Offer"></a>创建 Offer</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">peerConnection.createOffer()</span><br><span class="line">  .then(offer =&gt; &#123;</span><br><span class="line">    return peerConnection.setLocalDescription(offer);</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(() =&gt; &#123;</span><br><span class="line">    // 发送 SDP Offer 到远端对等体</span><br><span class="line">    sendOfferToRemote(peerConnection.localDescription);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;Error creating offer.&#x27;, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h6 id="处理-Offer"><a href="#处理-Offer" class="headerlink" title="处理 Offer"></a>处理 Offer</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">peerConnection.setRemoteDescription(new RTCSessionDescription(offer))</span><br><span class="line">  .then(() =&gt; &#123;</span><br><span class="line">    return peerConnection.createAnswer();</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(answer =&gt; &#123;</span><br><span class="line">    return peerConnection.setLocalDescription(answer);</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(() =&gt; &#123;</span><br><span class="line">    // 发送 SDP Answer 到远端对等体</span><br><span class="line">    sendAnswerToRemote(peerConnection.localDescription);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;Error handling offer.&#x27;, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h6 id="处理-Answer"><a href="#处理-Answer" class="headerlink" title="处理 Answer"></a>处理 Answer</h6><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">peerConnection.setRemoteDescription(new RTCSessionDescription(answer))</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;Error setting remote description.&#x27;, error);</span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-RTCDataChannel-API"><a href="#3-RTCDataChannel-API" class="headerlink" title="3. RTCDataChannel API"></a>3. RTCDataChannel API</h4><p>RTCDataChannel 提供了在对等体之间发送任意数据的功能。</p>
+<h5 id="创建-Data-Channel"><a href="#创建-Data-Channel" class="headerlink" title="创建 Data Channel"></a>创建 Data Channel</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">const dataChannel = peerConnection.createDataChannel(&#x27;chat&#x27;);</span><br><span class="line"></span><br><span class="line">dataChannel.onopen = () =&gt; &#123;</span><br><span class="line">  console.log(&#x27;Data channel is open&#x27;);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">dataChannel.onmessage = event =&gt; &#123;</span><br><span class="line">  console.log(&#x27;Received message:&#x27;, event.data);</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h5 id="接收-Data-Channel"><a href="#接收-Data-Channel" class="headerlink" title="接收 Data Channel"></a>接收 Data Channel</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">peerConnection.ondatachannel = event =&gt; &#123;</span><br><span class="line">  const dataChannel = event.channel;</span><br><span class="line"></span><br><span class="line">  dataChannel.onopen = () =&gt; &#123;</span><br><span class="line">    console.log(&#x27;Data channel is open&#x27;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  dataChannel.onmessage = event =&gt; &#123;</span><br><span class="line">    console.log(&#x27;Received message:&#x27;, event.data);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-4-示例代码"><a href="#7-4-示例代码" class="headerlink" title="7.4 示例代码"></a>7.4 示例代码</h3><p>以下是一个完整的示例代码，展示了如何使用 WebRTC API 来建立一个简单的音视频通信和数据通道。</p>
+<p><strong>HTML：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;title&gt;WebRTC Example&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;video id=&quot;localVideo&quot; autoplay playsinline&gt;&lt;/video&gt;</span><br><span class="line">  &lt;video id=&quot;remoteVideo&quot; autoplay playsinline&gt;&lt;/video&gt;</span><br><span class="line">  &lt;script src=&quot;webrtc.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>JavaScript：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">const localVideo = document.getElementById(&#x27;localVideo&#x27;);</span><br><span class="line">const remoteVideo = document.getElementById(&#x27;remoteVideo&#x27;);</span><br><span class="line"></span><br><span class="line">const configuration = &#123;</span><br><span class="line">  iceServers: [</span><br><span class="line">    &#123; urls: &#x27;stun:stun.l.google.com:19302&#x27; &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;;</span><br><span class="line">const peerConnection = new RTCPeerConnection(configuration);</span><br><span class="line"></span><br><span class="line">navigator.mediaDevices.getUserMedia(&#123; video: true, audio: true &#125;)</span><br><span class="line">  .then(stream =&gt; &#123;</span><br><span class="line">    localVideo.srcObject = stream;</span><br><span class="line">    stream.getTracks().forEach(track =&gt; peerConnection.addTrack(track, stream));</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;Error accessing media devices.&#x27;, error);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">peerConnection.onicecandidate = event =&gt; &#123;</span><br><span class="line">  if (event.candidate) &#123;</span><br><span class="line">    sendCandidateToRemote(event.candidate);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">peerConnection.ontrack = event =&gt; &#123;</span><br><span class="line">  remoteVideo.srcObject = event.streams[0];</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">peerConnection.createOffer()</span><br><span class="line">  .then(offer =&gt; &#123;</span><br><span class="line">    return peerConnection.setLocalDescription(offer);</span><br><span class="line">  &#125;)</span><br><span class="line">  .then(() =&gt; &#123;</span><br><span class="line">    sendOfferToRemote(peerConnection.localDescription);</span><br><span class="line">  &#125;)</span><br><span class="line">  .catch(error =&gt; &#123;</span><br><span class="line">    console.error(&#x27;Error creating offer.&#x27;, error);</span><br><span class="line">  &#125;);</span><br><span class="line"></span><br><span class="line">function handleRemoteOffer(offer) &#123;</span><br><span class="line">  peerConnection.setRemoteDescription(new RTCSessionDescription(offer))</span><br><span class="line">    .then(() =&gt; &#123;</span><br><span class="line">      return peerConnection.createAnswer();</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(answer =&gt; &#123;</span><br><span class="line">      return peerConnection.setLocalDescription(answer);</span><br><span class="line">    &#125;)</span><br><span class="line">    .then(() =&gt; &#123;</span><br><span class="line">      sendAnswerToRemote(peerConnection.localDescription);</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(error =&gt; &#123;</span><br><span class="line">      console.error(&#x27;Error handling offer.&#x27;, error);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function handleRemoteAnswer(answer) &#123;</span><br><span class="line">  peerConnection.setRemoteDescription(new RTCSessionDescription(answer))</span><br><span class="line">    .catch(error =&gt; &#123;</span><br><span class="line">      console.error(&#x27;Error setting remote description.&#x27;, error);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function handleRemoteCandidate(candidate) &#123;</span><br><span class="line">  peerConnection.addIceCandidate(new RTCIceCandidate(candidate))</span><br><span class="line">    .catch(error =&gt; &#123;</span><br><span class="line">      console.error(&#x27;Error adding ICE candidate.&#x27;, error);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function sendOfferToRemote(offer) &#123;</span><br><span class="line">  // Implement this function to send the offer to the remote peer</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function sendAnswerToRemote(answer) &#123;</span><br><span class="line">  // Implement this function to send the answer to the remote peer</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function sendCandidateToRemote(candidate) &#123;</span><br><span class="line">  // Implement this function to send the candidate to the remote peer</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="7-5-安全性"><a href="#7-5-安全性" class="headerlink" title="7.5 安全性"></a>7.5 安全性</h3><p>WebRTC 使用多种安全协议来保护通信安全，包括：</p>
+<ol>
+<li><p><strong>SRTP</strong>：用于加密音视频流，防止窃听和篡改。</p>
+</li>
+<li><p><strong>DTLS</strong>：用于加密数据通道和信令数据，确保数据完整性和保密性。</p>
+</li>
+<li><p><strong>同源策略</strong>：WebRTC 遵循浏览器的同源策略，防止跨站脚本攻击。</p>
+</li>
+</ol>
+<h3 id="7-6-使用场景"><a href="#7-6-使用场景" class="headerlink" title="7.6 使用场景"></a>7.6 使用场景</h3><p>WebRTC 广泛应用于以下场景：</p>
+<ol>
+<li><strong>视频会议</strong>：如 Zoom、Google Meet 等。</li>
+<li><strong>在线教育</strong>：如实时教学、远程实验等。</li>
+<li><strong>远程医疗</strong>：如医生与患者之间的视频咨询。</li>
+<li><strong>社交媒体</strong>：如实时视频聊天和直播。</li>
+<li><strong>游戏</strong>：如实时多人游戏中的语音聊天和数据同步。</li>
+</ol>
+<h2 id="8-对比"><a href="#8-对比" class="headerlink" title="8. 对比"></a>8. 对比</h2><h3 id="8-1-用途与类型"><a href="#8-1-用途与类型" class="headerlink" title="8.1 用途与类型"></a>8.1 用途与类型</h3><ul>
+<li><p>XMLHttpRequest 和 XMLHttpRequest Level 2: 早期的 AJAX 技术，用于从服务器异步获取数据。Level 2 是 XMLHttpRequest 的扩展，增加了更多功能。</p>
+</li>
+<li><p>Fetch API: 现代、基于 Promise 的 API，用于网络请求，支持跨域。</p>
+</li>
+<li><p>Beacon API: 用于在不影响当前页面性能的情况下，发送数据到服务器。</p>
+</li>
+<li><p>WebSocket API: 提供全双工通信渠道，允许服务器与客户端之间的实时、双向通信。</p>
+</li>
+<li><p>Server-Sent Events (SSE): 允许服务器主动向客户端发送更新，基于 HTTP 协议，但只能单向通信。</p>
+</li>
+<li><p>WebRTC: 不是直接用于 HTTP 请求，而是用于浏览器之间的实时通信，支持视频、音频和数据共享。</p>
+</li>
+</ul>
+<h3 id="8-2-同步性与实时性"><a href="#8-2-同步性与实时性" class="headerlink" title="8.2 同步性与实时性"></a>8.2 同步性与实时性</h3><ul>
+<li><p>XMLHttpRequest 和 XMLHttpRequest Level 2、Fetch API: 异步操作，但非实时通信（除非通过轮询）。</p>
+</li>
+<li><p>Beacon API: 异步，设计用于不阻塞页面的数据发送。</p>
+</li>
+<li><p>WebSocket API 和 WebRTC: 提供实时双向通信。</p>
+</li>
+<li><p>SSE: 实时单向通信（从服务器到客户端）。</p>
+</li>
+</ul>
+<h3 id="8-3-复杂度"><a href="#8-3-复杂度" class="headerlink" title="8.3 复杂度"></a>8.3 复杂度</h3><ul>
+<li><p>XMLHttpRequest 和 XMLHttpRequest Level 2: 较为原始，需要处理较多细节。</p>
+</li>
+<li><p>Fetch API: 较为现代，使用 Promise，但可能需要额外的库来处理复杂需求（如 JSON 解析）。</p>
+</li>
+<li><p>Beacon API: 非常简单，用于发送少量数据。</p>
+</li>
+<li><p>WebSocket API、SSE、WebRTC: 复杂度较高，需要处理网络事件和可能的连接问题。</p>
+</li>
+</ul>
+<h3 id="8-4-兼容性"><a href="#8-4-兼容性" class="headerlink" title="8.4 兼容性"></a>8.4 兼容性</h3><ul>
+<li><p>XMLHttpRequest 和 XMLHttpRequest Level 2: 广泛支持，几乎所有现代浏览器都支持。</p>
+</li>
+<li><p>Fetch API: 现代浏览器支持，但在一些旧版浏览器中可能需要 polyfill。</p>
+</li>
+<li><p>Beacon API、WebSocket API、SSE、WebRTC: 大多数现代浏览器支持，但在某些旧浏览器上可能不可用。</p>
+</li>
+</ul>
+<h3 id="8-5-使用场景"><a href="#8-5-使用场景" class="headerlink" title="8.5 使用场景"></a>8.5 使用场景</h3><ul>
+<li><p>XMLHttpRequest 和 XMLHttpRequest Level 2、Fetch API: 适用于需要从服务器异步获取数据的情况。</p>
+</li>
+<li><p>Beacon API: 适用于发送分析数据、日志等，不影响页面性能。</p>
+</li>
+<li><p>WebSocket API: 实时游戏、聊天应用、实时通知等需要双向实时通信的场景。</p>
+</li>
+<li><p>SSE: 实时新闻更新、股票行情等需要从服务器实时获取数据但不需要发送数据的场景。</p>
+</li>
+<li><p>WebRTC: 视频会议、在线游戏等需要实时音视频通信的场景。</p>
+</li>
+</ul>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名 - 非商业性使用 - 相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/11/08/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97%202024/">独立开发心得 2024</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/10/11/%E8%82%B2%E5%84%BF%E5%A4%87%E5%BF%98/">育儿备忘</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>©2023-2024 <a href="/">Radiant Moon</a>。除非特别声明，所有文章均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-XMLHttpRequest"><span class="toc-text">1. XMLHttpRequest</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-XHR-%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">1.1 XHR 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-XHR-%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">1.2 XHR 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E5%88%9B%E5%BB%BA-XMLHttpRequest-%E5%AF%B9%E8%B1%A1"><span class="toc-text">1.3 创建 XMLHttpRequest 对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-4-%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AF%B7%E6%B1%82"><span class="toc-text">1.4 初始化请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-5-%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="toc-text">1.5 设置请求头</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-6-%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82"><span class="toc-text">1.6 发送请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-7-%E5%A4%84%E7%90%86%E5%93%8D%E5%BA%94"><span class="toc-text">1.7 处理响应</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-8-responseText-%E5%92%8C-responseXML-%E5%B1%9E%E6%80%A7"><span class="toc-text">1.8 responseText 和 responseXML 属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-9-%E5%BC%82%E6%AD%A5%E4%B8%8E%E5%90%8C%E6%AD%A5%E8%AF%B7%E6%B1%82"><span class="toc-text">1.9 异步与同步请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-10-%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF"><span class="toc-text">1.10 处理错误</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-11-%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95%E5%92%8C%E5%B1%9E%E6%80%A7"><span class="toc-text">1.11 其他常用方法和属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-12-%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82"><span class="toc-text">1.12 跨域请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-13-%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">1.13 示例代码</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#GET-%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B"><span class="toc-text">GET 请求示例</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#POST-%E8%AF%B7%E6%B1%82%E7%A4%BA%E4%BE%8B"><span class="toc-text">POST 请求示例</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Fetch-API"><span class="toc-text">2. Fetch API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-Fetch-API-%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">2.1 Fetch API 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-Fetch-API-%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">2.2 Fetch API 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-3-Fetch-API-%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">2.3 Fetch API 的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">基本用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E8%AF%B7%E6%B1%82"><span class="toc-text">创建请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="toc-text">请求方法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="toc-text">设置请求头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E5%93%8D%E5%BA%94"><span class="toc-text">处理响应</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF"><span class="toc-text">处理错误</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82"><span class="toc-text">跨域请求</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-4-%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">2.4 示例代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-5-%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">2.5 安全性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-6-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">2.6 使用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Beacon-API"><span class="toc-text">3. Beacon API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-Beacon-API-%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">3.1 Beacon API 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-2-Beacon-API-%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">3.2 Beacon API 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-3-Beacon-API-%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">3.3 Beacon API 的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95"><span class="toc-text">1. 基本用法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="toc-text">2. 发送数据类型</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-4-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">3.4 使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-5-%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">3.5 兼容性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-6-%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE%E7%A4%BA%E4%BE%8B"><span class="toc-text">3.6 发送数据示例</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-7-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93%E7%9A%84%E5%8F%AF%E9%9D%A0%E6%80%A7"><span class="toc-text">3.7 数据传输的可靠性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-8-%E6%95%B0%E6%8D%AE%E6%8E%A5%E6%94%B6%E4%B8%8E%E5%A4%84%E7%90%86"><span class="toc-text">3.8 数据接收与处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-9-%E4%BD%BF%E7%94%A8%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5"><span class="toc-text">3.9 使用最佳实践</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-WebSocket-API"><span class="toc-text">4. WebSocket API</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#4-1-WebSocket-API-%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">4.1 WebSocket API 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-2-WebSocket-API-%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">4.2 WebSocket API 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-3-WebSocket-API-%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">4.3 WebSocket API 的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA-WebSocket-%E5%AF%B9%E8%B1%A1"><span class="toc-text">1. 创建 WebSocket 对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E8%BF%9E%E6%8E%A5%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86"><span class="toc-text">2. 连接事件处理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%8F%91%E9%80%81%E6%95%B0%E6%8D%AE"><span class="toc-text">3. 发送数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%8E%A5%E6%94%B6%E6%95%B0%E6%8D%AE"><span class="toc-text">4. 接收数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%85%B3%E9%97%AD%E8%BF%9E%E6%8E%A5"><span class="toc-text">5. 关闭连接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF"><span class="toc-text">6. 处理错误</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-4-WebSocket-%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86"><span class="toc-text">4.4 WebSocket 连接管理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E8%87%AA%E5%8A%A8%E9%87%8D%E8%BF%9E"><span class="toc-text">1. 自动重连</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%BF%83%E8%B7%B3%E6%9C%BA%E5%88%B6"><span class="toc-text">2. 心跳机制</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-5-WebSocket-%E6%95%B0%E6%8D%AE%E4%BC%A0%E8%BE%93"><span class="toc-text">4.5 WebSocket 数据传输</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%8F%91%E9%80%81%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE"><span class="toc-text">1. 发送文本数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%8F%91%E9%80%81%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E6%8D%AE"><span class="toc-text">2. 发送二进制数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E6%8E%A5%E6%94%B6%E6%96%87%E6%9C%AC%E6%95%B0%E6%8D%AE"><span class="toc-text">3. 接收文本数据</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%8E%A5%E6%94%B6%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%95%B0%E6%8D%AE"><span class="toc-text">4. 接收二进制数据</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-6-%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">4.6 安全性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-7-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">4.7 使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-8-%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">4.8 兼容性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Server-Sent-Events-SSE"><span class="toc-text">5. Server-Sent Events (SSE)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-SSE-%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">5.1 SSE 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-SSE-%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">5.2 SSE 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-SSE-%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">5.3 SSE 的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA-EventSource-%E5%AF%B9%E8%B1%A1"><span class="toc-text">1. 创建 EventSource 对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%A4%84%E7%90%86%E4%BA%8B%E4%BB%B6"><span class="toc-text">2. 处理事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89%E4%BA%8B%E4%BB%B6"><span class="toc-text">3. 自定义事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%A4%84%E7%90%86%E8%BF%9E%E6%8E%A5%E6%89%93%E5%BC%80%E5%92%8C%E5%85%B3%E9%97%AD"><span class="toc-text">4. 处理连接打开和关闭</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-SSE-%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F"><span class="toc-text">5.4 SSE 数据格式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-%E5%A4%84%E7%90%86%E6%96%AD%E5%BC%80%E5%92%8C%E9%87%8D%E8%BF%9E"><span class="toc-text">5.5 处理断开和重连</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-6-SSE-%E7%9A%84%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">5.6 SSE 的使用场景</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-7-SSE-%E4%B8%8E-WebSocket-%E5%AF%B9%E6%AF%94"><span class="toc-text">5.7 SSE 与 WebSocket 对比</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-8-SSE-%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">5.8 SSE 兼容性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-XMLHttpRequest-Level-2"><span class="toc-text">6. XMLHttpRequest Level 2</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-XMLHttpRequest-Level-2-%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">6.1 XMLHttpRequest Level 2 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-XMLHttpRequest-Level-2-%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">6.2 XMLHttpRequest Level 2 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-XMLHttpRequest-Level-2-%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">6.3 XMLHttpRequest Level 2 的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%88%9B%E5%BB%BA-XMLHttpRequest-%E5%AF%B9%E8%B1%A1"><span class="toc-text">1. 创建 XMLHttpRequest 对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%88%9D%E5%A7%8B%E5%8C%96%E8%AF%B7%E6%B1%82"><span class="toc-text">2. 初始化请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%AE%BE%E7%BD%AE%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="toc-text">3. 设置请求头</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82"><span class="toc-text">4. 发送请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%A4%84%E7%90%86%E5%93%8D%E5%BA%94"><span class="toc-text">5. 处理响应</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E8%BF%9B%E5%BA%A6%E4%BA%8B%E4%BB%B6"><span class="toc-text">6. 进度事件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E5%A4%84%E7%90%86%E9%94%99%E8%AF%AF"><span class="toc-text">7. 处理错误</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82"><span class="toc-text">8. 跨域请求</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="toc-text">9. 文件上传</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-Blob-%E5%92%8C-ArrayBuffer-%E6%94%AF%E6%8C%81"><span class="toc-text">10. Blob 和 ArrayBuffer 支持</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-4-%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">6.4 示例代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-5-%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">6.5 安全性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-6-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98"><span class="toc-text">6.6 常见问题</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-WebRTC"><span class="toc-text">7. WebRTC</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-WebRTC-%E7%9A%84%E4%BC%98%E7%82%B9"><span class="toc-text">7.1 WebRTC 的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-WebRTC-%E7%9A%84%E7%BC%BA%E7%82%B9"><span class="toc-text">7.2 WebRTC 的缺点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-WebRTC-%E7%9A%84%E7%94%A8%E6%B3%95"><span class="toc-text">7.3 WebRTC 的用法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-MediaStream-API"><span class="toc-text">1. MediaStream API</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-RTCPeerConnection-API"><span class="toc-text">2. RTCPeerConnection API</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-RTCPeerConnection"><span class="toc-text">创建 RTCPeerConnection</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%AA%92%E4%BD%93%E6%B5%81%E5%88%B0%E8%BF%9E%E6%8E%A5"><span class="toc-text">添加媒体流到连接</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%A4%84%E7%90%86-ICE-%E5%80%99%E9%80%89"><span class="toc-text">处理 ICE 候选</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%92%8C%E4%BA%A4%E6%8D%A2-SDP"><span class="toc-text">创建和交换 SDP</span></a><ol class="toc-child"><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Offer"><span class="toc-text">创建 Offer</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%A4%84%E7%90%86-Offer"><span class="toc-text">处理 Offer</span></a></li><li class="toc-item toc-level-6"><a class="toc-link" href="#%E5%A4%84%E7%90%86-Answer"><span class="toc-text">处理 Answer</span></a></li></ol></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-RTCDataChannel-API"><span class="toc-text">3. RTCDataChannel API</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA-Data-Channel"><span class="toc-text">创建 Data Channel</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%8E%A5%E6%94%B6-Data-Channel"><span class="toc-text">接收 Data Channel</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-4-%E7%A4%BA%E4%BE%8B%E4%BB%A3%E7%A0%81"><span class="toc-text">7.4 示例代码</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-5-%E5%AE%89%E5%85%A8%E6%80%A7"><span class="toc-text">7.5 安全性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-6-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">7.6 使用场景</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E5%AF%B9%E6%AF%94"><span class="toc-text">8. 对比</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#8-1-%E7%94%A8%E9%80%94%E4%B8%8E%E7%B1%BB%E5%9E%8B"><span class="toc-text">8.1 用途与类型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-2-%E5%90%8C%E6%AD%A5%E6%80%A7%E4%B8%8E%E5%AE%9E%E6%97%B6%E6%80%A7"><span class="toc-text">8.2 同步性与实时性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-3-%E5%A4%8D%E6%9D%82%E5%BA%A6"><span class="toc-text">8.3 复杂度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-4-%E5%85%BC%E5%AE%B9%E6%80%A7"><span class="toc-text">8.4 兼容性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-5-%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF"><span class="toc-text">8.5 使用场景</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    utils.js(`https://unpkg.com/lenis@1.1.9/dist/lenis.min.js`, { defer: true }).then(function () {
+      const lenis = new Lenis({
+        smoothWheel: true,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        lerp: 0.05,
+        touchMultiplier: 2,
+        wheelMultiplier: 1,
+        infinite: false,
+        autoResize: true,
+      })
+      const scrollFn = (time) => {
+        lenis.raf(time)
+        requestAnimationFrame(scrollFn)
+      }
+      requestAnimationFrame(scrollFn)
+
+      // 定义自定义的 scrollTo 方法
+      function smoothScrollTo(y = 0) {
+        lenis.scrollTo(y)
+      }
+
+      // 覆盖 window.scrollTo 方法
+      window.scrollTo = smoothScrollTo
+    })
+  })
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>
