@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>URL 拼接并复制</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .url-div {
+        padding: 10px;
+        margin: 5px;
+        background-color: #f0f0f0;
+        cursor: pointer;
+        border: 1px solid #ddd;
+        transition: background-color 0.3s;
+      }
+      .url-div:hover {
+        background-color: #e0e0e0;
+      }
+      #result {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <input
+      type="text"
+      id="inputAddress"
+      placeholder="输入地址..."
+      style="width: 300px; padding: 8px; font-size: 16px"
+    />
+    <div id="result"></div>
+
+    <script>
+      // 定义一组 URL 前缀
+      const urlPrefixes = [
+        "https://mirror.ghproxy.com/",
+        "https://cf.ghproxy.cc/",
+        "https://gh-proxy.com/",
+        "https://gh.api.99988866.xyz/",
+        "https://github.abskoop.workers.dev/",
+        "https://ghp.ci/",
+        "https://hub.gitmirror.com/?q=",
+        "https://ghproxy.com/",
+        "https://ghps.cc/",
+        "https://gh.ddlc.top/",
+        // "https://gh.con.sh?q=",
+        "raw.staticdn.net",
+      ];
+
+      // 获取输入框元素和结果显示区域
+      const inputAddress = document.getElementById("inputAddress");
+      const resultDiv = document.getElementById("result");
+
+      // 监听输入框的输入事件
+      inputAddress.addEventListener("input", function () {
+        const address = inputAddress.value;
+
+        // 清空现有的结果
+        resultDiv.innerHTML = "";
+
+        // 如果输入框为空，不显示任何内容
+        if (!address) {
+          return;
+        }
+
+        // 循环遍历 URL 前缀，拼接并创建 div 元素
+        urlPrefixes.forEach((prefix) => {
+          const fullUrl = prefix.includes('://')
+            ? prefix + address
+            : address.replace("raw.githubusercontent.com", prefix);
+          const urlDiv = document.createElement("div");
+          urlDiv.className = "url-div";
+          urlDiv.textContent = fullUrl;
+
+          // 给每个 div 添加点击事件，用于复制对应的 URL
+          urlDiv.addEventListener("click", function () {
+            navigator.clipboard
+              .writeText(fullUrl)
+              .then(() => {
+                alert("已复制：" + fullUrl);
+              })
+              .catch((err) => {
+                alert("复制失败：" + err);
+              });
+          });
+
+          // 将生成的 div 添加到结果区域
+          resultDiv.appendChild(urlDiv);
+        });
+      });
+    </script>
+  </body>
+</html>

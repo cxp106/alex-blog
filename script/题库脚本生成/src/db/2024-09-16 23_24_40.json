@@ -1,0 +1,130 @@
+{
+  "records": [
+    {
+      "id": "1811220977032458242",
+      "type": 3,
+      "level": 2,
+      "content": "<p>是否已学完相关知识？</p>",
+      "createTime": "2024-07-11 10:08:26",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1811220685352169474",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1811220977095372802",
+          "questionId": "1811220977032458242",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1811220977116344322",
+          "questionId": "1811220977032458242",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1817741628194992130",
+      "type": 1,
+      "level": 2,
+      "content": "<p>是否已学完全部知识？</p>",
+      "createTime": "2024-07-29 09:59:11",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1811220685352169474",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1817741628245323777",
+          "questionId": "1817741628194992130",
+          "content": "是",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1817741628266295298",
+          "questionId": "1817741628194992130",
+          "content": "否",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1821384010828353537",
+      "type": 1,
+      "level": 2,
+      "content": "<p>是否完成本章节全部知识的学习。</p>",
+      "createTime": "2024-08-08 11:12:43",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1811220685352169474",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1821384010849325057",
+          "questionId": "1821384010828353537",
+          "content": "是",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1821384010853519362",
+          "questionId": "1821384010828353537",
+          "content": "否",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    }
+  ],
+  "total": 3,
+  "size": 500,
+  "current": 1,
+  "orders": [],
+  "optimizeCountSql": true,
+  "searchCount": true,
+  "maxLimit": null,
+  "countId": null,
+  "pages": 1
+}

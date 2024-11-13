@@ -1,0 +1,857 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <!-- 加入字体 -->
+  <link rel="stylesheet" href="/font/result.css" />
+  <title>NPM 备忘 - Radiant Moon</title>
+
+  
+    <meta name="description" content="对于一个项目，常用的一些 npm 简单命令包含的功能有：初始化一个文件夹 ( npm init )，下载 npm 模块 ( npm install )，创建测试 ( npm test ) 和自定义脚本 ( npm run )。但是，进一步了解一些 npm 的使用技巧可以彻底改变你的日常开发任务。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NPM 备忘">
+<meta property="og:url" content="https://cxp.netlify.app/2024/07/31/NPM%20%E5%A4%87%E5%BF%98/index.html">
+<meta property="og:site_name" content="Radiant Moon">
+<meta property="og:description" content="对于一个项目，常用的一些 npm 简单命令包含的功能有：初始化一个文件夹 ( npm init )，下载 npm 模块 ( npm install )，创建测试 ( npm test ) 和自定义脚本 ( npm run )。但是，进一步了解一些 npm 的使用技巧可以彻底改变你的日常开发任务。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-31T08:28:05.413Z">
+<meta property="article:modified_time" content="2024-08-23T06:44:34.251Z">
+<meta property="article:author" content="Radiant Moon">
+<meta property="article:tag" content="前端">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="前端">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Radiant Moon" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/favicon.ico" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Radiant Moon</div><div class="sub cap">Embracing the Fortune of Light</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/07/31/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"><span class="title">工具资源</span></a><a class="item title" href="/2024/11/08/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97%202024/"><span class="title">独立开发心得 2024</span></a><a class="item title" href="/2024/10/24/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82API%E6%96%B9%E5%BC%8F/"><span class="title">前端请求 API 方式</span></a><a class="item title" href="/2024/07/31/Chatgpt%20%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/"><span class="title">Chatgpt 提示工程</span></a><a class="item title" href="/2024/08/01/%E7%94%9F%E6%B4%BB%E5%A6%99%E6%8B%9B/"><span class="title">生活妙招</span></a><a class="item title" href="/2024/07/31/JavaScript%20%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/"><span class="title">JavaScript 常用代码片段</span></a><a class="item title" href="/2024/10/11/%E8%82%B2%E5%84%BF%E5%A4%87%E5%BF%98/"><span class="title">育儿备忘</span></a><a class="item title" href="/2024/08/01/%E8%B4%AD%E7%89%A9%E6%B8%85%E5%8D%95/"><span class="title">购物清单</span></a><a class="item title" href="/2024/07/31/Github%20%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/"><span class="title">Github 使用备忘</span></a><a class="item title" href="/2024/07/31/%E7%AF%A1%E6%94%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/"><span class="title">篡改猴脚本</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-07-31T08:28:05.413Z">2024-07-31</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-23T06:44:34.251Z">2024-08-23</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>NPM 备忘</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p>对于一个项目，常用的一些 npm 简单命令包含的功能有：初始化一个文件夹 ( <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/init">npm init</a> )，下载 npm 模块 ( <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/install">npm install</a> )，创建测试 ( <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/test">npm test</a> ) 和自定义脚本 ( <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/run-script">npm run</a> )。但是，进一步了解一些 npm 的使用技巧可以彻底改变你的日常开发任务。</p>
+<h3 id="获取帮助"><a href="#获取帮助" class="headerlink" title="获取帮助"></a>获取帮助</h3><p><a target="_blank" rel="noopener" href="https://docs.npmjs.com/">npm 文档</a> 和 <a target="_blank" rel="noopener" href="https://docs.npmjs.com/#cli">CLI 命令行文档</a> 是非常不错地的学习资料，但需要通过浏览器访问，这并不是很方便。因而可以通过命令行快速获取所有可选项：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<p>此外，还能获取特定 npm 命令的使用帮助：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm <span class="built_in">help</span> &lt;<span class="built_in">command</span>&gt;</span><br></pre></td></tr></table></figure>
+
+<p>例如：<code>npm help install</code></p>
+<p>另一种方式是通过下面的命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm &lt;<span class="built_in">command</span>&gt; -h</span><br></pre></td></tr></table></figure>
+
+<h3 id="npm-命令自动完成"><a href="#npm-命令自动完成" class="headerlink" title="npm 命令自动完成"></a>npm 命令自动完成</h3><p>npm 通过 bash 提供了命令自动完成功能 (包括 <a target="_blank" rel="noopener" href="https://msdn.microsoft.com/en-us/commandline/wsl/about?f=255&MSPPError=-2147217396">Bash for Windows 10</a> ):</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm completion &gt;&gt; ~/.bashrc</span><br><span class="line"></span><br><span class="line">//or Z shell</span><br><span class="line"></span><br><span class="line">npm completion &gt;&gt; ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p>重新加载 shell 配置文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source ~/.bashrc</span><br></pre></td></tr></table></figure>
+
+<p>现在，在终端注入 <code>npm ins</code> ，然后按下 <code>tab</code> 键就会出现 <code>install</code> 了，不会再浪费时间去全部输入了。</p>
+<ol>
+<li>修复全局模块的权限</li>
+</ol>
+<hr>
+<p>当你试图安装全部模块时，类 Linux 系统可能会抛出权限错误，可以在 npm 命令之前添加 <code>sudo</code> 来执行，但这是一个较危险的选择。一个更高的解决方式是改变 npm 默认的模块安装目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mkdir ~/.npm-global</span><br><span class="line">npm config set prefix &#x27;~/.npm-global&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>使用适当的文本编辑器将下面的一行添加到 <code>~/.bashrc</code> 或者 <code>~/.zshrc</code> 文件中：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export PATH=&quot;$HOME/.npm-global/bin:$PATH&quot;</span><br></pre></td></tr></table></figure>
+
+<p>重新加载配置文件 (<code>source ~/.bashrc</code>)，然后重新安装 npm 到用户所属路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure>
+
+<p>这也会更新 npm。</p>
+<ol start="4">
+<li>持续更新 npm</li>
+</ol>
+<hr>
+<p>你可以通过下面的命令显示 npm 当前的版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>如果有需要，可以通过下面的命令更新 npm：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g npm</span><br></pre></td></tr></table></figure>
+
+<p>当 Node 的主版本 released 之后，你也可能需要重新构建 C++ 扩展：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm rebuild</span><br></pre></td></tr></table></figure>
+
+<p>如果你需要管理多个版本的 node.js 和 npm，可以考虑使用 <a target="_blank" rel="noopener" href="https://github.com/tj/n">n</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/creationix/nvm">nvm</a>。这有一篇关于 nvm 的文章：<a target="_blank" rel="noopener" href="https://www.sitepoint.com/quick-tip-multiple-versions-node-nvm/">使用 nvm 安装多版本的 Node.js</a></p>
+<ol start="5">
+<li>定义默认的 npm init</li>
+</ol>
+<hr>
+<p>使用 <code>npm init</code> 初始化一个新的项目，这会提示你关于项目的更多细节，并创建一个 <code>package.json</code> 文件。</p>
+<p>如果你厌倦了每次开始一个新的项目都需要重新输入同样的信息，可以使用 <code>-y</code> 标记表示你能接受<code>package.json</code> 文件的一堆默认值：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm init -y</span><br></pre></td></tr></table></figure>
+
+<p>或者你可以设置一些语义化的默认值：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set init.author.name &lt;name&gt;</span><br><span class="line">npm config set init.author.email &lt;email&gt;</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>更精准的模块搜索</li>
+</ol>
+<hr>
+<p>到目前为止，npm 上已经有超过 350000 个模块了，并且每天还在持续增长。尽管有很多非常棒的模块，但是你还是想避免使用一些不受欢迎的、存在 bug 的或者无人维护的模块。在 <a target="_blank" rel="noopener" href="https://www.npmjs.com/">npmjs</a> 和 <a target="_blank" rel="noopener" href="https://github.com/">Github</a> 上搜索 npm 模块是很实用但这还有一些其它选择：</p>
+<p><strong>npms</strong></p>
+<p><a target="_blank" rel="noopener" href="https://npms.io/">npms</a> 根据一个基于项目版本、模块下载次数、最新更新日期、提交频率、测试覆盖率、文档、贡献者数量、issues 数、star 数、forks 数和作者在社区的地位的综合测量分数进行模块排名。</p>
+<p><strong>npm Discover</strong></p>
+<p><a target="_blank" rel="noopener" href="http://www.npmdiscover.com/">npm Discover</a> 定位于快速搜索和其它模块通常一起使用的模块，如 <a target="_blank" rel="noopener" href="https://www.npmjs.com/package/body-parser">body-parser</a> 通常和 Express 一起使用。</p>
+<p><strong>Packages by PageRank</strong></p>
+<p><a target="_blank" rel="noopener" href="http://anvaka.github.io/npmrank/online/">Packages by PageRank</a> 按照模块的谷歌排名进行搜索和排序。</p>
+<p><strong>Curated npm Lists</strong></p>
+<p>还一个选择就是利用别人的搜索结果。当需要一个健壮的解决方案时，我经常会参考 <a target="_blank" rel="noopener" href="https://twitter.com/sindresorhus">sindresorhus</a> 的 <a target="_blank" rel="noopener" href="https://github.com/sindresorhus/awesome-nodejs">Awesome Node.js</a>。</p>
+<ol start="7">
+<li>管理你的模块</li>
+</ol>
+<hr>
+<p>你已经安装了一些模块，看看都有啥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list</span><br></pre></td></tr></table></figure>
+
+<p>(<code>ls</code>、<code>la</code> &amp; <code>ll</code> 可以用作 <code>list</code> 的别名)</p>
+<p>该命令会显示所有模块：(安装的) 模块，子模块以及子模块的子模块等。可以限制输出的模块层级：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list --depth=0</span><br></pre></td></tr></table></figure>
+
+<p>打开一个模块的主页：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm home &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<p>这只有在你的系统能打开浏览器时有用–在服务端的系统上会失败。同样，可以打开一个模块的 Github 仓库：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm repo &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或者它的文档：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm docs &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<p>或者它目前的 bugs 列表：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm bugs &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<p><code>npm list</code> 会显示和你已经安装地模块的关联模块—这些没有在 <code>package.json</code>文件中被引用。你可以单独<code>npm uninstall</code> 每一个模块或者全部移除它们：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm prune</span><br></pre></td></tr></table></figure>
+
+<p>如果安装模块时你添加了 <code>--production</code> 标记或者 <code>NODE_ENV</code> 被设置成 <code>production</code>，<code>package.json</code> 文件中被指定为 <code>devDependencies</code> 的模块也会被移除。</p>
+<ol start="8">
+<li>锁定依赖</li>
+</ol>
+<hr>
+<p>默认情况下，当用 <code>--save/-S</code> 或者 <code>--save-dev/-D</code> 安装一个模块时，npm 通过脱字符 (^) 来限定所安装模块的主版本号。例如，当运行 <code>npm update</code> 时， <code>^1.5.1</code> 允许安装版本号大于 <code>1.5.1</code> 但小于 <code>2.0.0</code> 版本的模块。</p>
+<p>波浪号 (<del>) 字符是限定模块的次要版本。例如，当运行 <code>npm update</code> 时， &#96;</del>1.5.1<code>允许安装版本号大于</code>1.5.1<code>但小于 </code>1.6.0&#96; 版本的模块。可以将需要安装的模块版本前缀默认设置成波浪号 (~):</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set save-prefix=&quot;~&quot;</span><br></pre></td></tr></table></figure>
+
+<p>对于那些偏执的认为任何更新 (模块的行为) 会破坏系统的人，可以配置 npm 仅安装精确版本号的模块：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set save-exact true</span><br></pre></td></tr></table></figure>
+
+<p>另一个选择是，可以在项目中使用 <a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/shrinkwrap">shrinkwrap</a>:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm shrinkwrap</span><br></pre></td></tr></table></figure>
+
+<p>这会生成一个 <code>shrinkwrap.json</code> 文件，该文件包含了你正在使用的模块的指定版本。当运行 <code>npm install</code>时，该文件所指定的模块版本会覆盖 <code>package.json</code> 文件中所指定的版本。</p>
+<ol start="9">
+<li>找出过时的模块</li>
+</ol>
+<hr>
+<p>怎么知道一个模块已经更新了呢？我之前的方式是先列举出项目所依赖的模块 (<code>npm list --depth=0</code>)，然后在 <a target="_blank" rel="noopener" href="https://www.npmjs.com/">npmjs.com</a> 上找到该模块，手动检查该模块的版本是否已经更新。这非常费时。幸运的是，有一个更简单的方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm outdated</span><br></pre></td></tr></table></figure>
+
+<p>或者 <code>npm outdated -g</code> 来查找全局模块。</p>
+<p>你也可以查看一个独立模块的当前版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list &lt;package&gt;</span><br></pre></td></tr></table></figure>
+
+<p>也可以查看检验当前和历史版本：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm view &lt;package&gt; versions</span><br></pre></td></tr></table></figure>
+
+<p><code>npm view &lt;package&gt;</code> 会显示一个独立模块的所有信息，包括它的依赖、关键字、更新日期、贡献者、仓库地址和许可证等。</p>
+<ol start="10">
+<li>使用开发中的模块</li>
+</ol>
+<hr>
+<p>当你正在开发一个模块时，会经常想在其它项目中尝试使用或者在任何一个目录运行它 (如果你的应用支持)，这时没必要将其发布到 npm，并全局安装—仅需在该模块所在目录使用下面的命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npn link</span><br></pre></td></tr></table></figure>
+
+<p>该命令会为模块在全局目录下创建一个符号链接。可以通过下面的命令查看模块引用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g --depth=0</span><br></pre></td></tr></table></figure>
+
+<p>或者：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm outdated -g</span><br></pre></td></tr></table></figure>
+
+<p>现在，就可以从命令行运行模块或者通过 <code>require</code> 在任何项目中引入该模块。</p>
+<p>另一个选择是，可以通过文件路径在 <code>package.json</code> 文件中声明对该模块的依赖：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">  &quot;myproject&quot;: &quot;file:../myproject/&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="Mac-环境配置"><a href="#Mac-环境配置" class="headerlink" title="Mac 环境配置"></a>Mac 环境配置</h3><p>在 macOS 上配置 <code>nvm</code>（Node Version Manager）时，你需要确保 <code>nvm</code> 的安装和配置正确。下面是详细的步骤，帮助你确保 <code>nvm</code> 能够在每次打开终端时正常工作：</p>
+<h4 id="1-安装-nvm"><a href="#1-安装-nvm" class="headerlink" title="1. 安装 nvm"></a>1. 安装 <code>nvm</code></h4><p>首先，确保你已经按照以下步骤安装了 <code>nvm</code>：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash</span><br></pre></td></tr></table></figure>
+
+<h4 id="2-配置-shell-环境"><a href="#2-配置-shell-环境" class="headerlink" title="2. 配置 shell 环境"></a>2. 配置 shell 环境</h4><p>根据你使用的 shell（Bash 或 Zsh），你需要将 <code>nvm</code> 的初始化脚本添加到你的 shell 配置文件中。macOS 默认使用 Zsh（从 macOS Catalina 开始），但如果你使用的是 Bash，你需要修改不同的配置文件。</p>
+<h5 id="对于-Zsh-用户"><a href="#对于-Zsh-用户" class="headerlink" title="对于 Zsh 用户"></a>对于 Zsh 用户</h5><ol>
+<li><p>打开你的 <code>~/.zshrc</code> 文件（如果文件不存在，可以创建一个）：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加以下内容到 <code>~/.zshrc</code> 文件中：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> NVM_DIR=<span class="string">&quot;<span class="variable">$HOME</span>/.nvm&quot;</span></span><br><span class="line">[ -s <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span> ] &amp;&amp; \. <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span> <span class="comment"># This loads nvm</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存文件并退出编辑器（在 Nano 中，按 <code>Ctrl+X</code>，然后按 <code>Y</code> 保存更改）。</p>
+</li>
+<li><p>重新加载 <code>~/.zshrc</code> 文件使更改生效：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h5 id="对于-Bash-用户"><a href="#对于-Bash-用户" class="headerlink" title="对于 Bash 用户"></a>对于 Bash 用户</h5><ol>
+<li><p>打开你的 <code>~/.bash_profile</code> 或 <code>~/.bashrc</code> 文件（通常 macOS 上是 <code>~/.bash_profile</code>）：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.bash_profile</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加以下内容到 <code>~/.bash_profile</code> 文件中：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> NVM_DIR=<span class="string">&quot;<span class="variable">$HOME</span>/.nvm&quot;</span></span><br><span class="line">[ -s <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span> ] &amp;&amp; \. <span class="string">&quot;<span class="variable">$NVM_DIR</span>/nvm.sh&quot;</span></span><br><span class="line">[ -s <span class="string">&quot;<span class="variable">$NVM_DIR</span>/bash_completion&quot;</span> ] &amp;&amp; \. <span class="string">&quot;<span class="variable">$NVM_DIR</span>/bash_completion&quot;</span> <span class="comment"># This loads nvm</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存文件并退出编辑器（在 Nano 中，按 <code>Ctrl+X</code>，然后按 <code>Y</code> 保存更改）。</p>
+</li>
+<li><p>重新加载 <code>~/.bash_profile</code> 文件使更改生效：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="3-安装-Node-js"><a href="#3-安装-Node-js" class="headerlink" title="3. 安装 Node.js"></a>3. 安装 Node.js</h4><p>安装 <code>nvm</code> 后，你可以使用它来安装 Node.js。运行以下命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 20</span><br></pre></td></tr></table></figure>
+
+<p>这会安装 Node.js 的 20 版本（你可以根据需要安装其他版本）。</p>
+<h4 id="4-验证安装"><a href="#4-验证安装" class="headerlink" title="4. 验证安装"></a>4. 验证安装</h4><p>你可以检查 <code>nvm</code> 和 Node.js 是否正确安装：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">command</span> -v nvm</span><br></pre></td></tr></table></figure>
+
+<p>这应该返回 <code>nvm</code> 的路径。如果返回为空，说明 <code>nvm</code> 没有被正确加载。</p>
+<p>检查 Node.js 和 npm 的版本：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>这些命令应该输出你安装的 Node.js 和 npm 的版本号。</p>
+<h3 id="Mac-配置控制台代理"><a href="#Mac-配置控制台代理" class="headerlink" title="Mac 配置控制台代理"></a>Mac 配置控制台代理</h3><p>在 macOS 上配置控制台（终端）使用 Shadowsocks 的 SOCKS 代理涉及到设置环境变量，使得终端中的网络请求通过代理服务器。以下是如何配置控制台以使用 SOCKS 代理的详细步骤：</p>
+<h4 id="1-确保-Shadowsocks-客户端正在运行"><a href="#1-确保-Shadowsocks-客户端正在运行" class="headerlink" title="1. 确保 Shadowsocks 客户端正在运行"></a>1. 确保 Shadowsocks 客户端正在运行</h4><p>首先，确保你的 Shadowsocks 客户端（如 ShadowsocksX-NG 或 ClashX）已经启动并且配置正确。你需要知道 SOCKS 代理的地址和端口（通常是 <code>127.0.0.1</code> 和 <code>1080</code>，如果使用默认设置）。</p>
+<h4 id="2-配置终端使用-SOCKS-代理"><a href="#2-配置终端使用-SOCKS-代理" class="headerlink" title="2. 配置终端使用 SOCKS 代理"></a>2. 配置终端使用 SOCKS 代理</h4><h5 id="临时配置（仅对当前终端会话有效）"><a href="#临时配置（仅对当前终端会话有效）" class="headerlink" title="临时配置（仅对当前终端会话有效）"></a>临时配置（仅对当前终端会话有效）</h5><ol>
+<li><p><strong>打开终端</strong>。</p>
+</li>
+<li><p>使用 <code>export</code> 命令设置环境变量。以下是设置 SOCKS 代理的命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> SOCKS5_PROXY=<span class="string">&quot;socks5://127.0.0.1:1080&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>你可以用这个环境变量来配置需要 SOCKS 代理的程序。</p>
+</li>
+<li><p>如果你只需要设置某些命令的代理，例如 <code>curl</code> 或 <code>wget</code>，可以这样运行命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --proxy <span class="variable">$SOCKS5_PROXY</span> http://example.com</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -e use_proxy=<span class="built_in">yes</span> -e socks_proxy=<span class="variable">$SOCKS5_PROXY</span> http://example.com</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h5 id="永久配置（对所有终端会话有效）"><a href="#永久配置（对所有终端会话有效）" class="headerlink" title="永久配置（对所有终端会话有效）"></a>永久配置（对所有终端会话有效）</h5><p>要使 SOCKS 代理的设置在每次打开终端时都有效，你可以将环境变量添加到你的 shell 配置文件中。</p>
+<p><strong>对于 Zsh 用户</strong>（默认 shell 从 macOS Catalina 开始）：</p>
+<ol>
+<li><p>打开你的 <code>~/.zshrc</code> 文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.zshrc</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加以下行到文件末尾：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> SOCKS5_PROXY=<span class="string">&quot;socks5://127.0.0.1:1080&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存并退出编辑器（在 Nano 中，按 <code>Ctrl+X</code>，然后按 <code>Y</code> 保存更改）。</p>
+</li>
+<li><p>重新加载 <code>~/.zshrc</code> 文件使更改生效：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure></li>
+</ol>
+<p><strong>对于 Bash 用户</strong>（如果你仍在使用 Bash）：</p>
+<ol>
+<li><p>打开你的 <code>~/.bash_profile</code> 或 <code>~/.bashrc</code> 文件：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano ~/.bash_profile</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加以下行到文件末尾：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> SOCKS5_PROXY=<span class="string">&quot;socks5://127.0.0.1:1080&quot;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>保存并退出编辑器（在 Nano 中，按 <code>Ctrl+X</code>，然后按 <code>Y</code> 保存更改）。</p>
+</li>
+<li><p>重新加载 <code>~/.bash_profile</code> 文件使更改生效：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">source</span> ~/.bash_profile</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="3-配置常见命令使用-SOCKS-代理"><a href="#3-配置常见命令使用-SOCKS-代理" class="headerlink" title="3. 配置常见命令使用 SOCKS 代理"></a>3. 配置常见命令使用 SOCKS 代理</h4><p><strong><code>curl</code></strong></p>
+<p>要让 <code>curl</code> 使用 SOCKS 代理，你可以在命令中指定代理：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl --proxy socks5://127.0.0.1:1080 http://example.com</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>wget</code></strong></p>
+<p>对于 <code>wget</code>，你可以在命令中指定 SOCKS 代理：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -e use_proxy=<span class="built_in">yes</span> -e socks_proxy=socks5://127.0.0.1:1080 http://example.com</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-测试代理设置"><a href="#4-测试代理设置" class="headerlink" title="4. 测试代理设置"></a>4. 测试代理设置</h4><p>可以使用 <code>curl</code> 或 <code>wget</code> 来测试代理是否配置正确：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -I http://example.com</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://example.com</span><br></pre></td></tr></table></figure>
+
+<p>这些命令应该通过你的 SOCKS 代理进行请求。</p>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名 - 非商业性使用 - 相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/07/31/VSCode/">vscode 备忘</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/07/31/Nginx%20%E5%A4%87%E5%BF%98/">Nginx 备忘</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>©2023-2024 <a href="/">Radiant Moon</a>。除非特别声明，所有文章均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E5%B8%AE%E5%8A%A9"><span class="toc-text">获取帮助</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#npm-%E5%91%BD%E4%BB%A4%E8%87%AA%E5%8A%A8%E5%AE%8C%E6%88%90"><span class="toc-text">npm 命令自动完成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac-%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="toc-text">Mac 环境配置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85-nvm"><span class="toc-text">1. 安装 nvm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE-shell-%E7%8E%AF%E5%A2%83"><span class="toc-text">2. 配置 shell 环境</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E-Zsh-%E7%94%A8%E6%88%B7"><span class="toc-text">对于 Zsh 用户</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E-Bash-%E7%94%A8%E6%88%B7"><span class="toc-text">对于 Bash 用户</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%AE%89%E8%A3%85-Node-js"><span class="toc-text">3. 安装 Node.js</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E9%AA%8C%E8%AF%81%E5%AE%89%E8%A3%85"><span class="toc-text">4. 验证安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Mac-%E9%85%8D%E7%BD%AE%E6%8E%A7%E5%88%B6%E5%8F%B0%E4%BB%A3%E7%90%86"><span class="toc-text">Mac 配置控制台代理</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E7%A1%AE%E4%BF%9D-Shadowsocks-%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%AD%A3%E5%9C%A8%E8%BF%90%E8%A1%8C"><span class="toc-text">1. 确保 Shadowsocks 客户端正在运行</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E9%85%8D%E7%BD%AE%E7%BB%88%E7%AB%AF%E4%BD%BF%E7%94%A8-SOCKS-%E4%BB%A3%E7%90%86"><span class="toc-text">2. 配置终端使用 SOCKS 代理</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#%E4%B8%B4%E6%97%B6%E9%85%8D%E7%BD%AE%EF%BC%88%E4%BB%85%E5%AF%B9%E5%BD%93%E5%89%8D%E7%BB%88%E7%AB%AF%E4%BC%9A%E8%AF%9D%E6%9C%89%E6%95%88%EF%BC%89"><span class="toc-text">临时配置（仅对当前终端会话有效）</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#%E6%B0%B8%E4%B9%85%E9%85%8D%E7%BD%AE%EF%BC%88%E5%AF%B9%E6%89%80%E6%9C%89%E7%BB%88%E7%AB%AF%E4%BC%9A%E8%AF%9D%E6%9C%89%E6%95%88%EF%BC%89"><span class="toc-text">永久配置（对所有终端会话有效）</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E9%85%8D%E7%BD%AE%E5%B8%B8%E8%A7%81%E5%91%BD%E4%BB%A4%E4%BD%BF%E7%94%A8-SOCKS-%E4%BB%A3%E7%90%86"><span class="toc-text">3. 配置常见命令使用 SOCKS 代理</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE"><span class="toc-text">4. 测试代理设置</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    utils.js(`https://unpkg.com/lenis@1.1.9/dist/lenis.min.js`, { defer: true }).then(function () {
+      const lenis = new Lenis({
+        smoothWheel: true,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        lerp: 0.05,
+        touchMultiplier: 2,
+        wheelMultiplier: 1,
+        infinite: false,
+        autoResize: true,
+      })
+      const scrollFn = (time) => {
+        lenis.raf(time)
+        requestAnimationFrame(scrollFn)
+      }
+      requestAnimationFrame(scrollFn)
+
+      // 定义自定义的 scrollTo 方法
+      function smoothScrollTo(y = 0) {
+        lenis.scrollTo(y)
+      }
+
+      // 覆盖 window.scrollTo 方法
+      window.scrollTo = smoothScrollTo
+    })
+  })
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

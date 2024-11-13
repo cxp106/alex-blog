@@ -1,0 +1,22 @@
+{
+  "name": "flexsearch-tampermonkey",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./src/processData.js && webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.7.7",
+    "fuse.js": "^7.0.0",
+    "pako": "^2.1.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "devDependencies": {
+    "terser-webpack-plugin": "^5.3.10"
+  }
+}

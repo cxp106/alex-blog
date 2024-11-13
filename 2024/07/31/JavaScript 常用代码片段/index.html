@@ -1,0 +1,664 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <!-- 加入字体 -->
+  <link rel="stylesheet" href="/font/result.css" />
+  <title>JavaScript 常用代码片段 - Radiant Moon</title>
+
+  
+    <meta name="description" content="开发时关于 JavaScript 使用的一些常用代码片段。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript 常用代码片段">
+<meta property="og:url" content="https://cxp.netlify.app/2024/07/31/JavaScript%20%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/index.html">
+<meta property="og:site_name" content="Radiant Moon">
+<meta property="og:description" content="开发时关于 JavaScript 使用的一些常用代码片段。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-31T08:28:05.381Z">
+<meta property="article:modified_time" content="2024-10-17T03:16:23.128Z">
+<meta property="article:author" content="Radiant Moon">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="JavaScript">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Radiant Moon" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/favicon.ico" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Radiant Moon</div><div class="sub cap">Embracing the Fortune of Light</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/07/31/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"><span class="title">工具资源</span></a><a class="item title" href="/2024/11/08/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97%202024/"><span class="title">独立开发心得 2024</span></a><a class="item title" href="/2024/10/24/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82API%E6%96%B9%E5%BC%8F/"><span class="title">前端请求 API 方式</span></a><a class="item title" href="/2024/07/31/Chatgpt%20%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/"><span class="title">Chatgpt 提示工程</span></a><a class="item title" href="/2024/08/01/%E7%94%9F%E6%B4%BB%E5%A6%99%E6%8B%9B/"><span class="title">生活妙招</span></a><a class="item title" href="/2024/07/31/JavaScript%20%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/"><span class="title">JavaScript 常用代码片段</span></a><a class="item title" href="/2024/10/11/%E8%82%B2%E5%84%BF%E5%A4%87%E5%BF%98/"><span class="title">育儿备忘</span></a><a class="item title" href="/2024/08/01/%E8%B4%AD%E7%89%A9%E6%B8%85%E5%8D%95/"><span class="title">购物清单</span></a><a class="item title" href="/2024/07/31/Github%20%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/"><span class="title">Github 使用备忘</span></a><a class="item title" href="/2024/07/31/%E7%AF%A1%E6%94%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/"><span class="title">篡改猴脚本</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-07-31T08:28:05.381Z">2024-07-31</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-10-17T03:16:23.128Z">2024-10-17</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>JavaScript 常用代码片段</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><h3 id="返回数据类型方法封装"><a href="#返回数据类型方法封装" class="headerlink" title="返回数据类型方法封装"></a>返回数据类型方法封装</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> classType = &#123;&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">&quot;Boolean Number String Function Array Date RegExp Object Error Null Undefined&quot;</span>.<span class="title function_">split</span>(<span class="string">&quot; &quot;</span>).<span class="title function_">map</span>(<span class="keyword">function</span>(<span class="params">item, index</span>) &#123;</span><br><span class="line">    classType[<span class="string">&quot;[object &quot;</span> + item + <span class="string">&quot;]&quot;</span>] = item.<span class="title function_">toLowerCase</span>();</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">type</span>(<span class="params">obj</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">typeof</span> obj === <span class="string">&quot;object&quot;</span> || <span class="keyword">typeof</span> obj === <span class="string">&quot;function&quot;</span> ?</span><br><span class="line">        classType[<span class="title class_">Object</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">toString</span>.<span class="title function_">call</span>(obj)] || <span class="string">&quot;object&quot;</span> :</span><br><span class="line">        <span class="keyword">typeof</span> obj;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取文件名后缀"><a href="#获取文件名后缀" class="headerlink" title="获取文件名后缀"></a>获取文件名后缀</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">方法<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fileExtension = fileName.<span class="title function_">substring</span>(fileName.<span class="title function_">lastIndexOf</span>(<span class="string">&#x27;.&#x27;</span>) + <span class="number">1</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">方法<span class="number">2</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fileExtension =fileName.<span class="title function_">substring</span>(fileName.<span class="property">length</span>-<span class="number">3</span>,fileName.<span class="property">length</span>).<span class="title function_">toLowerCase</span>();</span><br><span class="line"></span><br><span class="line">方法<span class="number">3</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> fileExtension = fileName.<span class="title function_">split</span>(<span class="string">&#x27;.&#x27;</span>).<span class="title function_">pop</span>().<span class="title function_">toLowerCase</span>();</span><br></pre></td></tr></table></figure>
+
+<h3 id="节流"><a href="#节流" class="headerlink" title="节流"></a>节流</h3><p>在规定时间内，只触发一次。比如我们设定 500ms，在这个时间内，无论点击按钮多少次，它都只会触发一次。具体场景可以是抢购时候，由于有无数人快速点击按钮，如果每次点击都发送请求，就会给服务器造成巨大的压力，但是我们进行节流后，就会大大减少请求的次数。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; fn 是我们需要包装的事件回调</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; wait 是每次推迟执行的等待时间</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">throttle</span> = (<span class="params">fn, wait = <span class="number">1500</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> inThrottle, lastFn, lastTime;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">const</span> context = <span class="variable language_">this</span>,</span><br><span class="line">      args = <span class="variable language_">arguments</span>;</span><br><span class="line">    <span class="keyword">if</span> (!inThrottle) &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(context, args);</span><br><span class="line">      lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">      inThrottle = <span class="literal">true</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(lastFn);</span><br><span class="line">      lastFn = <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="title class_">Date</span>.<span class="title function_">now</span>() - lastTime &gt;= wait) &#123;</span><br><span class="line">          fn.<span class="title function_">apply</span>(context, args);</span><br><span class="line">          lastTime = <span class="title class_">Date</span>.<span class="title function_">now</span>();</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;, <span class="title class_">Math</span>.<span class="title function_">max</span>(wait - (<span class="title class_">Date</span>.<span class="title function_">now</span>() - lastTime), <span class="number">0</span>));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> throttle;</span><br></pre></td></tr></table></figure>
+
+<h3 id="防抖"><a href="#防抖" class="headerlink" title="防抖"></a>防抖</h3><p>在连续的操作中，无论进行了多长时间，只有某一次的操作后在指定的时间内没有再操作，这一次才被判定有效。具体场景可以搜索框输入关键字过程中实时 请求服务器匹配搜索结果，如果不进行处理，那么就是输入框内容一直变化，导致一直发送请求。如果进行防抖处理，结果就是当我们输入内容完成后，一定时间 (比如 500ms) 没有再 输入内容，这时再触发请求。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> *</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; fn  是我们需要包装的事件回调</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*</span>&#125; delay 是每次推迟执行的等待时间</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">debounce</span> = (<span class="params">fn, delay = <span class="number">1000</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="comment">// 定时器</span></span><br><span class="line">  <span class="keyword">let</span> timer = <span class="literal">null</span>;</span><br><span class="line">  <span class="comment">// 将 debounce 处理结果当作函数返回</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 保留调用时的 this 上下文</span></span><br><span class="line">    <span class="keyword">let</span> context = <span class="variable language_">this</span>;</span><br><span class="line">    <span class="comment">// 保留调用时传入的参数</span></span><br><span class="line">    <span class="keyword">let</span> args = <span class="variable language_">arguments</span>;</span><br><span class="line">    <span class="comment">// 每次事件被触发时，都去清除之前的旧定时器</span></span><br><span class="line">    <span class="keyword">if</span> (timer) &#123;</span><br><span class="line">      <span class="built_in">clearTimeout</span>(timer);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 设立新定时器</span></span><br><span class="line">    timer = <span class="built_in">setTimeout</span>(<span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">      fn.<span class="title function_">apply</span>(context, args);</span><br><span class="line">    &#125;, delay);</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> debounce;</span><br></pre></td></tr></table></figure>
+
+<h3 id="快速生成整数数列"><a href="#快速生成整数数列" class="headerlink" title="快速生成整数数列"></a>快速生成整数数列</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[...<span class="title class_">Array</span>(<span class="number">100</span>).<span class="title function_">keys</span>()];</span><br><span class="line"><span class="title class_">Array</span>(<span class="number">100</span>).<span class="title function_">fill</span>(<span class="number">1</span>).<span class="title function_">map</span>(<span class="function">(<span class="params">v,k</span>)=&gt;</span>k+<span class="number">1</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="快速生成数组模拟数据"><a href="#快速生成数组模拟数据" class="headerlink" title="快速生成数组模拟数据"></a>快速生成数组模拟数据</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Array</span>.<span class="title function_">from</span>(&#123; <span class="attr">length</span>: <span class="number">100</span> &#125;, <span class="function">(<span class="params">_, i</span>) =&gt;</span> (&#123; <span class="attr">label</span>: <span class="string">`Net<span class="subst">$&#123;i + <span class="number">1</span>&#125;</span>`</span> &#125;))</span><br></pre></td></tr></table></figure>
+<h3 id="和"><a href="#和" class="headerlink" title="|| 和 ??"></a>|| 和 ??</h3><p>前端偶尔会出现后台拿到的值为空然后赋予一个默认值的场景</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// “||”会把下面这些都认为是空，但“??”只会在遇到 undefined 和 null，才会输出后面的值</span></span><br><span class="line"><span class="literal">undefined</span> || <span class="literal">null</span> || <span class="literal">false</span> || <span class="string">&#x27;&#x27;</span> || <span class="number">0</span> || <span class="string">&#x27;default&#x27;</span> <span class="comment">// default</span></span><br><span class="line"><span class="literal">undefined</span> ?? <span class="literal">null</span> ?? <span class="literal">false</span> ?? <span class="string">&#x27;&#x27;</span> ?? <span class="number">0</span> ?? <span class="string">&#x27;default&#x27;</span> <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span>((value??<span class="string">&#x27;&#x27;</span>) !== <span class="string">&#x27;&#x27;</span>)&#123;</span><br><span class="line">  <span class="comment">//...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="扁平化数组"><a href="#扁平化数组" class="headerlink" title="扁平化数组"></a>扁平化数组</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> deps = &#123;</span><br><span class="line">    <span class="string">&#x27;采购部&#x27;</span>:[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>],</span><br><span class="line">    <span class="string">&#x27;人事部&#x27;</span>:[<span class="number">5</span>,<span class="number">8</span>,<span class="number">12</span>],</span><br><span class="line">    <span class="string">&#x27;行政部&#x27;</span>:[<span class="number">5</span>,<span class="number">14</span>,<span class="number">79</span>],</span><br><span class="line">    <span class="string">&#x27;运输部&#x27;</span>:[<span class="number">3</span>,<span class="number">64</span>,<span class="number">105</span>],</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// 使用 Infinity 作为 flat 的参数，使得无需知道被扁平化的数组的维度。</span></span><br><span class="line"><span class="title class_">Object</span>.<span class="title function_">values</span>(deps).<span class="title function_">flat</span>(<span class="title class_">Infinity</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="并发请求"><a href="#并发请求" class="headerlink" title="并发请求"></a>并发请求</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一个请求失败就都不返回</span></span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">all</span>()</span><br><span class="line"><span class="comment">// 其中一个异步函数处理完成，就返回结果</span></span><br><span class="line"><span class="title class_">Promise</span>.<span class="title function_">race</span>()</span><br></pre></td></tr></table></figure>
+
+<h3 id="数组按照指定的数组大小分割成若干个数组块"><a href="#数组按照指定的数组大小分割成若干个数组块" class="headerlink" title="数组按照指定的数组大小分割成若干个数组块"></a>数组按照指定的数组大小分割成若干个数组块</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">array</span>&#125; arr 被平分的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; size 平分后数组块每个的大小</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">array</span>&#125; 处理后的数组块数组</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">chunk</span> = (<span class="params">arr, size</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">var</span> newArr = []</span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.<span class="property">length</span>; i = i + size) &#123;</span><br><span class="line">    newArr.<span class="title function_">push</span>(arr.<span class="title function_">slice</span>(i, i + size))</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> newArr</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">array</span>&#125; arr 被平分的数组</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; n 平分后数组块的数量</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@return</span> &#123;<span class="type">array</span>&#125; 处理后的数组块数组</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">chunk</span> = (<span class="params">arr, n</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> size = <span class="title class_">Math</span>.<span class="title function_">ceil</span>(arr.<span class="property">length</span> / n)</span><br><span class="line">  <span class="keyword">return</span> <span class="title class_">Array</span>.<span class="title function_">from</span>(&#123; <span class="attr">length</span>: n &#125;, <span class="function">(<span class="params">v, i</span>) =&gt;</span> arr.<span class="title function_">slice</span>(i * size, i * size + size))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="toFixed-四舍五入小数位去掉额外的-0"><a href="#toFixed-四舍五入小数位去掉额外的-0" class="headerlink" title="toFixed 四舍五入小数位去掉额外的 0"></a>toFixed 四舍五入小数位去掉额外的 0</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">parseFloat</span>((<span class="number">1.005</span>).<span class="title function_">toFixed</span>(<span class="number">15</span>)) <span class="comment">//==&gt; 1.005</span></span><br><span class="line"><span class="built_in">parseFloat</span>((<span class="number">1.000000000</span>).<span class="title function_">toFixed</span>(<span class="number">15</span>)) <span class="comment">//==&gt; 1</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="取得数组最后一个"><a href="#取得数组最后一个" class="headerlink" title="取得数组最后一个"></a>取得数组最后一个</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">arr.<span class="title function_">slice</span>(-<span class="number">1</span>)[<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="返回字符串字节长度"><a href="#返回字符串字节长度" class="headerlink" title="返回字符串字节长度"></a>返回字符串字节长度</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">codePointLength</span>(<span class="params">text</span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> result = text.<span class="title function_">match</span>(<span class="regexp">/[\s\S]/gu</span>);</span><br><span class="line">  <span class="keyword">return</span> result ? result.<span class="property">length</span> : <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> s = <span class="string">&#x27;??&#x27;</span>;</span><br><span class="line"></span><br><span class="line">s.<span class="property">length</span> <span class="comment">// 4</span></span><br><span class="line"><span class="title function_">codePointLength</span>(s) <span class="comment">// 2</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="随机颜色"><a href="#随机颜色" class="headerlink" title="随机颜色"></a>随机颜色</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//随机 RGB 颜色值</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Color</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">r</span> = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">255</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">g</span> = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">255</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">b</span> = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">255</span>);</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">color</span> = <span class="string">&#x27;rgba(&#x27;</span>+ <span class="variable language_">this</span>.<span class="property">r</span> +<span class="string">&#x27;,&#x27;</span>+ <span class="variable language_">this</span>.<span class="property">g</span> +<span class="string">&#x27;,&#x27;</span>+ <span class="variable language_">this</span>.<span class="property">b</span> +<span class="string">&#x27;,0.8)&#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 随机十六进制的颜色值</span></span><br><span class="line"><span class="keyword">var</span> getRandomColor = <span class="keyword">function</span>(<span class="params"></span>)&#123;    </span><br><span class="line">  <span class="keyword">return</span>  <span class="string">&#x27;#&#x27;</span> + (<span class="keyword">function</span>(<span class="params">color</span>)&#123;    </span><br><span class="line">        <span class="keyword">return</span> (color +=  <span class="string">&#x27;0123456789abcdef&#x27;</span>[<span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">16</span>)])    </span><br><span class="line">        &amp;&amp; (color.<span class="property">length</span> == <span class="number">6</span>) ?  color : <span class="variable language_">arguments</span>.<span class="title function_">callee</span>(color);    </span><br><span class="line">  &#125;)(<span class="string">&#x27;&#x27;</span>);    </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 随机十六进制的颜色值</span></span><br><span class="line"><span class="keyword">var</span> getRandomColor = <span class="keyword">function</span>(<span class="params"></span>)&#123;    </span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">function</span>(<span class="params">m,s,c</span>)&#123;    </span><br><span class="line">         <span class="keyword">return</span> (c ? <span class="variable language_">arguments</span>.<span class="title function_">callee</span>(m,s,c-<span class="number">1</span>) : <span class="string">&#x27;#&#x27;</span>) +</span><br><span class="line">         s[m.<span class="title function_">floor</span>(m.<span class="title function_">random</span>() * <span class="number">16</span>)]    </span><br><span class="line">    &#125;)(<span class="title class_">Math</span>,<span class="string">&#x27;0123456789abcdef&#x27;</span>,<span class="number">5</span>)    </span><br><span class="line">&#125; </span><br><span class="line"></span><br><span class="line"><span class="comment">// 随机 hsla 颜色</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">Color</span>(<span class="params"></span>)&#123;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">colorAngle</span> = <span class="title class_">Math</span>.<span class="title function_">floor</span>(<span class="title class_">Math</span>.<span class="title function_">random</span>()*<span class="number">360</span>);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">color</span> = <span class="string">&#x27;hsla(&#x27;</span>+ <span class="variable language_">this</span>.<span class="property">colorAngle</span> +<span class="string">&#x27;,100%,50%,1)&#x27;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="递归获取对象属性"><a href="#递归获取对象属性" class="headerlink" title="递归获取对象属性"></a>递归获取对象属性</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> user = &#123;</span><br><span class="line">  <span class="attr">info</span>: &#123;</span><br><span class="line">    <span class="attr">name</span>: <span class="string">&quot;张三&quot;</span>,</span><br><span class="line">    <span class="attr">address</span>: &#123; <span class="attr">home</span>: <span class="string">&quot;Shaanxi&quot;</span>, <span class="attr">company</span>: <span class="string">&quot;Xian&quot;</span> &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// obj 是获取属性的对象，path 是路径，fallback 是默认值</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">get</span>(<span class="params">obj, path, fallback</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> parts = path.<span class="title function_">split</span>(<span class="string">&quot;.&quot;</span>);</span><br><span class="line">  <span class="keyword">const</span> key = parts.<span class="title function_">shift</span>();</span><br><span class="line">  <span class="keyword">if</span> (<span class="keyword">typeof</span> obj[key] !== <span class="string">&quot;undefined&quot;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> parts.<span class="property">length</span> &gt; <span class="number">0</span> ?</span><br><span class="line">      <span class="title function_">get</span>(obj[key], parts.<span class="title function_">join</span>(<span class="string">&quot;.&quot;</span>), fallback) :</span><br><span class="line">      obj[key];</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">// 如果没有找到 key 返回 fallback</span></span><br><span class="line">  <span class="keyword">return</span> fallback;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">get</span>(user, <span class="string">&quot;info.name&quot;</span>)); <span class="comment">// 张三</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">get</span>(user, <span class="string">&quot;info.address.home&quot;</span>)); <span class="comment">// Shaanxi</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">get</span>(user, <span class="string">&quot;info.address.company&quot;</span>)); <span class="comment">// Xian</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">get</span>(user, <span class="string">&quot;info.address.abc&quot;</span>, <span class="string">&quot;fallback&quot;</span>)); <span class="comment">// fallback</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 第二种实现</span></span><br><span class="line">path.<span class="title function_">split</span>(<span class="string">&#x27;.&#x27;</span>).<span class="title function_">reduce</span>(<span class="function">(<span class="params">config, name</span>) =&gt;</span> config[name], config);</span><br></pre></td></tr></table></figure>
+
+<h3 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> cache;</span><br><span class="line"><span class="keyword">class</span> <span class="title class_">A</span> &#123;</span><br><span class="line">  <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getInstance</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (cache) <span class="keyword">return</span> cache;</span><br><span class="line">  <span class="keyword">return</span> cache = <span class="keyword">new</span> <span class="title function_">A</span>();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> x = <span class="title function_">getInstance</span>();</span><br><span class="line"><span class="keyword">const</span> y = <span class="title function_">getInstance</span>();</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(x === y); <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="柯里化（Curring）"><a href="#柯里化（Curring）" class="headerlink" title="柯里化（Curring）"></a>柯里化（Curring）</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">curry</span>(<span class="params">fn</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> <span class="title function_">curried</span>(<span class="params">...args</span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (args.<span class="property">length</span> &gt;= fn.<span class="property">length</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params">...args2</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> curried.<span class="title function_">apply</span>(<span class="variable language_">this</span>, args.<span class="title function_">concat</span>(args2));</span><br><span class="line">      &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">add</span>(<span class="params">x, y</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> curriedAdd = <span class="title function_">curry</span>(add);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedAdd</span>(<span class="number">1</span>)(<span class="number">2</span>)); <span class="comment">// 输出 3</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">curriedAdd</span>(<span class="number">1</span>, <span class="number">2</span>)); <span class="comment">// 输出 3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="函数只执行一次"><a href="#函数只执行一次" class="headerlink" title="函数只执行一次"></a>函数只执行一次</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">once</span> (<span class="params">fn</span>) &#123;</span><br><span class="line">  <span class="comment">// 利用闭包判断函数是否执行过</span></span><br><span class="line">  <span class="keyword">let</span> called = <span class="literal">false</span></span><br><span class="line">  <span class="keyword">return</span> <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (!called) &#123;</span><br><span class="line">      called = <span class="literal">true</span></span><br><span class="line">      fn.<span class="title function_">apply</span>(<span class="variable language_">this</span>, <span class="variable language_">arguments</span>)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="动态加载-js-文件"><a href="#动态加载-js-文件" class="headerlink" title="动态加载 js 文件"></a>动态加载 js 文件</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">loadJS</span>(<span class="params">files, done</span>) &#123;</span><br><span class="line">  <span class="comment">// 获取 head 标签</span></span><br><span class="line">  <span class="keyword">const</span> head = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&#x27;head&#x27;</span>)[<span class="number">0</span>];</span><br><span class="line">  <span class="title class_">Promise</span>.<span class="title function_">all</span>(files.<span class="title function_">map</span>(<span class="function"><span class="params">file</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 创建 script 标签并添加到 head</span></span><br><span class="line">      <span class="keyword">const</span> s = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&#x27;script&#x27;</span>);</span><br><span class="line">      s.<span class="property">type</span> = <span class="string">&quot;text/javascript&quot;</span>;</span><br><span class="line">      s.<span class="property">async</span> = <span class="literal">true</span>;</span><br><span class="line">      s.<span class="property">src</span> = file;</span><br><span class="line">      <span class="comment">// 监听 load 事件，如果加载完成则 resolve</span></span><br><span class="line">      s.<span class="title function_">addEventListener</span>(<span class="string">&#x27;load&#x27;</span>, <span class="function">(<span class="params">e</span>) =&gt;</span> <span class="title function_">resolve</span>(), <span class="literal">false</span>);</span><br><span class="line">      head.<span class="title function_">appendChild</span>(s);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;)).<span class="title function_">then</span>(done);  <span class="comment">// 所有均完成，执行用户的回调事件</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">loadJS</span>([<span class="string">&quot;test1.js&quot;</span>, <span class="string">&quot;test2.js&quot;</span>], <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">// 用户的回调逻辑</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h3 id="Undo、Redo"><a href="#Undo、Redo" class="headerlink" title="Undo、Redo"></a>Undo、Redo</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="variable constant_">MAX_REVOKE_COUNT</span> = <span class="number">5</span>; <span class="comment">// 最大撤销次数</span></span><br><span class="line">currentData = &#123;&#125;;</span><br><span class="line">redoData = [];</span><br><span class="line">undoData = [];</span><br><span class="line"></span><br><span class="line"><span class="title function_">_revokeLengthLimit</span>(<span class="params">data</span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (data.<span class="property">length</span> &gt; <span class="variable constant_">MAX_REVOKE_COUNT</span> + <span class="number">1</span>) &#123;</span><br><span class="line">    data.<span class="title function_">shift</span>();</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">update</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">redoData</span>.<span class="property">length</span> &gt; <span class="number">0</span>) <span class="variable language_">this</span>.<span class="property">redoData</span> = [];</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">currentData</span> = &#123; <span class="attr">s</span>: <span class="keyword">new</span> <span class="title class_">Date</span>().<span class="title function_">getSeconds</span>() &#125;;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">undoData</span>.<span class="title function_">push</span>(<span class="variable language_">this</span>.<span class="property">currentData</span>);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">_revokeLengthLimit</span>(<span class="variable language_">this</span>.<span class="property">undoData</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">redo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">redoData</span>.<span class="property">length</span> === <span class="number">0</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">undoData</span>.<span class="title function_">push</span>(<span class="variable language_">this</span>.<span class="property">redoData</span>.<span class="title function_">pop</span>());</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">_revokeLengthLimit</span>(<span class="variable language_">this</span>.<span class="property">undoData</span>);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">currentData</span> = <span class="variable language_">this</span>.<span class="property">undoData</span>[<span class="variable language_">this</span>.<span class="property">undoData</span>.<span class="property">length</span> - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">undo</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="variable language_">this</span>.<span class="property">undoData</span>.<span class="property">length</span> &lt;= <span class="number">1</span>) <span class="keyword">return</span>;</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">redoData</span>.<span class="title function_">push</span>(<span class="variable language_">this</span>.<span class="property">undoData</span>.<span class="title function_">pop</span>());</span><br><span class="line">  <span class="variable language_">this</span>.<span class="title function_">_revokeLengthLimit</span>(<span class="variable language_">this</span>.<span class="property">redoData</span>);</span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">currentData</span> = <span class="variable language_">this</span>.<span class="property">undoData</span>[<span class="variable language_">this</span>.<span class="property">undoData</span>.<span class="property">length</span> - <span class="number">1</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="目录结构生成"><a href="#目录结构生成" class="headerlink" title="目录结构生成"></a>目录结构生成</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fs = <span class="built_in">require</span>(<span class="string">&#x27;fs&#x27;</span>);</span><br><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> tstr = <span class="string">&#x27;├── &#x27;</span>;</span><br><span class="line"><span class="keyword">let</span> strNow = <span class="string">&#x27;&#x27;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">walk</span>(<span class="params">dir</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> files = fs.<span class="title function_">readdirSync</span>(dir);</span><br><span class="line">  strNow = tstr + strNow;</span><br><span class="line">  files.<span class="title function_">forEach</span>(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> pathNow = path.<span class="title function_">join</span>(dir, e);</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(strNow + path.<span class="title function_">relative</span>(dir, pathNow));</span><br><span class="line">    <span class="keyword">const</span> stats = fs.<span class="title function_">statSync</span>(pathNow);</span><br><span class="line">    <span class="keyword">if</span> (stats.<span class="title function_">isDirectory</span>()) &#123;</span><br><span class="line">      <span class="title function_">walk</span>(pathNow);</span><br><span class="line">      strNow = strNow.<span class="title function_">slice</span>(<span class="number">4</span>);</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_">walk</span>(path.<span class="title function_">resolve</span>(__dirname, <span class="string">&#x27;../&#x27;</span>));</span><br></pre></td></tr></table></figure>
+
+<h3 id="时间格式化"><a href="#时间格式化" class="headerlink" title="时间格式化"></a>时间格式化</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> &#123;<span class="type">String</span>&#125; fmt eg: yyyy-MM-dd hh:mm</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       * <span class="doctag">@author</span> <span class="variable">meizz</span></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       * https://blog.csdn.net/meizz/article/details/405708</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line"></span><br><span class="line">      <span class="title class_">Date</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">Format</span> = <span class="keyword">function</span> (<span class="params">fmt</span>) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> o = &#123;</span><br><span class="line"></span><br><span class="line">          <span class="string">&#x27;M+&#x27;</span>: <span class="variable language_">this</span>.<span class="title function_">getMonth</span>() + <span class="number">1</span>,</span><br><span class="line"></span><br><span class="line">          <span class="string">&#x27;d+&#x27;</span>: <span class="variable language_">this</span>.<span class="title function_">getDate</span>(),</span><br><span class="line"></span><br><span class="line">          <span class="string">&#x27;h+&#x27;</span>: <span class="variable language_">this</span>.<span class="title function_">getHours</span>(),</span><br><span class="line"></span><br><span class="line">          <span class="string">&#x27;m+&#x27;</span>: <span class="variable language_">this</span>.<span class="title function_">getMinutes</span>(),</span><br><span class="line"></span><br><span class="line">          <span class="string">&#x27;s+&#x27;</span>: <span class="variable language_">this</span>.<span class="title function_">getSeconds</span>(),</span><br><span class="line"></span><br><span class="line">          <span class="string">&#x27;q+&#x27;</span>: <span class="title class_">Math</span>.<span class="title function_">floor</span>((<span class="variable language_">this</span>.<span class="title function_">getMonth</span>() + <span class="number">3</span>) / <span class="number">3</span>),</span><br><span class="line"></span><br><span class="line">          <span class="attr">S</span>: <span class="variable language_">this</span>.<span class="title function_">getMilliseconds</span>(),</span><br><span class="line"></span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (<span class="regexp">/(y+)/</span>.<span class="title function_">test</span>(fmt)) fmt = fmt.<span class="title function_">replace</span>(<span class="title class_">RegExp</span>.<span class="property">$1</span>, (<span class="variable language_">this</span>.<span class="title function_">getFullYear</span>() + <span class="string">&#x27;&#x27;</span>).<span class="title function_">substr</span>(<span class="number">4</span> - <span class="title class_">RegExp</span>.<span class="property">$1</span>.<span class="property">length</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">let</span> k <span class="keyword">in</span> o)</span><br><span class="line"></span><br><span class="line">          <span class="keyword">if</span> (<span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="string">&#x27;(&#x27;</span> + k + <span class="string">&#x27;)&#x27;</span>).<span class="title function_">test</span>(fmt)) fmt = fmt.<span class="title function_">replace</span>(<span class="title class_">RegExp</span>.<span class="property">$1</span>, <span class="title class_">RegExp</span>.<span class="property">$1</span>.<span class="property">length</span> == <span class="number">1</span> ? o[k] : (<span class="string">&#x27;00&#x27;</span> + o[k]).<span class="title function_">substr</span>((o[k] + <span class="string">&#x27;&#x27;</span>).<span class="property">length</span>));</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> fmt;</span><br><span class="line"></span><br><span class="line">      &#125;;</span><br><span class="line"></span><br><span class="line">      <span class="comment">/**</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> &#123;<span class="type">Number</span>&#125; <span class="variable">num</span></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       * <span class="doctag">@param</span> &#123;<span class="type">String</span>&#125; unit enum: y,M,d,h,m,s</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">       */</span></span><br><span class="line"></span><br><span class="line">      <span class="title class_">Date</span>.<span class="property"><span class="keyword">prototype</span></span>.<span class="property">Add</span> = <span class="keyword">function</span> (<span class="params">num, unit</span>) &#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> s = <span class="number">1000</span>,</span><br><span class="line"></span><br><span class="line">          m = s * <span class="number">60</span>,</span><br><span class="line"></span><br><span class="line">          h = m * <span class="number">60</span>,</span><br><span class="line"></span><br><span class="line">          d = h * <span class="number">24</span>,</span><br><span class="line"></span><br><span class="line">          M = d * <span class="number">30</span>,</span><br><span class="line"></span><br><span class="line">          y = M * <span class="number">12</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">const</span> obj = &#123; s, m, h, d, M, y &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (!<span class="title class_">Object</span>.<span class="title function_">keys</span>(obj).<span class="title function_">includes</span>(unit)) <span class="keyword">throw</span> <span class="keyword">new</span> <span class="title class_">Error</span>(<span class="string">`Invalid param unit`</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="variable language_">this</span>.<span class="title function_">getTime</span>() + num * obj[unit]);</span><br><span class="line"></span><br><span class="line">      &#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="markdown-解析成-html"><a href="#markdown-解析成-html" class="headerlink" title="markdown 解析成 html"></a>markdown 解析成 html</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 版本一</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">wrap</span> = (<span class="params">text, tag</span>) =&gt; <span class="string">`&lt;<span class="subst">$&#123;tag&#125;</span>&gt;<span class="subst">$&#123;text&#125;</span>&lt;/<span class="subst">$&#123;tag&#125;</span>&gt;`</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">PARSERS</span> = [</span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="regexp">/^(.+)/gim</span>, <span class="attr">replace</span>: <span class="function">(<span class="params">match, content</span>) =&gt;</span> (<span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="regexp">/^(\*|#)/</span>)).<span class="title function_">test</span>(match) ? match : <span class="title function_">wrap</span>(content, <span class="string">&#x27;p&#x27;</span>) &#125;, <span class="comment">// paragraph</span></span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="regexp">/^(#&#123;1,7&#125;)\s*(.+)/gim</span>, <span class="attr">replace</span>: <span class="function">(<span class="params">match, heading, text</span>) =&gt;</span> heading.<span class="property">length</span> &gt; <span class="number">6</span> ? <span class="title function_">wrap</span>(match, <span class="string">&#x27;p&#x27;</span>) : <span class="title function_">wrap</span>(text, <span class="string">`h<span class="subst">$&#123;heading.length&#125;</span>`</span>) &#125;, <span class="comment">// heading</span></span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="regexp">/__(.+)__/gim</span>, <span class="attr">replace</span>: <span class="function">(<span class="params">match, text</span>) =&gt;</span> <span class="title function_">wrap</span>(text, <span class="string">&#x27;strong&#x27;</span>) &#125;, <span class="comment">// bold</span></span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="regexp">/_(.+)_/gim</span>, <span class="attr">replace</span>: <span class="function">(<span class="params">match, text</span>) =&gt;</span> <span class="title function_">wrap</span>(text, <span class="string">&#x27;em&#x27;</span>) &#125;, <span class="comment">// italic </span></span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="regexp">/^\*\s(.+)/gim</span>, <span class="attr">replace</span>: <span class="function">(<span class="params">match, item</span>) =&gt;</span> <span class="title function_">wrap</span>(item, <span class="string">&#x27;li&#x27;</span>), &#125;, <span class="comment">// list item </span></span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="regexp">/\n/gim</span>, <span class="attr">replace</span>: <span class="function">() =&gt;</span> <span class="string">&#x27;&#x27;</span> &#125;, <span class="comment">// new line</span></span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="regexp">/(&lt;li&gt;.+&lt;\/li&gt;)/gim</span>, <span class="attr">replace</span>: <span class="function">(<span class="params">match, list</span>) =&gt;</span> <span class="title function_">wrap</span>(list, <span class="string">&#x27;ul&#x27;</span>) &#125;, <span class="comment">// list</span></span><br><span class="line">];</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">parse</span>(<span class="params">markdown</span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> <span class="variable constant_">PARSERS</span>.<span class="title function_">reduce</span>(<span class="function">(<span class="params">parsed, &#123; regex, replace &#125;</span>) =&gt;</span> parsed.<span class="title function_">replaceAll</span>(<span class="keyword">new</span> <span class="title class_">RegExp</span>(regex), replace), markdown);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 版本二</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">wrap</span> = (<span class="params">text, tag</span>) =&gt; <span class="string">`&lt;<span class="subst">$&#123;tag&#125;</span>&gt;<span class="subst">$&#123;text&#125;</span>&lt;/<span class="subst">$&#123;tag&#125;</span>&gt;`</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义正则表达式常量</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">PARAGRAPH_REGEX</span> = <span class="regexp">/^(.+)/gim</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">HEADING_REGEX</span> = <span class="regexp">/^(#&#123;1,7&#125;)\s*(.+)/gim</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">BOLD_REGEX</span> = <span class="regexp">/__(.+)__/gim</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">ITALIC_REGEX</span> = <span class="regexp">/_(.+)_/gim</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">LIST_ITEM_REGEX</span> = <span class="regexp">/^\*\s(.+)/gim</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">NEWLINE_REGEX</span> = <span class="regexp">/\n/gim</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">LIST_REGEX</span> = <span class="regexp">/(&lt;li&gt;.+&lt;\/li&gt;)/gim</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 段落解析器</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">parseParagraph</span> = (<span class="params">match, content</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> (<span class="keyword">new</span> <span class="title class_">RegExp</span>(<span class="regexp">/^[*#]/</span>)).<span class="title function_">test</span>(match) ? match : <span class="title function_">wrap</span>(content, <span class="string">&#x27;p&#x27;</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 标题解析器</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">parseHeading</span> = (<span class="params">match, heading, text</span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">return</span> heading.<span class="property">length</span> &gt; <span class="number">6</span> ? <span class="title function_">wrap</span>(match, <span class="string">&#x27;p&#x27;</span>) : <span class="title function_">wrap</span>(text, <span class="string">`h<span class="subst">$&#123;heading.length&#125;</span>`</span>);</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 粗体解析器</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">parseBold</span> = (<span class="params">match, text</span>) =&gt; <span class="title function_">wrap</span>(text, <span class="string">&#x27;strong&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 斜体解析器</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">parseItalic</span> = (<span class="params">match, text</span>) =&gt; <span class="title function_">wrap</span>(text, <span class="string">&#x27;em&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 列表项解析器</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">parseListItem</span> = (<span class="params">match, item</span>) =&gt; <span class="title function_">wrap</span>(item, <span class="string">&#x27;li&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 列表解析器</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">parseList</span> = (<span class="params">match, list</span>) =&gt; <span class="title function_">wrap</span>(list, <span class="string">&#x27;ul&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 定义解析器数组</span></span><br><span class="line"><span class="keyword">const</span> <span class="variable constant_">PARSERS</span> = [</span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="variable constant_">PARAGRAPH_REGEX</span>, <span class="attr">replace</span>: parseParagraph &#125;,</span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="variable constant_">HEADING_REGEX</span>, <span class="attr">replace</span>: parseHeading &#125;,</span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="variable constant_">BOLD_REGEX</span>, <span class="attr">replace</span>: parseBold &#125;,</span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="variable constant_">ITALIC_REGEX</span>, <span class="attr">replace</span>: parseItalic &#125;,</span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="variable constant_">LIST_ITEM_REGEX</span>, <span class="attr">replace</span>: parseListItem &#125;,</span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="variable constant_">NEWLINE_REGEX</span>, <span class="attr">replace</span>: <span class="function">() =&gt;</span> <span class="string">&#x27;&#x27;</span> &#125;,</span><br><span class="line">  &#123; <span class="attr">regex</span>: <span class="variable constant_">LIST_REGEX</span>, <span class="attr">replace</span>: parseList &#125;,</span><br><span class="line">];</span><br><span class="line"></span><br><span class="line"><span class="comment">// 主解析函数</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">parse</span>(<span class="params">markdown</span>) &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable constant_">PARSERS</span>.<span class="title function_">reduce</span>(<span class="function">(<span class="params">parsed, &#123; regex, replace &#125;</span>) =&gt;</span> </span><br><span class="line">      parsed.<span class="title function_">replaceAll</span>(<span class="keyword">new</span> <span class="title class_">RegExp</span>(regex), replace), markdown);</span><br><span class="line">  &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">error</span>(<span class="string">&#x27;Parsing error:&#x27;</span>, error);</span><br><span class="line">    <span class="keyword">return</span> markdown; <span class="comment">// 返回原始输入以避免数据丢失</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名 - 非商业性使用 - 相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/07/31/JavaScript%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%A3%80%E6%B5%8B/">JavaScript 数据类型检测</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/07/31/HTTP%20%E5%A4%87%E5%BF%98/">HTTP 备忘</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>©2023-2024 <a href="/">Radiant Moon</a>。除非特别声明，所有文章均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E6%96%B9%E6%B3%95%E5%B0%81%E8%A3%85"><span class="toc-text">返回数据类型方法封装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E5%90%8D%E5%90%8E%E7%BC%80"><span class="toc-text">获取文件名后缀</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%8A%82%E6%B5%81"><span class="toc-text">节流</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%B2%E6%8A%96"><span class="toc-text">防抖</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%95%B4%E6%95%B0%E6%95%B0%E5%88%97"><span class="toc-text">快速生成整数数列</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BF%AB%E9%80%9F%E7%94%9F%E6%88%90%E6%95%B0%E7%BB%84%E6%A8%A1%E6%8B%9F%E6%95%B0%E6%8D%AE"><span class="toc-text">快速生成数组模拟数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%92%8C"><span class="toc-text">|| 和 ??</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%89%81%E5%B9%B3%E5%8C%96%E6%95%B0%E7%BB%84"><span class="toc-text">扁平化数组</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B6%E5%8F%91%E8%AF%B7%E6%B1%82"><span class="toc-text">并发请求</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%95%B0%E7%BB%84%E6%8C%89%E7%85%A7%E6%8C%87%E5%AE%9A%E7%9A%84%E6%95%B0%E7%BB%84%E5%A4%A7%E5%B0%8F%E5%88%86%E5%89%B2%E6%88%90%E8%8B%A5%E5%B9%B2%E4%B8%AA%E6%95%B0%E7%BB%84%E5%9D%97"><span class="toc-text">数组按照指定的数组大小分割成若干个数组块</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#toFixed-%E5%9B%9B%E8%88%8D%E4%BA%94%E5%85%A5%E5%B0%8F%E6%95%B0%E4%BD%8D%E5%8E%BB%E6%8E%89%E9%A2%9D%E5%A4%96%E7%9A%84-0"><span class="toc-text">toFixed 四舍五入小数位去掉额外的 0</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%96%E5%BE%97%E6%95%B0%E7%BB%84%E6%9C%80%E5%90%8E%E4%B8%80%E4%B8%AA"><span class="toc-text">取得数组最后一个</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%94%E5%9B%9E%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E8%8A%82%E9%95%BF%E5%BA%A6"><span class="toc-text">返回字符串字节长度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9A%8F%E6%9C%BA%E9%A2%9C%E8%89%B2"><span class="toc-text">随机颜色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E8%8E%B7%E5%8F%96%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7"><span class="toc-text">递归获取对象属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="toc-text">单例模式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9F%AF%E9%87%8C%E5%8C%96%EF%BC%88Curring%EF%BC%89"><span class="toc-text">柯里化（Curring）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%87%BD%E6%95%B0%E5%8F%AA%E6%89%A7%E8%A1%8C%E4%B8%80%E6%AC%A1"><span class="toc-text">函数只执行一次</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD-js-%E6%96%87%E4%BB%B6"><span class="toc-text">动态加载 js 文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Undo%E3%80%81Redo"><span class="toc-text">Undo、Redo</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E7%94%9F%E6%88%90"><span class="toc-text">目录结构生成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="toc-text">时间格式化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#markdown-%E8%A7%A3%E6%9E%90%E6%88%90-html"><span class="toc-text">markdown 解析成 html</span></a></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    utils.js(`https://unpkg.com/lenis@1.1.9/dist/lenis.min.js`, { defer: true }).then(function () {
+      const lenis = new Lenis({
+        smoothWheel: true,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        lerp: 0.05,
+        touchMultiplier: 2,
+        wheelMultiplier: 1,
+        infinite: false,
+        autoResize: true,
+      })
+      const scrollFn = (time) => {
+        lenis.raf(time)
+        requestAnimationFrame(scrollFn)
+      }
+      requestAnimationFrame(scrollFn)
+
+      // 定义自定义的 scrollTo 方法
+      function smoothScrollTo(y = 0) {
+        lenis.scrollTo(y)
+      }
+
+      // 覆盖 window.scrollTo 方法
+      window.scrollTo = smoothScrollTo
+    })
+  })
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

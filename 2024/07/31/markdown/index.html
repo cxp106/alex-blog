@@ -1,0 +1,716 @@
+
+<!DOCTYPE html><html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
+  
+  <meta name="generator" content="Hexo 7.3.0">
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
+  <meta name="theme-color" content="#f9fafb">
+  <!-- 加入字体 -->
+  <link rel="stylesheet" href="/font/result.css" />
+  <title>Markdown - Radiant Moon</title>
+
+  
+    <meta name="description" content="Markdown 作为当下最好的轻量级的写作语法，是十分值得学习一下的，好在现在关于 Markdown 语法的资料已经越来越多。经过一段时间学习，整理出了部分 Markdown 的常用的语法，以及对 Markdown 语法的一些粗浅理解。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markdown">
+<meta property="og:url" content="https://cxp.netlify.app/2024/07/31/markdown/index.html">
+<meta property="og:site_name" content="Radiant Moon">
+<meta property="og:description" content="Markdown 作为当下最好的轻量级的写作语法，是十分值得学习一下的，好在现在关于 Markdown 语法的资料已经越来越多。经过一段时间学习，整理出了部分 Markdown 的常用的语法，以及对 Markdown 语法的一些粗浅理解。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-07-31T08:28:05.400Z">
+<meta property="article:modified_time" content="2024-08-01T05:41:39.502Z">
+<meta property="article:author" content="Radiant Moon">
+<meta property="article:tag" content="Markdown">
+<meta name="twitter:card" content="summary">
+  
+  
+  
+  <meta name="keywords" content="Markdown">
+
+  <!-- feed -->
+  
+    <link rel="alternate" href="/atom.xml" title="Radiant Moon" type="application/atom+xml">
+  
+
+  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
+
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+
+  
+
+  
+</head>
+<body>
+
+<div class="l_body s:aa content tech" id="start" layout="post" ><aside class="l_left"><div class="leftbar-container">
+
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/favicon.ico" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">Radiant Moon</div><div class="sub cap">Embracing the Fortune of Light</div></a></div></header>
+
+<div class="nav-area">
+<div class="search-wrapper" id="search-wrapper"><form class="search-form"><a class="search-button" onclick="document.getElementById(&quot;search-input&quot;).focus();"><svg t="1705074644177" viewBox="0 0 1025 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1560" width="200" height="200"><path d="M1008.839137 935.96571L792.364903 719.491476a56.783488 56.783488 0 0 0-80.152866 0 358.53545 358.53545 0 1 1 100.857314-335.166073 362.840335 362.840335 0 0 1-3.689902 170.145468 51.248635 51.248635 0 1 0 99.217358 26.444296 462.057693 462.057693 0 1 0-158.255785 242.303546l185.930047 185.725053a51.248635 51.248635 0 0 0 72.568068 0 51.248635 51.248635 0 0 0 0-72.978056z" p-id="1561"></path><path d="M616.479587 615.969233a50.428657 50.428657 0 0 0-61.498362-5.534852 174.655348 174.655348 0 0 1-177.525271 3.484907 49.403684 49.403684 0 0 0-58.833433 6.76482l-3.074918 2.869923a49.403684 49.403684 0 0 0 8.609771 78.10292 277.767601 277.767601 0 0 0 286.992355-5.739847 49.403684 49.403684 0 0 0 8.404776-76.667958z" p-id="1562"></path></svg></a><input type="text" class="search-input" id="search-input" placeholder="站内搜索"></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div>
+
+
+<nav class="menu dis-select"></nav>
+</div>
+<div class="widgets">
+
+
+<widget class="widget-wrapper post-list"><div class="widget-header dis-select"><span class="name">最近更新</span></div><div class="widget-body fs14"><a class="item title" href="/2024/07/31/%E5%B7%A5%E5%85%B7%E8%B5%84%E6%BA%90/"><span class="title">工具资源</span></a><a class="item title" href="/2024/11/08/%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E5%BF%83%E5%BE%97%202024/"><span class="title">独立开发心得 2024</span></a><a class="item title" href="/2024/10/24/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82API%E6%96%B9%E5%BC%8F/"><span class="title">前端请求 API 方式</span></a><a class="item title" href="/2024/07/31/Chatgpt%20%E6%8F%90%E7%A4%BA%E5%B7%A5%E7%A8%8B/"><span class="title">Chatgpt 提示工程</span></a><a class="item title" href="/2024/08/01/%E7%94%9F%E6%B4%BB%E5%A6%99%E6%8B%9B/"><span class="title">生活妙招</span></a><a class="item title" href="/2024/07/31/JavaScript%20%E5%B8%B8%E7%94%A8%E4%BB%A3%E7%A0%81%E7%89%87%E6%AE%B5/"><span class="title">JavaScript 常用代码片段</span></a><a class="item title" href="/2024/10/11/%E8%82%B2%E5%84%BF%E5%A4%87%E5%BF%98/"><span class="title">育儿备忘</span></a><a class="item title" href="/2024/08/01/%E8%B4%AD%E7%89%A9%E6%B8%85%E5%8D%95/"><span class="title">购物清单</span></a><a class="item title" href="/2024/07/31/Github%20%E4%BD%BF%E7%94%A8%E5%A4%87%E5%BF%98/"><span class="title">Github 使用备忘</span></a><a class="item title" href="/2024/07/31/%E7%AF%A1%E6%94%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/"><span class="title">篡改猴脚本</span></a></div></widget>
+</div>
+
+</div></aside><div class="l_main" id="main">
+
+
+
+
+
+<div class="article banner top">
+  <div class="content">
+    <div class="top bread-nav footnote"><div class="left"><div class="flex-row" id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a>
+<span class="sep"></span><a class="cap breadcrumb" href="/">文章</a></div>
+<div class="flex-row" id="post-meta"><span class="text created">发布于：<time datetime="2024-07-31T08:28:05.400Z">2024-07-31</time></span><span class="sep updated"></span><span class="text updated">更新于：<time datetime="2024-08-01T05:41:39.502Z">2024-08-01</time></span></div></div></div>
+    
+    <div class="bottom only-title">
+      
+      <div class="text-area">
+        <h1 class="text title"><span>Markdown</span></h1>
+        
+      </div>
+    </div>
+    
+  </div>
+  </div><article class="md-text content"><p><strong>Markdown</strong> 作为当下最好的轻量级的写作语法，是十分值得学习一下的，好在现在关于 <strong>Markdown</strong> 语法的资料已经越来越多。经过一段时间学习，整理出了部分 <strong>Markdown</strong> 的常用的语法，以及对 <strong>Markdown</strong> 语法的一些粗浅理解。</p>
+<h3 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h3><h4 id="1-标题"><a href="#1-标题" class="headerlink" title="1. 标题"></a>1. 标题</h4><p><strong>Markdown</strong> 支持两种标题的语法，类 <strong>Setext</strong> 和类 <strong>Atx</strong> 形式。类 <strong>Setext</strong> 形式是用底线的形式，利用“=” （最高阶标题）和“-” （第二阶标题），例如：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">H1 标题</span></span><br><span class="line"><span class="section">=====</span></span><br><span class="line"></span><br><span class="line"><span class="section">H2 标题</span></span><br><span class="line"><span class="section">-----</span></span><br></pre></td></tr></table></figure>
+
+<p>任何数量的“&#x3D;”和“-”都可以有效果。</p>
+<blockquote>
+<p>注意：由于分割线也是“—-”，因此在使用分割线时，一定要空一行，不然会把上方的文字识别为第二阶标题。原因会在后面的段落和换行中说到。</p>
+</blockquote>
+<p>类 <strong>Atx</strong> 形式则是在行首插入 1 到 6 个“# ”，对应到标题 1 到 6 阶，例如：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section"># H1 标题 </span></span><br><span class="line"></span><br><span class="line"><span class="section">## H2 标题</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：标准语法一般在“#”后跟个空格再写文字，不然可能会无法识别。</p>
+</blockquote>
+<h4 id="2-字体"><a href="#2-字体" class="headerlink" title="2. 字体"></a>2. 字体</h4><p><strong>Markdown</strong> 使用星号“*”和底线“_”作为标记强调字词的符号，你可以随便用你喜欢的样式，唯一的限制是，你用什么符号开启标签，就要用什么符号结束。但个人感觉写中文时还是“*”比较好用，因为它不区分全角半角，不用切换输入法。示例：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**这是加粗**</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**这也是加粗**</span></span><br><span class="line"></span><br><span class="line"><span class="emphasis">_这是倾斜_</span></span><br><span class="line"></span><br><span class="line"><span class="emphasis">_这也是倾斜_</span></span><br><span class="line"></span><br><span class="line"><span class="strong">**<span class="emphasis">_这是加粗倾斜_</span>**</span></span><br><span class="line"></span><br><span class="line">~~这是加删除线~~</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：强调也可以直接插在文字中间，但是如果你的“*”和“_”两边都有空白的话，它们就只会被当成普通的符号。如果要在文字前后直接插入普通的星号或底线，你可以用反斜线“\” 。</p>
+</blockquote>
+<h4 id="3-分割线"><a href="#3-分割线" class="headerlink" title="3. 分割线"></a>3. 分割线</h4><p>你可以在一行中用三个以上的“*” 、 “-” 、 “_”来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">***</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">- - -</span></span><br><span class="line"><span class="strong"></span></span><br><span class="line"><span class="strong">__<span class="emphasis">_</span></span></span><br></pre></td></tr></table></figure>
+
+<h4 id="4-引用"><a href="#4-引用" class="headerlink" title="4. 引用"></a>4. 引用</h4><p>在引用的文字前加“&gt;”即可。在 <strong>Markdown</strong> 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上“&gt;” ：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="strong">**&gt; 这是一些引用</span></span><br><span class="line"><span class="strong">&gt; 引用里面依然可以使用其他**</span>语法**</span><br><span class="line"><span class="quote">&gt; 这是分了多行显示<span class="strong">**</span></span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的“&gt;”。</p>
+</blockquote>
+<h4 id="5-列表"><a href="#5-列表" class="headerlink" title="5. 列表"></a>5. 列表</h4><p><strong>Markdown</strong> 支持有序列表和无序列表。</p>
+<p>无序列表使用“*” 、 “+”或是“-”作为列表标记。示例：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> 列表内容</span><br><span class="line"></span><br><span class="line"><span class="bullet">*</span> 列表内容</span><br><span class="line"></span><br><span class="line"><span class="bullet">-</span> 列表内容</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：“-” 、 “+” 、 “*”跟内容之间都要有一个空格。</p>
+</blockquote>
+<p>有序列表则使用数字接着一个英文句点作为标记。示例：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1.</span> 列表内容</span><br><span class="line"><span class="bullet">2.</span> 列表内容</span><br><span class="line"><span class="bullet">3.</span> 列表内容</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-表格"><a href="#6-表格" class="headerlink" title="6. 表格"></a>6. 表格</h4><p>示例：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">| 表头 | 表头  | 表头 |</span><br><span class="line">| ---- | :---: | ---: |</span><br><span class="line">| 内容 | 内容  | 内容 |</span><br><span class="line">| 内容 | 内容  | 内容 |</span><br></pre></td></tr></table></figure>
+
+<p>第二行分割表头和内容。</p>
+<p>“-”有一个就行，为了书写对齐，多加了几个。</p>
+<p>文字默认居左 -两边加：表示文字居中。</p>
+<p>“-”右边加“:”表示文字居右。</p>
+<p>原生的语法两边都要用“|”包起来。此处省略。</p>
+<h4 id="7-代码"><a href="#7-代码" class="headerlink" title="7. 代码"></a>7. 代码</h4><p>代码用“`”括起来，示例：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\<span class="code">`单行代码`</span></span><br><span class="line"></span><br><span class="line">\<span class="code">```js</span></span><br><span class="line"><span class="code">console.log(123)</span></span><br><span class="line"><span class="code">console.log(321)</span></span><br><span class="line"><span class="code">\```</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：示例中的 “\” 只是为了防止被转译，实际写作时不需要加上。</p>
+</blockquote>
+<p>在“`&#96;&#96;”后面注明你的代码类型，可以产生相应的代码高亮。</p>
+<h4 id="8-超链接"><a href="#8-超链接" class="headerlink" title="8. 超链接"></a>8. 超链接</h4><p><strong>Markdown</strong> 支持两种形式的链接语法： <strong>行内式</strong> 和 <strong>参考式</strong> 两种形式。</p>
+<p>不管是哪一种，链接文字都是用 方括号“[ ]”来标记。</p>
+<p>要建立一个 <strong>行内式</strong> 的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，注意方括号和圆括号之间一定不能有空格，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">这是一个[<span class="string">例子</span>](<span class="link">http://example.com/ &quot;一个简单的例子&quot;</span>)超链接。</span><br><span class="line">[<span class="string">例子</span>](<span class="link">http://example.net/</span>) 也可以不加 title 文字</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注：如果想要在新页面中打开的话可以用 html 语言的 a 标签代替。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;超链接地址&quot;</span> <span class="attr">target</span>=<span class="string">&quot;_blank&quot;</span>&gt;</span>超链接名<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>参考式</strong> 的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">这是一个参考式[<span class="string">例子</span>][<span class="symbol">注</span>]</span><br></pre></td></tr></table></figure>
+
+<p>接着，在文件的任意处，你可以把这个标记的链接内容定义出来：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">注</span>]: <span class="link">http://example.com/ &quot;参考式&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>链接内容的形式为：  方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字   接着一个冒号   接着一个以上的空格或制表符   接着链接的网址   选择性地接着 title 内容，可以用单引号、双引号或是括弧包着   链接网址也可以用尖括号包起来：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="symbol">注</span>]: <span class="link">&lt;http://example.com/&gt; &quot;参考式&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>链接辨别标签可以有字母、数字、空白和标点符号，但是并不区分大小写。</p>
+<p>链接的定义可以放在文件中的任何一个地方，我比较偏好直接放在链接出现段落的后面，你也可以把它放在文件最后面，就像是注解一样。</p>
+<p>此外，用这个方法还可以将图片转化为 <strong>base64</strong> 编码保存在.md 文件中，这将在插入图片中介绍。</p>
+<p>要知道，参考式的链接其实重点不在于它比较好写，而是它比较好读。使用 <strong>Markdown</strong> 的参考式链接，可以让文件更像是浏览器最后产生的结果，让你可以把一些标记相关的元数据移到段落文字之外，你就可以增加链接而不让文章的阅读感觉被打断。</p>
+<h4 id="9-自动链接"><a href="#9-自动链接" class="headerlink" title="9. 自动链接"></a>9. 自动链接</h4><p>除了上面的超链接方式，<strong>Markdown</strong> 还支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用尖括号包起来， <strong>Markdown</strong> 就会自动把它转成链接。语法：</p>
+<figure class="highlight md"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="language-xml">&lt;http://example.com/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="10-内容目录"><a href="#10-内容目录" class="headerlink" title="10. 内容目录"></a>10. 内容目录</h4><p>Markdown 还有一个很方便的功能，就是可以根据标题自动生成目录。在段落中填写  [TOC]  以显示全文内容的目录结构。</p>
+<h3 id="表格转换"><a href="#表格转换" class="headerlink" title="表格转换"></a>表格转换</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://json.im/tableConvert/">tableConvert</a></li>
+</ul>
+<h3 id="封面制作"><a href="#封面制作" class="headerlink" title="封面制作"></a>封面制作</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://pablo.buffer.com/">Pablo</a></li>
+</ul>
+<h3 id="软件推荐"><a href="#软件推荐" class="headerlink" title="软件推荐"></a>软件推荐</h3><h4 id="app"><a href="#app" class="headerlink" title="app"></a>app</h4><ul>
+<li>纯纯写作</li>
+<li>Epsilon note</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gsantner/markor/releases">Markor</a></li>
+<li>Joplin</li>
+</ul>
+<h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><ul>
+<li>Vnote(非常强大，支持甘特图)</li>
+<li>Joplin</li>
+<li>Typora</li>
+<li><a target="_blank" rel="noopener" href="http://focusnote.91xiaban.com/#/">专注笔记</a></li>
+<li>vscode (<a target="_blank" rel="noopener" href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one">Markdown All in One</a>)</li>
+</ul>
+
+<div class="article-footer fs14">
+    <section id="license">
+      <div class="header"><span>许可协议</span></div>
+      <div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名 - 非商业性使用 - 相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div>
+    </section>
+    </div>
+</article>
+<div class="related-wrap" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/07/31/MIME/">MIME</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2024/07/31/Leaflet%20%E5%A4%87%E5%BF%98/">Leaflet 备忘</a></div></section></div>
+
+
+
+
+
+
+<footer class="page-footer footnote"><hr><div class="text"><p>©2023-2024 <a href="/">Radiant Moon</a>。除非特别声明，所有文章均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+</div></footer>
+<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
+<div class="widgets">
+
+
+
+<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">本文目录</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-text">基本语法</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E6%A0%87%E9%A2%98"><span class="toc-text">1. 标题</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%AD%97%E4%BD%93"><span class="toc-text">2. 字体</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E5%88%86%E5%89%B2%E7%BA%BF"><span class="toc-text">3. 分割线</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-%E5%BC%95%E7%94%A8"><span class="toc-text">4. 引用</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5-%E5%88%97%E8%A1%A8"><span class="toc-text">5. 列表</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6-%E8%A1%A8%E6%A0%BC"><span class="toc-text">6. 表格</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7-%E4%BB%A3%E7%A0%81"><span class="toc-text">7. 代码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#8-%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-text">8. 超链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#9-%E8%87%AA%E5%8A%A8%E9%93%BE%E6%8E%A5"><span class="toc-text">9. 自动链接</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#10-%E5%86%85%E5%AE%B9%E7%9B%AE%E5%BD%95"><span class="toc-text">10. 内容目录</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A8%E6%A0%BC%E8%BD%AC%E6%8D%A2"><span class="toc-text">表格转换</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%81%E9%9D%A2%E5%88%B6%E4%BD%9C"><span class="toc-text">封面制作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="toc-text">软件推荐</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#app"><span class="toc-text">app</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#windows"><span class="toc-text">windows</span></a></li></ol></li></ol></div><div class="widget-footer">
+
+<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>回到顶部</span></a></div></widget>
+</div></aside><div class='float-panel blur'>
+  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
+  </button>
+  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
+  </button>
+</div>
+</div><div class="scripts">
+<script type="text/javascript">
+  const ctx = {
+    date_suffix: {
+      just: `刚刚`,
+      min: `分钟前`,
+      hour: `小时前`,
+      day: `天前`,
+    },
+    root : `/`,
+  };
+
+  // required plugins (only load if needs)
+  if (`local_search`) {
+    ctx.search = {};
+    ctx.search.service = `local_search`;
+    if (ctx.search.service == 'local_search') {
+      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"sort":"-date"}`);
+      ctx.search[ctx.search.service] = service_obj;
+    }
+  }
+  const def = {
+    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
+    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
+  };
+  const deps = {
+    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
+    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
+  }
+  
+
+</script>
+
+<script type="text/javascript">
+  const utils = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    css: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    js: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = ctx.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    jq: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        utils.js(deps.jquery).then(fn)
+      } else {
+        fn()
+      }
+    },
+    
+    onLoading: (el) => {
+      if (el) {
+        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
+      }
+    },
+    onLoadSuccess: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap').remove();
+      }
+    },
+    onLoadFailure: (el) => {
+      if (el) {
+        $(el).find('.loading-wrap svg').remove();
+        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
+        $(el).find('.loading-wrap').addClass('error');
+      }
+    },
+    request: (el, url, callback, onFailure) => {
+      let retryTimes = 3;
+      utils.onLoading(el);
+      function req() {
+        return new Promise((resolve, reject) => {
+          let status = 0; // 0 等待 1 完成 2 超时
+          let timer = setTimeout(() => {
+            if (status === 0) {
+              status = 2;
+              timer = null;
+              reject('请求超时');
+              if (retryTimes == 0) {
+                onFailure();
+              }
+            }
+          }, 5000);
+          fetch(url).then(function(response) {
+            if (status !== 2) {
+              clearTimeout(timer);
+              resolve(response);
+              timer = null;
+              status = 1;
+            }
+            if (response.ok) {
+              return response.json();
+            }
+            throw new Error('Network response was not ok.');
+          }).then(function(data) {
+            retryTimes = 0;
+            utils.onLoadSuccess(el);
+            callback(data);
+          }).catch(function(error) {
+            if (retryTimes > 0) {
+              retryTimes -= 1;
+              setTimeout(() => {
+                req();
+              }, 5000);
+            } else {
+              utils.onLoadFailure(el);
+              onFailure();
+            }
+          });
+        });
+      }
+      req();
+    },
+  };
+</script>
+
+<script>
+  const sidebar = {
+    leftbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    rightbar: () => {
+      if (l_body) {
+        l_body.toggleAttribute('rightbar');
+        l_body.removeAttribute('leftbar');
+      }
+    },
+    dismiss: () => {
+      if (l_body) {
+        l_body.removeAttribute('leftbar');
+        l_body.removeAttribute('rightbar');
+      }
+    },
+    toggleTOC: () => {
+      document.querySelector('#data-toc').classList.toggle('collapse');
+    }
+  }
+</script>
+<script type="text/javascript">
+  (() => {
+    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
+    for (const tagSwitcher of tagSwitchers) {
+      tagSwitcher.addEventListener('click', (e) => {
+        const parent = e.target.closest('.tag-subtree.parent-tag')
+        parent.classList.toggle('expanded')
+        e.preventDefault()
+      })
+    }
+
+    // Get active tag from query string, then activate it.
+    const urlParams = new URLSearchParams(window.location.search)
+    const activeTag = urlParams.get('tag')
+    if (activeTag) {
+      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
+      if (tag) {
+        tag.querySelector('a').classList.add('active')
+        
+        while (tag) {
+          tag.classList.add('expanded')
+          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
+        }
+      }
+    }
+  })()
+</script>
+
+
+<!-- required -->
+<script src="/js/main.js?v=1.29.1" defer></script>
+
+<script type="text/javascript">
+  const applyTheme = (theme) => {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme')
+    } else {
+      document.documentElement.setAttribute('data-theme', theme)
+    }
+
+    applyThemeToGiscus(theme)
+  }
+
+  const applyThemeToGiscus = (theme) => {
+    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+
+    const cmt = document.getElementById('giscus')
+    if (cmt) {
+      // This works before giscus load.
+      cmt.setAttribute('data-theme', theme)
+    }
+
+    const iframe = document.querySelector('#comments > section.giscus > iframe')
+    if (iframe) {
+      // This works after giscus loaded.
+      const src = iframe.src
+      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
+      iframe.src = newSrc
+    }
+  }
+
+  const switchTheme = () => {
+    // light -> dark -> auto -> light -> ...
+    const currentTheme = document.documentElement.getAttribute('data-theme')
+    let newTheme;
+    switch (currentTheme) {
+      case 'light':
+        newTheme = 'dark'
+        break
+      case 'dark':
+        newTheme = 'auto'
+        break
+      default:
+        newTheme = 'light'
+    }
+    applyTheme(newTheme)
+    window.localStorage.setItem('Stellar.theme', newTheme)
+
+    const messages = {
+      light: `切换到浅色模式`,
+      dark: `切换到深色模式`,
+      auto: `切换到跟随系统配色`,
+    }
+    hud?.toast?.(messages[newTheme])
+  }
+
+  (() => {
+    // Apply user's preferred theme, if any.
+    const theme = window.localStorage.getItem('Stellar.theme')
+    if (theme !== null) {
+      applyTheme(theme)
+    }
+  })()
+</script>
+
+
+<!-- optional -->
+
+
+
+<script defer>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"}}`));
+    for (let id of Object.keys(ctx.services)) {
+      const js = ctx.services[id].js;
+      if (id == 'siteinfo') {
+        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
+        if (ctx.cardlinks?.length > 0) {
+          utils.js(js, { defer: true }).then(function () {
+            setCardLink(ctx.cardlinks);
+          });
+        }
+      } else {
+        const els = document.getElementsByClassName(`ds-${id}`);
+        if (els?.length > 0) {
+          utils.jq(() => {
+            if (id == 'timeline' || 'memos' || 'marked') {
+              utils.js(deps.marked).then(function () {
+                utils.js(js, { defer: true });
+              });
+            } else {
+              utils.js(js, { defer: true });
+            }
+          });
+        }
+      }
+    }
+  });
+</script>
+
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    ctx.search = {
+      path: `/search.json`,
+    }
+    utils.js('/js/search/local-search.js', { defer: true });
+  });
+</script><script>
+  window.FPConfig = {
+    delay: 0,
+    ignoreKeywords: [],
+    maxRPS: 5,
+    hoverDelay: 25
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
+<script>
+  // https://www.npmjs.com/package/vanilla-lazyload
+  // Set the options globally
+  // to make LazyLoad self-initialize
+  window.lazyLoadOptions = {
+    elements_selector: ".lazy",
+  };
+  // Listen to the initialization event
+  // and get the instance of LazyLoad
+  window.addEventListener(
+    "LazyLoad::Initialized",
+    function (event) {
+      window.lazyLoadInstance = event.detail.instance;
+    },
+    false
+  );
+  document.addEventListener('DOMContentLoaded', function () {
+    window.lazyLoadInstance?.update();
+  });
+</script><script>
+  ctx.fancybox = {
+    selector: `.timenode p>img`,
+    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
+    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
+  };
+  var selector = '[data-fancybox]:not(.error)';
+  if (ctx.fancybox.selector) {
+    selector += `, ${ctx.fancybox.selector}`
+  }
+  var needFancybox = document.querySelectorAll(selector).length !== 0;
+  if (!needFancybox) {
+    const els = document.getElementsByClassName('ds-memos');
+    if (els != undefined && els.length > 0) {
+      needFancybox = true;
+    }
+  }
+  if (needFancybox) {
+    utils.css(ctx.fancybox.css);
+    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
+      Fancybox.bind(selector, {
+        hideScrollbar: false,
+        Thumbs: {
+          autoStart: false,
+        },
+        caption: (fancybox, slide) => {
+          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
+        }
+      });
+    })
+  }
+</script>
+<script>
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const swiper_api = document.getElementById('swiper-api');
+    if (swiper_api != undefined) {
+      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
+      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
+        const effect = swiper_api.getAttribute('effect') || '';
+        var swiper = new Swiper('.swiper#swiper-api', {
+          slidesPerView: 'auto',
+          spaceBetween: 8,
+          centeredSlides: true,
+          effect: effect,
+          rewind: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+        });
+      })
+    }
+  });
+</script>
+<script>
+  window.addEventListener("DOMContentLoaded", (event) => {
+    utils.js(`https://unpkg.com/lenis@1.1.9/dist/lenis.min.js`, { defer: true }).then(function () {
+      const lenis = new Lenis({
+        smoothWheel: true,
+        duration: 1.2,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        lerp: 0.05,
+        touchMultiplier: 2,
+        wheelMultiplier: 1,
+        infinite: false,
+        autoResize: true,
+      })
+      const scrollFn = (time) => {
+        lenis.raf(time)
+        requestAnimationFrame(scrollFn)
+      }
+      requestAnimationFrame(scrollFn)
+
+      // 定义自定义的 scrollTo 方法
+      function smoothScrollTo(y = 0) {
+        lenis.scrollTo(y)
+      }
+
+      // 覆盖 window.scrollTo 方法
+      window.scrollTo = smoothScrollTo
+    })
+  })
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    window.codeElements = document.querySelectorAll('.code');
+    if (window.codeElements.length > 0) {
+      ctx.copycode = {
+        default_text: `Copy`,
+        success_text: `Copied`,
+        toast: `复制成功`,
+      };
+      utils.js('/js/plugins/copycode.js');
+    }
+  });
+</script>
+
+
+<!-- inject -->
+
+</div></body></html>

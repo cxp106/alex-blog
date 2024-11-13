@@ -1,0 +1,6601 @@
+{
+  "records": [
+    {
+      "id": "1809063692126523392",
+      "type": 3,
+      "level": 2,
+      "content": "提升健康素养是增进全民健康的前提。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696530415617",
+          "questionId": "1809063692126523392",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696547192834",
+          "questionId": "1809063692126523392",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523393",
+      "type": 3,
+      "level": 2,
+      "content": "公民有获得健康教育的权利。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696551387138",
+          "questionId": "1809063692126523393",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696559775745",
+          "questionId": "1809063692126523393",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523394",
+      "type": 3,
+      "level": 2,
+      "content": "健康教育是研究人类行为与健康之间相互联系及其规律的一门科学。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696563970050",
+          "questionId": "1809063692126523394",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696568164354",
+          "questionId": "1809063692126523394",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523395",
+      "type": 3,
+      "level": 2,
+      "content": "健康教育既具有自然科学的特征，更具有社会科学的特征。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696576552962",
+          "questionId": "1809063692126523395",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696580747265",
+          "questionId": "1809063692126523395",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523396",
+      "type": 3,
+      "level": 2,
+      "content": "针对目标人群开展健康传播时，信息越多越好。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696584941569",
+          "questionId": "1809063692126523396",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696589135874",
+          "questionId": "1809063692126523396",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523397",
+      "type": 3,
+      "level": 2,
+      "content": "提升公众健康素养，是一项社会系统工程，仅仅做科普宣传是不够的。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696597524481",
+          "questionId": "1809063692126523397",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696601718785",
+          "questionId": "1809063692126523397",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523398",
+      "type": 3,
+      "level": 2,
+      "content": "健康教育与健康促进是提升公众健康素养的首选策略和措施。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696605913089",
+          "questionId": "1809063692126523398",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696610107393",
+          "questionId": "1809063692126523398",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523399",
+      "type": 1,
+      "level": 2,
+      "content": "《“健康中国2030”规划纲要》中，提出5个重点工作领域，其中排在首位的是",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696618496001",
+          "questionId": "1809063692126523399",
+          "content": "优化健康服务",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696622690306",
+          "questionId": "1809063692126523399",
+          "content": "普及健康生活",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696626884609",
+          "questionId": "1809063692126523399",
+          "content": "完善健康保障",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696631078914",
+          "questionId": "1809063692126523399",
+          "content": "建设健康环境",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523400",
+      "type": 1,
+      "level": 2,
+      "content": "“健康知识普及行动”，主要是向城乡居民普及哪些知识？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696635273218",
+          "questionId": "1809063692126523400",
+          "content": "《中国公民健康素养——基本知识与技能》",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696643661826",
+          "questionId": "1809063692126523400",
+          "content": "传染病防病知识",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696647856130",
+          "questionId": "1809063692126523400",
+          "content": "慢性病防病知识",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696652050433",
+          "questionId": "1809063692126523400",
+          "content": "伤害预防知识",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523401",
+      "type": 1,
+      "level": 2,
+      "content": "健康促进中的“赋权”是指",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696656244738",
+          "questionId": "1809063692126523401",
+          "content": "能力建设",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696664633345",
+          "questionId": "1809063692126523401",
+          "content": "推动公共政策制定",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696668827650",
+          "questionId": "1809063692126523401",
+          "content": "调整卫生服务",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696673021953",
+          "questionId": "1809063692126523401",
+          "content": "加大健康保障",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692126523402",
+      "type": 1,
+      "level": 2,
+      "content": "健康传播材料中的插图，应具有哪两个基本属性？",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696677216257",
+          "questionId": "1809063692126523402",
+          "content": "审美性和针对性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696681410562",
+          "questionId": "1809063692126523402",
+          "content": "针对性和实用性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696689799169",
+          "questionId": "1809063692126523402",
+          "content": "关联性和自明性",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696698187777",
+          "questionId": "1809063692126523402",
+          "content": "关联性和审美性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717696",
+      "type": 2,
+      "level": 2,
+      "content": "健康教育的关键技术包括",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696698187778",
+          "questionId": "1809063692130717696",
+          "content": "需求评估",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696702382081",
+          "questionId": "1809063692130717696",
+          "content": "说服教育",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696710770690",
+          "questionId": "1809063692130717696",
+          "content": "信息传播",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696714964993",
+          "questionId": "1809063692130717696",
+          "content": "行为干预",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696719159297",
+          "questionId": "1809063692130717696",
+          "content": "效果评价",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717697",
+      "type": 2,
+      "level": 2,
+      "content": "健康教育的干预的策略包括",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696723353602",
+          "questionId": "1809063692130717697",
+          "content": "教育策略",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696727547906",
+          "questionId": "1809063692130717697",
+          "content": "社会策略",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696735936514",
+          "questionId": "1809063692130717697",
+          "content": "环境策略",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696740130818",
+          "questionId": "1809063692130717697",
+          "content": "心理策略",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696744325121",
+          "questionId": "1809063692130717697",
+          "content": "说服策略",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717698",
+      "type": 2,
+      "level": 2,
+      "content": "健康促进的三大策略是",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696748519425",
+          "questionId": "1809063692130717698",
+          "content": "协调",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696756908033",
+          "questionId": "1809063692130717698",
+          "content": "倡导",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696761102337",
+          "questionId": "1809063692130717698",
+          "content": "教育",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696765296642",
+          "questionId": "1809063692130717698",
+          "content": "动员",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696769490946",
+          "questionId": "1809063692130717698",
+          "content": "赋权",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717699",
+      "type": 2,
+      "level": 2,
+      "content": "健康促进的5大优先工作领域是",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696777879554",
+          "questionId": "1809063692130717699",
+          "content": "推动制定健康的公共政策",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696782073858",
+          "questionId": "1809063692130717699",
+          "content": "创造健康支持性环境",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696786268161",
+          "questionId": "1809063692130717699",
+          "content": "强化社区行动",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696790462466",
+          "questionId": "1809063692130717699",
+          "content": "发展个人技能",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696794656769",
+          "questionId": "1809063692130717699",
+          "content": "调整卫生服务方向",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717700",
+      "type": 2,
+      "level": 2,
+      "content": "一份合格的健康教育折页，在设计上应符合",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696803045378",
+          "questionId": "1809063692130717700",
+          "content": "整体布局合理",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696807239682",
+          "questionId": "1809063692130717700",
+          "content": "版块划分清晰",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696811433986",
+          "questionId": "1809063692130717700",
+          "content": "色彩搭配和谐",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696819822593",
+          "questionId": "1809063692130717700",
+          "content": "行间距疏密恰当",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696824016897",
+          "questionId": "1809063692130717700",
+          "content": "字体字号方便阅读",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692130717701",
+      "type": 2,
+      "level": 2,
+      "content": "一份合格的健康教育材料，在内容上应满足",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063696828211201",
+          "questionId": "1809063692130717701",
+          "content": "科学准确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696832405505",
+          "questionId": "1809063692130717701",
+          "content": "通俗易懂",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696836599809",
+          "questionId": "1809063692130717701",
+          "content": "行为指导具体可行",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696840794114",
+          "questionId": "1809063692130717701",
+          "content": "色彩和谐",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063696849182722",
+          "questionId": "1809063692130717701",
+          "content": "插图符合审美",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660737",
+      "type": 1,
+      "level": 2,
+      "content": "2023年国务院办公厅印发的《推动疾病预防控制事业高质量发展的指导意见》，要求进一步加强疾控信息化治理，健全______体系。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700322066433",
+          "questionId": "1809063692172660737",
+          "content": "分级分类、高效实用的传染病疫情应急预案",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700326260737",
+          "questionId": "1809063692172660737",
+          "content": "环境健康综合监测网络",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700330455042",
+          "questionId": "1809063692172660737",
+          "content": "疾控信息标准体系、网络安全和数据安全保障",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700338843650",
+          "questionId": "1809063692172660737",
+          "content": "国家、省、市、县四级卫生健康行政执法",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660738",
+      "type": 1,
+      "level": 2,
+      "content": "卫生健康行业数据分类分级工作原则是“______，______，______”。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700343037953",
+          "questionId": "1809063692172660738",
+          "content": "谁管业务，谁管数据，谁管数据安全",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700347232258",
+          "questionId": "1809063692172660738",
+          "content": "直接原则，限制利用原则，安全保护原则",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700351426562",
+          "questionId": "1809063692172660738",
+          "content": "谁主管谁负责，谁运营谁负责，谁签署谁负责",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700359815169",
+          "questionId": "1809063692172660738",
+          "content": "同步规划，同步建设，同步使用",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660739",
+      "type": 1,
+      "level": 2,
+      "content": "数据处理者是指开展数据处理活动的组织、个人。数据处理者负责对______数据情况进行梳理和识别。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700364009473",
+          "questionId": "1809063692172660739",
+          "content": "本人",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700368203777",
+          "questionId": "1809063692172660739",
+          "content": "本单位",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700372398082",
+          "questionId": "1809063692172660739",
+          "content": "本部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700376592385",
+          "questionId": "1809063692172660739",
+          "content": "本地区",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660740",
+      "type": 1,
+      "level": 2,
+      "content": "疾控数据分为核心数据（第4级）、特别重要数据（第3级）_____（第2级）、一般数据（第1级）等4个级别。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700380786690",
+          "questionId": "1809063692172660740",
+          "content": "一般重要数据",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700384980994",
+          "questionId": "1809063692172660740",
+          "content": "相对重要数据",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700393369602",
+          "questionId": "1809063692172660740",
+          "content": "比较重要数据",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700397563905",
+          "questionId": "1809063692172660740",
+          "content": "非常重要数据",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660741",
+      "type": 1,
+      "level": 2,
+      "content": "专家建议：密码最好______，最好90天左右修改一次。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700401758209",
+          "questionId": "1809063692172660741",
+          "content": "所有系统都使用相同的密码，以方面管理",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700405952513",
+          "questionId": "1809063692172660741",
+          "content": "采用工作中使用的专业术语，不容易忘记",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700410146818",
+          "questionId": "1809063692172660741",
+          "content": "设成家人或者宠物的名字，只有自己知道",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700414341122",
+          "questionId": "1809063692172660741",
+          "content": "使用大小写字母+符号+数字，长度9-14位以上",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660742",
+      "type": 2,
+      "level": 2,
+      "content": "数据作为新型生产要素，对土地、劳动力、资本、技术等生产要素具有_____、_______、_______作用，正在推动生产方式、生活方式和治理方式深刻变革。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700422729730",
+          "questionId": "1809063692172660742",
+          "content": "放大",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700426924034",
+          "questionId": "1809063692172660742",
+          "content": "叠加",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700431118337",
+          "questionId": "1809063692172660742",
+          "content": "倍增",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700435312642",
+          "questionId": "1809063692172660742",
+          "content": "缓冲",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660743",
+      "type": 2,
+      "level": 2,
+      "content": "我国网络安全法的三个基本原则是______、_______、_______。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700439506945",
+          "questionId": "1809063692172660743",
+          "content": "网络空间主权原则",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700443701249",
+          "questionId": "1809063692172660743",
+          "content": "实名制原则",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700452089858",
+          "questionId": "1809063692172660743",
+          "content": "网络安全与信息化发展并重原则",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700460478465",
+          "questionId": "1809063692172660743",
+          "content": "共同治理原则",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660744",
+      "type": 2,
+      "level": 2,
+      "content": "2024-2025年全国疾控信息化建设内容主要包括，加快实施传染病监测预警与应急指挥能力提升项目，_______，_______。_______，“一数一源，一处采集，多级实时共享应用”，推动建立医防协同数据共享新模式______。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700460478466",
+          "questionId": "1809063692172660744",
+          "content": "推进省统筹区域传染病监测预警与应急指挥信息平台建设",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700468867073",
+          "questionId": "1809063692172660744",
+          "content": "编制平台建设标准与规范",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700473061377",
+          "questionId": "1809063692172660744",
+          "content": "在二级及以上医疗机构部署实施国家传染病监测预警智能前置软件",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700477255681",
+          "questionId": "1809063692172660744",
+          "content": "多触发、反应快速、科学高效的传染病监测预警和应急体系基本建成",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700481449985",
+          "questionId": "1809063692172660744",
+          "content": "加强卫生监督信息化建设",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660745",
+      "type": 2,
+      "level": 2,
+      "content": "卫生健康行业数据分为_______、_______、_______等三个大类。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700485644289",
+          "questionId": "1809063692172660745",
+          "content": "基础资源类",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700489838594",
+          "questionId": "1809063692172660745",
+          "content": "地质资源类",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700494032897",
+          "questionId": "1809063692172660745",
+          "content": "业务资源类",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700502421505",
+          "questionId": "1809063692172660745",
+          "content": "主题资源类",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660746",
+      "type": 2,
+      "level": 2,
+      "content": "以下哪些属于弱密码：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700506615809",
+          "questionId": "1809063692172660746",
+          "content": "单一的字符类型，例如只用小写字母，或只用数字",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700510810113",
+          "questionId": "1809063692172660746",
+          "content": "与个人信息相关的弱密码：自己、家人、朋友、亲戚、宠物的名字，生日、结婚纪念日、电话号码等个人信息",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700515004417",
+          "questionId": "1809063692172660746",
+          "content": "工作中用到的专业术语，职业特征",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700519198722",
+          "questionId": "1809063692172660746",
+          "content": "用户名与密码相同",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700523393025",
+          "questionId": "1809063692172660746",
+          "content": "所有系统都使用相同的密码",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660747",
+      "type": 3,
+      "level": 2,
+      "content": "我国网络安全的“四法一条例”是指《国家安全法》《网络安全法》《数据安全法》《个人信息保护法》和《关键信息基础设施安全保护条例》。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "正确答案：《网络安全法》《数据安全法》《密码法》《个人信息保护法》和《关键信息基础设施安全保护条例》",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700527587330",
+          "questionId": "1809063692172660747",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700531781634",
+          "questionId": "1809063692172660747",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660748",
+      "type": 3,
+      "level": 2,
+      "content": "卫生健康行业的核心数据，指对领域、群体、区域具有较高覆盖度或达到较高精度、较大规模、一定深度的重要数据，一旦被非法使用或共享，可能直接影响政治安全。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700540170242",
+          "questionId": "1809063692172660748",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700544364545",
+          "questionId": "1809063692172660748",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660749",
+      "type": 3,
+      "level": 2,
+      "content": "数据经过脱敏、标签、统计、汇聚融合等加工活动而产生的衍生数据，可以按照原始数据的定级要求共享使用，不需要再次评估确定数据级别。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "正确答案：数据经过脱敏、标签、统计、汇聚融合等加工活动而产生的衍生数据，应在原始数据定级的基础上，综合考虑数据加工处理后对数据规模、精度、深度的影响，重新评估确定数据级别。",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700548558849",
+          "questionId": "1809063692172660749",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700552753153",
+          "questionId": "1809063692172660749",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660750",
+      "type": 3,
+      "level": 2,
+      "content": "数据处理者应对所掌握的数据进行全面梳理，如涉及网络运行的，还应梳理网络安全等级保护和关键信息基础设施安全保护情况。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700556947458",
+          "questionId": "1809063692172660750",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700561141761",
+          "questionId": "1809063692172660750",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692172660751",
+      "type": 3,
+      "level": 2,
+      "content": "数据分类分级只针对非涉密数据开展，涉及国家秘密的数据按照国家有关规定执行。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700565336066",
+          "questionId": "1809063692172660751",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700569530370",
+          "questionId": "1809063692172660751",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692210409490",
+      "type": 3,
+      "level": 2,
+      "content": "大部分电子垃圾污染物、医疗废弃物等会进入环境，渗入土地和水中，释放出有毒物质，对人体造成危害。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704306655234",
+          "questionId": "1809063692210409490",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704310849538",
+          "questionId": "1809063692210409490",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692210409491",
+      "type": 3,
+      "level": 2,
+      "content": "我国环境治理问题已经取得了显著进展，各项指标都在世界卫生组织发布的标准值之下。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704315043841",
+          "questionId": "1809063692210409491",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704319238146",
+          "questionId": "1809063692210409491",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692210409492",
+      "type": 3,
+      "level": 2,
+      "content": "我国首部卫生健康“基本法”是《基本医疗卫生与健康促进法》。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704323432449",
+          "questionId": "1809063692210409492",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704327626754",
+          "questionId": "1809063692210409492",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603776",
+      "type": 3,
+      "level": 2,
+      "content": "防控“5X5”策略中，5大非传染性疾病风险是指：不健康饮食、烟草使用、空气污染、有害使用酒精、缺乏身体活动。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704331821058",
+          "questionId": "1809063692214603776",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704331821059",
+          "questionId": "1809063692214603776",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603777",
+      "type": 3,
+      "level": 2,
+      "content": "当前健康环境建设面临的主要挑战之一是空气污染。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704336015362",
+          "questionId": "1809063692214603777",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704340209666",
+          "questionId": "1809063692214603777",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603778",
+      "type": 1,
+      "level": 2,
+      "content": "我国大气污染防治行动计划（“大气十条”）是从哪一年开始实施的？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704344403970",
+          "questionId": "1809063692214603778",
+          "content": "2012",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704352792577",
+          "questionId": "1809063692214603778",
+          "content": "2013",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704356986881",
+          "questionId": "1809063692214603778",
+          "content": "2017",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704361181185",
+          "questionId": "1809063692214603778",
+          "content": "2018",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603779",
+      "type": 1,
+      "level": 2,
+      "content": "2021年我国环境危险因素归因死亡负担排名第一的因素是（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704365375489",
+          "questionId": "1809063692214603779",
+          "content": "环境颗粒物污染",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704369569793",
+          "questionId": "1809063692214603779",
+          "content": "不安全的水",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704373764097",
+          "questionId": "1809063692214603779",
+          "content": "非适宜温度",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704377958401",
+          "questionId": "1809063692214603779",
+          "content": "铅",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603780",
+      "type": 1,
+      "level": 2,
+      "content": "以下哪个说法是错误的：（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704382152705",
+          "questionId": "1809063692214603780",
+          "content": "我国突出环境的问题包括空气污染防控难度大、水资源短缺、土壤污染严重、气候增温显著、极端天气事件频发、抗生素耐药等",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704386347010",
+          "questionId": "1809063692214603780",
+          "content": "为促进健康环境建设，我国在健全法律法规体系、加大综合治理力度、加强环境与健康监测调查和风险评估等方面采取了一系列举措",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704390541314",
+          "questionId": "1809063692214603780",
+          "content": "通过系列举措，我国空气质量、地表水环境质量、水环境质量显著改善",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704398929921",
+          "questionId": "1809063692214603780",
+          "content": "我国的环境资源如饮用水、空气和土壤等的质量已达标，不需要再采取进一步措施来改善。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603781",
+      "type": 1,
+      "level": 2,
+      "content": "传染病防控的三环节包括传染源、传播途径和易感人群，那么以下哪个属于切断传播途径的措施？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704403124225",
+          "questionId": "1809063692214603781",
+          "content": "消毒",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704407318529",
+          "questionId": "1809063692214603781",
+          "content": "隔离病人",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704411512833",
+          "questionId": "1809063692214603781",
+          "content": "提高人群免疫力",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704415707137",
+          "questionId": "1809063692214603781",
+          "content": "发现和管理感染者",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603782",
+      "type": 1,
+      "level": 2,
+      "content": "伤害预防的5E策略不包括以下哪一项？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704419901442",
+          "questionId": "1809063692214603782",
+          "content": "教育",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704424095746",
+          "questionId": "1809063692214603782",
+          "content": "环境改造",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704428290050",
+          "questionId": "1809063692214603782",
+          "content": "法规执行",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704432484353",
+          "questionId": "1809063692214603782",
+          "content": "疫苗接种",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603783",
+      "type": 2,
+      "level": 2,
+      "content": "以下属于我国大气污染防治成效的是？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704440872961",
+          "questionId": "1809063692214603783",
+          "content": "空气清洁行动期间，我国PM2.5浓度显著降低",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704445067266",
+          "questionId": "1809063692214603783",
+          "content": "空气清洁行动期间，我国O3浓度显著降低",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704449261570",
+          "questionId": "1809063692214603783",
+          "content": "空气清洁行动期间，短期PM2.5暴露导致的超额死亡人数呈下降趋势",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704453455874",
+          "questionId": "1809063692214603783",
+          "content": "空气清洁行动期间，长期PM2.5暴露导致的超额死亡人数呈下降趋势",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603784",
+      "type": 2,
+      "level": 2,
+      "content": "以下哪些法律法规是我国新制定的？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704457650178",
+          "questionId": "1809063692214603784",
+          "content": "《水污染防治法》",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704461844482",
+          "questionId": "1809063692214603784",
+          "content": "《土壤污染防治法》",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704466038786",
+          "questionId": "1809063692214603784",
+          "content": "《基本医疗卫生与健康促进法》",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704470233089",
+          "questionId": "1809063692214603784",
+          "content": "《环境保护法》",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603785",
+      "type": 2,
+      "level": 2,
+      "content": "以下哪些是我国为加强环境与健康监测调查而采取的举措？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704474427393",
+          "questionId": "1809063692214603785",
+          "content": "空气污染人群健康影响监测",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704478621698",
+          "questionId": "1809063692214603785",
+          "content": "生活饮用水卫生监测",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704487010305",
+          "questionId": "1809063692214603785",
+          "content": "公共场所健康危害因素监测",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704491204609",
+          "questionId": "1809063692214603785",
+          "content": "国家人体生物监测",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692214603786",
+      "type": 2,
+      "level": 2,
+      "content": "加强全球公共卫生治理应采取哪些策略？（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063704495398914",
+          "questionId": "1809063692214603786",
+          "content": "增强国际合作",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704499593218",
+          "questionId": "1809063692214603786",
+          "content": "提高疫苗接种率",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704503787522",
+          "questionId": "1809063692214603786",
+          "content": "建立全球疾病预警系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704507981825",
+          "questionId": "1809063692214603786",
+          "content": "增加个人隐私保护措施",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063704507981826",
+          "questionId": "1809063692214603786",
+          "content": "OneHealth策略",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692235575309",
+      "type": 1,
+      "level": 2,
+      "content": "科学技术进步促进人类认识传染病的病原微生物。第一次分离培养到细菌这个微小生物体的时间大约在下列哪个年份：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706286366722",
+          "questionId": "1809063692235575309",
+          "content": "1680年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706290561025",
+          "questionId": "1809063692235575309",
+          "content": "1780年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706294755329",
+          "questionId": "1809063692235575309",
+          "content": "1880年",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706298949634",
+          "questionId": "1809063692235575309",
+          "content": "1940年",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692235575310",
+      "type": 1,
+      "level": 2,
+      "content": "霍乱至目前已有次全球大流行。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706303143938",
+          "questionId": "1809063692235575310",
+          "content": "5",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706307338241",
+          "questionId": "1809063692235575310",
+          "content": "6",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706311532545",
+          "questionId": "1809063692235575310",
+          "content": "7",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706315726849",
+          "questionId": "1809063692235575310",
+          "content": "8",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769600",
+      "type": 1,
+      "level": 2,
+      "content": "开展实验室网络化监测的必要性不包括下面哪项：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706324115458",
+          "questionId": "1809063692239769600",
+          "content": "传染病是跨地区传播的，需要开展网络实验室监测",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706328309762",
+          "questionId": "1809063692239769600",
+          "content": "传染病是跨时间传播的，需要开展网络实验室监测",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706332504065",
+          "questionId": "1809063692239769600",
+          "content": "一个地区疫情的发现，对其他地区能发挥预警作用",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706336698369",
+          "questionId": "1809063692239769600",
+          "content": "一个实验室的检测结果要得到网络中另一个实验室的重复验证",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769601",
+      "type": 1,
+      "level": 2,
+      "content": "相比较看，传染病防控中的公共卫生实验室监测网络可不收集哪个信息：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706340892673",
+          "questionId": "1809063692239769601",
+          "content": "病原分离培养信息",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706345086978",
+          "questionId": "1809063692239769601",
+          "content": "病人治疗用药信息",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706345086979",
+          "questionId": "1809063692239769601",
+          "content": "病原细菌的耐药信息",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706349281282",
+          "questionId": "1809063692239769601",
+          "content": "病原体基因组序列信息",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769602",
+      "type": 1,
+      "level": 2,
+      "content": "病原体的基因组测序，下面表述不准确的是：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706353475586",
+          "questionId": "1809063692239769602",
+          "content": "获得病原体基因组序列，才能准确鉴定其属于哪个种属",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706361864194",
+          "questionId": "1809063692239769602",
+          "content": "能够用于感染免疫的认识",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706366058498",
+          "questionId": "1809063692239769602",
+          "content": "赋予了实验室监测的大数据特征",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706370252802",
+          "questionId": "1809063692239769602",
+          "content": "能够用于药物的研发",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769603",
+      "type": 2,
+      "level": 2,
+      "content": "病原分析在新冠疫情防控中发挥的作用包括：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706374447106",
+          "questionId": "1809063692239769603",
+          "content": "病原发现和鉴定",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706378641410",
+          "questionId": "1809063692239769603",
+          "content": "疫情扩散的追踪溯源",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706382835714",
+          "questionId": "1809063692239769603",
+          "content": "用于疫苗和药物的研发",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706387030018",
+          "questionId": "1809063692239769603",
+          "content": "免疫机制的研究认识",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769604",
+      "type": 2,
+      "level": 2,
+      "content": "关于公共卫生实验室网络建设，下列说法正确的包括：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706391224322",
+          "questionId": "1809063692239769604",
+          "content": "建立健全实验室网络，是传染病监测预警的需求。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706395418626",
+          "questionId": "1809063692239769604",
+          "content": "非医疗系统的检验检测机构也应纳入公共卫生实验室网络体系。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706399612929",
+          "questionId": "1809063692239769604",
+          "content": "高等院校的实验室工作以教学研究为主，不在公共卫生实验室网络之内。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706403807234",
+          "questionId": "1809063692239769604",
+          "content": "生态环境、畜牧业、林业等部门行业的实验室应在公共卫生实验室网络内。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769605",
+      "type": 2,
+      "level": 2,
+      "content": "发展健全公共卫生实验室网络，要包括下列哪些部门、行业的实验室：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706408001537",
+          "questionId": "1809063692239769605",
+          "content": "医疗机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706412195842",
+          "questionId": "1809063692239769605",
+          "content": "科研院所",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706416390145",
+          "questionId": "1809063692239769605",
+          "content": "海关检疫",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706420584449",
+          "questionId": "1809063692239769605",
+          "content": "第三方检测机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769606",
+      "type": 2,
+      "level": 2,
+      "content": "当前传染病病原监测面临以下问题：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706424778753",
+          "questionId": "1809063692239769606",
+          "content": "就诊的感染病例主要依靠临床症状体征进行诊断",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706428973057",
+          "questionId": "1809063692239769606",
+          "content": "能检测的病原体的种类数有限",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706433167361",
+          "questionId": "1809063692239769606",
+          "content": "病原学培养仍欠缺",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706437361665",
+          "questionId": "1809063692239769606",
+          "content": "没有核酸检测方法",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769607",
+      "type": 2,
+      "level": 2,
+      "content": "传染病实验室监测网络的必要因素包括：",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706441555969",
+          "questionId": "1809063692239769607",
+          "content": "网络内使用标准化方法",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706445750274",
+          "questionId": "1809063692239769607",
+          "content": "实验室网络要有信息系统收集分析数据",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706449944578",
+          "questionId": "1809063692239769607",
+          "content": "网络成员实验室要共同遵守数据收集和分析规则",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706454138881",
+          "questionId": "1809063692239769607",
+          "content": "实验室网络应有统一的质量管理体系",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769608",
+      "type": 3,
+      "level": 2,
+      "content": "<p>1854年约翰斯诺通过调查控制了霍乱在伦敦一个区的流行，他的贡献之一是认定霍乱由霍乱弧菌引起。</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:48:18",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816032646678016001",
+          "questionId": "1809063692239769608",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816032646690598914",
+          "questionId": "1809063692239769608",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769609",
+      "type": 3,
+      "level": 2,
+      "content": "疾控系统和临床实验室不仅承担检测诊断职能，并发挥传染病监测作用。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706470916097",
+          "questionId": "1809063692239769609",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706475110402",
+          "questionId": "1809063692239769609",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769610",
+      "type": 3,
+      "level": 2,
+      "content": "当前病原体基因组测序分析已成为传染病监测和防控的必要数据和研判依据来源。",
+      "createTime": "2024-07-05 11:16:11",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706479304706",
+          "questionId": "1809063692239769610",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706483499009",
+          "questionId": "1809063692239769610",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769611",
+      "type": 3,
+      "level": 2,
+      "content": "疾控系统内流行病学调查处置主要由流行病学人员开展，实验室人员主要是对样本开展检测，对于了解流行病学信息和参与现场处置的工作、不属于其职能。",
+      "createTime": "2024-07-05 11:16:11",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706487693313",
+          "questionId": "1809063692239769611",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706491887617",
+          "questionId": "1809063692239769611",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692239769612",
+      "type": 3,
+      "level": 2,
+      "content": "开展一个疫情的精准防控，要等待病原学的确认。",
+      "createTime": "2024-07-05 11:16:11",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063706496081922",
+          "questionId": "1809063692239769612",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063706500276226",
+          "questionId": "1809063692239769612",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256592297984",
+      "type": 1,
+      "level": 2,
+      "content": "研究制订传染病防控政策首要考虑的问题：",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257661804546",
+          "questionId": "1810965256592297984",
+          "content": "传染源控制措施   ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257682776065",
+          "questionId": "1810965256592297984",
+          "content": "防控目标  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257686970370",
+          "questionId": "1810965256592297984",
+          "content": "疫情处置措施   ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257691164673",
+          "questionId": "1810965256592297984",
+          "content": "防控措施的科学性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256592297985",
+      "type": 1,
+      "level": 2,
+      "content": "聚集性疫情定义的要素不包括",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257703747586",
+          "questionId": "1810965256592297985",
+          "content": "时间范围 ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257703747587",
+          "questionId": "1810965256592297985",
+          "content": "空间范围  ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257707941890",
+          "questionId": "1810965256592297985",
+          "content": "强度  ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257712136194",
+          "questionId": "1810965256592297985",
+          "content": "人群特征",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256592297986",
+      "type": 1,
+      "level": 2,
+      "content": "疫情控制措施首要考虑的是哪项措施",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257720524801",
+          "questionId": "1810965256592297986",
+          "content": "密切接触者管理 ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257724719106",
+          "questionId": "1810965256592297986",
+          "content": "流行病学调查  ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257728913409",
+          "questionId": "1810965256592297986",
+          "content": "区域管控 ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257733107713",
+          "questionId": "1810965256592297986",
+          "content": "传染源控制",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256592297987",
+      "type": 1,
+      "level": 2,
+      "content": "区域管控措施主要的目的是",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257741496321",
+          "questionId": "1810965256592297987",
+          "content": "阻断疫情，防止扩散 ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257741496322",
+          "questionId": "1810965256592297987",
+          "content": "找到传染源 ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257745690625",
+          "questionId": "1810965256592297987",
+          "content": "降低发病率和死亡率 ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257754079234",
+          "questionId": "1810965256592297987",
+          "content": "防止出现聚集性疫情",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256592297988",
+      "type": 1,
+      "level": 2,
+      "content": "确定需要防控的重点人群主要是考虑依据",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257758273537",
+          "questionId": "1810965256592297988",
+          "content": "年龄  ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257762467841",
+          "questionId": "1810965256592297988",
+          "content": "性别  ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257766662146",
+          "questionId": "1810965256592297988",
+          "content": "职业 ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257770856450",
+          "questionId": "1810965256592297988",
+          "content": "感染风险和重症死亡风险",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492288",
+      "type": 2,
+      "level": 2,
+      "content": "下列哪些可以作为传染病防控目标",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257779245057",
+          "questionId": "1810965256596492288",
+          "content": "阻断传播   ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257783439362",
+          "questionId": "1810965256596492288",
+          "content": "降低流行高峰  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257787633665",
+          "questionId": "1810965256596492288",
+          "content": "防止输入",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257791827969",
+          "questionId": "1810965256596492288",
+          "content": "降低重症和死亡  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257796022273",
+          "questionId": "1810965256596492288",
+          "content": "消除",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492289",
+      "type": 2,
+      "level": 2,
+      "content": "疫情监测的目的包括哪些方面",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257808605185",
+          "questionId": "1810965256596492289",
+          "content": "及时发现疫情  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257808605186",
+          "questionId": "1810965256596492289",
+          "content": "掌握疫情分布规律与变化趋势",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257812799490",
+          "questionId": "1810965256596492289",
+          "content": "了解影响疫情发生的风险因素",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257816993793",
+          "questionId": "1810965256596492289",
+          "content": "防止疫情输入",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257821188098",
+          "questionId": "1810965256596492289",
+          "content": "控制传染源",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492290",
+      "type": 2,
+      "level": 2,
+      "content": "发现疫情的监测方法主要有哪些？",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257829576705",
+          "questionId": "1810965256596492290",
+          "content": "哨点监测   ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257833771009",
+          "questionId": "1810965256596492290",
+          "content": "网络直报  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257837965313",
+          "questionId": "1810965256596492290",
+          "content": "人群筛查  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257842159617",
+          "questionId": "1810965256596492290",
+          "content": "抗体水平监测  ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257846353921",
+          "questionId": "1810965256596492290",
+          "content": "媒介监测",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492291",
+      "type": 2,
+      "level": 2,
+      "content": "传染病疫情的流行病学调查可以起到哪些主要作用：",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257850548225",
+          "questionId": "1810965256596492291",
+          "content": "追溯传染源   ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257858936834",
+          "questionId": "1810965256596492291",
+          "content": "找出密切接触者",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257863131137",
+          "questionId": "1810965256596492291",
+          "content": "发现聚集性疫情   ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257867325442",
+          "questionId": "1810965256596492291",
+          "content": "了解疫情风险因素  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257871519745",
+          "questionId": "1810965256596492291",
+          "content": "评估疫情风险区域",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492292",
+      "type": 2,
+      "level": 2,
+      "content": "一般考虑传染病防控的重点环节包括：",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257875714049",
+          "questionId": "1810965256596492292",
+          "content": "重点人群  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257879908353",
+          "questionId": "1810965256596492292",
+          "content": "重点场所  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257888296961",
+          "questionId": "1810965256596492292",
+          "content": "重点时段  ",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257892491265",
+          "questionId": "1810965256596492292",
+          "content": "重点环境  ",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257896685570",
+          "questionId": "1810965256596492292",
+          "content": "聚集性疫情",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492293",
+      "type": 3,
+      "level": 2,
+      "content": "我国网络直报系统数据对于多数传染病不能反映疫情变化趋势。",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257900879874",
+          "questionId": "1810965256596492293",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257909268482",
+          "questionId": "1810965256596492293",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492294",
+      "type": 3,
+      "level": 2,
+      "content": "大规模人群筛查是常用的发现传染病疫情的手段。",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257913462785",
+          "questionId": "1810965256596492294",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257917657090",
+          "questionId": "1810965256596492294",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492295",
+      "type": 3,
+      "level": 2,
+      "content": "传染病的聚集性疫情也可以被称为暴发疫情。",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257921851394",
+          "questionId": "1810965256596492295",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257926045697",
+          "questionId": "1810965256596492295",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256596492296",
+      "type": 3,
+      "level": 2,
+      "content": "密切接触者均需要采取隔离措施，防止可能的传播。",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257934434305",
+          "questionId": "1810965256596492296",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257938628609",
+          "questionId": "1810965256596492296",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1810965256600686592",
+      "type": 3,
+      "level": 2,
+      "content": "传染病防控措施的制订需要考虑措施的科学性和可执行性的平衡。",
+      "createTime": "2024-07-10 17:12:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1810965257942822914",
+          "questionId": "1810965256600686592",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1810965257951211521",
+          "questionId": "1810965256600686592",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058048",
+      "type": 1,
+      "level": 2,
+      "content": "什么是疾控体系？（）",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559774905921537",
+          "questionId": "1815559774541058048",
+          "content": "主要由四级疾控机构组成。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774922698753",
+          "questionId": "1815559774541058048",
+          "content": "以疾控机构和各类专科疾病防治机构为骨干、医疗机构为依托、基层医疗卫生机构为网底，军民融合、防治结合、全社会协同的疾控体系。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774926893058",
+          "questionId": "1815559774541058048",
+          "content": "主要指各级卫生健康行政部门和疾控机构。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774931087361",
+          "questionId": "1815559774541058048",
+          "content": "以疾控机构和各类专科疾病防治机构为骨干、医疗机构为依托、基层医疗卫生机构为网底。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058049",
+      "type": 1,
+      "level": 2,
+      "content": "在公立医院、基层医疗卫生机构和社会办医院设立专兼职疾控监督员，接受（）业务管理。",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559774939475970",
+          "questionId": "1815559774541058049",
+          "content": "属地卫生健康部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774943670273",
+          "questionId": "1815559774541058049",
+          "content": "属地疾控部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774952058881",
+          "questionId": "1815559774541058049",
+          "content": "属地疾控中心",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774956253186",
+          "questionId": "1815559774541058049",
+          "content": "所在机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058050",
+      "type": 1,
+      "level": 2,
+      "content": "（）负责疾控行政执法工作。",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559774960447490",
+          "questionId": "1815559774541058050",
+          "content": "国家、省级疾控部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774964641793",
+          "questionId": "1815559774541058050",
+          "content": "国家、省级疾控中心",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774968836098",
+          "questionId": "1815559774541058050",
+          "content": "市、县级疾控主管部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774977224705",
+          "questionId": "1815559774541058050",
+          "content": "市、县级卫生监督机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058051",
+      "type": 1,
+      "level": 2,
+      "content": "职称评审重点考核（）？",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559774981419009",
+          "questionId": "1815559774541058051",
+          "content": "科研成果",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774985613314",
+          "questionId": "1815559774541058051",
+          "content": "学历资质",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774998196226",
+          "questionId": "1815559774541058051",
+          "content": "社会服务和社会声誉",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559774998196227",
+          "questionId": "1815559774541058051",
+          "content": "工作实绩",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058052",
+      "type": 1,
+      "level": 2,
+      "content": "如何加强疾控人才队伍建设（）？",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775002390530",
+          "questionId": "1815559774541058052",
+          "content": "主要就是解决人员薪酬待遇。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775010779137",
+          "questionId": "1815559774541058052",
+          "content": "多培养高水平的公共卫生人员。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775014973441",
+          "questionId": "1815559774541058052",
+          "content": "要从人才培养、配备、使用、评价、激励等环节多措并举。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775014973442",
+          "questionId": "1815559774541058052",
+          "content": "取消对论文、科研的硬性要求。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058053",
+      "type": 2,
+      "level": 2,
+      "content": "疾病预防控制经费来源包括（）？",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775014973443",
+          "questionId": "1815559774541058053",
+          "content": "中央和地方财政投入",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775031750658",
+          "questionId": "1815559774541058053",
+          "content": "基本公共卫生服务项目经费",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775035944962",
+          "questionId": "1815559774541058053",
+          "content": "医保经费",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775044333569",
+          "questionId": "1815559774541058053",
+          "content": "社会捐赠",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775048527874",
+          "questionId": "1815559774541058053",
+          "content": "公民个人支出",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058054",
+      "type": 2,
+      "level": 2,
+      "content": "“规范疾控机构向社会提供的公共卫生技术服务”。其中“规范”的内容包括以下（）？",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775056916481",
+          "questionId": "1815559774541058054",
+          "content": "服务范围和项目",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775061110785",
+          "questionId": "1815559774541058054",
+          "content": "服务的收费",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775065305090",
+          "questionId": "1815559774541058054",
+          "content": "服务收费的使用和支出",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775069499394",
+          "questionId": "1815559774541058054",
+          "content": "服务对象",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058055",
+      "type": 2,
+      "level": 2,
+      "content": "疾控专业能力主要包括（）？",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775073693698",
+          "questionId": "1815559774541058055",
+          "content": "监测预警和检验检测能力",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775082082305",
+          "questionId": "1815559774541058055",
+          "content": "应急处置能力",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775086276609",
+          "questionId": "1815559774541058055",
+          "content": "传染病救治能力",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775090470913",
+          "questionId": "1815559774541058055",
+          "content": "公共卫生干预能力",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775094665218",
+          "questionId": "1815559774541058055",
+          "content": "科研创新能力",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775103053826",
+          "questionId": "1815559774541058055",
+          "content": "行政执法能力",
+          "analysis": null,
+          "isRight": true,
+          "tag": "F",
+          "sort": 6,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775107248130",
+          "questionId": "1815559774541058055",
+          "content": "宣传教育能力",
+          "analysis": null,
+          "isRight": true,
+          "tag": "G",
+          "sort": 7,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058056",
+      "type": 2,
+      "level": 2,
+      "content": "新冠疫情期间形成了落实疫情防控“四方责任”的有效经验。“四方责任”包括（）？",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775111442433",
+          "questionId": "1815559774541058056",
+          "content": "属地责任",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775119831041",
+          "questionId": "1815559774541058056",
+          "content": "领导责任",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775124025346",
+          "questionId": "1815559774541058056",
+          "content": "部门责任",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775128219649",
+          "questionId": "1815559774541058056",
+          "content": "监护人责任",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775132413953",
+          "questionId": "1815559774541058056",
+          "content": "单位责任",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775136608258",
+          "questionId": "1815559774541058056",
+          "content": "家庭和个人责任",
+          "analysis": null,
+          "isRight": true,
+          "tag": "F",
+          "sort": 6,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058057",
+      "type": 2,
+      "level": 2,
+      "content": "公共卫生实验室网络包括（）？",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775144996866",
+          "questionId": "1815559774541058057",
+          "content": "疾控机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775153385474",
+          "questionId": "1815559774541058057",
+          "content": "医疗机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775157579778",
+          "questionId": "1815559774541058057",
+          "content": "高等院校",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775157579779",
+          "questionId": "1815559774541058057",
+          "content": "科研院所",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775165968385",
+          "questionId": "1815559774541058057",
+          "content": "海关国际旅行卫生保健中心",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775170162689",
+          "questionId": "1815559774541058057",
+          "content": "检验检测机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "F",
+          "sort": 6,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774541058058",
+      "type": 2,
+      "level": 2,
+      "content": "以下哪项是错误的（）？",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775178551298",
+          "questionId": "1815559774541058058",
+          "content": "各级疾控中心加挂预防医学科学院牌子，强化科研支撑和技术保障能力。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775182745602",
+          "questionId": "1815559774541058058",
+          "content": "2024年底前，二级及以上医疗机构和基层医疗卫生机构全面落实公共卫生或预防保健科室规范化要求",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775186939906",
+          "questionId": "1815559774541058058",
+          "content": "按规定核定疾控机构人员编制并全额配备。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775191134209",
+          "questionId": "1815559774541058058",
+          "content": "国家和省级疾控中心承担的纵向科研项目的间接经费以及横向课题经费，按照财政经费有关规定管理使用。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775199522817",
+          "questionId": "1815559774541058058",
+          "content": "各级政府重点保障各级疾控机构所需基本建设、设备购置、学科建设、人才培养等发展建设支出。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774545252352",
+      "type": 3,
+      "level": 2,
+      "content": "“两个允许”是指允许医疗卫生机构突破现行事业单位工资调控水平，允许医疗服务收入扣除成本并按规定提取各项基金后主要用于人员奖励。",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775203717122",
+          "questionId": "1815559774545252352",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775212105729",
+          "questionId": "1815559774545252352",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774545252353",
+      "type": 3,
+      "level": 2,
+      "content": "疾控体系是由疾控中心和专病防治机构共同组成的。",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775216300034",
+          "questionId": "1815559774545252353",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775220494338",
+          "questionId": "1815559774545252353",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774545252354",
+      "type": 3,
+      "level": 2,
+      "content": "卫生健康行政执法体系是权责明确、程序规范、执行有力的国家、省、市、县四级卫生健康行政执法体系。",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775224688641",
+          "questionId": "1815559774545252354",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775228882945",
+          "questionId": "1815559774545252354",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774545252355",
+      "type": 3,
+      "level": 2,
+      "content": "疾控体系改革就是指市县两级疾控机构和卫生监督机构整合。",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775237271553",
+          "questionId": "1815559774545252355",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775241465858",
+          "questionId": "1815559774545252355",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559774545252356",
+      "type": 3,
+      "level": 2,
+      "content": "强化上级疾控机构对下级疾控机构的业务指导和工作协同，组织实施监督检查和考核评价。",
+      "createTime": "2024-07-23 09:29:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559775245660162",
+          "questionId": "1815559774545252356",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559775249854465",
+          "questionId": "1815559774545252356",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818602732697710593",
+      "type": 1,
+      "level": 2,
+      "content": "<p>在突发公共卫生事件中，最关键的响应措施是什么？</p>",
+      "createTime": "2024-07-31 19:00:54",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818602732760625154",
+          "questionId": "1818602732697710593",
+          "content": "增加医疗设施",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818602732785790977",
+          "questionId": "1818602732697710593",
+          "content": "实施信息共享",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818602732789985282",
+          "questionId": "1818602732697710593",
+          "content": "加大宣传力度",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818602732794179585",
+          "questionId": "1818602732697710593",
+          "content": "提高药品储备",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818602882832822273",
+      "type": 1,
+      "level": 2,
+      "content": "<p>通常哪个部门负责协调突发公共卫生事件的应急响应？</p>",
+      "createTime": "2024-07-31 19:01:30",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818602882899931138",
+          "questionId": "1818602882832822273",
+          "content": "教育部门",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818602882916708353",
+          "questionId": "1818602882832822273",
+          "content": "环境保护部门",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818602882925096962",
+          "questionId": "1818602882832822273",
+          "content": "卫生行政部门",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818602882929291265",
+          "questionId": "1818602882832822273",
+          "content": "财政部门",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818603013695107073",
+      "type": 1,
+      "level": 2,
+      "content": "<p>针对突发公共卫生事件，建立快速反应机制的主要目的是：</p>",
+      "createTime": "2024-07-31 19:02:01",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818603013753827329",
+          "questionId": "1818603013695107073",
+          "content": "提高公共卫生意识",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818603013770604545",
+          "questionId": "1818603013695107073",
+          "content": "迅速控制疫情扩散",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818603013778993153",
+          "questionId": "1818603013695107073",
+          "content": "加强国际合作",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818603013783187458",
+          "questionId": "1818603013695107073",
+          "content": "增强科研能力",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818603144544808961",
+      "type": 1,
+      "level": 2,
+      "content": "<p>在突发公共卫生事件应对中，信息传递的重要性体现在：</p>",
+      "createTime": "2024-07-31 19:02:32",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818603144599334914",
+          "questionId": "1818603144544808961",
+          "content": "降低公众的知晓率",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818603144616112129",
+          "questionId": "1818603144544808961",
+          "content": "提高公众对事件的恐慌",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818603144620306433",
+          "questionId": "1818603144544808961",
+          "content": "确保公众及时获取准确信息",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818603144624500738",
+          "questionId": "1818603144544808961",
+          "content": "推迟事件的处理时间",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818603258210447362",
+      "type": 1,
+      "level": 2,
+      "content": "<p>为提高突发公共卫生事件应对能力，各级政府应优先进行的培训是：</p>",
+      "createTime": "2024-07-31 19:02:59",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818603258264973314",
+          "questionId": "1818603258210447362",
+          "content": "财务管理培训",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818603258285944834",
+          "questionId": "1818603258210447362",
+          "content": "卫生应急管理培训",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818603258290139137",
+          "questionId": "1818603258210447362",
+          "content": "基础设施建设培训",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818603258294333441",
+          "questionId": "1818603258210447362",
+          "content": "文化交流培训",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818603396404375554",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在突发公共卫生事件中，有效的应急预案应包括哪些内容？</p>",
+      "createTime": "2024-07-31 19:03:32",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818603396463095809",
+          "questionId": "1818603396404375554",
+          "content": "事件监测与评估",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818603396479873026",
+          "questionId": "1818603396404375554",
+          "content": "资源调配与管理",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818603396484067330",
+          "questionId": "1818603396404375554",
+          "content": "人员培训与演练",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818603396488261634",
+          "questionId": "1818603396404375554",
+          "content": "社会心理疏导机制",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818603556140249089",
+      "type": 2,
+      "level": 2,
+      "content": "<p>加强突发公共卫生事件的应对能力，以下哪些方式是有效的？</p>",
+      "createTime": "2024-07-31 19:04:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818603556194775041",
+          "questionId": "1818603556140249089",
+          "content": "加强基础医疗设施建设",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818603556215746561",
+          "questionId": "1818603556140249089",
+          "content": "提升公共卫生服务水平",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818603556219940865",
+          "questionId": "1818603556140249089",
+          "content": "加大对科学研究的投入",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818603556224135169",
+          "questionId": "1818603556140249089",
+          "content": "加强社会宣传与教育",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818603697068863490",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在疫情防控中，公众的正确行为包括哪些？</p>",
+      "createTime": "2024-07-31 19:04:44",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818603697123389441",
+          "questionId": "1818603697068863490",
+          "content": "佩戴口罩",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818603697140166657",
+          "questionId": "1818603697068863490",
+          "content": "保持社交距离",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818603697144360962",
+          "questionId": "1818603697068863490",
+          "content": "自行处理疑似病例",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818603697152749569",
+          "questionId": "1818603697068863490",
+          "content": "遵循卫生部门的指导与建议",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818603875960123394",
+      "type": 2,
+      "level": 2,
+      "content": "<p>突发公共卫生事件中，哪些方面的合作是至关重要的？</p>",
+      "createTime": "2024-07-31 19:05:27",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818603876018843650",
+          "questionId": "1818603875960123394",
+          "content": "政府部门之间的协调",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818603876035620865",
+          "questionId": "1818603875960123394",
+          "content": "医疗机构与科研单位的合作",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818603876039815170",
+          "questionId": "1818603875960123394",
+          "content": "International cooperation between countries",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818603876044009474",
+          "questionId": "1818603875960123394",
+          "content": "社区与居民的参与",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818604001835380737",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在应对突发公共卫生事件中，有效的信息沟通应关注哪些方面？</p>",
+      "createTime": "2024-07-31 19:05:57",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818604001902489602",
+          "questionId": "1818604001835380737",
+          "content": "信息的准确性",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818604001923461122",
+          "questionId": "1818604001835380737",
+          "content": "信息传递的及时性",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818604001927655426",
+          "questionId": "1818604001835380737",
+          "content": "信息的保密性",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818604001931849729",
+          "questionId": "1818604001835380737",
+          "content": "信息的易懂性",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818604064640888834",
+      "type": 3,
+      "level": 2,
+      "content": "<p>在公共卫生事件发生时，及时的信息传播对于控制疫情的蔓延至关重要。</p>",
+      "createTime": "2024-07-31 19:06:12",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818604064695414786",
+          "questionId": "1818604064640888834",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818604064712192002",
+          "questionId": "1818604064640888834",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818604124753653762",
+      "type": 3,
+      "level": 2,
+      "content": "<p>卫生应急响应计划只需要在发生重大公共卫生事件前制定，不需要定期评估和更新。</p>",
+      "createTime": "2024-07-31 19:06:26",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818604124803985409",
+          "questionId": "1818604124753653762",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818604124820762625",
+          "questionId": "1818604124753653762",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818604189090082817",
+      "type": 3,
+      "level": 2,
+      "content": "<p>加强卫生应急能力包括培训医务人员和志愿者，以便他们能够在紧急情况下有效应对。</p>",
+      "createTime": "2024-07-31 19:06:41",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818604189140414465",
+          "questionId": "1818604189090082817",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818604189157191681",
+          "questionId": "1818604189090082817",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818604251455188994",
+      "type": 3,
+      "level": 2,
+      "content": "<p>公共卫生事件的应对只依赖于政府部门，公众的参与和配合没有太大影响。</p>",
+      "createTime": "2024-07-31 19:06:56",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818604251509714945",
+          "questionId": "1818604251455188994",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818604251526492161",
+          "questionId": "1818604251455188994",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818604315854532609",
+      "type": 3,
+      "level": 2,
+      "content": "<p>疫苗接种是提高公共卫生事件应对能力的有效策略，可以帮助减少疾病传播。</p>",
+      "createTime": "2024-07-31 19:07:12",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818604315904864257",
+          "questionId": "1818604315854532609",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818604315921641474",
+          "questionId": "1818604315854532609",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836963975556767745",
+      "type": 1,
+      "level": 2,
+      "content": "<p>传染病的定义主要是指：</p>",
+      "createTime": "2024-09-20 11:01:56",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836963975753900033",
+          "questionId": "1836963975556767745",
+          "content": "由病原体引起的、能够在人与人之间传播的疾病",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836963975766482946",
+          "questionId": "1836963975556767745",
+          "content": "由遗传因素引起的疾病",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836963975766482947",
+          "questionId": "1836963975556767745",
+          "content": "由环境因素引起的疾病",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836963975766482948",
+          "questionId": "1836963975556767745",
+          "content": "由营养不良引起的疾病",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836964216553086977",
+      "type": 1,
+      "level": 2,
+      "content": "<p>传染病的传播途径不包括以下哪一项？</p>",
+      "createTime": "2024-09-20 11:02:53",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836964216569864194",
+          "questionId": "1836964216553086977",
+          "content": "空气传播",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836964216582447105",
+          "questionId": "1836964216553086977",
+          "content": "水传播",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836964216590835714",
+          "questionId": "1836964216553086977",
+          "content": "食物传播",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836964216590835715",
+          "questionId": "1836964216553086977",
+          "content": "遗传传播",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836964479150071810",
+      "type": 1,
+      "level": 2,
+      "content": "<p>在传染病监测中，\"早期预警\"的主要目的是什么？</p>",
+      "createTime": "2024-09-20 11:03:56",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836964479171043329",
+          "questionId": "1836964479150071810",
+          "content": "提高疾病的传播速度",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836964479175237634",
+          "questionId": "1836964479150071810",
+          "content": "及时识别和控制疫情",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836964479179431938",
+          "questionId": "1836964479150071810",
+          "content": "降低医疗成本",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836964479179431939",
+          "questionId": "1836964479150071810",
+          "content": "保护病人的隐私",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836964720771342337",
+      "type": 1,
+      "level": 2,
+      "content": "<p>传染病监测的主要用途是：</p>",
+      "createTime": "2024-09-20 11:04:53",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836964720800702465",
+          "questionId": "1836964720771342337",
+          "content": "进行病原体的基因研究",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836964720804896770",
+          "questionId": "1836964720771342337",
+          "content": "评估疫苗的有效性",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836964720809091074",
+          "questionId": "1836964720771342337",
+          "content": "及时发现和控制传染病的暴发",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836964720809091075",
+          "questionId": "1836964720771342337",
+          "content": "进行药物研发",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836965191095513090",
+      "type": 1,
+      "level": 2,
+      "content": "<p>为了提高传染病预警能力，各国通常会建立什么系统？</p>",
+      "createTime": "2024-09-20 11:06:45",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836965191426863105",
+          "questionId": "1836965191095513090",
+          "content": "单一的疾病报告系统",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836965191447834626",
+          "questionId": "1836965191095513090",
+          "content": "综合的公共卫生监测系统",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836965191452028929",
+          "questionId": "1836965191095513090",
+          "content": "独立的私人医疗检测系统",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836965191452028930",
+          "questionId": "1836965191095513090",
+          "content": "高度保密的疾病数据监控",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836965415901818881",
+      "type": 2,
+      "level": 2,
+      "content": "<p>以下哪些措施可以有效提升传染病监测和预警能力？</p>",
+      "createTime": "2024-09-20 11:07:39",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836965415935373314",
+          "questionId": "1836965415901818881",
+          "content": "建立全民健康信息系统",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836965415952150530",
+          "questionId": "1836965415901818881",
+          "content": "加强对疑似病例的快速检测",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836965415952150531",
+          "questionId": "1836965415901818881",
+          "content": "定期举行公共卫生演练",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836965415960539138",
+          "questionId": "1836965415901818881",
+          "content": "限制医疗机构的信息共享",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836965591039176706",
+      "type": 2,
+      "level": 2,
+      "content": "<p>传染病的分类可以根据哪些标准进行？</p>",
+      "createTime": "2024-09-20 11:08:21",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836965591060148225",
+          "questionId": "1836965591039176706",
+          "content": "病原体类型",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836965591072731137",
+          "questionId": "1836965591039176706",
+          "content": "传播途径",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836965591072731138",
+          "questionId": "1836965591039176706",
+          "content": "临床表现",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836965591076925442",
+          "questionId": "1836965591039176706",
+          "content": "地理分布",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836965744324210690",
+      "type": 2,
+      "level": 2,
+      "content": "<p>传染病预防和控制的策略包括哪些？</p>",
+      "createTime": "2024-09-20 11:08:57",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836965744340987905",
+          "questionId": "1836965744324210690",
+          "content": "疫苗接种",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836965744345182210",
+          "questionId": "1836965744324210690",
+          "content": "健康教育",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836965744345182211",
+          "questionId": "1836965744324210690",
+          "content": "环境卫生改善",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836965744345182212",
+          "questionId": "1836965744324210690",
+          "content": "仅依赖药物治疗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836965888344027137",
+      "type": 2,
+      "level": 2,
+      "content": "<p>传染病监测的主要目的有哪些？</p>",
+      "createTime": "2024-09-20 11:09:32",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836965888373387266",
+          "questionId": "1836965888344027137",
+          "content": "及时发现疫情",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836965888381775873",
+          "questionId": "1836965888344027137",
+          "content": "评估公共卫生干预的效果",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836965888381775874",
+          "questionId": "1836965888344027137",
+          "content": "进行病原体的基因组研究",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836965888385970177",
+          "questionId": "1836965888344027137",
+          "content": "预测未来的疫情趋势",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836966039187976194",
+      "type": 2,
+      "level": 2,
+      "content": "<p>溢出事件的主要特征包括哪些？</p>",
+      "createTime": "2024-09-20 11:10:08",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836966039317999618",
+          "questionId": "1836966039187976194",
+          "content": "新病原体的出现",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836966039317999619",
+          "questionId": "1836966039187976194",
+          "content": "传播速度快",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1836966039317999620",
+          "questionId": "1836966039187976194",
+          "content": "仅限于动物传播",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1836966039317999621",
+          "questionId": "1836966039187976194",
+          "content": "可能导致人类感染",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836966119106244610",
+      "type": 3,
+      "level": 2,
+      "content": "<p>传染病的监测仅限于对已知病原体的观察。</p>",
+      "createTime": "2024-09-20 11:10:27",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836966119123021826",
+          "questionId": "1836966119106244610",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836966119127216129",
+          "questionId": "1836966119106244610",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836966181647511554",
+      "type": 3,
+      "level": 2,
+      "content": "<p>接种疫苗是预防传染病的重要手段，对于减少疾病传播具有显著效果。</p>",
+      "createTime": "2024-09-20 11:10:42",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836966181660094466",
+          "questionId": "1836966181647511554",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836966181664288769",
+          "questionId": "1836966181647511554",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836966238157369345",
+      "type": 3,
+      "level": 2,
+      "content": "<p>溢出事件监测主要关注新出现的病原体对人类的影响。</p>",
+      "createTime": "2024-09-20 11:10:55",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836966238157369346",
+          "questionId": "1836966238157369345",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836966238157369347",
+          "questionId": "1836966238157369345",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836966305626943490",
+      "type": 3,
+      "level": 2,
+      "content": "<p>传染病监测的主要用途是为了进行药物研发。</p>",
+      "createTime": "2024-09-20 11:11:11",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836966305643720705",
+          "questionId": "1836966305626943490",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836966305647915010",
+          "questionId": "1836966305626943490",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1836966359058182146",
+      "type": 3,
+      "level": 2,
+      "content": "<p>WHO疫情情报系统的工作框架包括数据收集、分析和报告。</p>",
+      "createTime": "2024-09-20 11:11:24",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1806569459507388417",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1836966359074959362",
+          "questionId": "1836966359058182146",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1836966359083347970",
+          "questionId": "1836966359058182146",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    }
+  ],
+  "total": 122,
+  "size": 500,
+  "current": 1,
+  "orders": [],
+  "optimizeCountSql": true,
+  "searchCount": true,
+  "maxLimit": null,
+  "countId": null,
+  "pages": 1
+}
