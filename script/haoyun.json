@@ -2,7 +2,35 @@
   "urls": [
     {
       "url": "",
-      "name": "最近更新日期：2024 年 10 月 09 日"
+      "name": "最近更新日期：2024 年 11 月 19 日"
+    },
+    {
+      "url": "https://cxp.netlify.app/#/script/haoyunvip.jsonc",
+      "name": "vip"
+    },
+    {
+      "url": "https://notabug.org/jick/ji/raw/master/jity",
+      "name": "🏠云影库"
+    },
+    {
+      "url": "http://itv.22m.top/ITVBox/%E8%87%AA%E7%94%A8%E6%8E%A5%E5%8F%A3.json",
+      "name": "22m"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/guot55/yg/refs/heads/main/box%E5%8E%9F.json",
+      "name": "guot55"
+    },
+    {
+      "url": "https://gitee.com/pmam/yuhao-video/raw/master/%E7%91%9C%E8%B1%AA%E8%A7%86%E9%A2%91.json",
+      "name": "瑜豪"
+    },
+    {
+      "url": "http://47.99.102.252/xc.json",
+      "name": "玉玉"
+    },
+    {
+      "url": "https://gitea.moe/yuan301/tv/raw/branch/main/box.txt",
+      "name": "yuan301"
     },
     {
       "url": "https://ghp.ci/https://raw.githubusercontent.com/newrecha/TVBOX/refs/heads/main/0914-no-sex.json",
