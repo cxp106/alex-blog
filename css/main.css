@@ -928,7 +928,7 @@ body {
   .md-text table {
     width: calc(100% - 36px);
     margin-left: auto;
-    margin-rightai: auto;
+    margin-right: auto;
   }
   h1 a,
   h2 a,
