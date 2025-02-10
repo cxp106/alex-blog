@@ -301,7 +301,6 @@
     </div>
     <script type="module">
       import { marked } from "https://s4.zstatic.net/ajax/libs/marked/15.0.6/lib/marked.esm.js"
-      const API_KEY = "YOUR_MOONSHOT_API_KEY" // 替换为您的 Moonshot API 密钥
       // 辅助函数：格式化日期
       function formatDate(date) {
         const year = date.getFullYear()
@@ -310,10 +309,18 @@
         return `${year}-${month}-${day}`
       }
       // 获取农历信息
+      // 获取更详细的农历信息
       function getLunarInfo(date) {
         const lunar = Lunar.fromDate(date)
         const solar = lunar.getSolar()
-        const festivals = lunar.getFestivals().concat(solar.getFestivals())
+        const festivals = lunar
+          .getFestivals()
+          .concat(solar.getFestivals())
+          .concat(lunar.getOtherFestivals())
+          .concat(solar.getOtherFestivals())
+        const foto = lunar.getFoto()
+        const tao = lunar.getTao()
+        const lunarYear = LunarYear.fromYear(lunar.getYear())
 
         const result = {
           lunarDate: `${lunar.getYearInChinese()}年 ${lunar.getMonthInChinese()}月 ${lunar.getDayInChinese()}日`,
@@ -359,8 +366,57 @@
             hou: `${lunar.getHou()}, ${lunar.getWuHou()}`,
             dailyFortune: lunar.getDayLu(),
             sixDays: lunar.getLiuYao(),
-            yuanAndYun: `${LunarYear.fromYear(lunar.getYear()).getYuan()} ${LunarYear.fromYear(lunar.getYear()).getYun()}`,
+            yuanAndYun: `${lunarYear.getYuan()} ${lunarYear.getYun()}`,
+            zhiShui: lunarYear.getZhiShui(), // 治水
+            fenBing: lunarYear.getFenBing(), // 分饼
+            gengTian: lunarYear.getGengTian(), // 耕田
+            deJin: lunarYear.getDeJin(), // 得金
           },
+          // 新增的详细信息
+          foto: {
+            year: foto.getYearInChinese(),
+            month: foto.getMonthInChinese(),
+            day: foto.getDayInChinese(),
+          },
+          tao: {
+            year: tao.getYearInChinese(),
+            month: tao.getMonthInChinese(),
+            day: tao.getDayInChinese(),
+          },
+          yueXiang: lunar.getYueXiang(),
+          zhiXing: lunar.getZhiXing(),
+          dayTianShen: {
+            name: lunar.getDayTianShen(),
+            type: lunar.getDayTianShenType(),
+            luck: lunar.getDayTianShenLuck(),
+          },
+          nineStar: {
+            number: lunar.getDayNineStar().getNumber(),
+            color: lunar.getDayNineStar().getColor(),
+            nameInTaiYi: lunar.getDayNineStar().getNameInTaiYi(),
+            wuXing: lunar.getDayNineStar().getWuXing(),
+            typeInTaiYi: lunar.getDayNineStar().getTypeInTaiYi(),
+            songInTaiYi: lunar.getDayNineStar().getSongInTaiYi(),
+          },
+          xunKong: {
+            year: lunar.getYearXunKong(),
+            month: lunar.getMonthXunKong(),
+            day: lunar.getDayXunKong(),
+          },
+          shuJiu: lunar.getShuJiu() ? lunar.getShuJiu().toFullString() : "",
+          fu: lunar.getFu() ? lunar.getFu().toFullString() : "",
+          times: lunar.getTimes().map((time) => ({
+            ganZhi: time.getGanZhi(),
+            minHm: time.getMinHm(),
+            maxHm: time.getMaxHm(),
+            tianShen: time.getTianShen(),
+            tianShenType: time.getTianShenType(),
+            tianShenLuck: time.getTianShenLuck(),
+            chongDesc: time.getChongDesc(),
+            sha: time.getSha(),
+            yi: time.getYi(),
+            ji: time.getJi(),
+          })),
         }
         return result
       }
@@ -482,6 +538,62 @@
    - 以智者的口吻，总结当天的运势特点，并给出对人生的启示。
    - 例如“希望大家根据黄历提示，度过吉祥的一天”。`
         const API_KEY = "sk-9BRxMCY28LUuVTX68wTM7WugAvFlcJ6Q4GWbizvotd7G4a52"
+
+        // 格式化黄历信息 (更详细)
+        const formattedLunarInfo = `
+        公历日期：${lunarInfo.solarDate}
+        农历日期：${lunarInfo.lunarDate}
+        干支纪年：年：${lunarInfo.ganAndZhi.year}，月：${lunarInfo.ganAndZhi.month}，日：${lunarInfo.ganAndZhi.day}
+        宜：${lunarInfo.auspiciousAndInauspicious.favorable.join("、")}
+        忌：${lunarInfo.auspiciousAndInauspicious.unfavorable.join("、")}
+        吉神：${lunarInfo.auspiciousAndOminousStars.auspiciousStars.join("、")}
+        凶煞：${lunarInfo.auspiciousAndOminousStars.ominousStars.join("、")}
+        冲煞：${lunarInfo.clashAndSha.clash}, ${lunarInfo.clashAndSha.sha}
+        彭祖百忌：${lunarInfo.otherInformation.pengZu}
+        节气：上一节气：${lunarInfo.solarTerms.previousTerm.name} (${lunarInfo.solarTerms.previousTerm.time})，下一节气：${
+          lunarInfo.solarTerms.nextTerm.name
+        } (${lunarInfo.solarTerms.nextTerm.time})
+        节日：${lunarInfo.festivals.join("、") || "无"}
+        ${lunarInfo.dailyGods.yangGuardian ? `阳贵神: ${lunarInfo.dailyGods.yangGuardian}` : ""}
+        ${lunarInfo.dailyGods.yinGuardian ? `阴贵神: ${lunarInfo.dailyGods.yinGuardian}` : ""}
+        ${lunarInfo.dailyGods.luckyGod ? `喜神: ${lunarInfo.dailyGods.luckyGod}` : ""}
+        ${lunarInfo.dailyGods.blessingGod ? `福神: ${lunarInfo.dailyGods.blessingGod}` : ""}
+        ${lunarInfo.dailyGods.wealthGod ? `财神: ${lunarInfo.dailyGods.wealthGod}` : ""}
+        ${lunarInfo.otherInformation.season ? `季节: ${lunarInfo.otherInformation.season}` : ""}
+        ${lunarInfo.otherInformation.hou ? `候: ${lunarInfo.otherInformation.hou}` : ""}
+        ${lunarInfo.otherInformation.dailyFortune ? `日禄: ${lunarInfo.otherInformation.dailyFortune}` : ""}
+        ${lunarInfo.otherInformation.sixDays ? `六曜: ${lunarInfo.otherInformation.sixDays}` : ""}
+        元运：${lunarInfo.otherInformation.yuanAndYun}
+        治水：${lunarInfo.otherInformation.zhiShui}
+        分饼：${lunarInfo.otherInformation.fenBing}
+        耕田：${lunarInfo.otherInformation.gengTian}
+        得金：${lunarInfo.otherInformation.deJin}
+        佛历：${lunarInfo.foto.year}年 ${lunarInfo.foto.month}月 ${lunarInfo.foto.day}
+        道历：${lunarInfo.tao.year}年 ${lunarInfo.tao.month}月 ${lunarInfo.tao.day}
+        月相：${lunarInfo.yueXiang}
+        值星：${lunarInfo.zhiXing}
+        值日天神：${lunarInfo.dayTianShen.name} (${lunarInfo.dayTianShen.type}) ${lunarInfo.dayTianShen.luck}
+        九星：${lunarInfo.nineStar.number}${lunarInfo.nineStar.color} - ${lunarInfo.nineStar.nameInTaiYi}星 (${
+          lunarInfo.nineStar.wuXing
+        }) - ${lunarInfo.nineStar.typeInTaiYi}
+        九星歌诀：${lunarInfo.nineStar.songInTaiYi}
+        旬空：年：${lunarInfo.xunKong.year}，月：${lunarInfo.xunKong.month}，日：${lunarInfo.xunKong.day}
+        数九：${lunarInfo.shuJiu}
+        三伏：${lunarInfo.fu}
+        时辰：
+          ${lunarInfo.times
+            .map(
+              (time) => `
+            ${time.ganZhi}时 (${time.minHm}-${time.maxHm})
+            天神: ${time.tianShen} (${time.tianShenType}) ${time.tianShenLuck}
+            冲: ${time.chongDesc}
+            煞: ${time.sha}
+            宜: ${time.yi.join(" ")}
+            忌: ${time.ji.join(" ")}
+          `
+            )
+            .join("")}
+      `.trim()
         const messages = [
           {
             role: "system",
@@ -489,7 +601,7 @@
           },
           {
             role: "user",
-            content: `以黄历老师的身份分析以下黄历信息，并给出今日运势和建议：\n${JSON.stringify(lunarInfo)} `,
+            content: `以黄历老师的身份分析以下黄历信息，并给出今日运势和建议：\n${formattedLunarInfo}`,
           },
         ]
         try {
@@ -518,6 +630,7 @@
         }
       }
       //  更新黄历信息和 AI 分析
+      //  更新黄历信息和 AI 分析
       async function updateLunarInfoAndAIAnalysis(date) {
         // 禁用所有日期点击
         const calendarDays = document.querySelectorAll(".calendar-day")
@@ -533,12 +646,15 @@
 
         try {
           const lunarInfo = getLunarInfo(date)
+          // 更新黄历信息展示 (更详细，包含时辰信息)
           document.getElementById("lunarInfo").innerHTML = `
             <h2>黄历信息</h2>
             <p>农历：${lunarInfo.lunarDate}</p>
             <p>阳历：${lunarInfo.solarDate}</p>
             <p>宜：${lunarInfo.auspiciousAndInauspicious.favorable.join("、")}</p>
             <p>忌：${lunarInfo.auspiciousAndInauspicious.unfavorable.join("、")}</p>
+             <p>冲煞：${lunarInfo.clashAndSha.clash}, ${lunarInfo.clashAndSha.sha}</p>
+              <p>值日天神：${lunarInfo.dayTianShen.name} (${lunarInfo.dayTianShen.type}) ${lunarInfo.dayTianShen.luck}</p>
           `
 
           const dateKey = formatDate(date)
@@ -559,20 +675,6 @@
         } finally {
           // 恢复日期点击
           calendarDays.forEach((day) => day.classList.remove("disabled"))
-        }
-      }
-      // 每天更新 localStorage
-      function clearOldData() {
-        const today = new Date()
-        const todayKey = formatDate(today)
-
-        // 遍历 localStorage，删除非今天的条目
-        for (let i = 0; i < localStorage.length; i++) {
-          const key = localStorage.key(i)
-          if (key !== todayKey) {
-            localStorage.removeItem(key)
-            console.log(`移除 localStorage 中过期的 AI 分析结果：${key}`)
-          }
         }
       }
       // 初始化日历
