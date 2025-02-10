@@ -924,11 +924,7 @@ body {
     z-index: 9999 /* 确保在最上层 */;
     visibility: visible;
     overflow: unset;
-  }
-  .md-text table {
-    width: calc(100% - 36px);
-    margin-left: auto;
-    margin-right: auto;
+    box-sizing: border-box;
   }
   h1 a,
   h2 a,
