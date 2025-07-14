@@ -1,0 +1,205 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Velocity - 极速图片压缩管道</title>
+    <meta name="description" content="为专业开发者与设计师打造的，以速度和自动化为核心的图像压缩工具。" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script type="text/javascript" src="res/zepto.min.js"></script>
+    <script type="text/javascript" src="res/jszip.min.js"></script>
+    <script type="text/javascript" src="res/FileSaver.js"></script>
+    <script type="text/javascript" src="pngtiny.js"></script>
+</head>
+<body>
+    <div id="main" class="app-layout">
+        <aside class="command-panel">
+            <div class="command-panel__header">
+                <h1 class="logo-text">Velocity</h1>
+                <p class="logo-subtext">极速图片压缩管道</p>
+            </div>
+            <label for="chsfile" id="drop-zone" class="drop-zone">
+                <div class="drop-zone__icon">
+                <svg t="1752474482776" class="icon" viewBox="0 0 1029 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="6056" width="36" height="36"><path d="M661.23 1003.042H119.672c-64.034 0-116.053-51.883-116.053-115.712V115.917C3.618 52.224 55.638 0.068 119.671 0.068H893.27c63.898 0 115.985 52.02 115.985 115.849v539.99c0 21.23-17.34 38.775-38.707 38.775s-38.912-17.34-38.912-38.776v-539.99c0-21.23-17.34-38.638-38.57-38.638H119.67c-21.299 0-38.912 17.408-38.912 38.639v771.14c0 21.231 17.613 38.639 38.912 38.639h541.492c21.162 0 38.707 17.203 38.707 38.639 0.068 21.3-17.545 38.707-38.64 38.707z" fill="" p-id="6057"></path><path d="M42.325 771.755c-9.762 0-19.729-4.028-27.238-11.606-14.95-14.95-14.95-39.458 0-54.408l192.785-192.034c35.157-35.158 89.156-44.169 133.803-21.777L551.39 596.65c14.814 7.578 32.768 4.643 44.373-7.167l347.614-346.317c14.95-15.019 39.458-15.019 54.682 0 15.223 14.882 15.087 39.39 0 54.545l-347.75 346.317c-35.09 35.089-88.816 43.759-133.667 21.367L306.86 561.084c-14.95-7.578-32.7-4.506-44.374 7.168L69.7 760.012c-7.51 7.578-17.34 11.743-27.375 11.743zM351.71 385.775c-63.898 0-116.053-51.746-116.053-115.712 0-63.898 51.882-115.712 116.053-115.712 63.76 0 116.053 51.883 116.053 115.712 0 63.898-52.36 115.712-116.053 115.712z m0-154.146c-21.163 0-38.776 17.271-38.776 38.502 0 21.368 17.477 38.64 38.776 38.64 21.163 0 38.639-17.272 38.639-38.64 0-21.23-17.34-38.502-38.64-38.502zM834.833 1024c-21.367 0-38.844-17.203-38.844-38.775V753.869c0-21.095 17.204-38.64 38.844-38.64 21.163 0 38.776 17.34 38.776 38.64v231.356c-0.069 21.572-17.545 38.775-38.776 38.775z" fill="" p-id="6058"></path><path d="M989.389 868.284c-9.49 0-18.978-3.345-26.76-10.377l-127.864-120.15-128.478 120.15c-15.36 14.404-39.8 13.858-54.409-1.57-14.677-15.633-13.994-39.868 1.707-54.682L788.89 674.611c11.127-13.721 27.58-21.436 45.533-21.436 17.818 0 34.27 7.988 45.261 21.436l135.441 127.044c15.702 14.814 16.52 38.912 1.775 54.682-6.758 7.782-17.066 11.947-27.511 11.947z" fill="" p-id="6059"></path></svg>    
+                </div>
+                <h2 class="drop-zone__title">拖放文件至此</h2>
+                <p class="drop-zone__text">或点击选择，或直接从剪贴板粘贴</p>
+            </label>
+            <input type="file" name="chsfile" id="chsfile" value="" accept="image/png,image/jpeg" title="" multiple class="visually-hidden"></input>
+            <div class="command-panel__actions">
+                <button class="btn btn--secondary" id="clearBtn">清空队列</button>
+                <button class="btn btn--primary" id="downall" disabled>一键打包下载 (0)</button>
+            </div>
+        </aside>
+        <main class="queue-panel">
+            <div id="preDesc" class="queue-panel__empty-state">
+                <div class="empty-state__icon">
+                    <svg width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 17L7 12L12 17L17 12L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M2 12L7 7L12 12L17 7L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                </div>
+                <h3 class="empty-state__title">等待处理任务...</h3>
+                <p class="empty-state__text">将图片拖入左侧面板以开始</p>
+            </div>
+            <div id="content" class="queue-panel__content">
+                <ul id="conUl" class="results-list"></ul>
+            </div>
+        </main>
+    </div>
+    <footer id="footer">Copyright © 镇苍澜（Darius）- Frontend Archon</footer>
+
+<script type="text/javascript">
+// --- 架构核心常量 ---
+const TARGET_SIZE_BYTES = 512000;
+const MAX_ITERATIONS = 10;
+const MIN_COMPRESSION_GAIN_BYTES = 2048;
+
+// --- 任务队列与状态控制 ---
+let taskQueue = [];
+let completedList = [];
+let isProcessing = false;
+let globalIdCounter = 0;
+
+$('#downall').click(function(){
+    if(completedList.length === 0) return;
+    $(this).text('打包中...');
+    const zip = new JSZip();
+    completedList.forEach(item => zip.file(item.name, item.data));
+    const date = new Date();
+    const ts = `${date.getMonth() + 1}_${date.getDate()}_${date.getHours()}_${date.getMinutes()}`;
+    zip.generateAsync({type:"blob"}).then((content) => {
+        saveAs(content, `velocity_batch_${ts}.zip`);
+        $(this).text(`一键打包下载 (${completedList.length})`);
+    });
+});
+
+$('#clearBtn').click(function(){
+    taskQueue = [];
+    completedList = [];
+    isProcessing = false; // 强制停止当前可能存在的异步循环
+    $('#conUl').html('');
+    $('#preDesc').show();
+    $('#downall').text('一键打包下载 (0)').prop('disabled', true);
+});
+
+pngtiny.onRuntimeInitialized = function() {
+    $('#chsfile').on("change", function(e) {
+        if(e.target.files.length > 0) addFilesToQueue(e.target.files);
+        $(this).val('');
+    });
+
+    const dropZone = document.getElementById("drop-zone");
+    dropZone.addEventListener("dragenter", (e) => { e.stopPropagation(); e.preventDefault(); e.currentTarget.classList.add('drop-zone--dragover'); });
+    dropZone.addEventListener("dragover", (e) => { e.stopPropagation(); e.preventDefault(); e.currentTarget.classList.add('drop-zone--dragover'); });
+    dropZone.addEventListener("dragleave", (e) => { e.stopPropagation(); e.preventDefault(); e.currentTarget.classList.remove('drop-zone--dragover'); });
+    dropZone.addEventListener("drop", (e) => {
+        e.stopPropagation(); e.preventDefault();
+        e.currentTarget.classList.remove('drop-zone--dragover');
+        addFilesToQueue(e.dataTransfer.files);
+    });
+
+    function addFilesToQueue(files) {
+        const conUl = $('#conUl');
+        if ($('#conUl li').length === 0) {
+            $('#preDesc').hide();
+            conUl.append('<li class="results-list__header"><div class="fname">文件</div><div class="before">原始体积</div><div class="after">压缩后体积</div><div class="deal">压缩率</div><div class="status">状态</div><div class="down"></div></li>');
+        }
+
+        for (const file of files) {
+            if (['image/png', 'image/jpeg'].indexOf(file.type) < 0) continue;
+            
+            globalIdCounter++;
+            const ufid = `task-${globalIdCounter}`;
+            
+            conUl.append(`<li id="${ufid}" class="results-list__item"><div class="fname">${file.name}</div><div class="before">${getSizeTrans(file.size)}</div><div class="after"></div><div class="deal"></div><div class="status"><span class="status--info">排队中</span></div><div class="down"></div></li>`);
+            
+            taskQueue.push({ file, ufid });
+        }
+        processQueue();
+    }
+
+    function processQueue() {
+        if (isProcessing || taskQueue.length === 0) {
+            return;
+        }
+        isProcessing = true;
+        const task = taskQueue.shift();
+        uploadFile(task.file, task.ufid);
+    }
+
+    function uploadFile(file, ufid) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+            const initialData = new Uint8Array(e.target.result);
+            $(`#${ufid} .status`).html('<div class="spinner"></div>处理中...');
+            setTimeout(() => { // 初始异步启动
+                recursiveCompress(initialData, file.name, ufid, file.size, 1, file.size);
+            }, 0);
+        };
+        reader.onerror = function() {
+            handleCompressionEnd(null, file.name, ufid, file.size, 0, 0, '<span class="status--error">文件读取失败</span>');
+        }
+        reader.readAsArrayBuffer(file);
+    }
+
+    function recursiveCompress(data, fileName, ufid, initialSize, iteration, lastSize) {
+        if (!isProcessing) return; // 如果队列被清除，则中止循环
+
+        const currentSize = data.byteLength;
+        if (iteration > MAX_ITERATIONS || currentSize <= TARGET_SIZE_BYTES || (iteration > 1 && (lastSize - currentSize) < MIN_COMPRESSION_GAIN_BYTES)) {
+            let statusText;
+            if (iteration > MAX_ITERATIONS) statusText = '<span class="status--error">失败: 已达上限</span>';
+            else {
+                const status = iteration === 1 ? '完成' : `完成 (${iteration - 1}次)`;
+                statusText = `<span class="status--success">${status}</span>`;
+                if (iteration > 1 && (lastSize - currentSize) < MIN_COMPRESSION_GAIN_BYTES) {
+                    statusText = `<span class="status--warn">完成: 收益过低</span>`;
+                }
+            }
+            handleCompressionEnd(data, fileName, ufid, initialSize, currentSize, iteration - 1, statusText);
+            return;
+        }
+
+        $(`#${ufid} .status`).html(`<div class="spinner"></div>压缩中 (${iteration}/${MAX_ITERATIONS})...`);
+        const dataptr = pngtiny._malloc(currentSize);
+        const retdata = pngtiny._malloc(4);
+        pngtiny.HEAPU8.set(data, dataptr);
+        try {
+            pngtiny._tiny(dataptr, currentSize, retdata);
+            const newSize = new Int32Array(pngtiny.HEAPU8.buffer, retdata, 1)[0];
+            const newData = (newSize > 0 && newSize < currentSize) ? new Uint8Array(new Uint8Array(pngtiny.HEAPU8.buffer, dataptr, newSize)) : data;
+            pngtiny._free(dataptr); pngtiny._free(retdata);
+
+            setTimeout(() => {
+                recursiveCompress(newData, fileName, ufid, initialSize, iteration + 1, currentSize);
+            }, 0);
+        } catch (err) {
+            pngtiny._free(dataptr); pngtiny._free(retdata);
+            handleCompressionEnd(data, fileName, ufid, initialSize, currentSize, iteration - 1, '<span class="status--error">引擎错误</span>');
+        }
+    }
+    
+    function handleCompressionEnd(finalData, fileName, ufid, initialSize, finalSize, iterations, statusText) {
+        $(`#${ufid} .status`).html(statusText);
+        $(`#${ufid} .after`).html(getSizeTrans(finalSize));
+        const ratio = initialSize > 0 ? ((initialSize - finalSize) * 100 / initialSize | 0) : 0;
+        $(`#${ufid} .deal`).html(ratio > 0 ? `<span class="deal--positive">${ratio}%</span>` : `<span>${ratio}%</span>`);
+
+        if (finalData) {
+            const blob = new Blob([finalData.buffer], { type: "image/png" });
+            completedList.push({ name: fileName, data: blob });
+            $('#downall').text(`一键打包下载 (${completedList.length})`).prop('disabled', false);
+        }
+        
+        isProcessing = false;
+        processQueue(); // 启动下一个任务
+    }
+
+    function getSizeTrans(fs) {
+        if (fs < 1024) return fs + 'B';
+        if (fs < 1024 * 1024) return (fs / 1024).toFixed(1) + 'KB';
+        return (fs / 1024 / 1024).toFixed(1) + 'MB';
+    }
+};
+
+pngtiny.run();
+</script>
+</body>
+</html>
