@@ -1,0 +1,275 @@
+/* --- Global Reset & Root Variables --- */
+:root {
+	--color-background: #f3f6f9;
+	--color-surface: #ffffff;
+	--color-text-primary: #24292f;
+	--color-text-secondary: #6a737d;
+	--color-accent: #0078d4;
+	--color-success: #28a745;
+	--color-warn: #db7c00;
+	--color-error: #d73a49;
+	--color-info: #6a737d;
+	--color-border: #e1e4e8;
+	--font-family-system: "Segoe UI", -apple-system, BlinkMacSystemFont,
+		"Helvetica Neue", "PingFang SC", "Microsoft YaHei", sans-serif;
+	--border-radius: 6px;
+	--transition-speed: 0.2s;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	font-family: var(--font-family-system);
+	background-color: var(--color-background);
+	color: var(--color-text-primary);
+	font-size: 14px;
+	line-height: 1.6;
+	display: flex;
+	flex-direction: column;
+}
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
+
+/* --- App Layout --- */
+.app-layout {
+	display: flex;
+	flex: 1;
+	min-height: 0;
+}
+
+/* --- Command Panel (Left) --- */
+.command-panel {
+	flex: 0 0 360px;
+	background-color: var(--color-surface);
+	border-right: 1px solid var(--color-border);
+	display: flex;
+	flex-direction: column;
+	padding: 24px;
+}
+.command-panel__header {
+	margin-bottom: 24px;
+}
+.logo-text {
+	font-size: 24px;
+	font-weight: 600;
+	color: var(--color-text-primary);
+}
+.logo-subtext {
+	font-size: 14px;
+	color: var(--color-text-secondary);
+}
+.command-panel__actions {
+	margin-top: auto;
+	display: grid;
+	grid-template-columns: 1fr 1.5fr;
+	gap: 12px;
+	margin-top: 16px;
+}
+
+/* --- Drop Zone Component --- */
+.drop-zone {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 2px dashed var(--color-border);
+	border-radius: var(--border-radius);
+	padding: 24px;
+	text-align: center;
+	color: var(--color-text-secondary);
+	cursor: pointer;
+	transition: background-color var(--transition-speed) ease,
+		border-color var(--transition-speed) ease;
+}
+.drop-zone:hover,
+.drop-zone--dragover {
+	background-color: #f7fafc;
+	border-color: var(--color-accent);
+}
+.drop-zone__icon {
+	color: #95a5a6;
+	margin-bottom: 16px;
+	transition: color var(--transition-speed) ease;
+}
+.drop-zone:hover .drop-zone__icon,
+.drop-zone--dragover .drop-zone__icon {
+	color: var(--color-accent);
+}
+.drop-zone__title {
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--color-text-primary);
+	margin-bottom: 4px;
+}
+
+/* --- Button Component --- */
+.btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	padding: 0 16px;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: var(--border-radius);
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: all var(--transition-speed) ease;
+	text-decoration: none;
+}
+.btn--primary {
+	background-color: var(--color-accent);
+	color: #ffffff;
+	border-color: var(--color-accent);
+}
+.btn--primary:hover {
+	background-color: #0063b1;
+	border-color: #0063b1;
+}
+.btn--secondary {
+	background-color: var(--color-surface);
+	color: var(--color-text-primary);
+	border-color: var(--color-border);
+}
+.btn--secondary:hover {
+	background-color: #f7fafc;
+}
+.btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+	background-color: #f6f8fa;
+	border-color: var(--color-border);
+	color: var(--color-text-secondary);
+}
+
+/* --- Queue Panel (Right) --- */
+.queue-panel {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow-y: auto;
+}
+.queue-panel__empty-state {
+	margin: auto;
+	text-align: center;
+	color: var(--color-text-secondary);
+}
+.empty-state__icon {
+	margin-bottom: 16px;
+	color: #cbd5e0;
+}
+.empty-state__title {
+	font-size: 18px;
+	font-weight: 600;
+	color: var(--color-text-primary);
+}
+.queue-panel__content {
+	padding: 16px 24px;
+}
+.results-list {
+	list-style: none;
+}
+
+/* --- ARCHITECT'S NOTE: The key fix for alignment is here --- */
+.results-list li {
+	display: grid;
+	/* The template now defines SIX columns to match the SIX divs in the HTML */
+	grid-template-columns: 3fr 1fr 1fr 1fr 1.5fr 0fr;
+	gap: 16px;
+	align-items: center;
+	padding: 12px 16px;
+	border-radius: var(--border-radius);
+}
+
+.results-list__item:nth-child(even) {
+	background-color: var(--color-surface);
+}
+.results-list__header {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--color-text-secondary);
+	text-transform: uppercase;
+	border-bottom: 1px solid var(--color-border);
+	border-radius: 0;
+	padding-bottom: 8px;
+	margin-bottom: 4px;
+}
+.results-list__item > div {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: left;
+}
+.results-list__item .fname {
+	text-align: left;
+	font-weight: 500;
+}
+.results-list__item .deal {
+	font-weight: 600;
+}
+.results-list__item .deal--positive {
+	color: var(--color-success);
+}
+.results-list__item .status {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+.results-list__item .status--info {
+	color: var(--color-info);
+}
+.results-list__item .status--success {
+	color: var(--color-success);
+}
+.results-list__item .status--warn {
+	color: var(--color-warn);
+}
+.results-list__item .status--error {
+	color: var(--color-error);
+	font-weight: 500;
+}
+.results-list__item .down {
+	display: none;
+} /* Kept for grid structure but not visible */
+
+.spinner {
+	width: 14px;
+	height: 14px;
+	border: 2px solid var(--color-accent);
+	border-top-color: transparent;
+	border-radius: 50%;
+	animation: spin 0.8s linear infinite;
+	flex-shrink: 0;
+}
+@keyframes spin {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* --- Footer --- */
+#footer {
+	padding: 16px;
+	text-align: center;
+	font-size: 12px;
+	color: var(--color-text-secondary);
+	background-color: #ffffff;
+	border-top: 1px solid var(--color-border);
+}
