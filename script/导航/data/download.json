@@ -1,0 +1,57 @@
+[
+  {
+    "category": "下载",
+    "links": [
+      {
+        "title": "Xclient",
+        "introduction": "优质的 Mac OS 软件分享平台，软件多且质量高",
+        "link": "https://xclient.info/"
+      },
+      {
+        "title": "马可波罗",
+        "introduction": "海量 Mac 软件免费下载",
+        "link": "https://www.macbl.com/"
+      },
+      {
+        "title": "史蒂芬周的博客",
+        "introduction": "Mac 软件分享博客",
+        "link": "http://www.sdifen.com/"
+      },
+      {
+        "title": "MacStore",
+        "introduction": "海量 Mac 软件免费下载",
+        "link": "https://macstore.info/"
+      },
+      {
+        "title": "苹果软件盒子",
+        "introduction": "海量 Mac 软件免费下载",
+        "link": "https://www.macappbox.com/"
+      },
+      {
+        "title": "mefcl",
+        "introduction": "免费分享最新纯净版、绿色版、开源软件，包含电脑软件、安卓应用等。",
+        "link": "https://www.mefcl.com/"
+      },
+      {
+        "title": "itellyou",
+        "introduction": "微软原版软件下载源，包括 Windows 系统，Office 等等全部微软原版软件",
+        "link": "http://msdn.itellyou.cn/"
+      },
+      {
+        "title": "Cats-Team/AdRules",
+        "introduction": "中国地区广告屏蔽列表",
+        "link": "https://github.com/Cats-Team/AdRules"
+      },
+      {
+        "title": "Via 浏览器收藏合集",
+        "introduction": "为 Via 浏览器自定义/功能保留的一份完整资料，仍在持续补全 (原“via 浏览器可用油猴脚本分享”仓库)",
+        "link": "https://gitee.com/daybreak166/ViaBrowserCollection"
+      },
+      {
+        "title": "浏览器增强",
+        "introduction": "最好用的油猴脚本汇总",
+        "link": "https://linux.do/t/topic/919536"
+      }
+    ]
+  }
+]

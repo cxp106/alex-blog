@@ -1,0 +1,846 @@
+[
+  {
+    "category": "工具",
+    "links": [
+      {
+        "title": "在线工具大全",
+        "introduction": "300 多个各类在线工具，包括字符处理、加密转换、网络测试、图表制作等",
+        "link": "https://www.lddgo.net/"
+      },
+      {
+        "title": "原牛",
+        "introduction": "一站式自媒体工具平台，提供网盘资源搜索、短视频去水印、语音转文字、字幕翻译等功能。支持百度网盘、阿里云盘、天翼云盘等多种网盘平台资源搜索，以及抖音、快手、小红书等平台的视频去水印下载，AI 语音识别服务",
+        "link": "https://mihoyonb.com/"
+      },
+      {
+        "title": "抖音去水印视频下载",
+        "introduction": "专业的抖音去水印视频下载工具，支持高清无水印下载抖音视频、图片。免费在线使用，无需注册，快速解析，一键保存到手机或电脑。",
+        "link": "https://www.xhs-download.org/zh/douyin-video-download"
+      },
+      {
+        "title": "效率坊",
+        "introduction": "支持下载抖音、B 站、YouTube、TikTok 等上千个平台站点的视频图片。一键解析即可免费去除水印，快速将高清无水印视频图片保存至电脑或手机。",
+        "link": "https://www.xiaolvfang.com/"
+      },
+      {
+        "title": "FavBox",
+        "introduction": "极简派书签管理扩展，本地优先更纯粹",
+        "link": "https://chromewebstore.google.com/detail/favbox/eangbddipcghohfjefjmfihcjgjnnemj"
+      },
+      {
+        "title": "remove.bg",
+        "introduction": "一站式修图（抠图、去杂物、换天空、背景模糊、产品图美化等）",
+        "link": "https://www.remove.bg/f/overview"
+      },
+      {
+        "title": "EditTools",
+        "introduction": "提供基础的图片和文本编辑功能，更适合轻度用户或应急使用。",
+        "link": "https://edittools.org/zh-cn/image-tools"
+      },
+      {
+        "title": "Photo Editor 在线图片编辑器",
+        "introduction": "基于 AI 人工智能的在线图片编辑器，方便易用，可以一键抠图、改图、修图、美图等。",
+        "link": "https://photokit.com/"
+      },
+      {
+        "title": "iLoveIMG",
+        "introduction": "图像文件在线编辑工具",
+        "link": "https://www.iloveimg.com/zh-cn"
+      },
+      {
+        "title": "Photopea",
+        "introduction": "免费的在线图像编辑工具，可以处理.psd、.ai、.sketch、.fig 等主流图像文件",
+        "link": "https://www.photopea.com/"
+      },
+      {
+        "title": "改图宝",
+        "introduction": "快速、简单的在线修改图片工具，可以在线修改图片像素及尺寸、裁剪、压缩文件大小及处理各类考试网上报名照片及证件照",
+        "link": "https://www.gaitubao.com/"
+      },
+      {
+        "title": "ImageCompress",
+        "introduction": "自定义尺寸和压缩率压缩图片。",
+        "link": "https://tool.yuzhulin.com/image_compress/"
+      },
+      {
+        "title": "imgdiet",
+        "introduction": "自定义压缩率压缩图片。",
+        "link": "https://www.imgdiet.com/zh-CN/compress"
+      },
+      {
+        "title": "Pic Smaller",
+        "introduction": "一个开源的批量图像压缩工具，支持 JPEG,PNG,WEBP,AVIF,SVG 和 GIF 等图像文件",
+        "link": "https://picsmaller.com/"
+      },
+      {
+        "title": "Green Screen Remover AI 抠图",
+        "introduction": "免费 AI 背景抠图网站，解放你的创作力",
+        "link": "https://greenscreenremover.online/?lang=zh"
+      },
+      {
+        "title": "Clipping Magic 在线抠图",
+        "introduction": "通过 AI 自动识别主题并扣出透明背景的图片，还可对透明区域进行修整得到更完美的效果",
+        "link": "https://zh.clippingmagic.com/"
+      },
+      {
+        "title": "vheer",
+        "introduction": "一键批量去除图片背景。",
+        "link": "https://vheer.com/app/background-remover"
+      },
+      {
+        "title": "QuitarFondo",
+        "introduction": "免费的在线抠图工具，一键去除图片背景。",
+        "link": "https://quitarfondo.cc/"
+      },
+      {
+        "title": "pictech",
+        "introduction": "图片智能抠图",
+        "link": "https://www.pictech.cc/picts/imgrmbg",
+        "hot": true
+      },
+      {
+        "title": "BgSub 抠图",
+        "introduction": "免费的智能抠图工具，支持颜色、渐变色、图像背景替换，最高可处理 4096 分辨率高清图片",
+        "link": "https://zh.bgsub.com/"
+      },
+      {
+        "title": "BgSub",
+        "introduction": "消除或者替换图像背景",
+        "link": "https://zh.bgsub.com/webapp/"
+      },
+      {
+        "title": "quitarfondo",
+        "introduction": "使用 AI 在几秒钟内从图像中去除背景",
+        "link": "https://quitarfondo.cc/"
+      },
+      {
+        "title": "cleanupphotos",
+        "introduction": "通过拖动框从照片中删除不需要的对象",
+        "link": "https://cleanupphotos.com/"
+      },
+      {
+        "title": "抠抠抠 - 免费抠图工具",
+        "introduction": "一个本地化抠图工具，不会上传数据到服务器，保护隐私",
+        "link": "https://koukoukou.cn/"
+      },
+      {
+        "title": "MagicEraser",
+        "introduction": "在线免费去水印工具",
+        "link": "https://magiceraser.org/zh/remove-watermark-from-image/",
+        "hot": true
+      },
+      {
+        "title": "pictech",
+        "introduction": "图片智能擦除水印",
+        "link": "https://www.pictech.cc/picts/imginpaint"
+      },
+      {
+        "title": "photogrid",
+        "introduction": "图片放大变清晰",
+        "link": "https://www.photogrid.app/zh-cn/image-enhancer/",
+        "hot": true
+      },
+      {
+        "title": "waifu2x",
+        "introduction": "本程序使用卷积神经网络对动漫风格的图片进行放大操作（支持照片）。",
+        "link": "https://www.waifu2x.net/index.zh-CN.html",
+        "hot": true
+      },
+      {
+        "title": "jpghd",
+        "introduction": "放大图片免费，其他需要付费",
+        "link": "https://jpghd.com/"
+      },
+      {
+        "title": "bigjpg",
+        "introduction": "（慢，作备选）免费高效的 AI 人工智能图片无损放大",
+        "link": "https://bigjpg.com/"
+      },
+      {
+        "title": "IDGen",
+        "introduction": "反推提示词，图像描述生成器",
+        "link": "https://www.image-description-generator.net/zh"
+      },
+      {
+        "title": "Vectorizer.AI",
+        "introduction": "将图片转换为矢量图",
+        "link": "https://vectorizer.ai/"
+      },
+      {
+        "title": "vectorizer",
+        "introduction": "在线图像矢量化器",
+        "link": "https://www.vectorizer.io/"
+      },
+      {
+        "title": "aivector",
+        "introduction": "免费 AI 矢量转换器 - 在线 PNG 转 SVG 工具",
+        "link": "https://www.aivector.net/en/create",
+        "hot": true
+      },
+      {
+        "title": "SVGcode",
+        "introduction": "开源免费的矢量图转换工具，可以将 JPG、PNG 等格式的位图转换为 SVG 矢量图形",
+        "link": "https://svgco.de/"
+      },
+      {
+        "title": "picturetodrawing",
+        "introduction": "一个图片转手绘的工具网站，不需要登录生成的照片效果不错。",
+        "link": "https://www.picturetodrawing.org/zh#hero",
+        "hot": true
+      },
+      {
+        "title": "Webtoon AI Painter",
+        "introduction": "（效果一般，需要登录，暂无替代）线稿画作上色工具",
+        "link": "https://ai.webtoons.com/ko/painter/paint"
+      },
+      {
+        "title": "AI 像素艺术生成器",
+        "introduction": "将图片转换为像素艺术或从文本创建，无需注册，生成快速。",
+        "link": "https://pixelartgenerator.app/zh"
+      },
+      {
+        "title": "PhotoFunia",
+        "introduction": "趣味照片效果滤镜库，可以把照片生成各种有趣的图像效果",
+        "link": "https://photofunia.com/cn/"
+      },
+      {
+        "title": "Belin Doc",
+        "introduction": "免费无限制 AI 文档翻译工具，轻松处理 PDF、DOCX、EPUB 等",
+        "link": "https://belindoc.com/zh"
+      },
+      {
+        "title": "站长工具",
+        "introduction": "base64 图片在线转换工具",
+        "link": "https://tool.chinaz.com/tools/imgtobase"
+      },
+      {
+        "title": "Fito",
+        "introduction": "短链接生成 + 文件图床，一站式搞定",
+        "link": "https://fito.cc/"
+      },
+      {
+        "title": "流浪图床",
+        "introduction": "（公众号不友好）免费图床",
+        "link": "https://p.sda1.dev/"
+      },
+      {
+        "title": "骤雨重山图床",
+        "introduction": "免费图床",
+        "link": "https://wp-cdn.4ce.cn/",
+        "hot": true
+      },
+      {
+        "title": "ImgToLink+",
+        "introduction": "(不好用) 无限带宽的图片托管服务，提供全球 CDN，最大 50M 图片",
+        "link": "https://imgtolinkx.com/"
+      },
+      {
+        "title": "Remit.ee",
+        "introduction": "免费图床 无限图床免费拖拽上传 - 图片秒变外链无需注册 | 稳定图床服务",
+        "link": "https://img.remit.ee/"
+      },
+      {
+        "title": "图床",
+        "introduction": "（公众号不友好）简单、快速、无需登录、免费的图床",
+        "link": "https://img.scdn.io/"
+      },
+      {
+        "title": "在线表格转换工具",
+        "introduction": "用于将 Excel、JSON、Markdown、XML、LaTex 等表格转换为需要的格式",
+        "link": "https://tableconvert.com/zh-cn/"
+      },
+      {
+        "title": "jeffjade",
+        "introduction": "markdown 写文章",
+        "link": "https://wechat.jeffjade.com/",
+        "hot": true
+      },
+      {
+        "title": "markdown.com.cn",
+        "introduction": "在线 markdown 编辑器_微信公众号 markdown 排版工具",
+        "link": "https://markdown.com.cn/editor/"
+      },
+      {
+        "title": "MDX",
+        "introduction": "markdown 写文章",
+        "link": "https://mdxnotes.com/post?id=demo"
+      },
+      {
+        "title": "Arya",
+        "introduction": "在线 Markdown 编辑器",
+        "link": "https://markdown.lovejade.cn/"
+      },
+      {
+        "title": "MDTU",
+        "introduction": "Markdown 在线编辑器",
+        "link": "https://markdown.devtool.tech/app",
+        "hot": true
+      },
+      {
+        "title": "bmpi",
+        "introduction": "markdown 转微信公众号",
+        "link": "https://wechat.bmpi.dev/"
+      },
+      {
+        "title": "doocs",
+        "introduction": "微信 Markdown 编辑器 | Doocs 开源社区",
+        "link": "https://md.doocs.org/"
+      },
+      {
+        "title": "深言达意",
+        "introduction": "找词找句",
+        "link": "https://www.shenyandayi.com/",
+        "hot": true
+      },
+      {
+        "title": "爱校对",
+        "introduction": "爱校对官网 - 错别字检查_文字校对_文本纠错_校对软件",
+        "link": "https://www.ijiaodui.com/workbench/",
+        "hot": true
+      },
+      {
+        "title": "WantWords",
+        "introduction": "反向词典，换个表达",
+        "link": "https://wantwords.net/",
+        "hot": true
+      },
+      {
+        "title": "押韵大师",
+        "introduction": "在线押韵 | 韵脚查询 | 说唱神器|freestyle",
+        "link": "https://rap.zlxiang.com/"
+      },
+      {
+        "title": "押韵啦",
+        "introduction": "(原押韵助手)-在线查询押韵的字、词、诗、歌",
+        "link": "https://yayunla.com/"
+      },
+      {
+        "title": "魔镜歌词网",
+        "introduction": "专业歌词搜索平台",
+        "link": "https://mojigeci.com/zh-Hans"
+      },
+      {
+        "title": "新媒体工具大全",
+        "introduction": "微信图文临时转永久链接",
+        "link": "https://www.xmyeditor.com/tool/change.html"
+      },
+      {
+        "title": "gaoding",
+        "introduction": "公众号首图模版",
+        "link": "https://www.gaoding.com/scenes/newmedia-page-1?fid=4974504-4974547-4974564~~"
+      },
+      {
+        "title": "toolzl",
+        "introduction": "公众号封面图获取",
+        "link": "https://www.toolzl.com/tools/getWxArticleImages.html"
+      },
+      {
+        "title": "html-md",
+        "introduction": "HTML 转 Markdown",
+        "link": "https://devtool.tech/html-md"
+      },
+      {
+        "title": "into.md",
+        "introduction": "将任何页面转换为 markdown",
+        "link": "https://into.md/"
+      },
+      {
+        "title": "FileCodeBox - 文件快递柜",
+        "introduction": "一个开源的在线文件分享工具，通过匿名口令分享文本或文件，像拿快递一样取文件",
+        "link": "https://share.lanol.cn/"
+      },
+      {
+        "title": "取文件",
+        "introduction": "在线文件、文本传输工具，最大支持 10G，可设置有效期。",
+        "link": "https://quwenjian.cc/#/"
+      },
+      {
+        "title": "轻松传",
+        "introduction": "跨设备快速传文件，64T 超大文件传输，无限速无扫描",
+        "link": "https://easychuan.cn/"
+      },
+      {
+        "title": "OpenFiles",
+        "introduction": "通过浏览器打开所有类型的文件",
+        "link": "https://openfiles.online/"
+      },
+      {
+        "title": "CRXDL",
+        "introduction": "支持历史版本下载的 Chrome 插件下载工具",
+        "link": "https://crxdl.com/"
+      },
+      {
+        "title": "Folo",
+        "introduction": "网页版 RSS 阅读器",
+        "link": "https://app.follow.is/"
+      },
+      {
+        "title": "rssrssrssrss",
+        "introduction": "将多个 RSS 源合并为一个统一的源",
+        "link": "https://www.rssrssrssrss.com/"
+      },
+      {
+        "title": "Fosshub",
+        "introduction": "提供完全免费开源的电脑软件",
+        "link": "https://www.fosshub.com/"
+      },
+      {
+        "title": "AlternativeTonet",
+        "introduction": "软件竞品查找网站",
+        "link": "https://alternativeto.net/"
+      },
+      {
+        "title": "Open Source Alternative",
+        "introduction": "开源替代品",
+        "link": "https://www.opensourcealternative.to/"
+      },
+      {
+        "title": "Altappsnet",
+        "introduction": "多平台应用程序的替代方案",
+        "link": "https://zh.altapps.net/"
+      },
+      {
+        "title": "新趣集",
+        "introduction": "发现新产品",
+        "link": "https://xinquji.com/"
+      },
+      {
+        "title": "流畅阅读",
+        "introduction": "完全开源免费的浏览器翻译插件",
+        "link": "https://chromewebstore.google.com/detail/%E6%B5%81%E7%95%85%E9%98%85%E8%AF%BB/djnlaiohfaaifbibleebjggkghlmcpcj?hl=zh-CN&amp;authuser=0"
+      },
+      {
+        "title": "简约翻译",
+        "introduction": "一款简洁、开源的浏览器翻译扩展 & 油猴脚本",
+        "link": "https://chromewebstore.google.com/detail/%E7%AE%80%E7%BA%A6%E7%BF%BB%E8%AF%91/bdiifdefkgmcblbcghdlonllpjhhjgof/reviews?hl=zh-CN"
+      },
+      {
+        "title": "ZRF.ME",
+        "introduction": "混合在线订阅转换工具",
+        "link": "https://sub.zrfme.com/"
+      },
+      {
+        "title": "Windows KMS Help",
+        "introduction": "生成 windows 激活命令",
+        "link": "https://help.kms.0t.net.cn/"
+      },
+      {
+        "title": "Circle 阅读助手",
+        "introduction": "用来导出 markdown",
+        "link": "https://chromewebstore.google.com/detail/circle-reader/dhpfcgilccfkodnhbllpiaabofjbjcbg?hl=zh-CN"
+      },
+      {
+        "title": "AIX 智能下载器",
+        "introduction": "轻松下载任何网页内容",
+        "link": "https://aixdownloader.com/zh"
+      },
+      {
+        "title": "Cloud Document Converter",
+        "introduction": "支持下载、复制飞书云文档为 Markdown。",
+        "link": "https://chromewebstore.google.com/detail/cloud-document-converter/ehkomhhcinhikfddnmklbloahaakploh"
+      },
+      {
+        "title": "Mermaid 在线编辑器",
+        "introduction": "用来梳理流程、思维导图",
+        "link": "https://mermaid-live.nodejs.cn/edit"
+      },
+      {
+        "title": "draw.io",
+        "introduction": "绘制流程图",
+        "link": "https://app.diagrams.net/"
+      },
+      {
+        "title": "Excalidraw",
+        "introduction": "简约的手绘风格在线白板工具，无需注册就能开始绘制，支持多人协作",
+        "link": "https://excalidraw.com/"
+      },
+      {
+        "title": "tldraw",
+        "introduction": "开源的在线画板，支持多人协作",
+        "link": "https://www.tldraw.com/"
+      },
+      {
+        "title": "ioDraw",
+        "introduction": "无需注册免费在线画流程图、思维导图、甘特图",
+        "link": "https://www.iodraw.com/"
+      },
+      {
+        "title": "PDF24",
+        "introduction": "完全免费的 PDF 工具站（无需登录），涵盖编辑、压缩、签署、转换、加密 / 解密等 88 种工具",
+        "link": "https://www.pdf24.org/fr/"
+      },
+      {
+        "title": "PDF.hk",
+        "introduction": "免费、安全、全能的在线 PDF 工具（合并 / 转换 / 压缩 / OCR / 编辑）",
+        "link": "https://pdf.hk/?lang=zh_CN"
+      },
+      {
+        "title": "Hello-PDF",
+        "introduction": "有很多免费的 PDF 工具，比如拆分合并等",
+        "link": "https://www.hello-pdf.com/zh"
+      },
+      {
+        "title": "pdf-tools",
+        "introduction": "免费在线 PDF 转换器和编辑器",
+        "link": "https://pdf-tools-app.com/zh-CN"
+      },
+      {
+        "title": "CatOCR: 易飞文字识别",
+        "introduction": "免费的在线 OCR 工具，粘贴或上传图片即可识别转换其中的文字信息",
+        "link": "https://catocr.com/#/"
+      },
+      {
+        "title": "大数据导航",
+        "introduction": "大数据工具导航",
+        "link": "https://hao.199it.com/"
+      },
+      {
+        "title": "199IT",
+        "introduction": "互联网数据资讯网 | 发现数据的价值 | 中文互联网数据研究资讯中心",
+        "link": "https://www.199it.com/"
+      },
+      {
+        "title": "Startab.cn",
+        "introduction": "探索发现新网站",
+        "link": "https://startab.cn/explorer"
+      },
+      {
+        "title": "新榜",
+        "introduction": "新媒体排行榜",
+        "link": "https://www.newrank.cn/ranklist/gongzhonghao?period=day&type=data"
+      },
+      {
+        "title": "Ava Maker - 头像制作",
+        "introduction": "通过选择眼睛、发型、体型、肤色、服饰等创建个性化头像",
+        "link": "https://avamake.com/"
+      },
+      {
+        "title": "Avatartion - Notion 风格头像生成器",
+        "introduction": "创建自定义 Notion 风格的头像，可以选择头发、眼睛、嘴巴、头部、服装、身体、配饰等",
+        "link": "https://www.avatartion.com/"
+      },
+      {
+        "title": "8bitpix - 8 位像素头像生成器",
+        "introduction": "在线绘制像素风格的头像，个性化选择颜色和元素",
+        "link": "https://8bitpix.com/"
+      },
+      {
+        "title": "Peeps Avatar Builder",
+        "introduction": "可以定制不同面孔的 3D 头像生成器",
+        "link": "https://peeps.ui8.net/"
+      },
+      {
+        "title": "记灵在线工具",
+        "introduction": "一个互联网工具箱，让每一个人都可以享受工具带来的效率和便利",
+        "link": "https://remeins.com/"
+      },
+      {
+        "title": "爱幕 - 在线免费字幕编辑器",
+        "introduction": "一个免费的在线字幕编辑器，无需登录即可使用，功能丰富，操作简单，所有数据都保存在本地，不会上传到服务器，可配置 OpenAI 语音识别 和 DeepL 字幕翻译服务",
+        "link": "https://online.aimu-app.com/"
+      },
+      {
+        "title": "拼字幕",
+        "introduction": "一个免费的在线字幕拼图工具",
+        "link": "https://quotemaker.cc/zh/"
+      },
+      {
+        "title": "Windy - 气象地图",
+        "introduction": "为气象爱好者提供的全球动画天气地图，有 50 多个图层类型和精确点位预报的气象数据",
+        "link": "https://www.windy.com/"
+      },
+      {
+        "title": "Ventusky - 风雨气温图",
+        "introduction": "可以看到全球各地的风向、气压、云量、温湿度等信息，并提供任意地点的精确气象预报",
+        "link": "https://www.ventusky.com"
+      },
+      {
+        "title": "实时卫星地图 | Zoom Earth",
+        "introduction": "全球气象卫星图像，可以追踪雨雪风暴等各类天气",
+        "link": "https://zoom.earth/"
+      },
+      {
+        "title": "火烧云分析与记录",
+        "introduction": "火烧云分析数据可视化网站，提供全国主要城市的基于美国 NCEP-GFS 数值模式和欧洲 CAMS 大气组分模式的火烧云分析结果",
+        "link": "https://sunsetbot.top/"
+      },
+      {
+        "title": "日食列表",
+        "introduction": "国家天文科学数据中心制作的日食查询工具",
+        "link": "https://nadc.china-vo.org/eclipse/"
+      },
+      {
+        "title": "易词云",
+        "introduction": "一个词云生成器，具有分词功能，内含多种形状模板，不同的配色方案可供选择",
+        "link": "https://www.yciyun.com/"
+      },
+      {
+        "title": "Trianglify.io",
+        "introduction": "创建多彩的三角形或多边形图案壁纸，可以设定尺寸、颜色和多边形参数",
+        "link": "https://trianglify.io/"
+      },
+      {
+        "title": "THE TOYMAKER 自制纸玩具",
+        "introduction": "免费的纸玩具 PDF 模板，自行打印后剪切粘贴即可制作出有趣的纸玩具",
+        "link": "https://www.thetoymaker.com/"
+      },
+      {
+        "title": "Templatemaker ︎",
+        "introduction": "提供各种制作纸盒手工的模板，可以根据需要定制打印",
+        "link": "https://www.templatemaker.nl/zh-cn/"
+      },
+      {
+        "title": "电子印章生成器",
+        "introduction": "可通过自定义配置在线制作各种印章、公章。一键生成电子印章图片",
+        "link": "https://vtool.pro/seal/index.html"
+      },
+      {
+        "title": "第一字体",
+        "introduction": "艺术字体在线生成转换器",
+        "link": "https://www.diyiziti.com/"
+      },
+      {
+        "title": "简历本",
+        "introduction": "智能在线简历编辑器，用所见即所得的方式快速制作一份简历，简历制作完后可下载到本地，支持下载 Word、PDF、图片格式",
+        "link": "https://www.jianliben.com/"
+      },
+      {
+        "title": "热速美斯，只为一份精美简历",
+        "introduction": "免费的简历制作工具，无需登录即可使用，本地存储保护隐私，拖拽组合，制作简单，还有丰富的简历模板",
+        "link": "https://www.resumeis.com/"
+      },
+      {
+        "title": "木及简历",
+        "introduction": "免费的 MarkDown 在线简历制作工具，以最简单的方式来写好简历，只需专注内容本身而无需关注排版",
+        "link": "https://www.mujicv.com/"
+      },
+      {
+        "title": "33 台词",
+        "introduction": "电影台词搜索引擎",
+        "link": "https://33.agilestudio.cn/"
+      },
+      {
+        "title": "YARN",
+        "introduction": "根据台词搜索电视剧、电影和音乐片段",
+        "link": "https://yarn.co/"
+      },
+      {
+        "title": "顏文字卡",
+        "introduction": "(`・ω・´) 丰富的颜文字库，可方便的一键复制，按标签查询",
+        "link": "https://grtimed.com/"
+      },
+      {
+        "title": "工具邦",
+        "introduction": "提供各类在线工具，旨在帮助您进行日常活动和创新工作",
+        "link": "https://cn.piliapp.com/"
+      },
+      {
+        "title": "Duotone 双色调生成器",
+        "introduction": "免费的​双色调 (Duotone) 风格生成器，可从调色板自定义色彩并上传自己的图片进行创作",
+        "link": "https://duotone.shapefactory.co/"
+      },
+      {
+        "title": "求字体",
+        "introduction": "字体识别搜索工具",
+        "link": "https://www.qiuziti.com/"
+      },
+      {
+        "title": "知意配音",
+        "introduction": "文字转语音、视频广告配音合成",
+        "link": "https://peiyin.wozhiyi.com/"
+      },
+      {
+        "title": "马克配音",
+        "introduction": "在线免费文字转语音",
+        "link": "https://ttsmaker.cn/"
+      },
+      {
+        "title": "TTS Omni",
+        "introduction": "一个免费 AI 文本转语音生成器，拥有 17 种独特的 AI 语音、50 多种语言",
+        "link": "https://ttsomni.com/zh"
+      },
+      {
+        "title": "TTS Importer",
+        "introduction": "轻松将 Azure TTS 语音合成服务导入阅读软件，现支持阅读（legado）、爱阅记、源阅读",
+        "link": "https://tts.yfi.moe/"
+      },
+      {
+        "title": "傲奇科技在线音频剪辑器",
+        "introduction": "支持 300 多种音频格式的在线音频一站处理平台",
+        "link": "https://www.aoqiv.com/"
+      },
+      {
+        "title": "Vocal Remover and Isolation",
+        "introduction": "强大的在线音频处理工具，可以分离人声，分离乐器，分析曲调，剪辑音频",
+        "link": "https://vocalremover.org/"
+      },
+      {
+        "title": "Any2Text",
+        "introduction": "一个将音频视频转换为文字的免费工具",
+        "link": "https://www.any2text.online/zh"
+      },
+      {
+        "title": "VoiceCraft",
+        "introduction": "同时支持语音转文字和文字转语音的免费工具",
+        "link": "https://tts.wangwangit.com/"
+      },
+      {
+        "title": "LALAL.AI",
+        "introduction": "人声去除器和 AI 智能伴奏分离器",
+        "link": "https://www.lalal.ai/zh-hans/"
+      },
+      {
+        "title": "萝卜工坊手写模拟器",
+        "introduction": "一键生成手写文稿，手写字体在线转换",
+        "link": "https://www.beautifulcarrot.com/"
+      },
+      {
+        "title": "手写体文稿生成器",
+        "introduction": "将文字转换为手写体的文稿效果，支持下载为图片或 PDF 格式",
+        "link": "https://vtool.pro/handwriting/index.html"
+      },
+      {
+        "title": "一份爱小工具",
+        "introduction": "专注于田字格字帖相关工具研发，提供田字格字帖生成器系列免费工具",
+        "link": "https://www.an2.net/"
+      },
+      {
+        "title": "PaperMe",
+        "introduction": "自定义打印纸生成器",
+        "link": "https://paperme.toolooz.com/"
+      },
+      {
+        "title": "kiddoworksheets",
+        "introduction": "免费可打印的儿童工作表",
+        "link": "https://www.kiddoworksheets.com/"
+      },
+      {
+        "title": "简明字帖",
+        "introduction": "可生成汉字字帖、拼音字帖、笔顺字帖、英文字母、英文单词、英文文章、数字及四则运算字帖和田字、米字、口字、回字格字帖并支持在线打印",
+        "link": "https://www.babawar.com/"
+      },
+      {
+        "title": "Z2H 字帖",
+        "introduction": "超级好用的字帖生成工具",
+        "link": "https://z2h.cn/"
+      },
+      {
+        "title": "淡墨水字帖",
+        "introduction": "可在线生成各种田字格字帖、笔顺字帖、拼音字帖、默写字帖、口算字帖、英文字帖，A4 纸规格，方便打印",
+        "link": "https://danmoshui.com/"
+      },
+      {
+        "title": "Uchinoko-Maker - 创建狗猫咪插图",
+        "introduction": "在线捏猫捏狗，免费轻松地创建出自己喜欢的猫猫或狗狗造型",
+        "link": "https://uchinoko-maker.jp/?lang=zh-cmn-Hans"
+      },
+      {
+        "title": "工具哇",
+        "introduction": "各种新奇实用好玩的免费在线小工具",
+        "link": "https://toolwa.com/"
+      },
+      {
+        "title": "LocallyTools",
+        "introduction": "安全免费的离线工具箱",
+        "link": "https://locallytools.com/zh-Hans"
+      },
+      {
+        "title": "即时工具",
+        "introduction": "致力打造即用即走型在线工具箱，包含音视频工具、办公辅助、设计工具、文本工具、数字工具、单位转换等数百个在线工具",
+        "link": "https://www.67tool.com/"
+      },
+      {
+        "title": "云剪贴板",
+        "introduction": "把本地剪贴板内的图文内容同步到远端",
+        "link": "https://www.ppzhilian.com/clipboard",
+        "hot": true
+      },
+      {
+        "title": "KuKuTool.com",
+        "introduction": "130 多个平台解析去水印、快手去水印、抖茵去水印、小红书去水印 - 支持视频、图片、实况 Live 图解析无水印下载",
+        "link": "https://dy.kukutool.com/",
+        "hot": true
+      },
+      {
+        "title": "88 查",
+        "introduction": "阿里巴巴出品的 AI 查企业工具",
+        "link": "https://88cha.com/h5/AIReply?query=88%E6%9F%A5%E6%98%AF%E4%BB%80%E4%B9%88"
+      },
+      {
+        "title": "APK Downloader",
+        "introduction": "解析下载 google 商店的 app",
+        "link": "https://apkcombo.com/zh/downloader/",
+        "hot": true
+      },
+      {
+        "title": "在照片上添加文字",
+        "introduction": "用来给图片添加自定义文字，并且能加载本地字体",
+        "link": "https://play.google.com/store/apps/details?id=com.nand.addtext",
+        "hot": true
+      },
+      {
+        "title": "FliiipBook",
+        "introduction": "一个 GIF 动画工具",
+        "link": "https://www.fliiipbook.com/"
+      },
+      {
+        "title": "文件同步",
+        "introduction": "快速下载网盘文件，可以提取网盘文件，注意网站打开会有视频，无关内容可点击右下角等地方关闭",
+        "link": "https://bw.01233.xyz/",
+        "hot": true
+      },
+      {
+        "title": "文件同步",
+        "introduction": "发布页，防止失联",
+        "link": "https://yjdz.bdwpweb.shop/"
+      },
+      {
+        "title": "Upscayl",
+        "introduction": "适用于 Linux、MacOS 和 Windows 的排名第一的免费开源 AI 图像升级器",
+        "link": "https://github.com/upscayl/upscayl"
+      },
+      {
+        "title": "Final2x",
+        "introduction": "图片放大，跨平台图像超分辨率工具",
+        "link": "https://github.com/EutropicAI/Final2x"
+      },
+      {
+        "title": "RealSR",
+        "introduction": "图片放大，用于超分辨率和插值的 Android 应用程序",
+        "link": "https://github.com/tumuyan/RealSR-NCNN-Android"
+      },
+      {
+        "title": "朱雀 AI 检测助手",
+        "introduction": "用来检测 AI 味",
+        "link": "https://matrix.tencent.com/ai-detect/ai_gen_txt"
+      },
+      {
+        "title": "isgen",
+        "introduction": "用来检测 AI 味",
+        "link": "https://isgen.ai/zh-TW"
+      },
+      {
+        "title": "quillbot",
+        "introduction": "用来检测 AI 味",
+        "link": "https://quillbot.com/ai-content-detector"
+      },
+      {
+        "title": "scribbr",
+        "introduction": "用来检测 AI 味",
+        "link": "https://www.scribbr.com/ai-detector/"
+      },
+      { "title": "阅读指南", "introduction": "发现全球优质免费电子书、漫画绘本、小说与教育学术资源", "link": "https://readzn.com/" },
+      {
+        "title": "PasteBin",
+        "introduction": "阅后即焚",
+        "link": "https://paste.fastmirror.net/"
+      },
+      {
+        "title": "BlogTrain",
+        "introduction": "如如",
+        "link": "https://blogtrain.com/dash/clientarea.php",
+        "info": "https://idcflare.com/t/topic/32449"
+      }
+    ]
+  }
+]

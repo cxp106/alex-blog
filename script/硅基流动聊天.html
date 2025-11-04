@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>硅基流动聊天界面 - V2.3 (Archon Edition)</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="https://cxp.netlify.app/script/markdowncss/word.css" />
+    <style>
+      /* --- 1. CSS Reset & Base --- */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary-hue: 220;
+        --primary: hsl(var(--primary-hue), 95%, 60%);
+        --primary-light: hsl(var(--primary-hue), 95%, 70%);
+        --primary-dark: hsl(var(--primary-hue), 95%, 50%);
+        --background: #f7f9fc;
+        --panel: #ffffff;
+        --text-primary: #1a202c;
+        --text-secondary: #718096;
+        --border-color: #e2e8f0;
+        --success: #10b981;
+        --error: #ef4444;
+        --radius: 8px;
+        --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        --transition: all 0.3s ease-in-out;
+      }
+
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        background-color: var(--background);
+        color: var(--text-primary);
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* --- 2. Main Layout --- */
+      #app-container {
+        display: flex;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+      }
+
+      #chat-area {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        transition: width var(--transition);
+      }
+
+      #config-panel {
+        width: 350px;
+        background-color: var(--panel);
+        border-left: 1px solid var(--border-color);
+        padding: 24px;
+        overflow-y: auto;
+        box-shadow: -4px 0 12px rgba(0, 0, 0, 0.05);
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        transform: translateX(100%);
+        transition: transform var(--transition);
+        z-index: 1000;
+      }
+
+      #app-container.config-panel-open #config-panel {
+        transform: translateX(0);
+      }
+
+      #mobile-backdrop {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+        z-index: 999;
+      }
+
+      #app-container.config-panel-open #mobile-backdrop {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* --- 3. Chat Area Components --- */
+      #chat-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 24px;
+        border-bottom: 1px solid var(--border-color);
+        background-color: var(--panel);
+        flex-shrink: 0;
+      }
+
+      .header-title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .icon-btn {
+        background: none;
+        border: none;
+        color: var(--text-secondary);
+        font-size: 20px;
+        cursor: pointer;
+        padding: 8px;
+        border-radius: 50%;
+        transition: var(--transition);
+      }
+
+      .icon-btn:hover {
+        color: var(--primary);
+        background-color: #f0f4f8;
+      }
+
+      #message-list {
+        flex-grow: 1;
+        overflow-y: auto;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+      }
+
+      .empty-state {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 100%;
+        color: var(--text-secondary);
+      }
+
+      .empty-icon {
+        font-size: 48px;
+        margin-bottom: 16px;
+      }
+
+      .empty-title {
+        font-size: 20px;
+        color: var(--text-primary);
+        margin-bottom: 8px;
+      }
+
+      .message {
+        display: flex;
+        gap: 16px;
+        max-width: 80%;
+      }
+
+      .message-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: var(--radius);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 600;
+        flex-shrink: 0;
+        color: white;
+      }
+
+      .message-body {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+      }
+
+      .message .message-content {
+        padding: 12px 16px;
+        border-radius: var(--radius);
+        line-height: 1.6;
+        word-break: break-word;
+      }
+
+      .message .message-content p:not(:last-child) {
+        margin-bottom: 1em;
+      }
+
+      .message pre {
+        background-color: #2d3748;
+        color: #e2e8f0;
+        padding: 1em;
+        border-radius: var(--radius);
+        overflow-x: auto;
+        font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+        font-size: 14px;
+      }
+
+      .message pre code {
+        background-color: transparent;
+        padding: 0;
+      }
+
+      .message code:not(pre > code) {
+        background-color: #e2e8f0;
+        padding: 2px 4px;
+        border-radius: 4px;
+        font-family: "SF Mono", "Fira Code", "Consolas", monospace;
+        color: var(--text-primary);
+      }
+
+      .message.user {
+        align-self: flex-end;
+        flex-direction: row-reverse;
+      }
+
+      .message.user .message-avatar {
+        background-color: var(--primary);
+      }
+
+      .message.user .message-content {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .message.user code:not(pre > code) {
+        background-color: var(--primary-dark);
+        color: white;
+      }
+
+      .message.assistant {
+        align-self: flex-start;
+      }
+
+      .message.assistant .message-avatar {
+        background-color: #718096;
+      }
+
+      .message.assistant .message-content {
+        background-color: var(--panel);
+        border: 1px solid var(--border-color);
+      }
+
+      .copy-btn {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background: none;
+        border: none;
+        color: var(--text-secondary);
+        font-size: 14px;
+        cursor: pointer;
+        padding: 6px;
+        border-radius: var(--radius);
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .message:hover .copy-btn {
+        opacity: 1;
+      }
+
+      .copy-btn:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
+
+      .message.user:hover .copy-btn {
+        color: rgba(255, 255, 255, 0.8);
+      }
+      .message.user .copy-btn:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .copy-btn .fa-check {
+        color: var(--success);
+      }
+
+      .typing-cursor {
+        display: inline-block;
+        width: 8px;
+        height: 1em;
+        background-color: var(--text-primary);
+        animation: blink 1s infinite;
+        vertical-align: text-bottom;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      #chat-input-container {
+        padding: 24px;
+        border-top: 1px solid var(--border-color);
+        background-color: var(--panel);
+        flex-shrink: 0;
+      }
+
+      .input-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        position: relative;
+      }
+
+      .message-input {
+        flex-grow: 1;
+        padding: 12px 16px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        font-size: 16px;
+        resize: none;
+        outline: none;
+        transition: var(--transition);
+      }
+
+      .message-input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 2px hsla(var(--primary-hue), 95%, 60%, 0.2);
+      }
+
+      .send-button {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: var(--primary);
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: var(--transition);
+      }
+
+      .send-button:hover {
+        background-color: var(--primary-dark);
+      }
+
+      .send-button:disabled {
+        background-color: #a0aec0;
+        cursor: not-allowed;
+      }
+
+      /* --- 4. Config Panel --- */
+      .panel-header {
+        margin-bottom: 24px;
+        padding-bottom: 16px;
+        border-bottom: 1px solid var(--border-color);
+      }
+
+      .panel-title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+
+      .config-section {
+        margin-bottom: 24px;
+      }
+
+      .section-title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 16px;
+      }
+
+      .form-group {
+        margin-bottom: 16px;
+      }
+
+      .form-group label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: var(--text-secondary);
+      }
+
+      .input-field {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius);
+        font-size: 14px;
+        background-color: var(--background);
+        outline: none;
+      }
+
+      textarea.input-field {
+        min-height: 100px;
+        resize: vertical;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: var(--radius);
+        border: none;
+        cursor: pointer;
+        transition: var(--transition);
+      }
+
+      .btn-primary {
+        background-color: var(--primary);
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: var(--primary-dark);
+      }
+
+      /* --- 5. Responsive & Refinement Overrides --- */
+      @media (min-width: 769px) {
+        #app-container.config-panel-open #chat-area {
+          width: calc(100% - 350px);
+        }
+      }
+
+      @media (max-width: 768px) {
+        #chat-header,
+        #chat-input-container {
+          padding: 12px;
+        }
+
+        #message-list {
+          padding: 16px;
+          gap: 16px;
+        }
+
+        .message {
+          max-width: 95%;
+          gap: 10px;
+        }
+
+        .message-avatar {
+          width: 32px;
+          height: 32px;
+        }
+
+        .header-title {
+          font-size: 18px;
+        }
+
+        .message-input {
+          font-size: 14px;
+        }
+
+        .send-button {
+          width: 40px;
+          height: 40px;
+          font-size: 16px;
+        }
+
+        .panel-header {
+          margin-bottom: 16px;
+        }
+
+        #config-panel {
+          padding: 16px;
+          width: 85%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app-container">
+      <main id="chat-area">
+        <header id="chat-header">
+          <h1 class="header-title">硅基流动</h1>
+          <div>
+            <button class="icon-btn" data-action="clear-chat" title="清空对话"><i class="fas fa-trash"></i></button>
+            <button class="icon-btn" data-action="toggle-config" title="配置"><i class="fas fa-sliders-h"></i></button>
+          </div>
+        </header>
+        <div id="message-list"></div>
+        <footer id="chat-input-container"></footer>
+      </main>
+
+      <aside id="config-panel"></aside>
+
+      <div id="mobile-backdrop" data-action="toggle-config"></div>
+    </div>
+
+    <script type="module">
+      /**
+       * @file ChatApp V2.3 - Single-File, Hardened & Refined Edition
+       * @author Frontend Archon
+       * @description A self-contained, state-driven chat application with a robust,
+       * high-performance streaming UI and flexible model input, powered by marked.js.
+       */
+      import { marked } from "https://cdn.jsdelivr.net/npm/marked/lib/marked.esm.js"
+
+      const ChatApp = (function () {
+        // --- 1. STATE: The Single Source of Truth ---
+        const state = {
+          config: {
+            apiKey: "",
+            model: "deepseek-ai/DeepSeek-V2-Chat",
+            apiEndpoint: "https://api.siliconflow.cn/v1/chat/completions",
+            systemPrompt: "You are a helpful assistant.",
+            temperature: 0.7,
+          },
+          history: [], // { id, role: 'user' | 'assistant', content: string }
+          runtime: {
+            status: "idle", // 'idle' | 'loading' | 'streaming' | 'error'
+            error: null,
+            isConfigPanelOpen: false,
+          },
+        }
+
+        // --- 2. DOM ELEMENT CACHE ---
+        const elements = {
+          app: document.getElementById("app-container"),
+          chatArea: document.getElementById("chat-area"),
+          configPanel: document.getElementById("config-panel"),
+          messageList: document.getElementById("message-list"),
+          chatInputContainer: document.getElementById("chat-input-container"),
+          chatHeader: document.getElementById("chat-header"),
+          mobileBackdrop: document.getElementById("mobile-backdrop"),
+        }
+
+        let lastMessageContentElement = null
+
+        // --- 3. TEMPLATING: HTML Generation from State ---
+
+        /**
+         * Converts raw markdown text to sanitized HTML using marked.js.
+         * @param {string} text - The raw text to convert.
+         * @returns {string} The resulting HTML.
+         */
+        function _markdownToHTML(text) {
+          if (!text || !text.trim()) return ""
+          // Configure marked for better default behavior (e.g., line breaks)
+          return marked.parse(text, { gfm: true, breaks: true, async: false })
+        }
+
+        /**
+         * Creates the HTML string for a single message object.
+         * @param {object} message - The message object from state.history.
+         * @returns {string} The HTML string for the message.
+         */
+        function _createMessageHTML(message) {
+          const isAssistant = message.role === "assistant"
+          const avatarChar = isAssistant ? "AI" : "U"
+          return `
+                <div class="message ${message.role}" data-id="${message.id}">
+                    <div class="message-avatar">${avatarChar}</div>
+                    <div class="message-body">
+                        <div class="message-content">${_markdownToHTML(message.content)}</div>
+                        <button class="copy-btn" data-action="copy-message" title="复制">
+                           <i class="far fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+            `
+        }
+
+        function _createChatInputHTML() {
+          const isLoading = state.runtime.status !== "idle"
+          return `
+                <div class="input-wrapper">
+                    <textarea class="message-input" placeholder="输入消息..." rows="1" ${isLoading ? "disabled" : ""}></textarea>
+                    <button class="send-button" data-action="send-message" title="发送" ${isLoading ? "disabled" : ""}>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            `
+        }
+
+        function _createConfigPanelHTML() {
+          return `
+                <div class="panel-header"><h2 class="panel-title">模型配置</h2></div>
+                <div class="config-section">
+                    <h3 class="section-title">API 配置</h3>
+                    <div class="form-group">
+                        <label for="api-key">API 密钥</label>
+                        <input type="password" id="api-key" class="input-field" placeholder="输入您的硅基流动 API 密钥" value="${state.config.apiKey}">
+                    </div>
+                    <div class="form-group">
+                        <label for="model-input">模型名称</label>
+                        <input type="text" id="model-input" class="input-field" placeholder="例如：deepseek-ai/DeepSeek-V2-Chat" value="${state.config.model}">
+                    </div>
+                </div>
+                <div class="config-section">
+                    <h3 class="section-title">身份设定</h3>
+                    <div class="form-group">
+                        <label for="system-prompt">系统提示词 (可选)</label>
+                        <textarea id="system-prompt" class="input-field">${state.config.systemPrompt}</textarea>
+                    </div>
+                </div>
+                <button class="btn btn-primary" data-action="save-config">保存配置</button>
+            `
+        }
+
+        // --- 4. RENDER: Updating the DOM from State ---
+
+        function _renderAll() {
+          elements.configPanel.innerHTML = _createConfigPanelHTML()
+          elements.chatInputContainer.innerHTML = _createChatInputHTML()
+          _renderMessages()
+          elements.app.classList.toggle("config-panel-open", state.runtime.isConfigPanelOpen)
+          _bindInputEvents()
+        }
+
+        function _renderMessages() {
+          if (state.history.length === 0) {
+            elements.messageList.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon"><i class="fas fa-robot"></i></div>
+                        <div class="empty-title">开始对话</div>
+                        <p>输入消息以开始与 AI 的对话。</p>
+                        ${!state.config.apiKey ? '<p style="color:var(--error);margin-top:8px;">请先在配置面板中设置 API 密钥。</p>' : ""}
+                    </div>`
+          } else {
+            elements.messageList.innerHTML = state.history.map(_createMessageHTML).join("")
+            _scrollToBottom()
+          }
+        }
+
+        function _updateLastMessage(content) {
+          if (!lastMessageContentElement) return
+          lastMessageContentElement.innerHTML = `${_markdownToHTML(content)}<span class="typing-cursor"></span>`
+          _scrollToBottom()
+        }
+
+        // --- 5. CORE LOGIC & STATE MUTATIONS ---
+
+        function _loadConfig() {
+          const savedConfig = localStorage.getItem("siliconFlowConfig_v2.3")
+          if (savedConfig) Object.assign(state.config, JSON.parse(savedConfig))
+        }
+
+        function _saveConfig() {
+          localStorage.setItem("siliconFlowConfig_v2.3", JSON.stringify(state.config))
+        }
+
+        function _scrollToBottom() {
+          elements.messageList.scrollTop = elements.messageList.scrollHeight
+        }
+
+        async function _sendMessage(promptText) {
+          if (state.runtime.status !== "idle") return
+
+          if (!state.config.apiKey) {
+            alert("错误：API 密钥未设置。请在配置面板中设置。")
+            state.runtime.isConfigPanelOpen = true
+            _renderAll()
+            return
+          }
+
+          state.runtime.status = "loading"
+          state.history.push({ id: Date.now().toString(), role: "user", content: promptText })
+          _renderAll()
+
+          const assistantMessage = { id: (Date.now() + 1).toString(), role: "assistant", content: "" }
+          state.history.push(assistantMessage)
+          state.runtime.status = "streaming"
+
+          _renderMessages()
+
+          const lastMessageElement = elements.messageList.querySelector(`[data-id="${assistantMessage.id}"] .message-content`)
+          lastMessageContentElement = lastMessageElement
+
+          try {
+            const messagesPayload = state.history.slice(0, -1).map((m) => ({ role: m.role, content: m.content }))
+            if (state.config.systemPrompt) {
+              messagesPayload.unshift({ role: "system", content: state.config.systemPrompt })
+            }
+
+            const response = await fetch(state.config.apiEndpoint, {
+              method: "POST",
+              headers: { "Content-Type": "application/json", Authorization: `Bearer ${state.config.apiKey}` },
+              body: JSON.stringify({
+                model: state.config.model,
+                messages: messagesPayload,
+                stream: true,
+                temperature: parseFloat(state.config.temperature),
+              }),
+            })
+
+            if (!response.ok) {
+              const errorData = await response.json().catch(() => ({}))
+              throw new Error(errorData.error?.message || `API Error: ${response.status} ${response.statusText}`)
+            }
+
+            const reader = response.body.getReader()
+            const decoder = new TextDecoder()
+
+            while (true) {
+              const { done, value } = await reader.read()
+              if (done) break
+
+              const lines = decoder.decode(value, { stream: true }).split("\n")
+              for (const line of lines) {
+                if (line.startsWith("data: ")) {
+                  const dataStr = line.substring(6)
+                  if (dataStr === "[DONE]") break
+                  try {
+                    const data = JSON.parse(dataStr)
+                    if (data.choices?.[0]?.delta?.content) {
+                      assistantMessage.content += data.choices[0].delta.content
+                      _updateLastMessage(assistantMessage.content)
+                    }
+                  } catch (e) {
+                    /* Ignore JSON parse errors on incomplete chunks */
+                  }
+                }
+              }
+            }
+          } catch (error) {
+            assistantMessage.content += `\n\n**错误:** ${error.message}`
+            state.runtime.error = error.message
+          } finally {
+            state.runtime.status = "idle"
+            lastMessageContentElement = null
+            _renderAll() // Re-render to remove cursor and finalize state
+            _saveChatHistory()
+          }
+        }
+
+        function _saveChatHistory() {
+          localStorage.setItem("siliconFlowHistory_v2.3", JSON.stringify(state.history))
+        }
+
+        function _loadChatHistory() {
+          const savedHistory = localStorage.getItem("siliconFlowHistory_v2.3")
+          if (savedHistory) state.history = JSON.parse(savedHistory)
+        }
+
+        // --- 6. EVENT HANDLING ---
+
+        function _handleGlobalClick(event) {
+          const actionTarget = event.target.closest("[data-action]")
+          if (!actionTarget) return
+
+          const action = actionTarget.dataset.action
+          switch (action) {
+            case "toggle-config":
+              state.runtime.isConfigPanelOpen = !state.runtime.isConfigPanelOpen
+              elements.app.classList.toggle("config-panel-open", state.runtime.isConfigPanelOpen)
+              break
+            case "save-config":
+              state.config.apiKey = document.getElementById("api-key").value.trim()
+              state.config.model = document.getElementById("model-input").value.trim()
+              state.config.systemPrompt = document.getElementById("system-prompt").value.trim()
+              _saveConfig()
+              alert("配置已保存。")
+              break
+            case "send-message":
+              const input = elements.chatInputContainer.querySelector(".message-input")
+              if (input?.value.trim()) {
+                _sendMessage(input.value.trim())
+                input.value = ""
+              }
+              break
+            case "clear-chat":
+              if (confirm("确定要清空所有聊天记录吗？此操作不可撤销。")) {
+                state.history = []
+                _saveChatHistory()
+                _renderAll()
+              }
+              break
+            case "copy-message": {
+              const button = actionTarget
+              const messageEl = button.closest(".message")
+              if (!messageEl) break
+
+              const messageId = messageEl.dataset.id
+              const messageToCopy = state.history.find((m) => m.id === messageId)
+
+              if (messageToCopy && messageToCopy.content) {
+                navigator.clipboard
+                  .writeText(messageToCopy.content)
+                  .then(() => {
+                    const icon = button.querySelector("i")
+                    button.title = "已复制！"
+                    icon.classList.remove("fa-copy")
+                    icon.classList.add("fa-check")
+
+                    setTimeout(() => {
+                      button.title = "复制"
+                      icon.classList.remove("fa-check")
+                      icon.classList.add("fa-copy")
+                    }, 2000)
+                  })
+                  .catch((err) => {
+                    console.error("Failed to copy content: ", err)
+                    alert("复制失败，请检查浏览器权限。")
+                  })
+              }
+              break
+            }
+          }
+        }
+
+        function _bindInputEvents() {
+          const input = elements.chatInputContainer.querySelector(".message-input")
+          if (input) {
+            input.addEventListener("keydown", (e) => {
+              if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault()
+                elements.chatInputContainer.querySelector(".send-button").click()
+              }
+            })
+          }
+        }
+
+        // --- 7. PUBLIC INTERFACE ---
+        return {
+          init() {
+            _loadConfig()
+            _loadChatHistory()
+            _renderAll()
+            document.body.addEventListener("click", _handleGlobalClick)
+            console.log("ChatApp V2.3 Initialized. System operational.")
+          },
+        }
+      })()
+
+      // --- APPLICATION START ---
+      document.addEventListener("DOMContentLoaded", ChatApp.init)
+    </script>
+  </body>
+</html>

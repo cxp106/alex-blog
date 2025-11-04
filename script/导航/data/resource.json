@@ -1,0 +1,800 @@
+[
+  {
+    "category": "资源",
+    "links": [
+      {
+        "title": "秀儿の科技软件",
+        "introduction": "讨论发布 PC 端软件、Github 优质项目、iOS＆安卓破解软件、脚本、4K 影视资源、玩机技巧、八卦娱乐、VPN 等",
+        "link": "https://t.me/s/jianjiaopd"
+      },
+      {
+        "title": "文件同步",
+        "introduction": "tg 群，发布地址",
+        "link": "https://t.me/s/gtwjxz"
+      },
+      {
+        "title": "Stymei",
+        "introduction": "全网综合分享",
+        "link": "https://t.me/s/stymei1"
+      },
+      {
+        "title": "飞鱼资源分享",
+        "introduction": "分享一些工具，软件，浏览器插件脚本，网站，歌曲，互联网相关资讯，开源项目，碎碎念的想法 等等。",
+        "link": "https://t.me/s/catlucky3"
+      },
+      {
+        "title": "我的小站",
+        "introduction": "阿里云盘资源共享站",
+        "link": "https://pan666.net/"
+      },
+      {
+        "title": "yunpan1",
+        "introduction": "价值 site:yunpan1.cc - Google 搜索",
+        "link": "https://www.google.com/search?q=价值+site:yunpan1.cc&newwindow=1&safe=off"
+      },
+      {
+        "title": "老九网盘链接管理系统",
+        "introduction": "一个聚合多个网盘平台的聚合搜索引擎",
+        "link": "https://pan.l9.lc/"
+      },
+      {
+        "title": "海搜",
+        "introduction": "一个网盘聚合搜索引擎，支持阿里、百渡等",
+        "link": "https://haisou.cc/"
+      },
+      {
+        "title": "大盘搜",
+        "introduction": "网盘资源搜索",
+        "link": "https://dapanso.com/search?keyword=&page=1&type="
+      },
+      {
+        "title": "热盘搜",
+        "introduction": "百度云盘搜索",
+        "link": "http://www.repanso.com/"
+      },
+      {
+        "title": "大漠盘搜",
+        "introduction": "百度云盘搜索",
+        "link": "http://www.dmpans.com/"
+      },
+      {
+        "title": "咔帕搜索",
+        "introduction": "网盘资源搜索，夸克/阿里/百度",
+        "link": "https://www.cuppaso.com/"
+      },
+      {
+        "title": "学搜搜",
+        "introduction": "一个网盘和磁力搜索引擎",
+        "link": "https://www.xuesousou.net/"
+      },
+      {
+        "title": "Alist 资源频道",
+        "introduction": "收集推荐网盘资源站点",
+        "link": "https://t.me/s/alistshare"
+      },
+      {
+        "title": "FLM 的资源分享群",
+        "introduction": "付费内容合集",
+        "link": "https://t.me/s/FLMdongtianfudi?q=%23%E4%BB%98%E8%B4%B9%E5%86%85%E5%AE%B9%E5%90%88%E9%9B%86"
+      },
+      {
+        "title": "LIHAICloud",
+        "introduction": "云盘归档，资源为收集",
+        "link": "https://t.me/s/lihaiCloud"
+      },
+      {
+        "title": "小胡",
+        "introduction": "小胡的书签",
+        "link": "https://httcup.github.io/"
+      },
+      {
+        "title": "淡泊云资源网",
+        "introduction": "专注于优质精选资源分享。网站致力于每日网站推荐、软件下载、源码下载、技术教程、活动线报、操作系统、号卡套餐等资源收集与分享，免费提供各类优质精选资源下载，绿色安全无毒。",
+        "link": "https://danb.cc/"
+      },
+      {
+        "title": "好软猫",
+        "introduction": "专注好软件与资源分享的猫",
+        "link": "https://www.haoruanmao.com/"
+      },
+      {
+        "title": "阿虚同学",
+        "introduction": "阿虚同学是资源分享界的大佬，粉丝无数",
+        "link": "https://www.axutongxue.com/"
+      },
+      {
+        "title": "陈蛋蛋的宝藏库",
+        "introduction": "资源分享",
+        "link": "http://chendandan.ysepan.com/"
+      },
+      {
+        "title": "小帅同学的储物间",
+        "introduction": "资源分享",
+        "link": "https://xstongxue.github.io/"
+      },
+      {
+        "title": "图欧学习资源库",
+        "introduction": "一个网盘资源分享网站，主要是学习资源、考证考级资源等",
+        "link": "https://tuostudy.com/"
+      },
+      {
+        "title": "搜网通",
+        "introduction": "搜网通是一个网络资源聚合整合站点，每天将各类资源网站中有价值的网络资源精选进行分类并分享",
+        "link": "https://www.s5t.com/"
+      },
+      {
+        "title": "挖互联网",
+        "introduction": "一个专门挖掘和收录有趣有用的互联网产品的网站",
+        "link": "https://tigg.cc/"
+      },
+      {
+        "title": "神秘的热心网友",
+        "introduction": "收集免费实用有趣的东西，做最好的资源导航",
+        "link": "https://imyshare.com/"
+      },
+      {
+        "title": "万万集资源库",
+        "introduction": "资源共建共享内部文档",
+        "link": "https://docs.qq.com/sheet/DZkpJeVJEeEVmRWxp"
+      },
+      {
+        "title": "七七导航",
+        "introduction": "每日分享",
+        "link": "https://docs.qq.com/sheet/DRVVxTHJ3RXJFVHVr?tab=9t2lvi"
+      },
+      {
+        "title": "付费资源分享",
+        "introduction": "分享一些首发付费课程",
+        "link": "https://x.com/li18875786"
+      },
+      {
+        "title": "生财有术",
+        "introduction": "生财有术知识星球",
+        "link": "https://qiiolnxwxyz.feishu.cn/docx/T3xidn6qno9M5ZxZRdqcfeaTnZb"
+      },
+      {
+        "title": "极光资料库",
+        "introduction": "网盘资料分享",
+        "link": "https://kcn0zcw5dnj5.feishu.cn/share/base/query/shrcnHDjT8Dw4LgitgjPyA423q8"
+      },
+      {
+        "title": "不死鸟",
+        "introduction": "专注分享优质资源",
+        "link": "https://iui.su/"
+      },
+      {
+        "title": "小棉袄的百味人生",
+        "introduction": "专注分享优质资源",
+        "link": "https://haikuoshijie.cn/"
+      },
+      {
+        "title": "哎呦不错",
+        "introduction": "乱七八糟啥都分享",
+        "link": "https://aiyoubucuo.com/archives.html"
+      },
+      {
+        "title": "ABABTOOLS",
+        "introduction": "发现有趣、有用的东西",
+        "link": "https://ababtools.com/"
+      },
+      {
+        "title": "Telegram 群合集",
+        "introduction": "Github Telegram Groups",
+        "link": "https://github.com/topics/telegramgroups"
+      },
+      {
+        "title": "字体库",
+        "introduction": "高品质免费商用字体库",
+        "link": "https://zitiku.org/"
+      },
+      {
+        "title": "字体天下",
+        "introduction": "提供各类字体的免费下载和在线预览服务",
+        "link": "https://www.fonts.net.cn/",
+        "hot": true
+      },
+      {
+        "title": "喵闪字库",
+        "introduction": "提供中文字体的在线预览和免费下载",
+        "link": "https://www.miao3.cn/"
+      },
+      {
+        "title": "100Font",
+        "introduction": "免费可商用字体下载",
+        "link": "https://www.100font.com/"
+      },
+      {
+        "title": "Funletu",
+        "introduction": "发现好物，分享资源，推荐精品",
+        "link": "https://funletu.com/"
+      },
+      {
+        "title": "MakerWorld",
+        "introduction": "行业领先的 3D 打印模型社区，为 3D 打印爱好者和设计师提供服务，免费提供海量 3D 模型和 STL 模型下载",
+        "link": "https://makerworld.com/"
+      },
+      {
+        "title": "大图居",
+        "introduction": "高清壁纸",
+        "link": "https://www.datuju.com/bizhi/"
+      },
+      {
+        "title": "WallHere",
+        "introduction": "电脑桌面壁纸",
+        "link": "https://wallhere.com/"
+      },
+      {
+        "title": "AURA 壁纸",
+        "introduction": "干净、舒适、流畅的壁纸网站",
+        "link": "https://gallery.wallaura.cn/"
+      },
+      {
+        "title": "Avogadr",
+        "introduction": "可自定义化学式壁纸",
+        "link": "https://avogadr.io/"
+      },
+      {
+        "title": "Gratisography",
+        "introduction": "脑洞设计师独立网站",
+        "link": "https://gratisography.com/",
+        "hot": true
+      },
+      {
+        "title": "Digital-Blasphemy",
+        "introduction": "殿堂级 3D 艺术家作品，提供高达 8K 分辨率，按年份归档的数字艺术壁纸。",
+        "link": "https://digitalblasphemy.com/seeall.shtml?y=2025"
+      },
+      {
+        "title": "DesktopwallPapers",
+        "introduction": "收录超 28 万张壁纸的综合资源库，种类丰富，更新迅速。",
+        "link": "http://desktopwallpapers.org.ua/"
+      },
+      {
+        "title": "Wallpaperfusion",
+        "introduction": "专为多显示器优化的超宽屏壁纸站，提供 4K 及以上分辨率。",
+        "link": "https://www.wallpaperfusion.com/"
+      },
+      {
+        "title": "WallpaperSite",
+        "introduction": "提供多种设备尺寸的高清壁纸，分类清晰，涵盖主流审美。",
+        "link": "https://wallpapersite.com/"
+      },
+      {
+        "title": "NASA image of the Day",
+        "introduction": "NASA 官方每日精选，提供来自宇宙深空的真实天文摄影作品。",
+        "link": "https://www.nasa.gov/multimedia/imagegallery/iotd.html"
+      },
+      {
+        "title": "NASTOL",
+        "introduction": "拥有超 16 万张壁纸的巨型图库，以高质量摄影作品为主。",
+        "link": "https://www.nastol.com.ua/"
+      },
+      {
+        "title": "HDqwalls",
+        "introduction": "专注高清（HD/4K/5K/8K）壁纸，更新快，紧随流行文化趋势。",
+        "link": "https://hdqwalls.com/"
+      },
+      {
+        "title": "Images",
+        "introduction": "欧洲南方天文台 (ESO) 官方图库，分享震撼的星空与宇宙图像。",
+        "link": "https://www.eso.org/public/unitedkingdom/images/"
+      },
+      {
+        "title": "WallpaperMaiden",
+        "introduction": "主打高质量动漫与游戏壁纸，分辨率高达 6K，二次元爱好者首选。",
+        "link": "https://www.wallpapermaiden.com/"
+      },
+      {
+        "title": "Facet",
+        "introduction": "每日更新一张由艺术家 Justin Maller 创作的几何插画风格壁纸。",
+        "link": "http://www.facets.la/"
+      },
+      {
+        "title": "Vladstudio",
+        "introduction": "充满想象力的童话绘本风格数字艺术壁纸（部分需注册下载）。",
+        "link": "https://vlad.studio/zh/wallpapers/"
+      },
+      {
+        "title": "Justinmaller",
+        "introduction": "知名数字艺术家 Justin Maller 的个人作品集，以矢量插画见长。",
+        "link": "http://justinmaller.com/"
+      },
+      {
+        "title": "故宫壁纸",
+        "introduction": "故宫博物院官方出品，蕴含东方古典美学的建筑与文物壁纸。",
+        "link": "https://www.dpm.org.cn/lights/royal.html"
+      },
+      {
+        "title": "Gamewallpapers",
+        "introduction": "专注提供官方级高画质游戏 CG 与截图壁纸的专业站点。",
+        "link": "https://www.gamewallpapers.com/"
+      },
+      {
+        "title": "CGwallpapers",
+        "introduction": "汇集全球顶尖 CG 艺术作品，数字艺术与幻想题材爱好者的宝库。",
+        "link": "https://www.cgwallpapers.com/"
+      },
+      {
+        "title": "Simpledesktops",
+        "introduction": "崇尚极简主义美学，提供简洁、有创意的桌面背景。",
+        "link": "http://simpledesktops.com/browse/"
+      },
+      {
+        "title": "10Wallpaper",
+        "introduction": "拥有超过 3.6 万张壁纸的综合站点，提供多种分辨率选择。",
+        "link": "https://10wallpaper.com/cn/"
+      },
+      {
+        "title": "Wallroom",
+        "introduction": "精选高质量插画风格壁纸，支持 2K/4K/5K 超高清分辨率。",
+        "link": "https://wallroom.io/"
+      },
+      {
+        "title": "动漫图片和壁纸",
+        "introduction": "专业的动漫图片搜索引擎，提供海量高清动漫壁纸与插画。",
+        "link": "https://anime-pictures.net/"
+      },
+      {
+        "title": "Wallpaper Abyss",
+        "introduction": "拥有超 84 万张壁纸的巨型社区驱动型图库，内容包罗万象。",
+        "link": "https://wall.alphacoders.com/?lang=Chinese"
+      },
+      {
+        "title": "致美化",
+        "introduction": "提供精细化的壁纸专题，常以同一作品系列进行深度整理。",
+        "link": "https://zhutix.com/wallpaper/"
+      },
+      {
+        "title": "WallHave",
+        "introduction": "备受推崇的高质量壁纸社区，拥有超 70 万张由用户上传的精美壁纸。",
+        "link": "https://wallhaven.cc/"
+      },
+      {
+        "title": "3G 壁纸",
+        "introduction": "面向国内用户的综合性高清电脑桌面壁纸下载站。",
+        "link": "https://desk.3gbizhi.com/"
+      },
+      {
+        "title": "电脑壁纸",
+        "introduction": "一个界面简洁、专注于提供高质量电脑壁纸的独立站点。",
+        "link": "https://bizhi.vercel.app/"
+      },
+      {
+        "title": "Wallls",
+        "introduction": "一个分类清晰、易于浏览的综合性壁纸资源网站。",
+        "link": "http://wallls.com/"
+      },
+      {
+        "title": "Gde-Fon",
+        "introduction": "收录超 6 万张壁纸的俄语区站点，以自然风光和摄影作品为主。",
+        "link": "http://cn.gde-fon.com/"
+      },
+      {
+        "title": "HDdesktopwallpapers",
+        "introduction": "提供详尽分类的高清桌面壁纸，便于按主题进行查找。",
+        "link": "http://hddesktopwallpapers.in/"
+      },
+      {
+        "title": "中关村壁纸",
+        "introduction": "中关村在线旗下壁纸频道，提供 4K 分辨率及多分类综合壁纸。",
+        "link": "http://desk.zol.com.cn/"
+      },
+      {
+        "title": "GraffitiwallPaper",
+        "introduction": "以街头涂鸦艺术为主题的特色壁纸网站。",
+        "link": "https://graffitiwallpaper.com/"
+      },
+      {
+        "title": "Desktopwalls",
+        "introduction": "一个简洁易用的综合壁纸网站，提供多种分类选择。",
+        "link": "https://desktopwalls.net/"
+      },
+      {
+        "title": "Pexels 桌面壁纸",
+        "introduction": "全球知名无版权图片库 Pexels 旗下的高质量桌面壁纸合集。",
+        "link": "https://www.pexels.com/search/desktop%20wallpaper/"
+      },
+      {
+        "title": "WallpaperFX",
+        "introduction": "一个拥有大量分类的传统壁纸下载站，资源丰富。",
+        "link": "https://wallpaperfx.com/"
+      },
+      {
+        "title": "Librestock",
+        "introduction": "一个聚合多个免费图库的搜索引擎，便于一站式查找。",
+        "link": "https://librestock.com/"
+      },
+      {
+        "title": "PickywallPaper",
+        "introduction": "提供精选的高质量壁纸，注重图片的审美与独特性。",
+        "link": "https://pickywallpapers.com/"
+      },
+      {
+        "title": "WallpaperUp",
+        "introduction": "一个大型的、用户驱动的壁纸分享社区，内容更新活跃。",
+        "link": "https://www.wallpaperup.com/"
+      },
+      {
+        "title": "Goodfon",
+        "introduction": "提供高达 5K 分辨率的高质量壁纸，以摄影和数字艺术为主。",
+        "link": "https://www.goodfon.com/"
+      },
+      {
+        "title": "乌云壁纸",
+        "introduction": "一个界面清新的国内壁纸站，提供多种分类的高清壁纸。",
+        "link": "https://www.obzhi.com/"
+      },
+      {
+        "title": "Socwall",
+        "introduction": "一个以分享高质量自然风光摄影壁纸为主的社区。",
+        "link": "https://www.socwall.com/"
+      },
+      {
+        "title": "必应壁纸",
+        "introduction": "每日同步微软必应搜索首页的精美背景图片，以壮丽风景著称。",
+        "link": "https://bing.ioliu.cn/"
+      },
+      {
+        "title": "Kwiatki",
+        "introduction": "专注于提供高清鲜花主题摄影壁纸的波兰网站。",
+        "link": "https://www.kwiatki.org/"
+      },
+      {
+        "title": "Moviemania",
+        "introduction": "提供无 LOGO、无水印的纯净电影海报与剧照壁纸（图片访问可能受限）。",
+        "link": "https://www.moviemania.io/desktop"
+      },
+      {
+        "title": "WallpapersCraft",
+        "introduction": "拥有超 8.4 万张壁纸的站点，提供自适应设备分辨率下载功能。",
+        "link": "https://wallpaperscraft.com/"
+      },
+      {
+        "title": "拾光壁纸",
+        "introduction": "一个追求极简、无广告体验的独立壁纸网站，注重浏览舒适度。",
+        "link": "https://snake.timeline.ink/"
+      },
+      {
+        "title": "壁纸湖",
+        "introduction": "一个无广告、免登录的手机壁纸站，提供便捷的下载体验。",
+        "link": "https://bizihu.com/"
+      },
+      {
+        "title": "Pixabay",
+        "introduction": "知名无版权图库，提供超 30 万张可免费商用的 4K 桌面壁纸。",
+        "link": "https://pixabay.com/"
+      },
+      {
+        "title": "Cleanpng",
+        "introduction": "提供海量 PNG 格式免抠素材，适用于设计与创意项目。",
+        "link": "https://www.cleanpng.com/"
+      },
+      {
+        "title": "pngimg",
+        "introduction": "一个大型的、分类详尽的 PNG 透明背景图像资源库。",
+        "link": "http://pngimg.com/"
+      },
+      {
+        "title": "pngitem",
+        "introduction": "提供数百万张高清 PNG 免抠图片，支持免费下载。",
+        "link": "https://www.pngitem.com/"
+      },
+      {
+        "title": "Pxhere",
+        "introduction": "一个多语言的无版权图片社区，提供大量免费高清摄影作品。",
+        "link": "https://pxhere.com/zh/"
+      },
+      {
+        "title": "VectorHQ",
+        "introduction": "提供免费的矢量图形、PSD 分层文件及图标资源下载。",
+        "link": "https://cn.vectorhq.com/"
+      },
+      {
+        "title": "foodiesfeed",
+        "introduction": "专注于美食主题的高质量、无版权摄影图片资源站。",
+        "link": "https://www.foodiesfeed.com/"
+      },
+      {
+        "title": "Gratisography",
+        "introduction": "提供独一无二、风格怪诞有趣的高分辨率免费插画与摄影图片。",
+        "link": "https://gratisography.com/"
+      },
+      {
+        "title": "ColorHub",
+        "introduction": "拥有超 11 万张图片的资源站，可通过颜色筛选查找素材。",
+        "link": "https://colorhub.me/"
+      },
+      {
+        "title": "stockvault",
+        "introduction": "一个分享免费摄影作品、纹理和插图的社区驱动型图库。",
+        "link": "https://skuawk.com/"
+      },
+      {
+        "title": "Photock",
+        "introduction": "日本运营的免费照片素材网站，尤以亚洲人像与场景为特色。",
+        "link": "https://www.photock.jp/"
+      },
+      {
+        "title": "Finda Photo",
+        "introduction": "一个便捷的免费图片聚合搜索引擎，可按颜色或来源进行筛选。",
+        "link": "https://www.chamberofcommerce.org/findaphoto/"
+      },
+      {
+        "title": "Cupcake",
+        "introduction": "由摄影师 Jonas Nilsson Lee 提供的可免费商用的高质量风景与城市摄影作品。",
+        "link": "https://cupcake.nilssonlee.se/"
+      },
+      {
+        "title": "Life of Pix",
+        "introduction": "由 LEEROY 广告公司创建的高质量免费摄影社区，每周更新（当前状态：暂时无法访问）。",
+        "link": "https://www.lifeofpix.com/"
+      },
+      {
+        "title": "Hippopx",
+        "introduction": "基于 CC0 协议的无版权高清图片库，支持中文关键词搜索。",
+        "link": "https://www.hippopx.com/"
+      },
+      {
+        "title": "visualhunt",
+        "introduction": "聚合海量高质量免费图片的搜索引擎，将来自网络的最佳图片汇集一处。",
+        "link": "https://visualhunt.com/"
+      },
+      {
+        "title": "Piqsels",
+        "introduction": "精美的免版税图库，所有图片都基于 CC0 公共领域协议，无需归属，高分辨率，个人和商业免费使用",
+        "link": "https://www.piqsels.com/zh"
+      },
+      {
+        "title": "Unsplash",
+        "introduction": "免费无版权可商用图库",
+        "link": "https://unsplash.com/"
+      },
+      {
+        "title": "Pexels",
+        "introduction": "免费高质量素材图片和视频，可以在任何地方使用",
+        "link": "https://www.pexels.com/zh-cn/"
+      },
+      {
+        "title": "PPBC 中国植物图像库",
+        "introduction": "收集整理并长效保存植物照片、植物底片、植物幻灯片、植物数码图片源文件及其拷贝的实体库，是国内最大的植物分类图片库",
+        "link": "https://ppbc.iplant.cn/"
+      },
+      {
+        "title": "VIDEVO",
+        "introduction": "免费视频剪辑资源素材下载",
+        "link": "https://www.videvo.net/"
+      },
+      {
+        "title": "Mixkit",
+        "introduction": "免费素材资源库，包括高清视频、音乐、音效和视频模板等资源",
+        "link": "https://mixkit.co/"
+      },
+      {
+        "title": "Lucida",
+        "introduction": "支持从 Spotify 等多个平台下载音乐",
+        "link": "https://lucida.to/"
+      },
+      {
+        "title": "潮点视频",
+        "introduction": "高清视频素材下载",
+        "link": "https://shipin520.com/"
+      },
+      {
+        "title": "新 CG 儿",
+        "introduction": "数字视觉分享平台，可免费下载 AE 模板、音效配乐、视频素材等",
+        "link": "https://www.newcger.com/"
+      },
+      {
+        "title": "Vidsplay",
+        "introduction": "免费超高清视频素材下载",
+        "link": "https://www.vidsplay.com"
+      },
+      {
+        "title": "Mazwai",
+        "introduction": "免费的高清视频资源下载",
+        "link": "https://mazwai.com/"
+      },
+      {
+        "title": "Public WorkPublic Work by Cosmos",
+        "introduction": "搜索公共领域 (public domain) 的 10 万 + 无版权图像，来源包括大都会艺术博物馆、纽约公共图书馆等",
+        "link": "https://public.work/"
+      },
+      {
+        "title": "优品 PPT",
+        "introduction": "高质量的免费 PPT 模板下载，包括图表、背景图片、素材、教程等各类 PPT 模板相关资源",
+        "link": "https://www.ypppt.com/"
+      },
+      {
+        "title": "爱 PPT",
+        "introduction": "各类 PPT 模板资源，无需注册免费下载",
+        "link": "https://www.2ppt.com/"
+      },
+      {
+        "title": "爱给网",
+        "introduction": "免费的数字娱乐素材下载网站，提供音效、配乐、3D 模型、视频、游戏素材等资源",
+        "link": "https://www.aigei.com/"
+      },
+      {
+        "title": "小森平的免费下载音效",
+        "introduction": "1800 种音效资源，可免费下载使用",
+        "link": "https://taira-komori.jpn.org/freesoundcn.html"
+      },
+      {
+        "title": "淘声网",
+        "introduction": "toSound 声音搜索引擎，免费音效素材资源，视频游戏配乐下载",
+        "link": "https://www.tosound.com/"
+      },
+      {
+        "title": "The Mockup Club",
+        "introduction": "为产品演示提供免费的优质设计模型资源",
+        "link": "https://themockup.club/"
+      },
+      {
+        "title": "Minimal Mockups",
+        "introduction": "免费的高质量设计展示模型资源",
+        "link": "https://www.minimalmockups.com/"
+      },
+      {
+        "title": "Viper",
+        "introduction": "软件更新合集",
+        "link": "https://pan.lanzoux.com/u/彪煌 qq1846055318",
+        "hot": true
+      },
+      {
+        "title": "APKFx",
+        "introduction": "软件更新合集",
+        "link": "https://viplzy.lanzout.com/s/Qqun799969022"
+      },
+      {
+        "title": "软件库",
+        "introduction": "全网最全软件宝库",
+        "link": "https://www.lanzoux.com/b60586",
+        "hot": true
+      },
+      {
+        "title": "ha16888",
+        "introduction": "蓝奏云网盘分享",
+        "link": "https://lanzoux.com/u/ha16888"
+      },
+      {
+        "title": "滚哥网盘资源",
+        "introduction": "蓝奏云网盘分享",
+        "link": "https://www.lanzoui.com/b838976"
+      },
+      {
+        "title": "chudali",
+        "introduction": "蓝奏云网盘分享",
+        "link": "https://www.lanzoux.com/u/chudali"
+      },
+      {
+        "title": "西部落",
+        "introduction": "放心软件搜索平台",
+        "link": "https://www.xibuluo.com/",
+        "hot": true
+      },
+      {
+        "title": "Gannina",
+        "introduction": "免注册，免付费，免任务的下载破解应用",
+        "link": "https://ganniniang.com/"
+      },
+      {
+        "title": "HelloDog",
+        "introduction": "AdGuard 过滤规则分享",
+        "link": "https://wsgzao.github.io/post/adguard/"
+      },
+      {
+        "title": "HyperADRules",
+        "introduction": "一个集合众家之长的、强力去广告的规则",
+        "link": "https://github.com/Lynricsy/HyperADRules",
+        "hot": true
+      },
+      {
+        "title": "TTDNS",
+        "introduction": "个人维护的拦截规则",
+        "link": "https://github.com/TTDNS/Cat",
+        "hot": true
+      },
+      {
+        "title": "qq5460168",
+        "introduction": "适用于 AdGuard、Qx Hosts Clash SingBox Shadowrocket Invizible AdClose 的去广告规则",
+        "link": "https://github.com/qq5460168/666",
+        "hot": true
+      },
+      {
+        "title": "Cats-Team",
+        "introduction": "中国地区广告屏蔽列表",
+        "link": "https://github.com/Cats-Team/AdRules"
+      },
+      {
+        "title": "adguardhomeguiz",
+        "introduction": "广告过滤规则订阅器，整合不同来源的规则，帮助你快速构建属于自己的规则集",
+        "link": "https://github.com/fengyanfengyusuisuinian/adguardhomeguiz?tab=readme-ov-file"
+      },
+      {
+        "title": "adblockfilters",
+        "introduction": "去广告合并规则，每 8 个小时更新一次",
+        "link": "https://github.com/217heidai/adblockfilters"
+      },
+      {
+        "title": "AdGuard-Rule",
+        "introduction": "AdGuard Rule 规则合并去重，适用 AdGuard/AdGuard Home，支持 DOMAIN、REGEX、MODIFY、HOSTS",
+        "link": "https://github.com/hululu1068/AdGuard-Rule?tab=readme-ov-file"
+      },
+      {
+        "title": "Claire9518",
+        "introduction": "适用于 AdGuard 的去广告合并规则，每 12 个小时更新一次",
+        "link": "https://github.com/Claire9518/filters"
+      },
+      {
+        "title": "GOODBYEADS",
+        "introduction": "适用于 AdGuard、Quantumult X、SmartDNS 的去广告规则，合并优质上游规则并去重整理排列。",
+        "link": "https://github.com/8680/GOODBYEADS"
+      },
+      {
+        "title": "网络代理工具箱",
+        "introduction": "关于科学上网",
+        "link": "https://www.haitunt.org/app.html"
+      },
+      {
+        "title": "free-font",
+        "introduction": "收录可商用的免费英文/汉字字体",
+        "link": "https://github.com/jaywcjlove/free-font"
+      },
+      {
+        "title": "【简道云筛选】电子书下载网站大全",
+        "introduction": "简道云是零代码的应用搭建平台，可以帮助各行业人员在不使用代码的情况下搭建个性化的 CRM、ERP、OA、项目管理、进销存等系统，产品包含自定义表单、自定义报表、自定义流程引擎、知识库、团队协作等功能，适用于各种业务场景。",
+        "link": "https://tyi45di4ct.jiandaoyun.com/dash/5e7d915c6c56d8000674a8b8"
+      },
+      {
+        "title": "游魂博客 - 分享技术，资源共享",
+        "introduction": "游魂博客是一个分享技术教程，共享资源，前端开发者交流的个人独立博客。",
+        "link": "https://www.iyouhun.com/"
+      },
+      {
+        "title": "Jsnzkpg",
+        "introduction": "已持续维护 4 年多，每天都会检测可用性，全网质量最高的免费节点订阅，魔鬼式筛选出高质量的免费节点",
+        "link": "https://github.com/Jsnzkpg/Jsnzkpg?tab=readme-ov-file"
+      },
+      {
+        "title": "裤佬",
+        "introduction": "书签收藏",
+        "link": "https://jsnzkpg.github.io/"
+      },
+      {
+        "title": "Evan",
+        "introduction": "书签收藏",
+        "link": "https://nav.oi.to/"
+      },
+      {
+        "title": "创造狮",
+        "introduction": "一个创意工作者的导航，专注分享正版优质设计、前端、产品、运营的书签导航，设计教程、设计规范、颜色搭配、灵感创意、前端框架、开发者工具、互联网新品推荐、运营数据分析、自媒体和工具利器好用的分类导航大全",
+        "link": "https://chuangzaoshi.com/"
+      },
+      {
+        "title": "blog do 导航",
+        "introduction": "提供全面的博客导航、站长导航、域名导航和 AI 工具导航服务。收录各类优秀个人博客、站长常用工具、前沿 AI 网站和域名交易平台。立即免费提交您的网站，获取更多流量和曝光机会。",
+        "link": "https://www.blog.do/"
+      },
+      {
+        "title": "oh-my-foss-android",
+        "introduction": "个人收集的实用、良心开源安卓软件。",
+        "link": "https://github.com/xlucn/oh-my-foss-android?tab=readme-ov-file"
+      },
+      {
+        "title": "学爸加加油",
+        "introduction": "教育资源分享",
+        "link": "https://xuebajiajiayou.com/"
+      },
+      {
+        "title": "赛博电子人的软件库",
+        "introduction": "一些个人常用软件分享",
+        "link": "https://linux.do/t/topic/154326/9"
+      },
+      {
+        "title": "TVAPP",
+        "introduction": "收集全网 Android TV 电视盒子应用，涵盖影视、直播、K 歌、工具、游戏等类型，整理优质 APK 资源，支持便捷下载与自动更新。提供安全验证、分类索引与兼容性标注，助力用户打造家庭影音娱乐中心",
+        "link": "https://github.com/youhunwl/TVAPP"
+      }
+    ]
+  }
+]

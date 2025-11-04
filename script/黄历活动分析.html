@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>每日活动分析（含未来适宜日查询）- 优化版</title>
+    <script src="https://s4.zstatic.net/ajax/libs/lunar-javascript/1.6.13/lunar.js"></script>
+    <style>
+      /* 基础样式 */
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji",
+          "Segoe UI Emoji", "Segoe UI Symbol"; /* 更好的跨平台字体栈 */
+        line-height: 1.6;
+        padding: 20px;
+        max-width: 800px;
+        margin: 20px auto; /* 垂直居中 */
+        background-color: #f8f8f8; /* 轻微背景色 */
+        color: #333;
+      }
+      h1,
+      h2,
+      h3 {
+        text-align: center;
+        color: #2c3e50; /* 深蓝色标题 */
+      }
+      h1 {
+        margin-bottom: 10px;
+      }
+      h2,
+      h3 {
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
+      pre {
+        background-color: #ecf0f1; /* 浅灰色背景 */
+        padding: 15px;
+        border-radius: 5px;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        font-size: 0.9em;
+        color: #34495e; /* 深蓝色文本 */
+        border: 1px solid #bdc3c7;
+      }
+      .result-container {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+      }
+      .result {
+        margin-top: 10px; /* 增大间距 */
+        padding: 12px; /* 增大内边距 */
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        display: flex; /* 使用 Flexbox 布局 */
+        align-items: center;
+        gap: 10px; /* 增加间距 */
+        flex-wrap: wrap; /* 允许换行，防止内容溢出 */
+      }
+      .result strong {
+        font-size: 1.1em;
+        flex-shrink: 0; /* 防止挤压 strong */
+        color: #2c3e50;
+      }
+      .result .status {
+        font-weight: bold; /* 加粗适宜/不适宜 */
+        flex-shrink: 0;
+      }
+      .result .score-display {
+        font-size: 0.9em;
+        color: #555;
+        flex-shrink: 0;
+      }
+      .suitable {
+        background-color: #e8f5e9; /* 浅绿色 */
+        border-left: 5px solid #4caf50; /* 绿色边框 */
+      }
+      .suitable .status {
+        color: #2e7d32; /* 深绿色文本 */
+      }
+      .unsuitable {
+        background-color: #ffebee; /* 浅红色 */
+        border-left: 5px solid #f44336; /* 红色边框 */
+      }
+      .unsuitable .status {
+        color: #c62828; /* 深红色文本 */
+      }
+      .neutral {
+        background-color: #fff3e0; /* 浅橙色或黄色表示中性/谨慎 */
+        border-left: 5px solid #ff9800; /* 橙色边框 */
+      }
+      .neutral .status {
+        color: #f57c00; /* 深橙色文本 */
+      }
+      .reason {
+        font-style: italic;
+        font-size: 0.9em; /* 略微调小 */
+        margin-top: 3px; /* 调整上边距 */
+        color: #555;
+        flex-basis: 100%; /* 原因独占一行 */
+      }
+      #rawDataOutput {
+        margin-top: 30px; /* 增大间距 */
+      }
+      #rawDataOutput h3,
+      #futureLookahead h3 {
+        text-align: left;
+        border-bottom: 1px solid #bdc3c7; /* 添加分隔线 */
+        padding-bottom: 5px;
+      }
+      .future-dates {
+        margin-top: 15px; /* 增大间距 */
+        background-color: #ecf0f1;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #bdc3c7;
+      }
+      .future-dates p {
+        margin: 8px 0; /* 增大段落间距 */
+        color: #34495e;
+      }
+      .loading-text {
+        color: #555;
+        font-style: italic;
+      }
+      /* 移除错误的 display: none 规则 */
+      * {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>每日活动分析（含未来适宜日查询）</h1>
+    <p>根据中国传统历法分析今日活动适宜性及查询未来适宜日期。</p>
+
+    <div class="result-container">
+      <h2>今日分析结果：</h2>
+      <div id="haircut-result" class="result loading">
+        <strong>剃头：</strong>
+        <span class="status loading-text">正在分析...</span>
+      </div>
+      <div id="marital-relations-result" class="result loading">
+        <strong>同房：</strong>
+        <span class="status loading-text">正在分析...</span>
+      </div>
+    </div>
+    <hr />
+    <div id="rawDataOutput">
+      <h3>今日详细历法信息 (部分预览):</h3>
+      <pre id="lunarInfoPreview">正在加载历法信息...</pre>
+    </div>
+    <hr />
+    <div id="futureLookahead">
+      <h3>未来适宜日期展望 (计算中...):</h3>
+      <div id="future-haircut" class="future-dates loading">
+        <strong>剃头适宜日（得分 > 0）：</strong>
+        <span id="future-haircut-dates" class="loading-text">正在计算未来适宜日...</span>
+      </div>
+      <div id="future-marital" class="future-dates loading">
+        <strong>同房适宜日（得分 > 0）：</strong>
+        <span id="future-marital-dates" class="loading-text">正在计算未来适宜日...</span>
+      </div>
+    </div>
+
+    <script>
+      // lunar-javascript is already loaded
+
+      // --- 数据获取与转换层 ---
+      /**
+       * 根据日期获取详细的农历及相关信息
+       * @param {Date} date - 公历日期对象
+       * @returns {object} 包含农历、公历、干支、宜忌等详细信息的对象
+       */
+      function getDetailedLunarInfo(date) {
+        // 使用 try-catch 包裹，增强健壮性
+        try {
+          const lunar = Lunar.fromDate(date)
+          const solar = lunar.getSolar()
+          // 确保 festivals 数组有效
+          const festivals = (lunar.getFestivals() || [])
+            .concat(solar.getFestivals() || [])
+            .concat(lunar.getOtherFestivals() || [])
+            .concat(solar.getOtherFestivals() || [])
+
+          const currentJieQi = lunar.getCurrentJieQi()
+          // 获取前后节气时，使用 false 获取 Solar 对象，并添加健壮性检查
+          const previousTerm = lunar.getPrevJieQi(false) || null
+          const nextTerm = lunar.getNextJieQi(false) || null
+
+          // 确保 getDayCount 方法存在并返回有效值
+          const daysInLunarMonth = LunarMonth.fromYm(lunar.getYear(), lunar.getMonth())?.getDayCount() || 30
+
+          return {
+            // 基础日期信息
+            solarDate: `${solar.getYear()}年 ${solar.getMonth()}月 ${solar.getDay()}日 星期${solar.getWeekInChinese()} ${solar.getXingZuo()}座`,
+            lunarDate: `${lunar.getYearInChinese()}年 ${lunar.getMonthInChinese()}月 ${lunar.getDayInChinese()}日`,
+            // 数值日期信息，便于计算
+            solarYear: solar.getYear(),
+            solarMonth: solar.getMonth(),
+            solarDay: solar.getDay(),
+            lunarYear: lunar.getYear(),
+            lunarMonth: lunar.getMonth(),
+            lunarDay: lunar.getDay(),
+            lunarDayInChinese: lunar.getDayInChinese(),
+            daysInLunarMonth: daysInLunarMonth,
+
+            // 干支与生肖信息
+            ganZhi: {
+              year: `${lunar.getYearInGanZhi()} (${lunar.getYearShengXiao()}) ${lunar.getYearNaYin()}`,
+              month: `${lunar.getMonthInGanZhi()} (${lunar.getMonthShengXiao()}) ${lunar.getMonthNaYin()}`,
+              day: `${lunar.getDayInGanZhi()} (${lunar.getDayShengXiao()}) ${lunar.getDayNaYin()}`,
+              dayStem: lunar.getDayGan(), // 天干，用于特定规则判断
+              dayBranch: lunar.getDayZhi(), // 地支
+            },
+
+            // 宜忌、神煞等传统信息 - 确保返回数组
+            auspiciousAndInauspicious: {
+              favorable: lunar.getDayYi() || [], // 宜
+              unfavorable: lunar.getDayJi() || [], // 忌
+            },
+            clashAndSha: {
+              clash: lunar.getChongDesc() || "", // 冲煞描述字符串
+              // lunar.getSha() 返回的可能是 月煞/忌，需要确认其具体含义和影响
+              // 对于更泛化的冲煞，可以使用 lunar.getSha() 结合 lunar.getChong() 等
+              // 这里暂用 getChongDesc，如果需要更多可以扩展
+            },
+            auspiciousAndOminousStars: {
+              auspiciousStars: lunar.getDayJiShen() || [], // 吉神
+              ominousStars: lunar.getDayXiongSha() || [], // 凶煞
+            },
+            pengZuCombined: `${lunar.getPengZuGan() || ""} ${lunar.getPengZuZhi() || ""}`.trim(),
+
+            // 节气信息
+            solarTerms: {
+              currentTermName: currentJieQi ? currentJieQi.getName() : "",
+              // 直接返回 Solar 对象或 null，在 mapDetailedInfoToAnalysisData 中处理其有效性
+              previousTerm: previousTerm,
+              nextTerm: nextTerm,
+            },
+
+            // 节日与月相
+            // 确保节日名称有效
+            festivals: festivals
+              .map((f) => (f && typeof f === "object" && typeof f.getName === "function" ? f.getName() : undefined))
+              .filter((name) => name),
+            yueXiang: lunar.getYueXiang() || "",
+          }
+        } catch (error) {
+          console.error(`Error fetching lunar info for date ${date.toLocaleDateString("zh-CN")}:`, error)
+          // Rethrow or return a specific error object to signal failure
+          throw new Error(`Failed to get lunar info for ${date.toLocaleDateString("zh-CN")}: ${error.message}`)
+        }
+      }
+
+      /**
+       * 将详细农历信息映射为分析函数所需的简化/特定格式
+       * @param {object} detailedInfo - getDetailedLunarInfo 返回的详细信息对象
+       * @returns {object} 适用于 analyzeDailyActivities 的数据对象
+       */
+      function mapDetailedInfoToAnalysisData(detailedInfo) {
+        // 添加防御性检查，确保 detailedInfo 有效
+        if (!detailedInfo) {
+          console.error("Mapping Error: detailedInfo is null or undefined.")
+          throw new Error("Invalid detailed info provided for mapping.")
+        }
+
+        const previousTerm = detailedInfo.solarTerms.previousTerm
+        const nextTerm = detailedInfo.solarTerms.nextTerm
+
+        // === 修正点：使用 typeof 检查方法存在性，代替 instanceof Solar ===
+        // 检查对象是否存在并且具有 getYear 方法
+        const previousSolarTermDate =
+          previousTerm && typeof previousTerm.getYear === "function"
+            ? new Date(previousTerm.getYear(), previousTerm.getMonth() - 1, previousTerm.getDay())
+            : null
+
+        const nextSolarTermDate =
+          nextTerm && typeof nextTerm.getYear === "function"
+            ? new Date(nextTerm.getYear(), nextTerm.getMonth() - 1, nextTerm.getDay())
+            : null
+        // =============================================
+
+        return {
+          solarYear: detailedInfo.solarYear,
+          solarMonth: detailedInfo.solarMonth,
+          solarDay: detailedInfo.solarDay,
+          lunarMonth: detailedInfo.lunarMonth,
+          lunarDay: detailedInfo.lunarDay,
+          lunarDayInChinese: detailedInfo.lunarDayInChinese,
+          daysInLunarMonth: detailedInfo.daysInLunarMonth,
+          dayStem: detailedInfo.ganZhi.dayStem,
+          dayBranch: detailedInfo.ganZhi.dayBranch, // 添加日地支
+          宜: detailedInfo.auspiciousAndInauspicious.favorable,
+          忌: detailedInfo.auspiciousAndInauspicious.unfavorable,
+          pengZuCombinedString: detailedInfo.pengZuCombined,
+          xiongSha: detailedInfo.auspiciousAndOminousStars.ominousStars, // 凶煞数组
+          jiShen: detailedInfo.auspiciousAndOminousStars.auspiciousStars, // 吉神数组
+          clashDesc: detailedInfo.clashAndSha.clash, // 冲煞描述字符串
+          currentSolarTermName: detailedInfo.solarTerms.currentTermName,
+          previousSolarTermDate: previousSolarTermDate, // 已经是 Date 对象 或 null
+          previousSolarTermName: previousTerm ? previousTerm.getName() : "", // 从获取到的对象本身取名称
+          nextSolarTermDate: nextSolarTermDate, // 已经是 Date 对象 或 null
+          nextSolarTermName: nextTerm ? nextTerm.getName() : "", // 从获取到的对象本身取名称
+
+          yueXiang: detailedInfo.yueXiang,
+          festivals: detailedInfo.festivals, // 保留节日信息
+        }
+      }
+
+      // --- 业务逻辑层 (评分与分析规则) ---
+
+      /**
+       * 根据得分映射适宜性等级 (阈值可根据需求调整以改变等级分布)
+       * @param {number} score - 活动适宜性得分
+       * @returns {string} 适宜性等级描述
+       */
+      function mapScoreToLevel(score) {
+        // 等级阈值，需要根据实际得分分布进行调整测试，以获得更合理的分布
+        if (score <= -25) return "极其不宜"
+        if (score <= -10) return "不宜"
+        if (score < 0) return "谨慎为之" // 负分但未达不宜阈值
+        if (score === 0) return "平" // 得分正好为零
+        if (score < 10) return "尚可" // 正分但未达适宜阈值
+        if (score < 20) return "适宜" // 达到适宜阈值
+        return "极其适宜" // 达到极其适宜阈值
+      }
+
+      // 定义原因排序优先级
+      const reasonOrder = [
+        "黄历明确忌", // 最直接的禁忌
+        "极其不宜", // 明确且强烈的禁忌（兜底描述，应尽量细化）
+        "五毒日", // 极端禁忌
+        "四离四绝", // 节气交替的极端禁忌
+        "农历特定日期", // 朔望晦月终等
+        "特定凶煞", // 犯煞
+        "彭祖百忌", // 特定行为禁忌
+        "干支日", // 干支特性的禁忌
+        "冲煞", // 日辰冲煞
+        "月相", // 月相禁忌
+        "谨慎为之", // 中低度不宜
+        "黄历明确宜", // 最直接的适宜
+        "特定吉神", // 吉神助力
+        "极其适宜", // 明确且强烈的适宜（兜底描述）
+        "尚可", // 中低度适宜
+        "平", // 中性
+        "综合判断", // 兜底或无具体原因
+      ]
+
+      /**
+       * 对原因数组进行排序，按照预设的优先级
+       * @param {string[]} reasons - 原因字符串数组
+       * @returns {string[]} 排序后的原因数组
+       */
+      function sortReasons(reasons) {
+        if (!Array.isArray(reasons)) return reasons // 防御性检查
+        return reasons.sort((a, b) => {
+          // 查找每个原因字符串最匹配的优先级前缀
+          const aIndex = reasonOrder.findIndex((prefix) => a.startsWith(prefix))
+          const bIndex = reasonOrder.findIndex((prefix) => b.startsWith(prefix))
+
+          // 处理未匹配的项：未匹配的排在最后
+          if (aIndex === -1 && bIndex === -1) return 0
+          if (aIndex === -1) return 1
+          if (bIndex === -1) return -1
+
+          // 按优先级索引升序排列
+          return aIndex - bIndex
+        })
+      }
+
+      /**
+       * 分析指定日期的活动适宜性 - 优化版 (基于权重评分和分级)
+       * @param {object} almanacData - mapDetailedInfoToAnalysisData 格式的数据
+       * @returns {object} 包含各项活动适宜性等级、得分及原因的分析结果 (包含 suitable 布尔字段用于查找)
+       */
+      function analyzeDailyActivitiesOptimized(almanacData) {
+        const results = {
+          haircut: { suitable: false, level: "平", score: 0, reasons: [] },
+          maritalRelations: { suitable: false, level: "平", score: 0, reasons: [] },
+        }
+
+        // 添加防御性检查，确保 almanacData 有效
+        if (!almanacData) {
+          console.error("Analysis Error: almanacData is null or undefined.")
+          return results // 返回默认结果或抛出错误
+        }
+
+        const {
+          solarYear,
+          solarMonth,
+          solarDay,
+          lunarMonth,
+          lunarDay,
+          lunarDayInChinese,
+          daysInLunarMonth,
+          dayStem,
+          dayBranch, // 添加日地支
+          宜,
+          忌,
+          pengZuCombinedString,
+          xiongSha, // 凶煞数组
+          jiShen, // 吉神数组
+          clashDesc, // 冲煞描述字符串
+          currentSolarTermName,
+          previousSolarTermDate, // 已经是 Date 对象 或 null
+          previousSolarTermName,
+          nextSolarTermDate, // 已经是 Date 对象 或 null
+          nextSolarTermName,
+          yueXiang,
+          // festivals, // 解构节日，如果需要用作评分因素
+        } = almanacData
+
+        const isLastDayOfLunarMonth = lunarDay === daysInLunarMonth
+
+        // --- 剃头适宜性判断 ---
+        let haircutScore = 0
+        const haircutReasons = new Set()
+
+        // 剃头规则权重 (负数代表禁忌，正数代表适宜，数值大小代表影响强度)
+        // 可以根据对传统习俗的理解进行微调
+        const haircutWeights = {
+          jiHaircutOrBath: -8, // 黄历明确忌剃头或沐浴 - 中等偏强
+          pengZuHaircut: -6, // 彭祖百忌中含不剃头 - 中等
+          dayStemDing: -7, // 干支日为丁 (彭祖百忌未覆盖时) - 中等偏弱 (相比明确忌)
+          lunarKeyDates: -9, // 农历朔望晦/月终 - 中等偏强
+          yiHaircutOrBath: +8, // 黄历明确宜剃头或沐浴 - 中等偏强
+          // 针对剃头可能有利的吉神 (示例，需要查找相关资料确定哪些吉神对理发有利)
+          // 假设“天喜”“福德”等对个人形象和福祉有利
+          auspiciousForHaircut: +3, // 吉神加分 - 弱
+          clashNegativeHaircut: -4, // 冲煞对头部的潜在影响 - 弱
+        }
+
+        // 剃头规则触发判断与评分累加
+
+        if (Array.isArray(忌) && (忌.includes("剃头") || 忌.includes("沐浴"))) {
+          haircutScore += haircutWeights.jiHaircutOrBath
+          haircutReasons.add("黄历明确忌：剃头/沐浴")
+        }
+
+        if (pengZuCombinedString.includes("不剃头")) {
+          haircutScore += haircutWeights.pengZuHaircut
+          haircutReasons.add(
+            `彭祖百忌：${pengZuCombinedString
+              .split(" ")
+              .filter((s) => s.includes("不剃头"))
+              .join("；")}`
+          )
+        }
+
+        if (dayStem === "丁") {
+          // 如果彭祖百忌中已经明确包含了“丁不剃头”，则不再重复添加丁日的独立负面权重
+          const dingPengZuCovered = pengZuCombinedString.includes("丁不剃头")
+          if (!dingPengZuCovered) {
+            haircutScore += haircutWeights.dayStemDing
+            haircutReasons.add("干支日为“丁”，传统认为不宜剃头 (头主生疮之说)")
+          }
+        }
+
+        if (lunarDay === 1 || lunarDay === 15 || isLastDayOfLunarMonth) {
+          haircutScore += haircutWeights.lunarKeyDates
+          let reasonText = `农历${lunarDayInChinese}`
+          if (lunarDay === 1) reasonText += "(朔日)"
+          else if (lunarDay === 15) reasonText += "(望日)"
+          else if (isLastDayOfLunarMonth) reasonText += "(月终)"
+          haircutReasons.add(`农历特定日期：${reasonText}，传统习俗不宜剃头`)
+        }
+
+        if (Array.isArray(宜) && (宜.includes("剃头") || 宜.includes("沐浴"))) {
+          haircutScore += haircutWeights.yiHaircutOrBath
+          haircutReasons.add("黄历明确宜：剃头/沐浴")
+        }
+
+        // === 新增：考虑吉神对剃头的影响 ===
+        if (Array.isArray(jiShen)) {
+          const jiShenForHaircut = jiShen.filter((s) => ["天喜", "福德", "金匮", "宝光"].includes(s)) // 示例吉神
+          if (jiShenForHaircut.length > 0) {
+            haircutScore += haircutWeights.auspiciousForHaircut * jiShenForHaircut.length // 每个相关吉神都加分
+            haircutReasons.add(`特定吉神：有"${jiShenForHaircut.join("、")}"吉神值守，有利个人形象或福祉。`)
+          }
+        }
+
+        // === 新增：考虑冲煞对剃头的影响 ===
+        if (clashDesc && clashDesc.includes(`冲${dayBranch}`)) {
+          // 如果描述中明确冲本日地支
+          haircutScore += haircutWeights.clashNegativeHaircut
+          haircutReasons.add(`冲煞：日支逢冲，气场不稳定，对头部（首）可能有影响。`)
+        }
+
+        // 如果没有任何明确的宜忌和禁忌规则触发，且得分为 0，给出中性理由
+        if (haircutReasons.size === 0 && haircutScore === 0) {
+          haircutReasons.add("综合判断：当日无明显剃头禁忌或适宜事项，平")
+        }
+
+        results.haircut.score = haircutScore
+        results.haircut.level = mapScoreToLevel(haircutScore)
+        results.haircut.reasons = sortReasons(Array.from(haircutReasons))
+        results.haircut.suitable = results.haircut.score > 0 // 适宜查找的标准仍是得分 > 0
+
+        // --- 同房适宜性判断 ---
+        let maritalRelationsScore = 0
+        const maritalReasons = new Set()
+
+        // 同房规则权重 (数值大小代表影响强度) - 同房的禁忌权重普遍更高
+        // 这些权重和阈值需要根据实际得分分布进行调整测试
+        const maritalWeights = {
+          wuDuRi: -25, // 农历五月初五 (五毒日) - 最强禁忌
+          siLiSiJueToday: -22, // 四离四绝日当天 - 强烈禁忌
+          severeXiongSha: -18, // 特定凶煞 (血忌，厌对，招摇，月厌，大时，白虎，天狗) - 强烈禁忌
+          lunarKeyDatesMarital: -20, // 农历朔望晦日 (1/15/月终) - 强烈禁忌
+          siLiSiJueAdjacent: -16, // 四离四绝日前后一日 - 较强禁忌
+          jiMarital: -15, // 黄历明确忌：嫁娶/安床/合帐/同房 - 较强禁忌
+          yueXiangXian: -12, // 月相为弦 - 中等偏弱
+          yiMarital: +10, // 黄历宜：嫁娶/纳采/订盟/安床/合帐 - 正面影响（略调高宜的权重，但仍低于主要禁忌）
+          // 针对房事可能有利的吉神 (示例，需要查找相关资料)
+          auspiciousForMarital: +7, // 吉神加分 - 中等
+          clashNegativeMarital: -8, // 冲煞对人元气血的影响 - 中等
+        }
+
+        // 同房规则触发判断与评分累加
+
+        // === 关键修正点：扩展五毒日判断范围 ===
+        const wuDuRiDays = [5, 6, 7, 15, 16, 17, 25, 26, 27]
+        if (lunarMonth === 5 && wuDuRiDays.includes(lunarDay)) {
+          maritalRelationsScore += maritalWeights.wuDuRi
+          maritalReasons.add(
+            "极其不宜：农历五月五毒日期间（初五、初六、初七、十五、十六、十七、廿五、廿六、廿七），损耗精气，极其不宜同房。"
+          )
+        }
+        // ===================================
+
+        const majorSolarTerms = ["立春", "立夏", "立秋", "立冬", "春分", "夏至", "秋分", "冬至"]
+        const isTodayMajorTerm = majorSolarTerms.includes(currentSolarTermName)
+        if (isTodayMajorTerm) {
+          maritalRelationsScore += maritalWeights.siLiSiJueToday
+          maritalReasons.add(`极其不宜：今日为节气“${currentSolarTermName}”，天地气机剧烈转换 (四离四绝日)，应顺应自然，严禁房事。`)
+        }
+
+        if (Array.isArray(xiongSha)) {
+          const relevantXiongSha = xiongSha.filter((s) => ["血忌", "厌对", "招摇", "月厌", "大时", "白虎", "天狗"].includes(s))
+          if (relevantXiongSha.length > 0) {
+            maritalRelationsScore += maritalWeights.severeXiongSha * relevantXiongSha.length // 多个凶煞叠加影响
+            maritalReasons.add(`特定凶煞：今日有凶煞“${relevantXiongSha.join("、")}”值守，传统认为不利房事，易损精伤身。`)
+          }
+        }
+
+        if (lunarDay === 1 || lunarDay === 15 || isLastDayOfLunarMonth) {
+          maritalRelationsScore += maritalWeights.lunarKeyDatesMarital
+          let reasonText = `农历${lunarDayInChinese}`
+          if (lunarDay === 1) reasonText += "(朔日)"
+          else if (lunarDay === 15) reasonText += "(望日)"
+          else if (isLastDayOfLunarMonth) reasonText += "(月终/晦日)"
+          maritalReasons.add(`农历特定日期：${reasonText}为传统禁忌日期 (气血虚或盛极)，不宜同房。`)
+        }
+
+        // 较低强度禁忌
+        const todayDateObj = new Date(solarYear, solarMonth - 1, solarDay)
+        const yesterdayDateObj = new Date(todayDateObj)
+        yesterdayDateObj.setDate(todayDateObj.getDate() - 1)
+        const tomorrowDateObj = new Date(todayDateObj)
+        tomorrowDateObj.setDate(todayDateObj.getDate() + 1)
+
+        let isYesterdayMajorTermDay = false
+        // 确保 previousSolarTermDate 是有效的 Date 对象
+        if (previousSolarTermDate instanceof Date && !isNaN(previousSolarTermDate.getTime())) {
+          isYesterdayMajorTermDay = previousSolarTermDate.toDateString() === yesterdayDateObj.toDateString()
+        }
+
+        let isTomorrowMajorTermDay = false
+        // 确保 nextSolarTermDate 是有效的 Date 对象
+        if (nextSolarTermDate instanceof Date && !isNaN(nextSolarTermDate.getTime())) {
+          isTomorrowMajorTermDay = nextSolarTermDate.toDateString() === tomorrowDateObj.toDateString()
+        }
+
+        if (isYesterdayMajorTermDay && !isTodayMajorTerm) {
+          // 当天不是节气，但前一天是
+          maritalRelationsScore += maritalWeights.siLiSiJueAdjacent
+          maritalReasons.add(
+            `节气前后一日：昨日为节气“${
+              previousSolarTermName || "未知"
+            }”，今日仍处气机调整期，传统认为应谨慎，不宜同房 (四离四绝日前一日)。`
+          )
+        }
+        if (isTomorrowMajorTermDay && !isTodayMajorTerm) {
+          // 当天不是节气，但后一天是
+          maritalRelationsScore += maritalWeights.siLiSiJueAdjacent // Corrected variable name
+          maritalReasons.add(`节气前后一日：明日为节气“${nextSolarTermName || "未知"}”，今日应谨慎，传统认为不宜同房 (四离四绝日后一日)。`)
+        }
+
+        const jiForMarital = ["嫁娶", "安床", "合帐", "同房"]
+        if (Array.isArray(忌)) {
+          const matchedJi = jiForMarital.filter((item) => 忌.includes(item))
+          if (matchedJi.length > 0) {
+            maritalRelationsScore += maritalWeights.jiMarital
+            maritalReasons.add(`黄历明确忌：${matchedJi.join("、")} (传统认为不利房事)`)
+          }
+        }
+
+        if (yueXiang === "弦") {
+          maritalRelationsScore += maritalWeights.yueXiangXian
+          maritalReasons.add(`月相为“弦”，传统认为不宜同房。`)
+        }
+
+        // === 新增：考虑吉神对房事或相关活动的影响 ===
+        // 与嫁娶、安床、合帐等相关的吉神
+        if (Array.isArray(jiShen)) {
+          const jiShenForMarital = jiShen.filter((s) => ["天德", "月德", "天喜", "六合", "宝光", "三合"].includes(s)) // 示例吉神
+          if (jiShenForMarital.length > 0) {
+            maritalRelationsScore += maritalWeights.auspiciousForMarital * jiShenForMarital.length // 每个相关吉神都加分
+            maritalReasons.add(`特定吉神：有"${jiShenForMarital.join("、")}"吉神值守，有利婚嫁、感情和谐等事。`)
+          }
+        }
+
+        // === 新增：考虑冲煞对房事的影响 ===
+        if (clashDesc && clashDesc.includes(`冲${dayBranch}`)) {
+          // 如果描述中明确冲本日地支
+          maritalRelationsScore += maritalWeights.clashNegativeMarital
+          maritalReasons.add(`冲煞：日支逢冲，气场不稳定，传统认为不宜行房事。`)
+        }
+
+        const yiForMarital = ["嫁娶", "纳采", "订盟", "安床", "合帐", "同房"] // 补齐合帐和同房宜
+        if (Array.isArray(宜)) {
+          const matchedYi = yiForMarital.filter((item) => 宜.includes(item))
+          if (matchedYi.length > 0) {
+            maritalRelationsScore += maritalWeights.yiMarital * matchedYi.length // 多个宜叠加加分
+            maritalReasons.add(`黄历明确宜：${matchedYi.join("、")} (传统认为有利于房事相关活动)`)
+          }
+        }
+
+        // 如果没有任何明确的宜忌和禁忌规则触发，且得分为 0，给出中性理由
+        if (maritalReasons.size === 0 && maritalRelationsScore === 0) {
+          maritalReasons.add("综合判断：当日无明显同房禁忌或明确推荐，平")
+        }
+
+        results.maritalRelations.score = maritalRelationsScore
+        results.maritalRelations.level = mapScoreToLevel(maritalRelationsScore)
+        results.maritalRelations.reasons = sortReasons(Array.from(maritalReasons))
+        results.maritalRelations.suitable = results.maritalRelations.score > 0 // 适宜查找的标准仍是得分 > 0
+
+        return results
+      }
+
+      // --- DOM 操作与渲染层 ---
+      /**
+       * 更新页面上今日分析结果的显示
+       * @param {object} analysisResults - analyzeDailyActivitiesOptimized 返回的分析结果
+       */
+      function updateTodayAnalysisUI(analysisResults) {
+        const haircutDiv = document.getElementById("haircut-result")
+        const maritalRelationsDiv = document.getElementById("marital-relations-result")
+
+        if (!haircutDiv || !maritalRelationsDiv) {
+          console.error("UI Error: Could not find today analysis result elements.")
+          return
+        }
+
+        // 清除加载状态类
+        haircutDiv.classList.remove("loading")
+        maritalRelationsDiv.classList.remove("loading")
+
+        // 确定样式类 based on level for more granularity
+        const getStatusClass = (level) => {
+          if (level.includes("不宜")) return "unsuitable"
+          if (level.includes("谨慎为之") || level.includes("平") || level.includes("尚可")) return "neutral"
+          if (level.includes("适宜")) return "suitable"
+          return "" // Fallback
+        }
+
+        // 更新剃头结果
+        haircutDiv.innerHTML = `
+             <strong>剃头：</strong>
+             <span class="status">${analysisResults.haircut.level}</span>
+             <span class="score-display">(得分：${analysisResults.haircut.score})</span>
+             <div class="reason"><em>理由：${analysisResults.haircut.reasons.join("； ") || "无特别说明"}</em></div>
+         `
+        haircutDiv.className = `result ${getStatusClass(analysisResults.haircut.level)}`
+
+        // 更新同房结果
+        maritalRelationsDiv.innerHTML = `
+             <strong>同房：</strong>
+             <span class="status">${analysisResults.maritalRelations.level}</span>
+              <span class="score-display">(得分：${analysisResults.maritalRelations.score})</span>
+             <div class="reason"><em>理由：${analysisResults.maritalRelations.reasons.join("； ") || "无特别说明"}</em></div>
+         `
+        maritalRelationsDiv.className = `result ${getStatusClass(analysisResults.maritalRelations.level)}`
+      }
+
+      /**
+       * 更新页面上今日历法信息预览的显示
+       * @param {object} detailedInfo - getDetailedLunarInfo 返回的详细信息对象
+       */
+      function updateLunarInfoPreviewUI(detailedInfo) {
+        const previewElement = document.getElementById("lunarInfoPreview")
+        if (!previewElement) {
+          console.error("UI Error: Could not find lunar info preview element.")
+          return
+        }
+        // 确保 detailedInfo 不为 null
+        if (!detailedInfo) {
+          previewElement.textContent = "未能加载今日历法信息。"
+          return
+        }
+        previewElement.textContent =
+          `公历：${detailedInfo.solarDate}\n` +
+          `农历：${detailedInfo.lunarDate} (月相：${detailedInfo.yueXiang})\n` +
+          `干支：年 - ${detailedInfo.ganZhi.year}, 月 - ${detailedInfo.ganZhi.month}, 日 - ${detailedInfo.ganZhi.day}\n` +
+          `今日节气：${detailedInfo.solarTerms.currentTermName || "无"}\n` +
+          `彭祖百忌：${detailedInfo.pengZuCombined || "无"}\n` + // 添加无彭祖百忌的情况
+          `宜：${
+            detailedInfo.auspiciousAndInauspicious.favorable.length > 0
+              ? detailedInfo.auspiciousAndInauspicious.favorable.slice(0, 10).join("、") + // 显示更多宜忌
+                (detailedInfo.auspiciousAndInauspicious.favorable.length > 10 ? "..." : "")
+              : "无"
+          }\n` +
+          `忌：${
+            detailedInfo.auspiciousAndInauspicious.unfavorable.length > 0
+              ? detailedInfo.auspiciousAndInauspicious.unfavorable.slice(0, 10).join("、") + // 显示更多宜忌
+                (detailedInfo.auspiciousAndInauspicious.unfavorable.length > 10 ? "..." : "")
+              : "无"
+          }\n` +
+          `冲煞：${detailedInfo.clashAndSha.clash || "无"}\n` +
+          `吉神：${
+            detailedInfo.auspiciousAndOminousStars.auspiciousStars.length > 0
+              ? detailedInfo.auspiciousAndOminousStars.auspiciousStars.slice(0, 10).join("、") + // 显示更多神煞
+                (detailedInfo.auspiciousAndOminousStars.auspiciousStars.length > 10 ? "..." : "")
+              : "无"
+          }\n` +
+          `凶煞：${
+            detailedInfo.auspiciousAndOminousStars.ominousStars.length > 0
+              ? detailedInfo.auspiciousAndOminousStars.ominousStars.slice(0, 10).join("、") + // 显示更多神煞
+                (detailedInfo.auspiciousAndOminousStars.ominousStars.length > 10 ? "..." : "")
+              : "无"
+          }`
+      }
+
+      /**
+       * 更新页面上未来适宜日期结果的显示
+       * @param {string} activityType - 活动类型 ('haircut' 或 'maritalRelations')
+       * @param {Array<object>} suitableDays - 适宜日期数组 (现在包含 level 和 score)
+       * @param {number} totalDaysScanned - 总共扫描天数
+       */
+      function updateFutureDatesUI(activityType, suitableDays, totalDaysScanned) {
+        const spanElementId = activityType === "haircut" ? "future-haircut-dates" : "future-marital-dates"
+        const spanElement = document.getElementById(spanElementId)
+        const containerDiv = spanElement ? spanElement.parentElement : null
+
+        if (!spanElement || !containerDiv) {
+          console.error(`UI Error: Could not find future dates element with id ${spanElementId}.`)
+          return
+        }
+
+        spanElement.classList.remove("loading-text")
+        containerDiv.classList.remove("loading")
+
+        const activityName = activityType === "haircut" ? "剃头" : "同房" // 用于显示
+
+        if (suitableDays && suitableDays.length > 0) {
+          // 按得分降序排列适宜日期，得分越高越靠前
+          suitableDays.sort((a, b) => b.score - a.score)
+
+          const datesHtml = suitableDays
+            .map(
+              // 显示日期、等级和得分
+              (d) => `${d.date} (${d.lunarDate}) - ${d.level} (得分：${d.score})`
+            )
+            .join("<br>")
+
+          spanElement.innerHTML =
+            datesHtml + `<br><small> (共扫描 ${totalDaysScanned} 天找到以上 ${suitableDays.length} 个得分 > 0 的适宜日) </small>`
+        } else {
+          spanElement.textContent = `未能在扫描的 ${totalDaysScanned} 天内找到任何得分 > 0 的${activityName}适宜日期。`
+        }
+      }
+
+      /**
+       * 查找未来 N 个适合某项活动的日期 (包含起始日期)
+       * “适合查找”现在严格定义为优化版分析函数返回结果的 score > 0
+       * @param {Date} startDate - 开始查找的日期 (包括此日期)
+       * @param {string} activityType - 活动类型 ('haircut' 或 'maritalRelations')
+       * @param {number} count - 需要查找的适宜日期数量
+       * @param {number} [maxDaysToScan=365*2] - 最多扫描天数，防止无限循环
+       * @returns {Promise<object>} 包含 suitableDays 数组和 totalDaysScanned 的 Promise
+       */
+      async function findFutureSuitableDays(startDate, activityType, count, maxDaysToScan = 365 * 2) {
+        const suitableDays = []
+        let currentDate = new Date(startDate)
+        let daysChecked = 0
+
+        const activityName = activityType === "haircut" ? "剃头" : "同房"
+
+        console.log(`\n${"=".repeat(40)}`)
+        console.log(`--- 开始查找未来 ${count} 个适合（得分 > 0）“${activityName}”的日子 ---`)
+        console.log(`--- 从 ${startDate.toLocaleDateString("zh-CN")} 开始，最多扫描 ${maxDaysToScan} 天 ---`)
+        console.log(`${"=".repeat(40)}\n`)
+
+        // 更新 UI 提示
+        const spanElementId = activityType === "haircut" ? "future-haircut-dates" : "future-marital-dates"
+        const spanElement = document.getElementById(spanElementId)
+        const containerDiv = spanElement ? spanElement.parentElement : null
+
+        if (spanElement && containerDiv) {
+          spanElement.textContent = `正在计算未来${count}个得分 > 0 的${activityName}适宜日，请稍候... (已扫描 0 天)`
+          spanElement.classList.add("loading-text")
+          containerDiv.classList.add("loading")
+        }
+
+        while (suitableDays.length < count && daysChecked < maxDaysToScan) {
+          daysChecked++ // 在处理日期前增加计数
+          const dateToProcess = new Date(currentDate) // 克隆日期对象，避免setDate影响while条件判断
+          try {
+            const detailedInfo = getDetailedLunarInfo(dateToProcess)
+            const analysisData = mapDetailedInfoToAnalysisData(detailedInfo)
+            const analysis = analyzeDailyActivitiesOptimized(analysisData) // 使用优化版分析函数
+
+            let currentDayResult
+            if (activityType === "haircut") {
+              currentDayResult = analysis.haircut
+            } else if (activityType === "maritalRelations") {
+              currentDayResult = analysis.maritalRelations
+            } else {
+              // Should not happen if activityType is validated, but as a safeguard
+              currentDate.setDate(currentDate.getDate() + 1) // 确保日期前进
+              continue
+            }
+
+            // --- 优化点 20: 基于 score > 0 判断是否适宜查找 ---
+            if (currentDayResult.score > 0) {
+              const dayEntry = {
+                date: `${detailedInfo.solarYear}年${detailedInfo.solarMonth}月${detailedInfo.solarDay}日`,
+                lunarDate: detailedInfo.lunarDate,
+                reason: currentDayResult.reasons.join(". "),
+                level: currentDayResult.level, // 包含等级和得分
+                score: currentDayResult.score,
+              }
+              suitableDays.push(dayEntry)
+              console.log(
+                `[找到] 适合“${activityName}”的日子 (${suitableDays.length}/${count}) [扫描 ${daysChecked} 天]: ${dayEntry.date} (${dayEntry.lunarDate}) - 等级：${dayEntry.level} (得分：${dayEntry.score}).`
+              )
+            } else {
+              // 打印得分 <= 0 的日期，帮助理解过滤效果
+              // console.log(
+              //   `[跳过] 不适合（得分 <= 0）“${activityName}”的日子 [扫描 ${daysChecked} 天]: ${detailedInfo.solarYear}年${detailedInfo.solarMonth}月${detailedInfo.solarDay}日 (得分：${currentDayResult.score}, 等级：${currentDayResult.level}).`
+              // )
+            }
+          } catch (error) {
+            console.error(`[错误] 处理日期 ${dateToProcess.toLocaleDateString("zh-CN")} 时出错:`, error)
+            // 遇到错误跳过当前日期，继续下一天
+          }
+
+          // 更新 UI 扫描进度
+          if (spanElement && daysChecked % 20 === 0) {
+            // 稍微降低更新频率
+            spanElement.textContent = `正在计算未来${count}个得分 > 0 的${activityName}适宜日，请稍候... (已扫描 ${daysChecked} 天)`
+          }
+
+          currentDate.setDate(currentDate.getDate() + 1) // 日期前进一天
+        }
+
+        console.log(`\n${"=".repeat(40)}`)
+        console.log(`--- “${activityName}”查找完毕 ---`)
+        console.log(`--- 共扫描 ${daysChecked} 天。最终找到 ${suitableDays.length} 个适宜日（目标 ${count} 个）。---`)
+        console.log(`${"=".repeat(40)}`)
+        if (suitableDays.length > 0) {
+          console.log(`适合（得分 > 0）“${activityName}”的日期列表如下:`)
+          suitableDays.forEach((day, index) => {
+            console.log(`-> ${index + 1}. ${day.date} (${day.lunarDate}) - 等级：${day.level} (得分：${day.score}). 原因：${day.reason}`)
+          })
+        } else {
+          console.log(`未能在可查找范围内（${maxDaysToScan} 天内）找到任何适合（得分 > 0）“${activityName}”的日期。`)
+        }
+        console.log(`${"=".repeat(40)}\n`)
+
+        // 返回结果时包含总扫描天数，用于 UI 更新
+        return { suitableDays, totalDaysScanned: daysChecked }
+      }
+
+      // --- 主入口 ---
+      document.addEventListener("DOMContentLoaded", async function () {
+        const today = new Date()
+        // 测试日期示例
+        // const today = new Date(2025, 4, 31); // Test for 端午 (五月初五，2025-05-31 是农历五月初五)
+        // const today = new Date(2024, 1, 3); // Test for 立春前一天 (公历 2024-02-03)
+        // const today = new Date(2024, 1, 4); // Test for 立春当天 (公历 2024-02-04)
+        // const today = new Date(2024, 1, 5); // Test for 立春后一天 (公历 2024-02-05)
+        // const today = new Date(2024, 1, 9); // Test for 丁日 (例：公历 2024-02-09 甲辰年 丙寅月 丁丑日)
+        // const today = new Date(2025, 6, 1); // Test for 2025/7/1 (July 1, 2025) - to reproduce the TypeError -> 已通过 Date 对象处理方式优化
+
+        try {
+          const currentDetailedInfo = getDetailedLunarInfo(today)
+          console.log("--- 当天详细历法信息 (详细对象) ---")
+          console.log(currentDetailedInfo)
+
+          const analysisDataForToday = mapDetailedInfoToAnalysisData(currentDetailedInfo)
+          console.log("--- 转换为分析函数所需数据格式 ---")
+          console.log(analysisDataForToday)
+
+          const todayActivityAnalysis = analyzeDailyActivitiesOptimized(analysisDataForToday)
+          console.log("--- 今日活动适宜性分析结果 (得分与等级) ---")
+          console.log("剃头适宜性：", todayActivityAnalysis.haircut)
+          console.log("同房适宜性：", todayActivityAnalysis.maritalRelations)
+
+          updateLunarInfoPreviewUI(currentDetailedInfo) // Update UI after successful data fetch and map
+          updateTodayAnalysisUI(todayActivityAnalysis) // Update UI after successful analysis
+        } catch (error) {
+          console.error("处理今日信息时出错：", error)
+          document.getElementById("lunarInfoPreview").textContent = `加载今日历法信息出错：${error.message || error}. 详细请查看控制台。`
+          const haircutDiv = document.getElementById("haircut-result")
+          const maritalRelationsDiv = document.getElementById("marital-relations-result")
+          if (haircutDiv) {
+            haircutDiv.innerHTML = `<strong>剃头：</strong> <span class="status unsuitable">错误</span> <span class="score-display">(得分：N/A)</span> <div class="reason"><em>加载或分析今日数据出错。</em></div>`
+            haircutDiv.className = "result unsuitable"
+          }
+          if (maritalRelationsDiv) {
+            maritalRelationsDiv.innerHTML = `<strong>同房：</strong> <span class="status unsuitable">错误</span> <span class="score-display">(得分：N/A)</span> <div class="reason"><em>加载或分析今日数据出错。</em></div>`
+            maritalRelationsDiv.className = "result unsuitable"
+          }
+
+          // === 错误时更新未来查询区域 ===
+          const futureHaircutSpan = document.getElementById("future-haircut-dates")
+          const futureMaritalSpan = document.getElementById("future-marital-dates")
+          const futureLookaheadTitle = document.querySelector("#futureLookahead h3")
+
+          if (futureHaircutSpan) {
+            futureHaircutSpan.textContent = "因处理今日数据出错，未来查询已终止。"
+            futureHaircutSpan.classList.remove("loading-text")
+            if (futureHaircutSpan.parentElement) futureHaircutSpan.parentElement.classList.remove("loading")
+          }
+          if (futureMaritalSpan) {
+            futureMaritalSpan.textContent = "因处理今日数据出错，未来查询已终止。"
+            futureMaritalSpan.classList.remove("loading-text")
+            if (futureMaritalSpan.parentElement) futureMaritalSpan.parentElement.classList.remove("loading")
+          }
+          if (futureLookaheadTitle) futureLookaheadTitle.textContent = "未来适宜日期展望 (处理终止):"
+          return // Stop further execution if today's analysis fails
+        }
+
+        // 将未来查询放入 setTimeout 中，确保今日分析先完成并渲染
+        // 使用较短的延迟（如 10ms）以避免阻塞主线程但仍能尽快开始
+        setTimeout(async () => {
+          try {
+            // 查找未来 7 个得分 > 0 的适宜日期，包含今天
+            const haircutLookupResult = await findFutureSuitableDays(today, "haircut", 7)
+            updateFutureDatesUI("haircut", haircutLookupResult.suitableDays, haircutLookupResult.totalDaysScanned)
+
+            // 查找未来 7 个得分 > 0 的适宜日期，包含今天
+            const maritalLookupResult = await findFutureSuitableDays(today, "maritalRelations", 7)
+            updateFutureDatesUI("maritalRelations", maritalLookupResult.suitableDays, maritalLookupResult.totalDaysScanned)
+
+            const futureLookaheadTitle = document.querySelector("#futureLookahead h3")
+            if (futureLookaheadTitle) futureLookaheadTitle.textContent = "未来适宜日期展望："
+          } catch (error) {
+            console.error("查找未来适宜日期时出错：", error)
+            // === 错误时更新未来查询区域 ===
+            const futureHaircutSpan = document.getElementById("future-haircut-dates")
+            const futureMaritalSpan = document.getElementById("future-marital-dates")
+            const futureLookaheadTitle = document.querySelector("#futureLookahead h3")
+
+            if (futureHaircutSpan) {
+              futureHaircutSpan.textContent = `查询未来适宜日期出错：${error.message || error}. 详细请查看控制台。`
+              futureHaircutSpan.classList.remove("loading-text")
+              if (futureHaircutSpan.parentElement) futureHaircutSpan.parentElement.classList.remove("loading")
+            }
+
+            if (futureMaritalSpan) {
+              futureMaritalSpan.textContent = `查询未来适宜日期出错：${error.message || error}. 详细请查看控制台。`
+              futureMaritalSpan.classList.remove("loading-text")
+              if (futureMaritalSpan.parentElement) futureMaritalSpan.parentElement.classList.remove("loading")
+            }
+            if (futureLookaheadTitle) futureLookaheadTitle.textContent = "未来适宜日期展望 (查询出错):"
+          }
+        }, 10) // 短暂延迟
+      })
+    </script>
+  </body>
+</html>

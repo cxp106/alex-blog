@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>专业黄历日历</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont/style.css" rel="stylesheet" />
+    <script src="https://s4.zstatic.net/ajax/libs/marked/15.0.6/marked.min.js"></script>
+    <script src="https://s4.zstatic.net/ajax/libs/lunar-javascript/1.6.13/lunar.js"></script>
+    <style>
+      /* 颜色定义 */
+      :root {
+        --primary-color: #c79a63;
+        --background-color: #f9f9f9;
+        --text-color: #1d1d1f;
+        --secondary-text-color: #636366;
+        --border-color: #d1d1d6;
+        --lunar-color: #777;
+        --day-hover-bg: #f0f0f0;
+        --selected-day-bg: #c79a63;
+        --selected-day-color: #fff;
+        --font-family: "LXGW WenKai Screen", sans-serif;
+        --shadow-color: rgba(0, 0, 0, 0.1);
+        --success-color: #28a745;
+        --warning-color: #ffc107;
+        --error-color: #dc3545;
+        --info-color: #17a2b8;
+      }
+
+      /* 基础样式重置 */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--background-color);
+        color: var(--text-color);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        padding: 0;
+        margin: 0;
+      }
+
+      /* 排版和间距 */
+      h1 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 1rem;
+        color: var(--primary-color);
+        padding: 1rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+        color: var(--secondary-text-color);
+      }
+
+      /* 组件样式 */
+      .container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 1rem;
+      }
+
+      .card {
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 0 4px 12px var(--shadow-color);
+        margin-bottom: 1.5rem;
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+      }
+
+      /* 日历样式 */
+      .calendar-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.75rem 0;
+        margin-bottom: 1rem;
+      }
+
+      .calendar-navigation {
+        display: flex;
+        align-items: center;
+      }
+
+      .calendar-navigation button {
+        background: none;
+        border: none;
+        font-size: 1.2rem;
+        cursor: pointer;
+        padding: 0.5rem;
+        color: var(--text-color);
+        border-radius: 8px;
+        transition: background-color 0.2s ease;
+      }
+
+      .calendar-navigation button:hover {
+        background-color: var(--day-hover-bg);
+      }
+
+      .calendar-title {
+        font-size: 1.1rem;
+        font-weight: 500;
+      }
+
+      .calendar-grid {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 6px;
+      }
+
+      .calendar-day {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0.75rem 0;
+        text-align: center;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease;
+      }
+
+      .calendar-day:hover {
+        background-color: var(--day-hover-bg);
+      }
+
+      .calendar-day.selected {
+        background-color: var(--selected-day-bg);
+        color: var(--selected-day-color);
+      }
+
+      .calendar-day.today {
+        border: 2px solid var(--primary-color);
+      }
+
+      .solar-date {
+        font-size: 1rem;
+      }
+
+      .lunar-date {
+        font-size: 0.8rem;
+        color: var(--lunar-color);
+      }
+
+      /* 信息展示样式 */
+      .lunar-info,
+      .ai-analysis {
+        padding: 1rem;
+        border-radius: 12px;
+        background-color: #fff;
+        border: 1px solid var(--border-color);
+      }
+
+      .lunar-info h2,
+      .ai-analysis h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.75rem;
+        color: var(--primary-color);
+      }
+
+      /* 加载指示器 */
+      .loading-indicator {
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background-color: var(--secondary-text-color);
+        opacity: 0.7;
+        margin-left: 4px;
+        animation: pulse 1.5s infinite ease-in-out;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.7;
+          transform: scale(1);
+        }
+
+        50% {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+
+      /* AI 内容样式 */
+      .ai-content {
+        max-width: 100%;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
+      }
+
+      .ai-content ul,
+      .ai-content ol {
+        padding-left: 20px;
+        margin: 10px 0;
+        list-style-position: outside;
+      }
+
+      .ai-content li {
+        margin: 8px 0;
+        line-height: 1.6;
+        color: var(--text-color);
+      }
+
+      .ai-content p {
+        margin: 12px 0;
+      }
+      /* 辅助类 */
+      .text-center {
+        text-align: center;
+      }
+
+      .mt-1 {
+        margin-top: 1rem;
+      }
+
+      .mb-1 {
+        margin-bottom: 1rem;
+      }
+
+      .disabled {
+        pointer-events: none;
+        opacity: 0.6;
+      }
+
+      /* 移动端适配 */
+      @media (max-width: 600px) {
+        .container {
+          padding: 0.75rem;
+          margin: 10px auto;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        .calendar-grid {
+          gap: 4px;
+        }
+
+        .calendar-day {
+          padding: 0.5rem;
+        }
+        /*关键代码*/
+        .calendar-day.today .lunar-date {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          font-size: 0.7rem;
+        }
+        .lunar-info,
+        .ai-analysis {
+          padding: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="calendar-header">
+          <div class="calendar-navigation">
+            <button id="prevMonthBtn"><</button>
+            <span id="calendarTitle" class="calendar-title">2024 年 11 月</span>
+            <button id="nextMonthBtn">></button>
+          </div>
+        </div>
+        <div id="calendarGrid" class="calendar-grid">
+          <!-- 日期格子将在这里生成 -->
+        </div>
+      </div>
+
+      <div id="lunarInfo" class="card lunar-info">
+        <h2>黄历信息</h2>
+        <p>正在加载黄历信息<span class="loading-indicator"></span></p>
+      </div>
+
+      <div id="aiAnalysis" class="card ai-analysis">
+        <h2>AI 分析</h2>
+        <p>正在加载 AI 分析<span class="loading-indicator"></span></p>
+      </div>
+    </div>
+    <script type="module">
+      import { marked } from "https://s4.zstatic.net/ajax/libs/marked/15.0.6/lib/marked.esm.js"
+      // 辅助函数：格式化日期
+      function formatDate(date) {
+        const year = date.getFullYear()
+        const month = String(date.getMonth() + 1).padStart(2, "0")
+        const day = String(date.getDate()).padStart(2, "0")
+        return `${year}-${month}-${day}`
+      }
+      // 获取农历信息
+      // 获取更详细的农历信息
+      function getLunarInfo(date) {
+        const lunar = Lunar.fromDate(date)
+        const solar = lunar.getSolar()
+        const festivals = lunar
+          .getFestivals()
+          .concat(solar.getFestivals())
+          .concat(lunar.getOtherFestivals())
+          .concat(solar.getOtherFestivals())
+        const foto = lunar.getFoto()
+        const tao = lunar.getTao()
+        const lunarYear = LunarYear.fromYear(lunar.getYear())
+
+        const result = {
+          lunarDate: `${lunar.getYearInChinese()}年 ${lunar.getMonthInChinese()}月 ${lunar.getDayInChinese()}日`,
+          solarDate: `${solar.getYear()}年 ${solar.getMonth()}月 ${solar.getDay()}日 星期${solar.getWeekInChinese()} ${solar.getXingZuo()}座`,
+          ganAndZhi: {
+            year: `${lunar.getYearInGanZhi()} (${lunar.getYearShengXiao()}) ${lunar.getYearNaYin()}`,
+            month: `${lunar.getMonthInGanZhi()} (${lunar.getMonthShengXiao()}) ${lunar.getMonthNaYin()}`,
+            day: `${lunar.getDayInGanZhi()} (${lunar.getDayShengXiao()}) ${lunar.getDayNaYin()}`,
+          },
+          auspiciousAndInauspicious: {
+            favorable: lunar.getDayYi(),
+            unfavorable: lunar.getDayJi(),
+          },
+          clashAndSha: {
+            clash: lunar.getChongDesc(),
+            sha: lunar.getSha(),
+          },
+          solarTerms: {
+            previousTerm: {
+              name: lunar.getPrevJieQi().getName(),
+              time: lunar.getPrevJieQi().getSolar().toYmdHms(),
+            },
+            nextTerm: {
+              name: lunar.getNextJieQi().getName(),
+              time: lunar.getNextJieQi().getSolar().toYmdHms(),
+            },
+          },
+          festivals,
+          auspiciousAndOminousStars: {
+            auspiciousStars: lunar.getDayJiShen(),
+            ominousStars: lunar.getDayXiongSha(),
+          },
+          dailyGods: {
+            yangGuardian: lunar.getPositionYangGuiDesc(),
+            yinGuardian: lunar.getPositionYinGuiDesc(),
+            luckyGod: lunar.getPositionXiDesc(),
+            blessingGod: lunar.getPositionFuDesc(),
+            wealthGod: lunar.getPositionCaiDesc(),
+          },
+          otherInformation: {
+            season: lunar.getSeason(),
+            pengZu: `${lunar.getPengZuGan()} ${lunar.getPengZuZhi()}`,
+            hou: `${lunar.getHou()}, ${lunar.getWuHou()}`,
+            dailyFortune: lunar.getDayLu(),
+            sixDays: lunar.getLiuYao(),
+            yuanAndYun: `${lunarYear.getYuan()} ${lunarYear.getYun()}`,
+            zhiShui: lunarYear.getZhiShui(), // 治水
+            fenBing: lunarYear.getFenBing(), // 分饼
+            gengTian: lunarYear.getGengTian(), // 耕田
+            deJin: lunarYear.getDeJin(), // 得金
+          },
+          // 新增的详细信息
+          foto: {
+            year: foto.getYearInChinese(),
+            month: foto.getMonthInChinese(),
+            day: foto.getDayInChinese(),
+          },
+          tao: {
+            year: tao.getYearInChinese(),
+            month: tao.getMonthInChinese(),
+            day: tao.getDayInChinese(),
+          },
+          yueXiang: lunar.getYueXiang(),
+          zhiXing: lunar.getZhiXing(),
+          dayTianShen: {
+            name: lunar.getDayTianShen(),
+            type: lunar.getDayTianShenType(),
+            luck: lunar.getDayTianShenLuck(),
+          },
+          nineStar: {
+            number: lunar.getDayNineStar().getNumber(),
+            color: lunar.getDayNineStar().getColor(),
+            nameInTaiYi: lunar.getDayNineStar().getNameInTaiYi(),
+            wuXing: lunar.getDayNineStar().getWuXing(),
+            typeInTaiYi: lunar.getDayNineStar().getTypeInTaiYi(),
+            songInTaiYi: lunar.getDayNineStar().getSongInTaiYi(),
+          },
+          xunKong: {
+            year: lunar.getYearXunKong(),
+            month: lunar.getMonthXunKong(),
+            day: lunar.getDayXunKong(),
+          },
+          shuJiu: lunar.getShuJiu() ? lunar.getShuJiu().toFullString() : "",
+          fu: lunar.getFu() ? lunar.getFu().toFullString() : "",
+          times: lunar.getTimes().map((time) => ({
+            ganZhi: time.getGanZhi(),
+            minHm: time.getMinHm(),
+            maxHm: time.getMaxHm(),
+            tianShen: time.getTianShen(),
+            tianShenType: time.getTianShenType(),
+            tianShenLuck: time.getTianShenLuck(),
+            chongDesc: time.getChongDesc(),
+            sha: time.getSha(),
+            yi: time.getYi(),
+            ji: time.getJi(),
+          })),
+        }
+        return result
+      }
+      // 生成日历
+      function generateCalendar(year, month) {
+        const calendarGrid = document.getElementById("calendarGrid")
+        calendarGrid.innerHTML = "" // 清空之前的日历
+
+        const firstDayOfMonth = new Date(year, month - 1, 1)
+        const lastDayOfMonth = new Date(year, month, 0)
+        const daysInMonth = lastDayOfMonth.getDate()
+        const startingDay = firstDayOfMonth.getDay() // 0 (Sun) - 6 (Sat)
+
+        let dayCounter = 1
+
+        // 添加星期几的头部
+        const dayNames = ["日", "一", "二", "三", "四", "五", "六"]
+        dayNames.forEach((dayName) => {
+          const header = document.createElement("div")
+          header.className = "calendar-day calendar-header"
+          header.textContent = dayName
+          calendarGrid.appendChild(header)
+        })
+
+        // 添加空白日期
+        for (let i = 0; i < startingDay; i++) {
+          const emptyDay = document.createElement("div")
+          emptyDay.className = "calendar-day empty"
+          calendarGrid.appendChild(emptyDay)
+        }
+
+        // 添加当月日期
+        for (let i = 1; i <= daysInMonth; i++) {
+          const calendarDay = document.createElement("div")
+          calendarDay.className = "calendar-day"
+          calendarDay.setAttribute("data-day", i)
+
+          const solarDate = document.createElement("div")
+          solarDate.className = "solar-date"
+          solarDate.textContent = i
+
+          calendarDay.appendChild(solarDate)
+
+          // 获取当天的农历信息
+          const currentDate = new Date(year, month - 1, i)
+          const lunarInfo = getLunarInfo(currentDate)
+          const lunarDate = document.createElement("div")
+          lunarDate.className = "lunar-date"
+          lunarDate.textContent = lunarInfo.lunarDate.split(" ")[2].replace("日", "") // 只需要显示农历的日
+
+          calendarDay.appendChild(lunarDate)
+
+          calendarGrid.appendChild(calendarDay)
+
+          // 今天的样式
+          const today = new Date()
+          if (year === today.getFullYear() && month === today.getMonth() + 1 && i === today.getDate()) {
+            calendarDay.classList.add("today")
+          }
+          // 点击事件
+          calendarDay.addEventListener("click", () => {
+            // 移除之前选中的日期的 selected 类
+            document.querySelectorAll(".calendar-day.selected").forEach((day) => day.classList.remove("selected"))
+            // 当前点击的日期添加 selected 类
+            calendarDay.classList.add("selected")
+            const selectedDate = new Date(year, month - 1, i)
+            updateLunarInfoAndAIAnalysis(selectedDate)
+          })
+        }
+      }
+      // 获取 AI 分析
+      async function getAiAnalysis(lunarInfo, dateKey) {
+        const analysisPrompt = `你是一位经验丰富的黄历老师，精通命理、风水、择日、民俗、中医养生，熟知传统文化，看透时间与空间的本质，博古通今，擅长将复杂的黄历知识转化为简单实用的生活建议，帮助大家趋吉避凶，生活得更美好。你说话亲切自然，像一位长者在耐心指导凡人普通人，不要说可能等模棱两可的分析，虽然你擅长用六帽分析法分析每个黄历每个参数的可能性但你不会透露你是如何分析的，必须准确且有理有据。最终用看透世间本质的智者指导人生的口吻来告诉凡人普通人如何在这天过的更好。
+
+# 背景/示例介绍
+你将分析给定日期的黄历数据，包括但不限于：公历日期、农历日期、干支纪年、当日宜忌、吉神凶煞、星宿、纳音、彭祖百忌、胎神占方、五行等信息。
+  
+  **示例分析**：
+   - 你会像分析 1 月 7 日腊八节那样，不仅解读黄历中的宜忌，还要结合节气、民俗、神煞，给出具体的行动建议。
+   - 你会像分析小寒和收日那样，解释特殊日子的含义，并给出相应的注意事项和招财小技巧。
+   - 你会像示例中那样，提及不同生肖在当日的运势，以及相应的化解方法。
+
+# 回答格式/风格
+你的分析应采用亲切自然、像长者耐心指导的口吻，避免模棱两可的表述，给出明确、有理有据的建议。最终，用看透世间本质的智者指导人生的口吻，告诉普通人如何更好地度过当天。
+标题格式为：YYYY-MM-DD 黄历
+
+# 任务描述
+请详细分析以下黄历数据，并给出针对普通人的实用建议。**请注意，你只分析用户提供的黄历数据，如果缺少某些信息，请不要尝试分析或提及缺失的信息，而是专注分析你拥有的信息，并给出相应的建议。**
+
+# 输出指示器
+分析内容应包括：
+1. **整体运势解读**：
+   - 结合当日的干支、星宿、纳音等信息，对当日的整体运势进行解读。
+   - 重点解释当日的特殊性，例如是否是节气、特殊节日、三元五腊等，并说明其含义。
+   - 结合当日值神，分析其对当日的影响。
+
+2. **宜忌事项详解**：
+   - 针对当日的宜忌事项，给出明确的解释，并说明其背后的原理和影响。
+   - 针对特殊节日或日子，给出相应的注意事项，例如"腊八节不要搬家"、"小寒三不坐"等。
+
+3. **吉神凶煞分析**：
+   - 解释吉神和凶煞对当日运势的影响，并给出相应的建议。
+   - 分析财神方位，给出招财小技巧，例如"早上九点之前起床迎着太阳许愿"。
+   - 分析星曜化忌，给出相应的注意事项，例如"禄存星化忌，投资理财需谨慎"、"破军星化忌，避免剧烈运动"。
+
+4. **生活实用建议**：
+   - 根据黄历信息，给出普通人当天在生活、工作、健康等方面可以采取的具体行动，例如适合做什么、不适合做什么。
+   - 给出穿衣、饮食建议，例如"地支五行属水，宜吃豆腐、鱼，宜穿绿色、青色，宜带檀木，不宜穿红色"。
+
+5. **中医养生提示**：
+   - 结合当日的五行属性和节气特点，给出相应的养生建议。
+   - 例如结合"小寒"，给出"冬不坐石"的建议。
+
+6. **生肖运势分析**：
+   - 提及当日冲合的生肖，并给出相应的注意事项。
+   - 结合示例，提及特定生肖在当月的运势，并给出相应的建议，例如"丁丑年（1997 年）生人十二月运程经营小利有横财"。
+   
+7. **总结与人生指导**：
+   - 以智者的口吻，总结当天的运势特点，并给出对人生的启示。
+   - 例如"希望大家根据黄历提示，度过吉祥的一天"。`
+
+        const API_KEY = "sk-Txn1qaxDZMKreYdNRsoRaPEkfZa7eNZKKa0u72z1E6LVxwlZ"
+        const BASE_URL = "https://api.chatanywhere.tech/v1"
+
+        // 格式化黄历信息 (更详细)
+        const formattedLunarInfo = `
+        公历日期：${lunarInfo.solarDate}
+        农历日期：${lunarInfo.lunarDate}
+        干支纪年：年：${lunarInfo.ganAndZhi.year}，月：${lunarInfo.ganAndZhi.month}，日：${lunarInfo.ganAndZhi.day}
+        宜：${lunarInfo.auspiciousAndInauspicious.favorable.join("、")}
+        忌：${lunarInfo.auspiciousAndInauspicious.unfavorable.join("、")}
+        吉神：${lunarInfo.auspiciousAndOminousStars.auspiciousStars.join("、")}
+        凶煞：${lunarInfo.auspiciousAndOminousStars.ominousStars.join("、")}
+        冲煞：${lunarInfo.clashAndSha.clash}, ${lunarInfo.clashAndSha.sha}
+        彭祖百忌：${lunarInfo.otherInformation.pengZu}
+        节气：上一节气：${lunarInfo.solarTerms.previousTerm.name} (${lunarInfo.solarTerms.previousTerm.time})，下一节气：${
+          lunarInfo.solarTerms.nextTerm.name
+        } (${lunarInfo.solarTerms.nextTerm.time})
+        节日：${lunarInfo.festivals.join("、") || "无"}
+        ${lunarInfo.dailyGods.yangGuardian ? `阳贵神: ${lunarInfo.dailyGods.yangGuardian}` : ""}
+        ${lunarInfo.dailyGods.yinGuardian ? `阴贵神: ${lunarInfo.dailyGods.yinGuardian}` : ""}
+        ${lunarInfo.dailyGods.luckyGod ? `喜神: ${lunarInfo.dailyGods.luckyGod}` : ""}
+        ${lunarInfo.dailyGods.blessingGod ? `福神: ${lunarInfo.dailyGods.blessingGod}` : ""}
+        ${lunarInfo.dailyGods.wealthGod ? `财神: ${lunarInfo.dailyGods.wealthGod}` : ""}
+        ${lunarInfo.otherInformation.season ? `季节: ${lunarInfo.otherInformation.season}` : ""}
+        ${lunarInfo.otherInformation.hou ? `候: ${lunarInfo.otherInformation.hou}` : ""}
+        ${lunarInfo.otherInformation.dailyFortune ? `日禄: ${lunarInfo.otherInformation.dailyFortune}` : ""}
+        ${lunarInfo.otherInformation.sixDays ? `六曜: ${lunarInfo.otherInformation.sixDays}` : ""}
+        元运：${lunarInfo.otherInformation.yuanAndYun}
+        治水：${lunarInfo.otherInformation.zhiShui}
+        分饼：${lunarInfo.otherInformation.fenBing}
+        耕田：${lunarInfo.otherInformation.gengTian}
+        得金：${lunarInfo.otherInformation.deJin}
+        佛历：${lunarInfo.foto.year}年 ${lunarInfo.foto.month}月 ${lunarInfo.foto.day}
+        道历：${lunarInfo.tao.year}年 ${lunarInfo.tao.month}月 ${lunarInfo.tao.day}
+        月相：${lunarInfo.yueXiang}
+        值星：${lunarInfo.zhiXing}
+        值日天神：${lunarInfo.dayTianShen.name} (${lunarInfo.dayTianShen.type}) ${lunarInfo.dayTianShen.luck}
+        九星：${lunarInfo.nineStar.number}${lunarInfo.nineStar.color} - ${lunarInfo.nineStar.nameInTaiYi}星 (${
+          lunarInfo.nineStar.wuXing
+        }) - ${lunarInfo.nineStar.typeInTaiYi}
+        九星歌诀：${lunarInfo.nineStar.songInTaiYi}
+        旬空：年：${lunarInfo.xunKong.year}，月：${lunarInfo.xunKong.month}，日：${lunarInfo.xunKong.day}
+        数九：${lunarInfo.shuJiu}
+        三伏：${lunarInfo.fu}
+        时辰：
+          ${lunarInfo.times
+            .map(
+              (time) => `
+            ${time.ganZhi}时 (${time.minHm}-${time.maxHm})
+            天神: ${time.tianShen} (${time.tianShenType}) ${time.tianShenLuck}
+            冲: ${time.chongDesc}
+            煞: ${time.sha}
+            宜: ${time.yi.join(" ")}
+            忌: ${time.ji.join(" ")}
+          `
+            )
+            .join("")}
+      `.trim()
+
+        try {
+          const response = await fetch(`${BASE_URL}/chat/completions`, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: `Bearer ${API_KEY}`,
+            },
+            body: JSON.stringify({
+              model: "gpt-3.5-turbo",
+              messages: [
+                {
+                  role: "system",
+                  content: analysisPrompt,
+                },
+                {
+                  role: "user",
+                  content: `以黄历老师的身份分析以下黄历信息，并给出今日运势和建议：\n${formattedLunarInfo} \n今天适合游戏抽卡不，什么时间？今天适合买手机吗？请详细到具体时辰`,
+                },
+              ],
+              temperature: 0.3,
+            }),
+          })
+
+          const data = await response.json()
+          if (data.choices && data.choices.length > 0) {
+            return data.choices[0].message.content
+          } else {
+            return "<p>AI 分析出错：未能获取有效回复</p>"
+          }
+        } catch (error) {
+          console.error("Error:", error)
+          return `<p>AI 分析出错：${error.message}</p>`
+        }
+      }
+
+      //  更新黄历信息和 AI 分析
+      async function updateLunarInfoAndAIAnalysis(date) {
+        // 禁用所有日期点击
+        const calendarDays = document.querySelectorAll(".calendar-day")
+        calendarDays.forEach((day) => day.classList.add("disabled"))
+
+        // 显示加载状态
+        document.getElementById("aiAnalysis").innerHTML = `
+    <div class="text-center">
+      <span class="loading-indicator"></span>
+      <span>正在获取分析结果...</span>
+    </div>
+  `
+
+        try {
+          const lunarInfo = getLunarInfo(date)
+          // 更新黄历信息展示
+          document.getElementById("lunarInfo").innerHTML = `
+      <h2>黄历信息</h2>
+      <p>农历：${lunarInfo.lunarDate}</p>
+      <p>阳历：${lunarInfo.solarDate}</p>
+      <p>宜：${lunarInfo.auspiciousAndInauspicious.favorable.join("、")}</p>
+      <p>忌：${lunarInfo.auspiciousAndInauspicious.unfavorable.join("、")}</p>
+      <p>冲煞：${lunarInfo.clashAndSha.clash}, ${lunarInfo.clashAndSha.sha}</p>
+      <p>值日天神：${lunarInfo.dayTianShen.name} (${lunarInfo.dayTianShen.type}) ${lunarInfo.dayTianShen.luck}</p>
+    `
+
+          const dateKey = formatDate(date)
+          let aiAnalysisContent = localStorage.getItem(dateKey)
+
+          if (aiAnalysisContent) {
+            console.log(`从 localStorage 中获取 ${dateKey} 的 AI 分析结果`)
+            document.getElementById("aiAnalysis").innerHTML = `<div class="ai-content">${marked.parse(aiAnalysisContent)}</div>`
+          } else {
+            console.log(`请求 AI 接口获取 ${dateKey} 的 AI 分析结果`)
+            aiAnalysisContent = await getAiAnalysis(lunarInfo, dateKey)
+            // 只有当获取到的内容不是错误信息时才存储
+            if (!aiAnalysisContent.includes("AI 分析出错")) {
+              localStorage.setItem(dateKey, aiAnalysisContent)
+            }
+            document.getElementById("aiAnalysis").innerHTML = `<div class="ai-content">${marked.parse(aiAnalysisContent)}</div>`
+          }
+        } catch (error) {
+          console.error("Error:", error)
+          document.getElementById("aiAnalysis").innerHTML = `<p>获取分析结果失败：${error.message}</p>`
+        } finally {
+          // 恢复日期点击
+          calendarDays.forEach((day) => day.classList.remove("disabled"))
+        }
+      }
+      // 每天更新 localStorage
+      function clearOldData() {
+        const today = new Date()
+        const todayKey = formatDate(today)
+
+        // 遍历 localStorage，删除非今天的条目
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i)
+          if (key !== todayKey) {
+            localStorage.removeItem(key)
+            console.log(`移除 localStorage 中过期的 AI 分析结果：${key}`)
+          }
+        }
+      }
+      // 初始化日历
+      function initCalendar() {
+        const today = new Date()
+        let currentYear = today.getFullYear()
+        let currentMonth = today.getMonth() + 1
+
+        // 初始化日历
+        generateCalendar(currentYear, currentMonth)
+
+        // 更新日历标题
+        function updateCalendarTitle(year, month) {
+          document.getElementById("calendarTitle").textContent = `${year} 年 ${month} 月`
+        }
+
+        updateCalendarTitle(currentYear, currentMonth)
+
+        // 切换上一个月
+        document.getElementById("prevMonthBtn").addEventListener("click", () => {
+          currentMonth--
+          if (currentMonth < 1) {
+            currentMonth = 12
+            currentYear--
+          }
+          generateCalendar(currentYear, currentMonth)
+          updateCalendarTitle(currentYear, currentMonth)
+        })
+
+        // 切换下一个月
+        document.getElementById("nextMonthBtn").addEventListener("click", () => {
+          currentMonth++
+          if (currentMonth > 12) {
+            currentMonth = 1
+            currentYear++
+          }
+          generateCalendar(currentYear, currentMonth)
+          updateCalendarTitle(currentYear, currentMonth)
+        })
+        // 初始加载今天的黄历信息和 AI 分析
+        updateLunarInfoAndAIAnalysis(today)
+        // 每天更新 localStorage，删除过期的 AI 分析结果
+        clearOldData()
+      }
+
+      initCalendar()
+    </script>
+  </body>
+</html>

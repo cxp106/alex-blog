@@ -1,0 +1,68 @@
+[
+  {
+    "category": "AI",
+    "links": [
+      {
+        "title": "GPT-OSS",
+        "introduction": "一个开放服务工作室，供开发人员探索最新的 ChatGPT 模型。",
+        "link": "https://chat-gpt-oss.com/"
+      },
+      {
+        "title": "Deepseek",
+        "introduction": "Deepseek 官网",
+        "link": "https://chat.deepseek.com/"
+      },
+      {
+        "title": "豆包",
+        "introduction": "抖音旗下 AI 助手",
+        "link": "https://www.doubao.com/"
+      },
+      {
+        "title": "元宝",
+        "introduction": "腾讯旗下 AI 助手",
+        "link": "https://yuanbao.tencent.com/"
+      },
+      {
+        "title": "当贝 AI",
+        "introduction": "一站式 AI 体验，聚合全网优质大模型",
+        "link": "https://ai.dangbei.com/chat"
+      },
+      {
+        "title": "LongCat AI",
+        "introduction": "美团推出的 AI 模型，与其他模型最大区别是拥有超快响应速度",
+        "link": "https://longcat.chat/t"
+      },
+      {
+        "title": "Google AI Studio",
+        "introduction": "由谷歌推出的一款基于浏览器的生成式 AI 人工智能应用开发平台",
+        "link": "https://aistudio.google.com/"
+      },
+      {
+        "title": "问小白",
+        "introduction": "元石科技旗下超能 AI 助手",
+        "link": "https://www.wenxiaobai.com/"
+      },
+      {
+        "title": "napkin",
+        "introduction": "文字秒转可视化图表，提升表达逻辑与可读性，适用于行业分析、报告、工作汇报，打破 PPT 单调感。",
+        "link": "https://www.napkin.ai/"
+      },
+      {
+        "title": "viggle",
+        "introduction": "上传“带人物动作的视频 + 目标人物图片”，AI 一键替换视频人物，动作完全复刻，适合制作搞笑创意视频",
+        "link": "http://viggle.ai/"
+      },
+      {
+        "title": "ShowMeBest.AI",
+        "introduction": "发现最佳 AI 工具",
+        "link": "https://www.showmebest.ai/"
+      },
+      {
+        "title": "通义",
+        "introduction": "你的超级个人助理",
+        "link": "https://www.tongyi.com/qianwen/equity",
+        "hot": true
+      }
+    ]
+  }
+]

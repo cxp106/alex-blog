@@ -1,0 +1,5608 @@
+{
+  "records": [
+    {
+      "id": "1807415912899416073",
+      "type": 1,
+      "level": 2,
+      "content": "《传染病信息报告管理规范（2015年版）》自（）年1月1日起执行。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT10",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916342927362",
+          "questionId": "1807415912899416073",
+          "content": "2014",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916351315969",
+          "questionId": "1807415912899416073",
+          "content": "2015",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916355510274",
+          "questionId": "1807415912899416073",
+          "content": "2016",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916363898882",
+          "questionId": "1807415912899416073",
+          "content": "2017",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916368093185",
+          "questionId": "1807415912899416073",
+          "content": "2018",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912899416074",
+      "type": 1,
+      "level": 2,
+      "content": " 以下哪个组织机构负责本辖区内传染病信息报告工作的业务指导和技术支持？",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT12",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916376481793",
+          "questionId": "1807415912899416074",
+          "content": "卫生计生行政部门",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916380676098",
+          "questionId": "1807415912899416074",
+          "content": "疾病预防控制机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916389064706",
+          "questionId": "1807415912899416074",
+          "content": "卫生监督机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916393259009",
+          "questionId": "1807415912899416074",
+          "content": "医疗机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916401647618",
+          "questionId": "1807415912899416074",
+          "content": "采供血机构",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912899416075",
+      "type": 1,
+      "level": 2,
+      "content": "责任报告单位和责任疫情报告人发现甲类传染病和乙类传染病中的肺炭疽、传染性非典型肺炎等按照甲类管理的传染病人或疑似病人时，或发现其他传染病和不明原因疾病暴发时，应于（）小时内将传染病报告卡通过网络报告。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT22",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916410036226",
+          "questionId": "1807415912899416075",
+          "content": "1小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916414230530",
+          "questionId": "1807415912899416075",
+          "content": "2小时",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916422619137",
+          "questionId": "1807415912899416075",
+          "content": "6小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916426813441",
+          "questionId": "1807415912899416075",
+          "content": "12小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916435202050",
+          "questionId": "1807415912899416075",
+          "content": "24小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912899416076",
+      "type": 1,
+      "level": 2,
+      "content": "对于其他乙、丙类传染病报告卡，由县级疾病预防控制机构核对无误后，于（）内通过网络完成确认审核。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT23",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916439396353",
+          "questionId": "1807415912899416076",
+          "content": "2小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916447784961",
+          "questionId": "1807415912899416076",
+          "content": "6小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916451979266",
+          "questionId": "1807415912899416076",
+          "content": "12小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916460367873",
+          "questionId": "1807415912899416076",
+          "content": "24小时",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916464562178",
+          "questionId": "1807415912899416076",
+          "content": "48小时",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912903610368",
+      "type": 1,
+      "level": 2,
+      "content": " 县级疾病预防控制机构及具备网络直报条件的医疗机构应（）对报告信息进行查重，对重复报告信息进行删除。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT25",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916472950786",
+          "questionId": "1807415912903610368",
+          "content": "不定期",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916477145089",
+          "questionId": "1807415912903610368",
+          "content": "每日",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916485533698",
+          "questionId": "1807415912903610368",
+          "content": "每三日",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916489728001",
+          "questionId": "1807415912903610368",
+          "content": "每周",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916498116610",
+          "questionId": "1807415912903610368",
+          "content": "每月",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912903610369",
+      "type": 2,
+      "level": 2,
+      "content": "传染病信息报告管理的职责单位包括（）？",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT11-15",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916502310913",
+          "questionId": "1807415912903610369",
+          "content": "卫生计生行政部门",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916510699522",
+          "questionId": "1807415912903610369",
+          "content": "疾病预防控制机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916519088130",
+          "questionId": "1807415912903610369",
+          "content": "卫生监督机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916523282433",
+          "questionId": "1807415912903610369",
+          "content": "医疗机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916531671042",
+          "questionId": "1807415912903610369",
+          "content": "采供血机构",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912903610370",
+      "type": 2,
+      "level": 2,
+      "content": "以下属于甲类传染病的是（）。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT17",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916535865345",
+          "questionId": "1807415912903610370",
+          "content": "流行性腮腺炎",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916544253953",
+          "questionId": "1807415912903610370",
+          "content": "鼠疫",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916548448257",
+          "questionId": "1807415912903610370",
+          "content": "流感",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916556836865",
+          "questionId": "1807415912903610370",
+          "content": "霍乱",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916565225474",
+          "questionId": "1807415912903610370",
+          "content": "淋病",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912903610371",
+      "type": 2,
+      "level": 2,
+      "content": "根据不同传染病诊断分类，分为（）、（）、（）和（）四类。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT19",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916569419778",
+          "questionId": "1807415912903610371",
+          "content": "疑似病例",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916577808386",
+          "questionId": "1807415912903610371",
+          "content": "临床诊断病例",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916582002690",
+          "questionId": "1807415912903610371",
+          "content": "确诊病例",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916590391298",
+          "questionId": "1807415912903610371",
+          "content": "病原携带者",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916594585601",
+          "questionId": "1807415912903610371",
+          "content": "住院病例",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912903610372",
+      "type": 2,
+      "level": 2,
+      "content": "当收到以下哪些传染病的报告信息，需要在2小时内通过网络完成报告信息的三级确认审核？",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT22",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916602974209",
+          "questionId": "1807415912903610372",
+          "content": "鼠疫",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916607168514",
+          "questionId": "1807415912903610372",
+          "content": "霍乱",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916615557121",
+          "questionId": "1807415912903610372",
+          "content": "肺炭疽",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916619751425",
+          "questionId": "1807415912903610372",
+          "content": "传染性非典型肺炎",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916628140033",
+          "questionId": "1807415912903610372",
+          "content": "人感染高致病性禽流感",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912907804672",
+      "type": 2,
+      "level": 2,
+      "content": "关于报告信息的订正，以下说法正确的是：",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT24",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916632334337",
+          "questionId": "1807415912907804672",
+          "content": "医疗卫生机构发生报告病例诊断变更、已报告病例因该病死亡或填卡错误时，应由该医疗卫生机构及时进行订正报告。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916640722946",
+          "questionId": "1807415912907804672",
+          "content": "B医疗机构重新填写传染病报告卡或抽取电子传染病报告卡，卡片类别应与初次报告时一致，避免重复报卡。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916644917250",
+          "questionId": "1807415912907804672",
+          "content": "实行专病报告管理的传染病，由相应的专病管理机构或部门对报告的病例进行追踪调查。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916653305857",
+          "questionId": "1807415912907804672",
+          "content": "专病管理机构发现传染病报告卡信息有误或排除病例时应当在24小时内订正。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916657500162",
+          "questionId": "1807415912907804672",
+          "content": "已具备电子病历、电子健康档案数据自动抽取交换功能时，以唯一身份标识实现传染病个案报告与专病的数据动态管理。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912907804673",
+      "type": 3,
+      "level": 2,
+      "content": "采供血机构按《艾滋病和艾滋病病毒感染诊断标准》对最终检测结果为阳性的病例可不进行报告。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT15",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916665888770",
+          "questionId": "1807415912907804673",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916674277378",
+          "questionId": "1807415912907804673",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912907804674",
+      "type": 3,
+      "level": 2,
+      "content": "各级各类医疗卫生机构执行职务的人员和乡村医生、个体开业医生均为责任疫情报告人。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT16",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916678471681",
+          "questionId": "1807415912907804674",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916686860290",
+          "questionId": "1807415912907804674",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912907804675",
+      "type": 3,
+      "level": 2,
+      "content": "不具备网络直报条件的医疗机构可不进行传染病报告卡信息报告。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT21",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916691054594",
+          "questionId": "1807415912907804675",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916699443202",
+          "questionId": "1807415912907804675",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912907804676",
+      "type": 3,
+      "level": 2,
+      "content": "医疗机构传染病报告管理人员须对收到的纸质传染病报告卡或电子病历、电子健康档案系统中抽取的电子传染病报告卡的信息进行错项、漏项、逻辑错误等检查，对有疑问的报告卡必须及时向填卡人核实。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT23",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916703637505",
+          "questionId": "1807415912907804676",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916712026113",
+          "questionId": "1807415912907804676",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1807415912907804677",
+      "type": 3,
+      "level": 2,
+      "content": "各级各类医疗卫生机构的纸质《传染病报告卡》及传染病报告记录保存3年。",
+      "createTime": "2024-06-30 22:08:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "PPT28",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1807415916716220418",
+          "questionId": "1807415912907804677",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1807415916724609026",
+          "questionId": "1807415912907804677",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692164272148",
+      "type": 1,
+      "level": 2,
+      "content": "<p>目前，中国传染病自动预警系统（CIDARS）采用的预警方法包括</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:44:36",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816031718180745217",
+          "questionId": "1809063692164272148",
+          "content": "时空预警模型",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816031718201716738",
+          "questionId": "1809063692164272148",
+          "content": "单病例预警",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816031718205911042",
+          "questionId": "1809063692164272148",
+          "content": "时间预警模型",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816031718214299650",
+          "questionId": "1809063692164272148",
+          "content": "以上均包括",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466432",
+      "type": 1,
+      "level": 2,
+      "content": "<p>目前，美国CDC针对流感住院人数的预测采用哪种工作模式</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:44:51",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816031777601449985",
+          "questionId": "1809063692168466432",
+          "content": "CDC负责提供数据，仅由美国国立卫生研究院（NIH）采用ARIMA模型进行预测并公布预测结果。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816031777635004418",
+          "questionId": "1809063692168466432",
+          "content": "CDC负责提供数据，与多个预测团队合作，每周CDC公布一个集合预测结果。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816031777643393025",
+          "questionId": "1809063692168466432",
+          "content": "CDC负责提供数据，仅由预测和疫情分析中心采用SEIR模型进行预测并公布预测结果。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466433",
+      "type": 1,
+      "level": 2,
+      "content": "<p>目前，欧洲CDC针对流感活动的预测指标有</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:45:07",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816031847046541314",
+          "questionId": "1809063692168466433",
+          "content": "ILI",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816031847067512833",
+          "questionId": "1809063692168466433",
+          "content": "ARI",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816031847075901441",
+          "questionId": "1809063692168466433",
+          "content": "ILI和ARI",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466434",
+      "type": 1,
+      "level": 2,
+      "content": "<p>目前，欧洲CDC获得流感活动分级所采用的主要的模型是</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:45:22",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816031907859755010",
+          "questionId": "1809063692168466434",
+          "content": "Serfling回归",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816031907872337921",
+          "questionId": "1809063692168466434",
+          "content": "MEM模型",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816031907880726530",
+          "questionId": "1809063692168466434",
+          "content": "GLM模型",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466435",
+      "type": 1,
+      "level": 2,
+      "content": "<p>目前，美国CDC将流感活动强度分为（）级</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:45:40",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816031983428530177",
+          "questionId": "1809063692168466435",
+          "content": "8级",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816031983445307394",
+          "questionId": "1809063692168466435",
+          "content": "10级",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816031983449501697",
+          "questionId": "1809063692168466435",
+          "content": "13级",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466436",
+      "type": 2,
+      "level": 2,
+      "content": "传染病发生的呈现类型包括（）。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063699952967681",
+          "questionId": "1809063692168466436",
+          "content": "散发",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063699957161986",
+          "questionId": "1809063692168466436",
+          "content": "暴发",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063699961356289",
+          "questionId": "1809063692168466436",
+          "content": "流行",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063699969744897",
+          "questionId": "1809063692168466436",
+          "content": "大流行",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466437",
+      "type": 2,
+      "level": 2,
+      "content": "传染病苗头预警场景可包括（）。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063699973939201",
+          "questionId": "1809063692168466437",
+          "content": "单个病例预警",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063699978133506",
+          "questionId": "1809063692168466437",
+          "content": "聚集性疫情预警",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063699982327810",
+          "questionId": "1809063692168466437",
+          "content": "流行起始预警",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063699986522113",
+          "questionId": "1809063692168466437",
+          "content": "流行强度预警",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063699990716418",
+          "questionId": "1809063692168466437",
+          "content": "疾病严重性预警",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466438",
+      "type": 2,
+      "level": 2,
+      "content": "<p>中国传染病自动预警系统存在的不足包括（）</p>",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": "2024-07-24 16:46:03",
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816032080245649409",
+          "questionId": "1809063692168466438",
+          "content": "时间模型的疑似事件率较低，需要进一步提高预警信号的特异性，减少假阳性信号。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816032080262426626",
+          "questionId": "1809063692168466438",
+          "content": "不同传染病的预警效果存在较大差异，各病种的疑似事件信号占其预警信号的比例不同。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816032080270815233",
+          "questionId": "1809063692168466438",
+          "content": "未能深入比较基于短期基线数据和基于长期基线数据的时间模型方法的效果。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816032080279203842",
+          "questionId": "1809063692168466438",
+          "content": "模型方法以及阈值的设置有待继续优化。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466439",
+      "type": 2,
+      "level": 2,
+      "content": "下列关于美国CDC与欧盟CDC针对流感流行严重性预警说法正确的是（）。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700015882242",
+          "questionId": "1809063692168466439",
+          "content": "均首先通过历史数据拟合回归方程，再应用到目标时间段获得预值作为基线阈值。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700020076545",
+          "questionId": "1809063692168466439",
+          "content": "美国CDC将肺炎与流感相关死亡比例的流行阈值设定为基线阈值+2倍标准误。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700024270849",
+          "questionId": "1809063692168466439",
+          "content": "欧盟CDC将流感相关死亡的大幅增长阈值设定为基线阈值+2倍标准误。",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700032659458",
+          "questionId": "1809063692168466439",
+          "content": "与美国CDC相比，欧盟CDC使用的模型灵活性更强。",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466440",
+      "type": 2,
+      "level": 2,
+      "content": "传染病多源数据预警平台建立和应用的意义包括（）。",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700036853762",
+          "questionId": "1809063692168466440",
+          "content": "提升传染病早期预警能力",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700041048066",
+          "questionId": "1809063692168466440",
+          "content": "提供科学决策支持",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700045242369",
+          "questionId": "1809063692168466440",
+          "content": "促进全球健康协作",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700049436673",
+          "questionId": "1809063692168466440",
+          "content": "提高公众健康意识",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466441",
+      "type": 3,
+      "level": 2,
+      "content": "判断进入流行期的阈值与流行期结束的阈值可以不一样。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700053630977",
+          "questionId": "1809063692168466441",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700057825282",
+          "questionId": "1809063692168466441",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466442",
+      "type": 3,
+      "level": 2,
+      "content": "中国传染病自动预警系统（CIDARS）的预警信号响应工作流程主要包括接收预警信号、预警信息分析与核实、现场调查、确认事件后按照突发公共卫生事件有关规定开展防控工作。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700066213889",
+          "questionId": "1809063692168466442",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700070408193",
+          "questionId": "1809063692168466442",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466443",
+      "type": 3,
+      "level": 2,
+      "content": "以呼吸道疾病为例，与ILI流感病毒阳性率相比，社会数据（如百度症状指数，以及药店退热药物零售量等）往往能更及时地反映出疾病流行态势已经出现了异常。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700074602498",
+          "questionId": "1809063692168466443",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700078796802",
+          "questionId": "1809063692168466443",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466444",
+      "type": 3,
+      "level": 2,
+      "content": "美国CDC在计算流感活动的基线阈值时，仅考虑了ILI%一个指标。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700082991106",
+          "questionId": "1809063692168466444",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700087185410",
+          "questionId": "1809063692168466444",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692168466445",
+      "type": 3,
+      "level": 2,
+      "content": "Google流感趋势（GoogleFluTrend，GFT）至今仍在使用。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063700095574018",
+          "questionId": "1809063692168466445",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063700099768322",
+          "questionId": "1809063692168466445",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826571",
+      "type": 1,
+      "level": 2,
+      "content": "污水流行病学采集的污水样本通常是（）的混合样品",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703077724161",
+          "questionId": "1809063692197826571",
+          "content": "12h",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703081918465",
+          "questionId": "1809063692197826571",
+          "content": "24h",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703086112769",
+          "questionId": "1809063692197826571",
+          "content": "36h",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703090307073",
+          "questionId": "1809063692197826571",
+          "content": "48h",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826572",
+      "type": 1,
+      "level": 2,
+      "content": "下列哪项指标是污水特征中最能反映人类代谢的指标（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703094501377",
+          "questionId": "1809063692197826572",
+          "content": "化学需氧量",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703102889985",
+          "questionId": "1809063692197826572",
+          "content": "悬浮颗粒物",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703107084290",
+          "questionId": "1809063692197826572",
+          "content": "总氮",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703111278594",
+          "questionId": "1809063692197826572",
+          "content": "氨氮",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826573",
+      "type": 1,
+      "level": 2,
+      "content": "一般来讲，取样量（）能够保证污水中常见物质分析",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703115472898",
+          "questionId": "1809063692197826573",
+          "content": "100mL",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703119667202",
+          "questionId": "1809063692197826573",
+          "content": "250mL",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703123861506",
+          "questionId": "1809063692197826573",
+          "content": "500mL",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703128055809",
+          "questionId": "1809063692197826573",
+          "content": "1000mL",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826574",
+      "type": 1,
+      "level": 2,
+      "content": "PEG沉淀法富集浓缩污水中病毒的原理是（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703132250114",
+          "questionId": "1809063692197826574",
+          "content": "尺寸截留",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703136444418",
+          "questionId": "1809063692197826574",
+          "content": "絮凝沉淀",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703140638722",
+          "questionId": "1809063692197826574",
+          "content": "空间排阻",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703144833025",
+          "questionId": "1809063692197826574",
+          "content": "吸附架桥",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703149027330",
+          "questionId": "1809063692197826574",
+          "content": "离心沉降",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826575",
+      "type": 1,
+      "level": 2,
+      "content": "铝盐沉淀法富集浓缩污水中病毒的原理是（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703153221633",
+          "questionId": "1809063692197826575",
+          "content": "尺寸截留",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703157415938",
+          "questionId": "1809063692197826575",
+          "content": "絮凝沉淀",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703161610242",
+          "questionId": "1809063692197826575",
+          "content": "空间排阻",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703165804545",
+          "questionId": "1809063692197826575",
+          "content": "吸附架桥",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703169998849",
+          "questionId": "1809063692197826575",
+          "content": "离心沉降",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826576",
+      "type": 1,
+      "level": 2,
+      "content": "离心超滤法富集浓缩污水中病毒的原理是（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703174193153",
+          "questionId": "1809063692197826576",
+          "content": "尺寸截留",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703182581761",
+          "questionId": "1809063692197826576",
+          "content": "絮凝沉淀",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703186776066",
+          "questionId": "1809063692197826576",
+          "content": "空间排阻",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703190970370",
+          "questionId": "1809063692197826576",
+          "content": "吸附架桥",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703195164674",
+          "questionId": "1809063692197826576",
+          "content": "离心沉降",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826577",
+      "type": 2,
+      "level": 2,
+      "content": "污水流行病学涉及的学科包括（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703199358978",
+          "questionId": "1809063692197826577",
+          "content": "分析化学",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703203553281",
+          "questionId": "1809063692197826577",
+          "content": "环境科学",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703207747586",
+          "questionId": "1809063692197826577",
+          "content": "流行病学",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703211941890",
+          "questionId": "1809063692197826577",
+          "content": "社会行为学",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826578",
+      "type": 2,
+      "level": 2,
+      "content": "通过监测污水中特定的暴露和效应标志物来监测覆盖范围内的人群健康和行为监测的优势是（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703216136193",
+          "questionId": "1809063692197826578",
+          "content": "污水采样方便",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703220330497",
+          "questionId": "1809063692197826578",
+          "content": "监测范围大",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703224524801",
+          "questionId": "1809063692197826578",
+          "content": "成本低",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703228719105",
+          "questionId": "1809063692197826578",
+          "content": "能够提供客观、连续、实时的数据",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703232913410",
+          "questionId": "1809063692197826578",
+          "content": "无隐私、伦理问题",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826579",
+      "type": 2,
+      "level": 2,
+      "content": "《污水中新型冠状病毒富集浓缩和核酸检测方法标准》（WS/T799-2022）中污水中病毒核酸富集浓缩方法有（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703237107714",
+          "questionId": "1809063692197826579",
+          "content": "PEG",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703241302017",
+          "questionId": "1809063692197826579",
+          "content": "铝盐沉淀",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703249690625",
+          "questionId": "1809063692197826579",
+          "content": "超滤",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703253884929",
+          "questionId": "1809063692197826579",
+          "content": "磁珠法",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703258079233",
+          "questionId": "1809063692197826579",
+          "content": "裂解法",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826580",
+      "type": 3,
+      "level": 2,
+      "content": "美国环保署局ChristianG.Daughton博士首次提出污水流行病学概念。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703266467841",
+          "questionId": "1809063692197826580",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703270662146",
+          "questionId": "1809063692197826580",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692197826581",
+      "type": 3,
+      "level": 2,
+      "content": "我国新冠病毒多渠道监测预警体系包括抗原检测、发热门诊监测、污水监测、哨点医院监测、病毒变异监测、疫苗接种监测、住院诊疗情况监测。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703274856449",
+          "questionId": "1809063692197826581",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703279050753",
+          "questionId": "1809063692197826581",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692202020864",
+      "type": 3,
+      "level": 2,
+      "content": "美国于2020年9月启动国家污水监测系统（NWSS），监测污水中的病毒（新冠、猴痘和甲型流感病毒）和细菌。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703283245057",
+          "questionId": "1809063692202020864",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703291633665",
+          "questionId": "1809063692202020864",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692202020865",
+      "type": 3,
+      "level": 2,
+      "content": "污水流行病学起源于违禁药品的消费调查。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703295827970",
+          "questionId": "1809063692202020865",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703300022274",
+          "questionId": "1809063692202020865",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692202020866",
+      "type": 3,
+      "level": 2,
+      "content": "污水流行病学的研究对象是市政污水。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703304216577",
+          "questionId": "1809063692202020866",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703308410882",
+          "questionId": "1809063692202020866",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1809063692202020867",
+      "type": 3,
+      "level": 2,
+      "content": "适宜的生物标志物需要有较大的水溶解度，具有较大的颗粒物水分配系数，不易被污水中的悬浮颗粒物吸附。（）",
+      "createTime": "2024-07-05 11:16:10",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1809063703312605185",
+          "questionId": "1809063692202020867",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1809063703316799490",
+          "questionId": "1809063692202020867",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032192",
+      "type": 2,
+      "level": 2,
+      "content": "世卫组织发布的突发公共卫生事件快速风险评估文件中指出，某一事件的风险水平取决于：",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737253654530",
+          "questionId": "1815559737153032192",
+          "content": "可能（或已知）的危害",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737270431745",
+          "questionId": "1815559737153032192",
+          "content": "暴露于危害的可能性",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737274626050",
+          "questionId": "1815559737153032192",
+          "content": "事件发生的背景",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737278820353",
+          "questionId": "1815559737153032192",
+          "content": "事件发生的不确定性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032193",
+      "type": 2,
+      "level": 2,
+      "content": "全球传染病监测预警的系统性思维包括哪些方面。",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737287208961",
+          "questionId": "1815559737153032193",
+          "content": "信息驱动层",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737291403266",
+          "questionId": "1815559737153032193",
+          "content": "援外输出层",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737295597570",
+          "questionId": "1815559737153032193",
+          "content": "产品加工层",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737303986178",
+          "questionId": "1815559737153032193",
+          "content": "国内服务层",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032194",
+      "type": 2,
+      "level": 2,
+      "content": "全球传染病监测事件信息来源可以包括。",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737308180481",
+          "questionId": "1815559737153032194",
+          "content": "世卫组织EIOS",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737312374785",
+          "questionId": "1815559737153032194",
+          "content": "加拿大GPHIN",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737316569090",
+          "questionId": "1815559737153032194",
+          "content": "国际传染病学会ProMED-mail",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737320763394",
+          "questionId": "1815559737153032194",
+          "content": "美国波士顿儿童医院HealthMap",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737324957697",
+          "questionId": "1815559737153032194",
+          "content": "联合国人道协调厅ReliefWeb",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737329152001",
+          "questionId": "1815559737153032194",
+          "content": "国际组织以及国家政府网站",
+          "analysis": null,
+          "isRight": true,
+          "tag": "F",
+          "sort": 6,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032195",
+      "type": 2,
+      "level": 2,
+      "content": "风险矩阵法是风险描述的有效辅助工具，它包括哪些维度。",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737337540609",
+          "questionId": "1815559737153032195",
+          "content": "发生可能性",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737341734913",
+          "questionId": "1815559737153032195",
+          "content": "事件危害性",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737345929217",
+          "questionId": "1815559737153032195",
+          "content": "后果严重性",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737350123521",
+          "questionId": "1815559737153032195",
+          "content": "防控难易程度",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032196",
+      "type": 2,
+      "level": 2,
+      "content": "哪些人工智能技术会在传染病监测预警中发挥应用。",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737354317826",
+          "questionId": "1815559737153032196",
+          "content": "智能问答",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737358512129",
+          "questionId": "1815559737153032196",
+          "content": "语义理解",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737362706433",
+          "questionId": "1815559737153032196",
+          "content": "自动分类",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737366900738",
+          "questionId": "1815559737153032196",
+          "content": "智能搜索",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032197",
+      "type": 2,
+      "level": 2,
+      "content": "影响全球新冠疫情的影响因素包括哪些。",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737371095042",
+          "questionId": "1815559737153032197",
+          "content": "防控政策",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737375289346",
+          "questionId": "1815559737153032197",
+          "content": "人群移动",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737379483649",
+          "questionId": "1815559737153032197",
+          "content": "毒株变异",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737387872257",
+          "questionId": "1815559737153032197",
+          "content": "疫苗接种",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737392066561",
+          "questionId": "1815559737153032197",
+          "content": "气候变化",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032198",
+      "type": 3,
+      "level": 2,
+      "content": "全球传染病监测不能采用开源信息，需要依靠各国卫生部门的上报数据",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737396260865",
+          "questionId": "1815559737153032198",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737400455170",
+          "questionId": "1815559737153032198",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032199",
+      "type": 3,
+      "level": 2,
+      "content": "全球新发突发传染病监测预警平台需要依托多源数据融合以及人工智能技术的支撑",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737404649473",
+          "questionId": "1815559737153032199",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737408843778",
+          "questionId": "1815559737153032199",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032200",
+      "type": 3,
+      "level": 2,
+      "content": "世卫组织的EIOS监测系统包含来自ProMED-mail、Healthmap、GPHIN等多个数据源",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737413038082",
+          "questionId": "1815559737153032200",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737417232385",
+          "questionId": "1815559737153032200",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737153032201",
+      "type": 3,
+      "level": 2,
+      "content": "全球新发突发传染病监测预警平台不仅仅在风险识别方面发挥作用，也将为科研和科普发挥巨大作用",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737421426689",
+          "questionId": "1815559737153032201",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737425620993",
+          "questionId": "1815559737153032201",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737157226496",
+      "type": 3,
+      "level": 2,
+      "content": "疾病防控理念和智慧的输出，不是我国公共卫生援外的目标",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737429815297",
+          "questionId": "1815559737157226496",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737434009601",
+          "questionId": "1815559737157226496",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737157226497",
+      "type": 3,
+      "level": 2,
+      "content": "全球传染病智能化监测预警的核心与数据来源和质量关系不大，主要取决于模型算法",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737442398209",
+          "questionId": "1815559737157226497",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737446592513",
+          "questionId": "1815559737157226497",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737157226498",
+      "type": 3,
+      "level": 2,
+      "content": "全球新发突发传染病监测预警平台的建立和应用，将有助于我国参与全球卫生治理",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737454981122",
+          "questionId": "1815559737157226498",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737454981123",
+          "questionId": "1815559737157226498",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737157226499",
+      "type": 3,
+      "level": 2,
+      "content": "大语言模型不属于人工智能领域，目前还无法用于全球传染病的监测。",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737459175426",
+          "questionId": "1815559737157226499",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737463369730",
+          "questionId": "1815559737157226499",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1815559737157226500",
+      "type": 3,
+      "level": 2,
+      "content": "智能化的传染病监测，包括基于指标的传染病监测和基于事件的传染病监测。",
+      "createTime": "2024-07-23 09:29:07",
+      "updateTime": null,
+      "remark": null,
+      "analysis": "",
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1815559737467564034",
+          "questionId": "1815559737157226500",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1815559737471758338",
+          "questionId": "1815559737157226500",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585984",
+      "type": 1,
+      "level": 2,
+      "content": "下列哪项不是单病例预警的病种",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260169596930",
+          "questionId": "1816023260060585984",
+          "content": "肺炭疽",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260190568450",
+          "questionId": "1816023260060585984",
+          "content": "白喉",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260194762754",
+          "questionId": "1816023260060585984",
+          "content": "手足口病",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260198957057",
+          "questionId": "1816023260060585984",
+          "content": "学校肺结核",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585985",
+      "type": 1,
+      "level": 2,
+      "content": "用于应对传染病聚集或暴发、食物中毒、预防接种和预防服药群体性不良反应等的事件管理系统是",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260207345666",
+          "questionId": "1816023260060585985",
+          "content": "传染病自动预警系统",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260211539970",
+          "questionId": "1816023260060585985",
+          "content": "突发公共卫生事件报告系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260215734273",
+          "questionId": "1816023260060585985",
+          "content": "不明原因肺炎报告系统",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260219928577",
+          "questionId": "1816023260060585985",
+          "content": "专病强化监测系统",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585986",
+      "type": 1,
+      "level": 2,
+      "content": "下列哪项不是传染病五大症候群",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260224122882",
+          "questionId": "1816023260060585986",
+          "content": "呼吸道发热症候群",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260232511490",
+          "questionId": "1816023260060585986",
+          "content": "腹泻症候群",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260236705793",
+          "questionId": "1816023260060585986",
+          "content": "发热伴咳嗽症候群",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260240900097",
+          "questionId": "1816023260060585986",
+          "content": "脑膜脑炎症候群",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585987",
+      "type": 1,
+      "level": 2,
+      "content": "不属于传染病预测预警新技术方法应用范畴有",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260245094402",
+          "questionId": "1816023260060585987",
+          "content": "纸质报告系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260249288705",
+          "questionId": "1816023260060585987",
+          "content": "HEALTHMAP",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260253483010",
+          "questionId": "1816023260060585987",
+          "content": "D-MOSS",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260257677314",
+          "questionId": "1816023260060585987",
+          "content": "EPIWATCH",
+          "analysis": null,
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585988",
+      "type": 1,
+      "level": 2,
+      "content": "传染病多渠道监测预警主要数据来源不包括",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260261871617",
+          "questionId": "1816023260060585988",
+          "content": "传染病流行相关影响因素数据",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260266065922",
+          "questionId": "1816023260060585988",
+          "content": "海关出入境检疫数据",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260274454529",
+          "questionId": "1816023260060585988",
+          "content": "学校缺课数据",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260278648833",
+          "questionId": "1816023260060585988",
+          "content": "广告数据",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585989",
+      "type": 2,
+      "level": 2,
+      "content": "传染病监测的主要用途",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260282843137",
+          "questionId": "1816023260060585989",
+          "content": "识别传染病暴发或流行",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260287037442",
+          "questionId": "1816023260060585989",
+          "content": "发现并管理病例",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260291231746",
+          "questionId": "1816023260060585989",
+          "content": "评价干预措施",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260295426049",
+          "questionId": "1816023260060585989",
+          "content": "了解疫情趋势和三间分布特征",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260303814657",
+          "questionId": "1816023260060585989",
+          "content": "监测病原及其危险因素变化",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585990",
+      "type": 2,
+      "level": 2,
+      "content": "突发公共卫生事件报告系统的特征有",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260308008961",
+          "questionId": "1816023260060585990",
+          "content": "全国所有地区均需报告，包括传染病、食物中毒等各类事件",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260312203265",
+          "questionId": "1816023260060585990",
+          "content": "每类事件均有报告标准",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260316397569",
+          "questionId": "1816023260060585990",
+          "content": "不包括食物中毒事件",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260320591874",
+          "questionId": "1816023260060585990",
+          "content": "对于当地已经发生并由疾控机构开展调查后的突发公共卫生事件进行报告",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260324786177",
+          "questionId": "1816023260060585990",
+          "content": "可以作为公共卫生安全威胁发现的系统",
+          "analysis": null,
+          "isRight": false,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585991",
+      "type": 2,
+      "level": 2,
+      "content": "下列哪些属于我国现行传染病监测系统",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260328980481",
+          "questionId": "1816023260060585991",
+          "content": "法定传染病报告系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260333174785",
+          "questionId": "1816023260060585991",
+          "content": "食品安全事件报告系统",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260337369089",
+          "questionId": "1816023260060585991",
+          "content": "重点传染病强化监测系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260341563393",
+          "questionId": "1816023260060585991",
+          "content": "突发公共卫生事件报告系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260345757698",
+          "questionId": "1816023260060585991",
+          "content": "不明原因肺炎监测系统",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585992",
+      "type": 2,
+      "level": 2,
+      "content": "改进我国公共卫生安全监测预警思路有",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260358340609",
+          "questionId": "1816023260060585992",
+          "content": "完善立法，明确法律要求和责任",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260358340610",
+          "questionId": "1816023260060585992",
+          "content": "加强传染病实验室监测体系",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260362534913",
+          "questionId": "1816023260060585992",
+          "content": "提高医务人员的工作强度",
+          "analysis": null,
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260366729217",
+          "questionId": "1816023260060585992",
+          "content": "改进不明原因疾病和异常健康事件监测机制",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260370923521",
+          "questionId": "1816023260060585992",
+          "content": "疾控体系的改革、重塑与能力建设",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585993",
+      "type": 2,
+      "level": 2,
+      "content": "建立智慧化传染病预警多点触发机制的要素",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260375117826",
+          "questionId": "1816023260060585993",
+          "content": "监测和预警工作有刚性制度要求",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260379312130",
+          "questionId": "1816023260060585993",
+          "content": "有多元化的监测数据来源，且获取便利",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260383506433",
+          "questionId": "1816023260060585993",
+          "content": "数据处理技术和算法智能化",
+          "analysis": null,
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260387700738",
+          "questionId": "1816023260060585993",
+          "content": "背景噪音的剔除",
+          "analysis": null,
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260391895042",
+          "questionId": "1816023260060585993",
+          "content": "有风险研判、预警发布和容错的机制",
+          "analysis": null,
+          "isRight": true,
+          "tag": "E",
+          "sort": 5,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585994",
+      "type": 3,
+      "level": 2,
+      "content": "监测是预警的基础，预警即预测。",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260396089345",
+          "questionId": "1816023260060585994",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260400283649",
+          "questionId": "1816023260060585994",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585995",
+      "type": 3,
+      "level": 2,
+      "content": "法定传染病报告系统是最基本的传染病监测系统。",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260408672258",
+          "questionId": "1816023260060585995",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260412866562",
+          "questionId": "1816023260060585995",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585996",
+      "type": 3,
+      "level": 2,
+      "content": "传染病自动预警系统仅用于新发传染病预警，不能用于法定传染病预警。",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260421255170",
+          "questionId": "1816023260060585996",
+          "content": "正确",
+          "analysis": null,
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260421255171",
+          "questionId": "1816023260060585996",
+          "content": "错误",
+          "analysis": null,
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585997",
+      "type": 3,
+      "level": 2,
+      "content": "D-MOSS是一个实时登革热预报系统。",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260425449473",
+          "questionId": "1816023260060585997",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260429643777",
+          "questionId": "1816023260060585997",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1816023260060585998",
+      "type": 3,
+      "level": 2,
+      "content": "建立不明原因肺炎监测系统是为了发现和识别新发病毒性呼吸道传染病。",
+      "createTime": "2024-07-24 16:11:00",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1816023260433838081",
+          "questionId": "1816023260060585998",
+          "content": "正确",
+          "analysis": null,
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1816023260438032386",
+          "questionId": "1816023260060585998",
+          "content": "错误",
+          "analysis": null,
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818607517354192897",
+      "type": 1,
+      "level": 2,
+      "content": "<p>以下哪种技术被广泛用于传染病的实时监测和预测？</p>",
+      "createTime": "2024-07-31 19:19:55",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818607517417107458",
+          "questionId": "1818607517354192897",
+          "content": "传统调查",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818607517438078978",
+          "questionId": "1818607517354192897",
+          "content": "大数据分析",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818607517442273282",
+          "questionId": "1818607517354192897",
+          "content": "手动统计",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818607517446467586",
+          "questionId": "1818607517354192897",
+          "content": "文献回顾",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818607650959552513",
+      "type": 1,
+      "level": 2,
+      "content": "<p>机器学习在传染病预测中的主要作用是什么？</p>",
+      "createTime": "2024-07-31 19:20:27",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818607651018272769",
+          "questionId": "1818607650959552513",
+          "content": "收集数据",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818607651035049986",
+          "questionId": "1818607650959552513",
+          "content": "提供疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818607651039244289",
+          "questionId": "1818607650959552513",
+          "content": "识别模式并预测传播趋势",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818607651047632898",
+          "questionId": "1818607650959552513",
+          "content": "进行现场诊断",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818607773009604609",
+      "type": 1,
+      "level": 2,
+      "content": "<p>在传染病爆发时，社交媒体分析可以用来做什么？</p>",
+      "createTime": "2024-07-31 19:20:56",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818607773064130562",
+          "questionId": "1818607773009604609",
+          "content": "收集病患的个人信息",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818607773080907777",
+          "questionId": "1818607773009604609",
+          "content": "预测疫情的地理扩散和公众情绪",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818607773085102082",
+          "questionId": "1818607773009604609",
+          "content": "生产疫苗",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818607773089296386",
+          "questionId": "1818607773009604609",
+          "content": "医疗支援资源的分配",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818607905553805313",
+      "type": 1,
+      "level": 2,
+      "content": "<p>哪种工具能够帮助公共卫生部门实现对传染病的快速响应和决策支持？</p>",
+      "createTime": "2024-07-31 19:21:27",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818607905612525570",
+          "questionId": "1818607905553805313",
+          "content": "电子邮件",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818607905629302786",
+          "questionId": "1818607905553805313",
+          "content": "地理信息系统（GIS）",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818607905633497090",
+          "questionId": "1818607905553805313",
+          "content": "传真机",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818607905641885697",
+          "questionId": "1818607905553805313",
+          "content": "手工记录",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818608029701009409",
+      "type": 1,
+      "level": 2,
+      "content": "<p>通过遥感技术，科学家能够获得哪些类型的数据以帮助预测传染病的传播？</p>",
+      "createTime": "2024-07-31 19:21:57",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818608029759729665",
+          "questionId": "1818608029701009409",
+          "content": "社会经济数据",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818608029776506882",
+          "questionId": "1818608029701009409",
+          "content": "气候和环境数据",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818608029780701185",
+          "questionId": "1818608029701009409",
+          "content": "历史病例数据",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818608029789089793",
+          "questionId": "1818608029701009409",
+          "content": "个人健康档案",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818608164333973505",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在使用大数据技术进行传染病预测时，以下哪些数据源是重要的？</p>",
+      "createTime": "2024-07-31 19:22:29",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818608164388499458",
+          "questionId": "1818608164333973505",
+          "content": "医疗机构的病例报告",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818608164405276674",
+          "questionId": "1818608164333973505",
+          "content": "社交媒体上的话题和趋势",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818608164409470977",
+          "questionId": "1818608164333973505",
+          "content": "气象数据",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818608164413665281",
+          "questionId": "1818608164333973505",
+          "content": "政府的经济统计数据",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818608384857894913",
+      "type": 2,
+      "level": 2,
+      "content": "<p>以下哪些新兴技术能够有效提高传染病监测的准确性和及时性？</p>",
+      "createTime": "2024-07-31 19:23:22",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818608384916615170",
+          "questionId": "1818608384857894913",
+          "content": "人工智能与机器学习",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818608384937586689",
+          "questionId": "1818608384857894913",
+          "content": "无人机技术",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818608384941780993",
+          "questionId": "1818608384857894913",
+          "content": "区块链技术",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818608384950169602",
+          "questionId": "1818608384857894913",
+          "content": "虚拟现实技术",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818608537476034561",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在疫情决策支持系统中，以下哪些方法可以用于预测疫情传播？</p>",
+      "createTime": "2024-07-31 19:23:58",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818608537534754817",
+          "questionId": "1818608537476034561",
+          "content": "传染病数学模型",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818608537551532033",
+          "questionId": "1818608537476034561",
+          "content": "人口流动分析",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818608537559920641",
+          "questionId": "1818608537476034561",
+          "content": "机器视觉技术",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818608537564114946",
+          "questionId": "1818608537476034561",
+          "content": "深度学习算法",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818608671148503041",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在利用物联网（IoT）技术进行健康监测时，以下哪些设备可以被用于收集数据？</p>",
+      "createTime": "2024-07-31 19:24:30",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818608671203028994",
+          "questionId": "1818608671148503041",
+          "content": "健康监测手环",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818608671219806210",
+          "questionId": "1818608671148503041",
+          "content": "智能温度计",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818608671224000513",
+          "questionId": "1818608671148503041",
+          "content": "常规医疗设备",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818608671232389121",
+          "questionId": "1818608671148503041",
+          "content": "医用监护仪",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818608816900567041",
+      "type": 2,
+      "level": 2,
+      "content": "<p>以下哪些措施可以在传染病预测和预警中增强公共卫生的响应能力？</p>",
+      "createTime": "2024-07-31 19:25:05",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818608816959287297",
+          "questionId": "1818608816900567041",
+          "content": "实时数据共享平台",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818608816967675906",
+          "questionId": "1818608816900567041",
+          "content": "社区参与的健康行动",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818608816980258817",
+          "questionId": "1818608816900567041",
+          "content": "做好疾病统计报告",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818608816988647426",
+          "questionId": "1818608816900567041",
+          "content": "研究新药物的开发",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818608892406427649",
+      "type": 3,
+      "level": 2,
+      "content": "<p>使用基因组测序技术可以快速识别传染病病原体。</p>",
+      "createTime": "2024-07-31 19:25:23",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818608892460953601",
+          "questionId": "1818608892406427649",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818608892477730818",
+          "questionId": "1818608892406427649",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818608953030897666",
+      "type": 3,
+      "level": 2,
+      "content": "<p>传统的流行病学调查方法在传染病预测中比大数据分析更加有效。</p>",
+      "createTime": "2024-07-31 19:25:37",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818608953081229314",
+          "questionId": "1818608953030897666",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818608953098006529",
+          "questionId": "1818608953030897666",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818609018826944513",
+      "type": 3,
+      "level": 2,
+      "content": "<p>社交媒体数据无法提供关于传染病传播的有价值信息。</p>",
+      "createTime": "2024-07-31 19:25:53",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818609018885664769",
+          "questionId": "1818609018826944513",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818609018902441986",
+          "questionId": "1818609018826944513",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818609075508768769",
+      "type": 3,
+      "level": 2,
+      "content": "<p>区块链技术可以用于确保传染病相关数据的安全和透明。</p>",
+      "createTime": "2024-07-31 19:26:06",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818609075571683329",
+          "questionId": "1818609075508768769",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818609075588460545",
+          "questionId": "1818609075508768769",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818609125391626242",
+      "type": 3,
+      "level": 2,
+      "content": "<p>只需要人工收集数据就能有效进行传染病的预测与预警。</p>",
+      "createTime": "2024-07-31 19:26:18",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818609125441957890",
+          "questionId": "1818609125391626242",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818609125462929410",
+          "questionId": "1818609125391626242",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818609898196332545",
+      "type": 1,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件主要用于哪个方面的监测？</p>",
+      "createTime": "2024-07-31 19:29:23",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818609898263441409",
+          "questionId": "1818609898196332545",
+          "content": "环境污染",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818609898284412929",
+          "questionId": "1818609898196332545",
+          "content": "交通安全",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818609898288607234",
+          "questionId": "1818609898196332545",
+          "content": "传染病疫情",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818609898296995842",
+          "questionId": "1818609898196332545",
+          "content": "食品安全",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818610071815352322",
+      "type": 1,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件通常结合哪些技术来进行工作？</p>",
+      "createTime": "2024-07-31 19:30:04",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818610071874072577",
+          "questionId": "1818610071815352322",
+          "content": "大数据分析和人工智能",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818610071895044097",
+          "questionId": "1818610071815352322",
+          "content": "虚拟现实技术",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818610071899238401",
+          "questionId": "1818610071815352322",
+          "content": "区块链技术",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818610071907627009",
+          "questionId": "1818610071815352322",
+          "content": "量子计算",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818610206767083522",
+      "type": 1,
+      "level": 2,
+      "content": "<p>以下哪个功能是国家传染病智能监测预警前置软件的核心功能？</p>",
+      "createTime": "2024-07-31 19:30:36",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818610206829998082",
+          "questionId": "1818610206767083522",
+          "content": "经济数据分析",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818610206850969601",
+          "questionId": "1818610206767083522",
+          "content": "交通流量监测",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818610206855163906",
+          "questionId": "1818610206767083522",
+          "content": "疫情数据分析与预警",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818610206859358209",
+          "questionId": "1818610206767083522",
+          "content": "天气预报",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818610380293828610",
+      "type": 1,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件部署应用的底线原则是什么？</p>",
+      "createTime": "2024-07-31 19:31:17",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818610380356743170",
+          "questionId": "1818610380293828610",
+          "content": "逐级数据推送",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818610380373520386",
+          "questionId": "1818610380293828610",
+          "content": " 国家与省两级平台数据交换",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818610380381908994",
+          "questionId": "1818610380293828610",
+          "content": "网络直报（电子病历原始数据采集）",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818610380386103298",
+          "questionId": "1818610380293828610",
+          "content": "医院清洗数据后推送",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818610518433230849",
+      "type": 1,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件在疫情监测中，最重要的业务目标是什么？</p>",
+      "createTime": "2024-07-31 19:31:50",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818610518491951105",
+          "questionId": "1818610518433230849",
+          "content": "提高公共卫生人员的工作效率",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818610518508728321",
+          "questionId": "1818610518433230849",
+          "content": "智能疫情报告与风险提醒",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818610518517116930",
+          "questionId": "1818610518433230849",
+          "content": "美化信息展示界面",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818610518521311233",
+          "questionId": "1818610518433230849",
+          "content": "促进科研成果转化",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "单选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818610654597115906",
+      "type": 2,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件可以应用于哪些领域？</p>",
+      "createTime": "2024-07-31 19:32:23",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818610654655836162",
+          "questionId": "1818610654597115906",
+          "content": "公共卫生管理",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818610654676807682",
+          "questionId": "1818610654597115906",
+          "content": "传染病监测与防控",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818610654681001986",
+          "questionId": "1818610654597115906",
+          "content": "医防数据融合与工作协同",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818610654685196289",
+          "questionId": "1818610654597115906",
+          "content": "教育资源分配",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818610802295336961",
+      "type": 2,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件使用哪些数据来源进行分析？</p>",
+      "createTime": "2024-07-31 19:32:58",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818610802349862914",
+          "questionId": "1818610802295336961",
+          "content": "医疗机构电子病历（EMR）的数据",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818610802370834434",
+          "questionId": "1818610802295336961",
+          "content": "政府部门的人口统计数据",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818610802375028738",
+          "questionId": "1818610802295336961",
+          "content": "社交媒体舆情数据",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818610802379223041",
+          "questionId": "1818610802295336961",
+          "content": "其它相关部门的协同共享数据",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818610991059988482",
+      "type": 2,
+      "level": 2,
+      "content": "<p>在疫情监测中，国家传染病智能监测预警前置软件提供哪些功能？</p>",
+      "createTime": "2024-07-31 19:33:43",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818610991118708737",
+          "questionId": "1818610991059988482",
+          "content": "实时数据监测",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818610991139680258",
+          "questionId": "1818610991059988482",
+          "content": "动态风险评估",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818610991143874562",
+          "questionId": "1818610991059988482",
+          "content": "公众健康教育",
+          "analysis": "",
+          "isRight": false,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818610991152263170",
+          "questionId": "1818610991059988482",
+          "content": "风险预警提醒",
+          "analysis": "",
+          "isRight": true,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818611178734120962",
+      "type": 2,
+      "level": 2,
+      "content": "<p>影响国家传染病智能监测预警前置软件准确性的数据因素有哪些？</p>",
+      "createTime": "2024-07-31 19:34:28",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818611178788646913",
+          "questionId": "1818611178734120962",
+          "content": "EMR数据交互的及时性和完整性",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818611178805424129",
+          "questionId": "1818611178734120962",
+          "content": "EMR数据的标准化程度",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818611178809618433",
+          "questionId": "1818611178734120962",
+          "content": "医院外送病原检测结果数据的缺失",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818611178818007042",
+          "questionId": "1818611178734120962",
+          "content": "数据处理算法的复杂性",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818611318706434049",
+      "type": 2,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件可以通过哪些方式与相关部门与人员提供信息交互？</p>",
+      "createTime": "2024-07-31 19:35:01",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818611318765154306",
+          "questionId": "1818611318706434049",
+          "content": "医院调用API接口实时推送",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818611318786125825",
+          "questionId": "1818611318706434049",
+          "content": "通过电子疾病档案（EDR）赋能提醒",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        },
+        {
+          "id": "1818611318790320130",
+          "questionId": "1818611318706434049",
+          "content": "移动应用程序工作协同",
+          "analysis": "",
+          "isRight": true,
+          "tag": "C",
+          "sort": 3,
+          "pathScore": null
+        },
+        {
+          "id": "1818611318798708738",
+          "questionId": "1818611318706434049",
+          "content": "社交媒体发布",
+          "analysis": "",
+          "isRight": false,
+          "tag": "D",
+          "sort": 4,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "多选题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818611379997798401",
+      "type": 3,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件只针对特定的传染病进行监测。</p>",
+      "createTime": "2024-07-31 19:35:16",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818611380052324353",
+          "questionId": "1818611379997798401",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818611380069101570",
+          "questionId": "1818611379997798401",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818611443663138817",
+      "type": 3,
+      "level": 2,
+      "content": "<p>人工智能模型训练与应用可以帮助识别潜在的疑似传染病风险病例。</p>",
+      "createTime": "2024-07-31 19:35:31",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818611443713470466",
+          "questionId": "1818611443663138817",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818611443734441986",
+          "questionId": "1818611443663138817",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818611503096426497",
+      "type": 3,
+      "level": 2,
+      "content": "<p>该软件的可视化展示功能能够帮助用户更好地理解疫情监测数据和监测系统的运行状况。</p>",
+      "createTime": "2024-07-31 19:35:45",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818611503150952449",
+          "questionId": "1818611503096426497",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818611503167729666",
+          "questionId": "1818611503096426497",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818611613800886274",
+      "type": 3,
+      "level": 2,
+      "content": "<p>国家传染病智能监测预警前置软件主要依靠手动输入数据来进行监测。</p>",
+      "createTime": "2024-07-31 19:36:12",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818611613851217921",
+          "questionId": "1818611613800886274",
+          "content": "正确",
+          "analysis": "",
+          "isRight": false,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818611613872189441",
+          "questionId": "1818611613800886274",
+          "content": "错误",
+          "analysis": "",
+          "isRight": true,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    },
+    {
+      "id": "1818611671153799169",
+      "type": 3,
+      "level": 2,
+      "content": "<p>疫情预警报告可以通过国家传染病智能监测预警前置软件自动生成。</p>",
+      "createTime": "2024-07-31 19:36:25",
+      "updateTime": null,
+      "remark": null,
+      "analysis": null,
+      "repositoryId": "1807255375540510721",
+      "answerOrder": null,
+      "repositoryName": null,
+      "score": null,
+      "answerList": [
+        {
+          "id": "1818611671204130817",
+          "questionId": "1818611671153799169",
+          "content": "正确",
+          "analysis": "",
+          "isRight": true,
+          "tag": "A",
+          "sort": 1,
+          "pathScore": null
+        },
+        {
+          "id": "1818611671225102337",
+          "questionId": "1818611671153799169",
+          "content": "错误",
+          "analysis": "",
+          "isRight": false,
+          "tag": "B",
+          "sort": 2,
+          "pathScore": null
+        }
+      ],
+      "questionNum": null,
+      "type_dictText": "判断题",
+      "level_dictText": "一般"
+    }
+  ],
+  "total": 105,
+  "size": 500,
+  "current": 1,
+  "orders": [],
+  "optimizeCountSql": true,
+  "searchCount": true,
+  "maxLimit": null,
+  "countId": null,
+  "pages": 1
+}

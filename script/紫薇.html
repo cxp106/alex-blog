@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iztro - 专业紫微斗数排盘</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/iztro/dist/iztro.min.js"></script>
+
+    <style>
+      :root {
+        --bg-color: #1a1a1a;
+        --panel-bg: #2c2c2c;
+        --border-color: #444;
+        --text-color: #e0e0e0;
+        --text-secondary: #a0a0a0;
+        --primary-color: #d4af37;
+        --major-star-color: #ffdd57;
+        --soft-star-color: #63cdda;
+        --tough-star-color: #ff7675;
+        --lucun-star-color: #f0c94b;
+        --tianma-star-color: #f0c94b;
+        --adjective-star-color: #b8b8b8;
+        --flower-star-color: #fd79a8;
+        --helper-star-color: #55efc4;
+        --level-bright-color: #ff6348;
+        --level-gain-color: #f0c94b;
+        --level-peace-color: #dcdde1;
+        --level-uneven-color: #74b9ff;
+        --level-trap-color: #8395a7;
+        --font-main: "Noto Serif SC", serif;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      body {
+        font-family: var(--font-main);
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        display: flex;
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+      .container {
+        display: flex;
+        width: 100%;
+        flex-grow: 1;
+      }
+      .controls-panel {
+        width: 380px;
+        flex-shrink: 0;
+        background-color: var(--panel-bg);
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        overflow-y: auto;
+        border-right: 1px solid var(--border-color);
+      }
+      .chart-panel {
+        flex-grow: 1;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .title {
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--primary-color);
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      .input-group {
+        margin-bottom: 15px;
+      }
+      .input-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: var(--text-secondary);
+        font-size: 14px;
+      }
+      .input-group input,
+      .input-group select,
+      #user-question {
+        width: 100%;
+        padding: 10px;
+        background: #333;
+        border: 1px solid var(--border-color);
+        color: var(--text-color);
+        border-radius: 4px;
+        font-family: inherit;
+        font-size: 16px;
+      }
+      #lunar-calendar-label {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        user-select: none;
+      }
+      #lunar-calendar {
+        width: 18px;
+        height: 18px;
+        margin-right: 8px;
+      }
+      .options-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      #analyze-button {
+        width: 100%;
+        padding: 12px;
+        background: var(--primary-color);
+        color: #111;
+        border: none;
+        border-radius: 4px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-bottom: 20px;
+      }
+      #analyze-button:hover {
+        background: #f0c94b;
+      }
+      #analyze-button:disabled {
+        background: #555;
+        cursor: not-allowed;
+        color: #888;
+      }
+      #analysis-result {
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border-color);
+        white-space: pre-wrap;
+        line-height: 1.8;
+        font-size: 15px;
+        flex-grow: 1;
+      }
+      #analysis-result:empty::before {
+        content: "AI分析结果将显示于此...";
+        color: var(--text-secondary);
+        font-style: italic;
+      }
+      #chart-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        width: 100%;
+        max-width: 900px;
+        aspect-ratio: 1 / 1;
+        border: 2px solid var(--border-color);
+        background-color: var(--panel-bg);
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+      #chart-grid.visible {
+        opacity: 1;
+      }
+      .palace-box {
+        border: 1px solid var(--border-color);
+        padding: 5px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+        line-height: 1.4;
+      }
+      .tianpan-info {
+        grid-column: 2 / 4;
+        grid-row: 2 / 4;
+        background: #222;
+        border: 1px solid var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        text-align: center;
+      }
+      .tianpan-info .info-block {
+        margin: 5px 0;
+      }
+      .tianpan-info .info-block div {
+        margin: 2px 0;
+      }
+      .tianpan-info .info-label {
+        color: var(--text-secondary);
+      }
+      .palace-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 4px;
+      }
+      .palace-name-container {
+        display: flex;
+        align-items: center;
+      }
+      .palace-name {
+        font-weight: bold;
+        font-size: 16px;
+        color: var(--primary-color);
+      }
+      .palace-id-tag {
+        font-size: 10px;
+        background-color: var(--primary-color);
+        color: var(--panel-bg);
+        padding: 1px 3px;
+        border-radius: 2px;
+        margin-left: 5px;
+        font-weight: bold;
+      }
+      .palace-gz {
+        color: var(--text-secondary);
+        font-size: 12px;
+      }
+      .stars-container {
+        flex-grow: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2px 8px;
+        align-content: flex-start;
+      }
+      .star {
+        font-size: 14px;
+        display: flex;
+        align-items: baseline;
+      }
+      .star-name {
+        padding-right: 2px;
+      }
+      .star-level {
+        font-size: 10px;
+      }
+      .mutagen {
+        font-size: 10px;
+        color: #ff4757;
+        font-weight: bold;
+        margin-left: 2px;
+      }
+      .star.major {
+        color: var(--major-star-color);
+        font-weight: bold;
+      }
+      .star.soft {
+        color: var(--soft-star-color);
+      }
+      .star.tough {
+        color: var(--tough-star-color);
+      }
+      .star.lucun,
+      .star.tianma {
+        color: var(--lucun-star-color);
+      }
+      .star.adjective {
+        color: var(--adjective-star-color);
+      }
+      .star.flower {
+        color: var(--flower-star-color);
+      }
+      .star.helper {
+        color: var(--helper-star-color);
+      }
+      .star-level.旺,
+      .star-level.庙 {
+        color: var(--level-bright-color);
+      }
+      .star-level.得,
+      .star-level.利 {
+        color: var(--level-gain-color);
+      }
+      .star-level.平 {
+        color: var(--level-peace-color);
+      }
+      .star-level.不 {
+        color: var(--level-uneven-color);
+      }
+      .star-level.陷 {
+        color: var(--level-trap-color);
+      }
+      .palace-footer {
+        margin-top: auto;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2px;
+        font-size: 10px;
+        color: var(--text-secondary);
+        padding-top: 4px;
+        border-top: 1px solid var(--border-color);
+      }
+      @media (max-width: 1200px) {
+        .controls-panel {
+          width: 320px;
+        }
+      }
+      @media (max-width: 992px) {
+        .container {
+          flex-direction: column;
+        }
+        .controls-panel {
+          width: 100%;
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid var(--border-color);
+        }
+        .chart-panel {
+          padding: 20px 10px;
+        }
+        #chart-grid {
+          max-width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HTML 结构不变 -->
+      <div class="controls-panel">
+        <h1 class="title">紫微斗数・智能解读</h1>
+        <div class="input-section">
+          <div class="input-group">
+            <label for="birth-year" id="year-label">公历年份</label><input type="number" id="birth-year" placeholder="例如：1995" />
+          </div>
+          <div class="input-group"><label for="birth-month">月份</label><input type="number" id="birth-month" placeholder="1-12" /></div>
+          <div class="input-group"><label for="birth-day">日期</label><input type="number" id="birth-day" placeholder="1-31" /></div>
+          <div class="input-group">
+            <label for="birth-hour">时间 (24 小时制)</label><input type="number" id="birth-hour" placeholder="0-23" />
+          </div>
+          <div class="options-group">
+            <div class="input-group">
+              <label for="gender">性别</label
+              ><select id="gender">
+                <option value="男" selected>男</option>
+                <option value="女">女</option>
+              </select>
+            </div>
+            <div class="input-group">
+              <label id="lunar-calendar-label" for="lunar-calendar"><input type="checkbox" id="lunar-calendar" /> 使用农历</label>
+            </div>
+          </div>
+          <div class="input-group">
+            <label for="user-question">您的问题 (选填)</label
+            ><textarea id="user-question" rows="3" placeholder="例如：请分析我的事业格局和财运走向。"></textarea>
+          </div>
+          <button id="analyze-button">立即排盘并分析</button>
+        </div>
+        <div id="analysis-result"></div>
+      </div>
+      <div class="chart-panel"><div id="chart-grid"></div></div>
+    </div>
+    <script>
+      const palaceGridOrder = [3, 4, 5, 6, 2, -1, 7, 1, 8, 0, 9, 11, 10]
+      const analyzeButton = document.getElementById("analyze-button")
+      const chartGrid = document.getElementById("chart-grid")
+      // ... 其他常量和事件监听不变 ...
+
+      analyzeButton.addEventListener("click", () => {
+        // ... 主逻辑不变，确保能获取到 astrolabeData ...
+        const year = document.getElementById("birth-year").value,
+          month = document.getElementById("birth-month").value,
+          day = document.getElementById("birth-day").value,
+          hour = document.getElementById("birth-hour").value,
+          gender = document.getElementById("gender").value,
+          isLunar = document.getElementById("lunar-calendar").checked
+        if (!year || !month || !day || hour === "") {
+          alert("请输入完整的出生年月日时！")
+          return
+        }
+        if (parseInt(hour) < 0 || parseInt(hour) > 23) {
+          alert("请输入有效的小时 (0-23)")
+          return
+        }
+        setLoadingState(true)
+        setTimeout(() => {
+          try {
+            let astrolabeData
+            const timeIndex = Math.floor(parseInt(hour) / 2)
+            if (isLunar) {
+              astrolabeData = iztro.astro.byLunar(`${year}-${month}-${day}`, timeIndex, gender, false, true, "zh-CN")
+            } else {
+              astrolabeData = iztro.astro.bySolar(`${year}-${month}-${day}`, timeIndex, gender, true, "zh-CN")
+            }
+            if (!astrolabeData || !Array.isArray(astrolabeData.palaces) || astrolabeData.palaces.length === 0) {
+              throw new Error("无法生成有效的命盘数据。请仔细检查您的输入是否为真实存在的日期。")
+            }
+            renderChart(astrolabeData)
+            const userQuestion =
+              document.getElementById("user-question").value ||
+              "请作为一位专业的紫微斗数大师，为我详细解读命盘。请分析我的性格特质、事业格局、财富状况、感情婚姻，并针对我未来十年的大运运势提供建议，指出关键的流年节点，并给出趋吉避凶的开运方法。"
+            analyzeWithLLM(astrolabeData, userQuestion)
+          } catch (error) {
+            console.error("排盘失败：", error)
+            alert(`排盘失败：${error.message}`)
+            setLoadingState(false)
+          }
+        }, 50)
+      })
+
+      function setLoadingState(isLoading) {
+        analyzeButton.disabled = isLoading
+        if (isLoading) {
+          analyzeButton.textContent = "分析中..."
+          document.getElementById("analysis-result").innerHTML = ""
+          chartGrid.innerHTML = ""
+          chartGrid.classList.remove("visible")
+        } else {
+          analyzeButton.textContent = "立即排盘并分析"
+        }
+      }
+
+      function renderChart(data) {
+        chartGrid.innerHTML = ""
+        chartGrid.classList.remove("visible")
+
+        // 【真理渲染 - 天盘】
+        const tianpanInfo = document.createElement("div")
+        tianpanInfo.className = "tianpan-info"
+        tianpanInfo.innerHTML = `
+                <div class="info-block">
+                    <div><span class="info-label">阳历：</span>${data.solarDate || ""}</div>
+                    <div><span class="info-label">农历：</span>${data.lunarDate || ""} ${data.time || ""}</div>
+                    <div><span class="info-label">四柱：</span>${data.chineseDate || ""}</div>
+                </div>
+                <div class="info-block">
+                    <div>${data.gender || ""} | ${data.zodiac || ""} | ${data.sign || ""}</div>
+                    <div><span class="info-label">五行：</span>${data.fiveElementsClass || ""}</div>
+                </div>
+                <div class="info-block">
+                    <div><span class="info-label">命主：</span>${data.soul || ""}</div>
+                    <div><span class="info-label">身主：</span>${data.body || ""}</div>
+                </div>
+            `
+
+        const palaceElements = []
+        data.palaces.forEach((palace) => {
+          let starsHTML = ""
+          const allStars = [...(palace.majorStars ?? []), ...(palace.minorStars ?? []), ...(palace.adjectiveStars ?? [])]
+
+          allStars.forEach((star) => {
+            const type = star.type || "adjective" // 默认类型
+            const brightness = star.brightness || ""
+            const mutagen = star.mutagen || ""
+            starsHTML += `<div class="star ${type}">
+                                    <span class="star-name">${star.name}</span>
+                                    ${mutagen ? `<span class="mutagen">${mutagen}</span>` : ""}
+                                    ${brightness ? `<span class="star-level ${brightness}">${brightness}</span>` : ""}
+                                 </div>`
+          })
+
+          const palaceDiv = document.createElement("div")
+          palaceDiv.className = "palace-box"
+          palaceDiv.innerHTML = `
+                    <div class="palace-header">
+                        <div class="palace-name-container">
+                            <span class="palace-name">${palace.name}</span>
+                            ${palace.isBodyPalace ? '<span class="palace-id-tag">身宫</span>' : ""}
+                        </div>
+                        <span class="palace-gz">${palace.heavenlyStem}${palace.earthlyBranch}</span>
+                    </div>
+                    <div class="stars-container">${starsHTML}</div>
+                    <div class="palace-footer">
+                        <span>${palace.changsheng12 || ""}</span>
+                        <span>${palace.boshi12 || ""}</span>
+                        <span>${palace.jiangqian12 || ""}</span>
+                        <span>${palace.suiqian12 || ""}</span>
+                        <span>大限：${palace.decadal?.range.join("-") || ""}</span>
+                        <span>小限：${palace.ages?.[0] || ""}</span>
+                    </div>
+                `
+          palaceElements[palace.index] = palaceDiv
+        })
+
+        // 按正确顺序插入
+        let tianpanInserted = false
+        palaceGridOrder.forEach((palaceIndex) => {
+          if (palaceIndex === -1) {
+            if (!tianpanInserted) {
+              chartGrid.appendChild(tianpanInfo)
+              tianpanInserted = true
+            }
+          } else {
+            if (palaceElements[palaceIndex]) {
+              chartGrid.appendChild(palaceElements[palaceIndex])
+            }
+          }
+        })
+        setTimeout(() => chartGrid.classList.add("visible"), 50)
+      }
+
+      // LLM 分析函数保持不变
+      async function analyzeWithLLM(astrolabeData, userQuestion) {
+        const apiUrl = "https://open.bigmodel.cn/api/paas/v4/chat/completions",
+          apiKey = "45ac2f99ee5a49e1867ccfeaf82520be.kLKYvSQU1myKDbW6",
+          llmModel = "glm-4-flash",
+          systemPrompt = `你是一位精通紫微斗数的智慧大师。你的任务是基于提供的 JSON 格式命盘数据，为用户提供深刻、清晰且富有同理心的命理分析。请遵循以下规则：\n1.  **解读风格**: 语言既要专业严谨，又要通俗易懂，避免使用过于晦涩的术语。分析需客观中立，多给予建设性意见。\n2.  **结构化输出**: 回答应有逻辑、有层次。可以先概括命盘核心结构（如命宫主星、命主、身主），然后根据用户问题分点详细论述（如性格、事业、财运、感情等）。\n3.  **结合数据**: 你的每一句论断都必须紧密结合命盘数据（如“因为你的命宫主星是七杀，所以...”、“财帛宫有化禄，代表...”）。\n4.  **结尾提示**: 在分析的最后，必须加上一段话：“温馨提示：此分析仅为紫微斗数命理模型的参考，旨在提供一种认知自我、规划人生的视角。命运始终掌握在自己手中，积极的行动和善良的心态才是创造美好未来的关键。”\n5.  **语言**: 使用与用户问题相同的语言（中文）进行回答。`,
+          prompt = `紫微斗数命盘数据如下：\n${JSON.stringify(astrolabeData)}\n\n请根据以上命盘，仔细回答用户的问题：\n${userQuestion}`
+        try {
+          const e = await fetch(apiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json", Authorization: `Bearer ${apiKey}` },
+            body: JSON.stringify({
+              model: llmModel,
+              messages: [
+                { role: "system", content: systemPrompt },
+                { role: "user", content: prompt },
+              ],
+            }),
+          })
+          if (!e.ok) {
+            const t = await e.text()
+            throw new Error(`API 请求失败：${e.status} - ${t}`)
+          }
+          const t = await e.json()
+          document.getElementById("analysis-result").innerText = t.choices[0].message.content
+        } catch (e) {
+          console.error("LLM 分析失败：", e),
+            (document.getElementById("analysis-result").innerText = `分析出错，请稍后重试。\n错误详情：${e.message}`)
+        } finally {
+          setLoadingState(!1)
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>二十四节气养生宝典</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- 引入 lunar-javascript 库 -->
+    <script src="https://s4.zstatic.net/ajax/libs/lunar-javascript/1.7.0/lunar.min.js"></script>
+    <script>
+      console.log(Lunar.fromDate(new Date()).toFullString())
+      console.log(Solar.fromYmd(2016, 1, 1).toFullString())
+
+      console.log(HolidayUtil.getHoliday(2020, 5, 2) + "")
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap");
+
+      body {
+        font-family: "Noto Sans SC", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-color: #fdfbf6;
+        color: #3a3a3a;
+      }
+
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .printable-content {
+          box-shadow: none !important;
+          border: none !important;
+        }
+        body {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+        .current-actual-term-badge {
+          display: none !important;
+        } /* 打印时可隐藏实时标记 */
+      }
+
+      .solar-term-card {
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        border: 2px solid transparent; /* 默认透明边框 */
+        position: relative;
+        background-color: #fff; /* 默认白色背景，让季节色更突出 */
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -1px rgba(0, 0, 0, 0.04); /* 更柔和的默认阴影 */
+      }
+
+      /* 增强的季节性视觉 - 直接作用于卡片 */
+      .solar-term-card.season-spring {
+        border-left-width: 5px; /* 左侧厚边框作为季节指示 */
+        border-left-color: rgba(74, 222, 128, 0.7); /* green-400 with alpha */
+        background-image: linear-gradient(to top right, rgba(240, 253, 244, 0.5), rgba(220, 252, 231, 0.3)); /* subtle green gradient */
+      }
+      .solar-term-card.season-spring .seasonal-text {
+        color: #16a34a; /* green-600 */
+      }
+
+      .solar-term-card.season-summer {
+        border-left-width: 5px;
+        border-left-color: rgba(250, 204, 21, 0.7); /* yellow-400 */
+        background-image: linear-gradient(to top right, rgba(254, 252, 232, 0.5), rgba(254, 249, 195, 0.3));
+      }
+      .solar-term-card.season-summer .seasonal-text {
+        color: #ca8a04; /* yellow-600 */
+      }
+
+      .solar-term-card.season-autumn {
+        border-left-width: 5px;
+        border-left-color: rgba(251, 146, 60, 0.7); /* orange-400 */
+        background-image: linear-gradient(to top right, rgba(255, 250, 245, 0.5), rgba(255, 237, 213, 0.3));
+      }
+      .solar-term-card.season-autumn .seasonal-text {
+        color: #c2410c; /* orange-600 */
+      }
+
+      .solar-term-card.season-winter {
+        border-left-width: 5px;
+        border-left-color: rgba(96, 165, 250, 0.7); /* blue-400 */
+        background-image: linear-gradient(to top right, rgba(239, 246, 255, 0.5), rgba(219, 234, 254, 0.3));
+      }
+      .solar-term-card.season-winter .seasonal-text {
+        color: #2563eb; /* blue-600 */
+      }
+
+      .solar-term-card:hover {
+        transform: translateY(-5px) scale(1.03);
+        box-shadow: 0 15px 30px -10px rgba(0, 0, 0, 0.15);
+        /* 悬浮时，边框颜色可以略微增强，或使用主题色 */
+        /* border-color: rgba(var(--seasonal-color-rgb), 0.7);  <-- 此处可能需要动态调整，或统一 */
+      }
+
+      /* 用户点击选中的活动节气 */
+      .solar-term-card.active-term {
+        /* transform: translateY(-2px) scale(1.01); */
+        /*border-color: rgb(var(--seasonal-color-rgb));*/ /* 使用 JS 设置的当前选中节气的主题色 */
+        /* box-shadow: 0 0 0 3px rgba(var(--seasonal-color-rgb), 0.25), 0 10px 20px -5px rgba(0, 0, 0, 0.15); */
+        /* background-color: white;  确保背景不会被覆盖太多，或调整为更亮的季节色 */
+      }
+      /* 当活动节气时，左侧季节指示边框保持其季节色，而整体边框变为选中色 */
+      .solar-term-card.active-term.season-spring {
+        border-left-color: rgba(74, 222, 128, 1);
+      }
+      .solar-term-card.active-term.season-summer {
+        border-left-color: rgba(250, 204, 21, 1);
+      }
+      .solar-term-card.active-term.season-autumn {
+        border-left-color: rgba(251, 146, 60, 1);
+      }
+      .solar-term-card.active-term.season-winter {
+        border-left-color: rgba(96, 165, 250, 1);
+      }
+
+      /* 当前实际所处的节气 */
+      .solar-term-card.current-actual-term {
+        /* 保持原有的 current-actual-term 边框样式，但要确保它能覆盖或和谐地与季节性左边框结合 */
+        /*border-width: 2px;*/ /* 统一边框宽度 */
+        border-style: solid;
+        /*border-color: #ef4444 !important;*/ /* 红色边框优先显示 */
+        /* box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.3), 0 12px 25px -8px rgba(0, 0, 0, 0.25); */
+      }
+      /* 如果实际当前节气也是活动节气，红色边框依然优先 */
+      .solar-term-card.active-term.current-actual-term {
+        /* border-color: #ef4444 !important; */
+      }
+      /* 确保左侧季节指示在 current-actual-term 时依然可见或有特定处理 */
+      .solar-term-card.current-actual-term.season-spring {
+        border-left-color: rgba(74, 222, 128, 0.7) !important;
+      } /* 保持季节色，但整体外框是红色 */
+      .solar-term-card.current-actual-term.season-summer {
+        border-left-color: rgba(250, 204, 21, 0.7) !important;
+      }
+      .solar-term-card.current-actual-term.season-autumn {
+        border-left-color: rgba(251, 146, 60, 0.7) !important;
+      }
+      .solar-term-card.current-actual-term.season-winter {
+        border-left-color: rgba(96, 165, 250, 0.7) !important;
+      }
+      /* 或者，可以决定 current-actual-term 时，左侧边框也变成红色的一部分，但这样季节感会弱化 */
+
+      .current-actual-term-badge {
+        /* ... (保留之前的徽章样式) ... */
+        position: absolute;
+        top: -10px;
+        right: -10px;
+        background-color: #ef4444; /* red-500 */
+        color: white;
+        font-size: 0.65rem;
+        font-weight: bold;
+        padding: 3px 6px;
+        border-radius: 9999px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        transform: rotate(10deg);
+        z-index: 10;
+      }
+
+      .solar-term-card .card-content {
+        position: relative;
+        z-index: 1;
+      }
+
+      /* ... (保留之前的 #solar-term-detail-container, seasonal-text, etc. 样式) ... */
+      :root {
+        --seasonal-color-rgb: 59, 130, 246;
+        --seasonal-color: #3b82f6;
+      }
+      .seasonal-text {
+        color: var(--seasonal-color);
+      } /* 这个变量会被 JS 根据选中的详情节气动态改变 */
+      .seasonal-bg-soft {
+        background-color: rgba(var(--seasonal-color-rgb), 0.05);
+      }
+      .seasonal-border {
+        border-color: var(--seasonal-color);
+      }
+      .seasonal-accent-bg {
+        background-color: var(--seasonal-color);
+      }
+      .detail-section h3 {
+        border-left: 4px solid var(--seasonal-color);
+        padding-left: 0.75rem;
+      }
+      .icon-leaf {
+        color: #34d399;
+      }
+      .icon-warning {
+        color: #f87171;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        /* ... (与之前相同) ... */
+      }
+    </script>
+  </head>
+  <body class="min-h-screen py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Solar Terms Grid -->
+      <section class="mb-10 sm:mb-12 printable-content">
+        <h2 class="text-2xl sm:text-3xl font-semibold text-gray-700 mb-6 text-center flex items-center justify-center">
+          <i class="far fa-calendar-alt mr-3 text-gray-500"></i>
+          节气概览
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-5" id="solar-terms-grid">
+          <div class="text-center col-span-full py-8 text-gray-400">
+            <i class="fas fa-spinner fa-spin text-3xl"></i>
+            <p class="mt-2">正在加载节气信息...</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Solar Term Detail Section -->
+      <section id="solar-term-detail-wrapper" class="bg-white rounded-xl shadow-2xl p-6 sm:p-8 lg:p-10 printable-content min-h-[400px]">
+        <div id="solar-term-detail-container" class="opacity-0">
+          <div id="detail-placeholder" class="text-center py-16">
+            <i class="fas fa-leaf text-6xl text-gray-300 mb-6"></i>
+            <h2 class="text-2xl font-semibold text-gray-500 mb-2">请选择一个节气查看详情</h2>
+            <p class="text-gray-400">点击上方卡片，探索每个节气的养生奥秘。</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="text-center text-sm text-gray-400 mt-12 pt-8 border-t border-gray-200 printable-content">
+        <p>智慧源于实践，养生贵在坚持</p>
+        <p class="mt-1">© <span id="current-year"></span> 四季轮回，生生不息 • 匠心呈现 by 🧠🌐✨</p>
+      </footer>
+    </div>
+
+    <div class="fixed bottom-6 right-6 no-print z-50">
+      <button
+        onclick="window.print()"
+        title="打印本页节气指南"
+        class="seasonal-accent-bg hover:opacity-80 text-white px-4 py-3 rounded-full shadow-xl flex items-center transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-seasonal"
+      >
+        <i class="fas fa-print mr-2"></i> <span class="hidden sm:inline">打印宝典</span>
+      </button>
+    </div>
+
+    <script>
+      const solarTermData = [
+        {
+          节气名称: "立春",
+          季节: "春",
+          "节气特点/含义": "一年之始，春之开端。阳气初生，万物复苏，冰雪消融，土地解冻。",
+          "中医养生要点/原理": "春属木，应肝。肝主疏泄，喜条达，恶抑郁。立春阳气初升，肝气渐旺。宜养肝疏肝，助阳气生发。慎防风邪。",
+          "顺应之道 (养生建议)":
+            "早睡早起，与日俱兴。多到户外散步，舒展筋骨，吐故纳新，助阳气升发。保持心情愉畅，忌怒伤肝。饮食上，辛甘之品以助升发，少食酸涩收敛之物。",
+          "违逆之害 (不良影响)": "恼怒抑郁伤肝。熬夜耗伤初生之阳气。衣着不暖，风邪易侵，引动肝气或发感冒。",
+          精要概述: "春回大地，万象更新。养生以护肝助阳为要，保持心境开阔，顺应生发之机。",
+        },
+        {
+          节气名称: "雨水",
+          季节: "春",
+          "节气特点/含义": "降水量增多，雨水频繁，空气湿润。气温回升但仍寒。",
+          "中医养生要点/原理": "雨水增多，湿气渐盛。湿邪易困脾。脾主运化水湿。此时宜健脾化湿，护阳气。注意“倒春寒”。",
+          "顺应之道 (养生建议)":
+            "健脾祛湿为要，可食芡实、薏苡仁、山药等。穿衣“春捂”，下厚上薄，循序减衣。早晚湿冷，注意保暖，尤其脾胃和下肢。保持室内干燥通风。",
+          "违逆之害 (不良影响)": "过早减衣，受寒湿邪。饮食不节，损伤脾胃。环境潮湿，加重体内湿气。",
+          精要概述: "雨水润物，湿气渐重。健脾化湿，春捂防寒，内外兼修护正气。",
+        },
+        {
+          节气名称: "惊蛰",
+          季节: "春",
+          "节气特点/含义": "春雷始鸣，蛰虫惊醒。气温显著回升，万物生机勃勃。",
+          "中医养生要点/原理": "阳气升发迅速，肝阳易亢，内风易动。此时风邪活跃，多发温病。宜平肝熄风，扶正祛邪。",
+          "顺应之道 (养生建议)":
+            "饮食清淡，少食辛辣刺激之物，以防助肝火。适当活动，舒筋活络。保持心情平和，避免情绪激动引动肝风。注意个人卫生，预防时行感冒。",
+          "违逆之害 (不良影响)": "情绪波动大，易发眩晕、头痛。感受风邪，易发热病。饮食油腻助湿生痰，加重内风。",
+          精要概述: "春雷乍响，生机盎然。平肝熄风防内动，清淡饮食避外邪。",
+        },
+        {
+          节气名称: "春分",
+          季节: "春",
+          "节气特点/含义": "昼夜等长，阴阳平衡。之后昼长夜短。气温进一步回升。",
+          "中医养生要点/原理": "阴阳气血相对平衡，但肝气仍旺，易克脾土。需调和肝脾，继续助阳气升发，防风邪。",
+          "顺应之道 (养生建议)":
+            "调和阴阳平衡，作息规律，不偏不倚。可多食甘味食物以培补脾土，如大枣、蜂蜜等。保持心情舒畅，避免大悲大喜。根据气温变化，灵活增减衣物。",
+          "违逆之害 (不良影响)": "阴阳失调，易生不适。肝气过旺，影响脾胃功能。气候多变，易受外邪侵袭。",
+          精要概述: "春分阴阳和，昼夜平。调和肝脾，内外皆安，顺应平衡之态。",
+        },
+        {
+          节气名称: "清明",
+          季节: "春",
+          "节气特点/含义": "天气清澈明朗，万物生长。适宜踏青祭祖。雨水增多。",
+          "中医养生要点/原理": "阳气进一步升发，但湿气仍存。肝气旺盛，易夹湿邪。需疏肝利湿，防风邪。情志波动较大。",
+          "顺应之道 (养生建议)":
+            "多进行户外活动，如踏青、放风筝，以助阳气疏泄。饮食上，清淡为主，少食油腻，注意健脾祛湿。情绪上宜舒缓，可参加一些舒缓情志的活动。",
+          "违逆之害 (不良影响)": "情志不畅，肝气郁结。湿邪留滞，困阻脾胃。风邪趁虚而入，引发疾病。",
+          精要概述: "清明风光好，湿邪易扰。疏肝利湿畅气机，心随景转养性情。",
+        },
+        {
+          节气名称: "谷雨",
+          季节: "春末",
+          "节气特点/含义": "雨生百谷。气温升高，雨量充沛，利于谷物生长。",
+          "中医养生要点/原理":
+            "湿气加重，脾胃负担重。且湿邪易郁而化热，形成湿热。需健脾除湿，清热利湿。谷雨是春季肝旺之时向夏季心旺之时的过渡。",
+          "顺应之道 (养生建议)":
+            "健脾祛湿仍是重点，可食赤小豆、绿豆、茯苓、冬瓜等。避免久居湿地，保持衣物干燥。饮食清淡，减少辛辣油腻。适当增加户外活动，微微汗出以助湿邪排出。",
+          "违逆之害 (不良影响)": "湿邪内蕴，易生湿疹、关节痛。湿热上蒸，易发痤疮、口臭。脾胃虚弱，运化不良。",
+          精要概述: "谷雨时节雨连绵，湿气困脾需化解。健脾除湿清热利，身体轻盈少病缠。",
+        },
+        {
+          节气名称: "立夏",
+          季节: "夏",
+          "节气特点/含义": "夏之开端。气温显著升高，万物繁茂。",
+          "中医养生要点/原理": "夏属火，应心。心主神明，主血脉。立夏阳气盛，心气渐强。宜养心安神，防暑热伤津耗气。",
+          "顺应之道 (养生建议)":
+            "养心为重，保持心情宁静，勿大喜大悲。作息宜晚睡早起，顺应阳气。午间小憩养心。饮食清淡，多食蔬果，补充水分。适当运动，微微汗出即可。",
+          "违逆之害 (不良影响)": "情绪波动，耗伤心神。过度劳累，耗气伤津。贪凉饮冷，损伤脾阳。",
+          精要概述: "夏日初长，心气渐旺。养心安神是根本，顺应阳气勿过劳。",
+        },
+        {
+          节气名称: "小满",
+          季节: "夏",
+          "节气特点/含义": "谷物饱满但未全熟。气温升高，潮湿闷热感增强。",
+          "中医养生要点/原理": "湿热之邪渐盛。湿邪困脾，热邪扰心。需清热利湿，健脾养心。注意皮肤疾病高发。",
+          "顺应之道 (养生建议)":
+            "清淡饮食，多食具有清热利湿作用的食物，如苦瓜、冬瓜、绿豆、薏苡仁。避免辛辣油腻。衣着宽松透气。保持皮肤清洁干燥。适当午睡，养心助脾。",
+          "违逆之害 (不良影响)": "饮食不节，加重湿热。久居湿热环境，诱发皮肤病。心火过旺，心神不宁。",
+          精要概述: "小满湿热交织盛，清热利湿护脾心。内外调理避湿邪，身体舒畅度炎夏。",
+        },
+        {
+          节气名称: "芒种",
+          季节: "夏",
+          "节气特点/含义": "麦类等有芒的作物成熟。气温高，湿度大，天气闷热，多雷雨。",
+          "中医养生要点/原理": "湿热并重，心火易旺。湿热易侵袭肌表，阻滞气机。需清心火，祛湿热。",
+          "顺应之道 (养生建议)":
+            "饮食宜清淡、易消化，多食瓜类、蔬菜。适当饮茶，如绿茶、花茶。保持居室通风干燥，及时除湿。避免过度劳累，保证睡眠。可适当食些苦味食物，助清心火。",
+          "违逆之害 (不良影响)": "湿热内蕴，易发中暑、消化不良。心火上炎，心烦失眠。皮肤湿疹、疖肿高发。",
+          精要概述: "芒种夏日炎炎蒸，湿热侵袭需警惕。清心利湿保安康，静心养神避暑邪。",
+        },
+        {
+          节气名称: "夏至",
+          季节: "夏",
+          "节气特点/含义": "阳气极盛，昼最长夜最短。之后阳气渐衰，阴气渐长。",
+          "中医养生要点/原理": "阳气达到顶点，开始内敛。心气最旺，易耗心阴。此时需养心阴，护阳气，防暑热伤津。注意“夏至一阴生”。",
+          "顺应之道 (养生建议)":
+            "避免烈日暴晒，防中暑。午间高温时段减少户外活动。多饮温开水，补充体液。饮食宜清淡，多食滋阴生津之品。心境平和，避免情绪剧烈波动。适当午睡，养心阴。",
+          "违逆之害 (不良影响)": "过度贪凉，损伤脾阳。过度出汗，耗伤心阴心气。情绪激动，引动心火。",
+          精要概述: "夏至阳极阴初生，养心护阴是关键。避暑防晒多补水，心静自然凉半边。",
+        },
+        {
+          节气名称: "小暑",
+          季节: "夏",
+          "节气特点/含义": "盛夏开始，天气炎热，多台风暴雨。",
+          "中医养生要点/原理": "暑湿之邪盛行。暑邪耗气伤津，湿邪困阻气机。心、脾最易受困。需清暑化湿，益气养阴。",
+          "顺应之道 (养生建议)":
+            "饮食清淡易消化，多食稀粥、瓜类、绿豆汤等。及时补充水分和无机盐（非药物补充，指食疗如绿豆汤、少量盐水）。适当减少户外活动，避开高温时段。保持居室通风凉爽，但避免空调直吹。午睡养神。",
+          "违逆之害 (不良影响)": "过度贪食生冷寒凉，损伤脾胃。过度吹空调，寒湿内侵。剧烈运动，耗伤气阴。",
+          精要概述: "小暑炎热暑湿蒸，清暑化湿是良方。饮食清淡多补水，平和心境度盛夏。",
+        },
+        {
+          节气名称: "大暑",
+          季节: "夏",
+          "节气特点/含义": "一年中最热的时段。高温酷暑，潮湿闷热。",
+          "中医养生要点/原理": "暑邪极盛，最易伤人阳气和津液。湿邪与热邪胶着，缠绵难解。心、脾、肾皆易受损。需清暑化湿，益气养阴，护心肾。",
+          "顺应之道 (养生建议)":
+            "避暑是重中之重，减少户外活动，尤其正午。饮食宜清淡滋阴，多食水果、蔬菜、粥品、汤水。可适当饮用荷叶、淡竹叶水等。充足睡眠，养足精神。保持心境平和，勿躁怒。",
+          "违逆之害 (不良影响)": "中暑，暑湿感冒高发。大量出汗不及时补充水分盐分，津液耗竭。贪凉过度，损伤脾胃阳气。",
+          精要概述: "大暑极热酷暑天，清暑益气养阴津。心肾同护避酷热，静心慢行保安宁。",
+        },
+        {
+          节气名称: "立秋",
+          季节: "秋",
+          "节气特点/含义": "秋之开端。气温开始下降，但仍有暑热（秋老虎）。昼夜温差增大。",
+          "中医养生要点/原理": "秋属金，应肺。燥邪渐生，易伤肺阴。湿热渐退，但仍有余邪。需养肺润燥，清余热。脾胃功能逐渐恢复。",
+          "顺应之道 (养生建议)":
+            "滋阴润燥为要，多食梨、银耳、蜂蜜、芝麻等。饮食清淡，少食辛辣烧烤，避免伤肺。注意昼夜温差，及时增减衣物。保持情绪稳定，避免悲秋伤肺。适当户外活动，呼吸新鲜空气。",
+          "违逆之害 (不良影响)": "燥邪伤肺，易发咳嗽、咽干。秋老虎余热，湿热困扰。情志抑郁，伤肺气。",
+          精要概述: "秋风初起暑未消，润肺养阴去燥扰。平心静气避悲秋，迎接金秋气渐高。",
+        },
+        {
+          节气名称: "处暑",
+          季节: "秋",
+          "节气特点/含义": "出暑。暑气渐退，但白天仍热，早晚凉。",
+          "中医养生要点/原理": "暑气渐消，燥气更盛。肺阴易伤。需继续润肺养阴，健脾益气。防“秋燥”。",
+          "顺应之道 (养生建议)":
+            "继续滋阴润燥，食疗如百合、莲子、杏仁等。多饮水，保持呼吸道湿润。早晚注意保暖，防止着凉。适当进行运动，但避免大汗淋漓。规律作息，早睡早起，顺应阴气内收。",
+          "违逆之害 (不良影响)": "燥邪伤肺及大肠，易发咳嗽、便秘。温差大，易感冒。脾胃虚弱者，易腹泻。",
+          精要概述: "处暑暑去秋意浓，秋燥袭人需润肺。早晚添衣防感冒，平补脾胃助安泰。",
+        },
+        {
+          节气名称: "白露",
+          季节: "秋",
+          "节气特点/含义": "昼夜温差大，清晨露珠晶莹。天气转凉。",
+          "中医养生要点/原理": "燥邪与凉邪并存。凉燥易伤肺脾。需润肺止咳，健脾益气，温中散寒。重点防护呼吸道和脾胃。",
+          "顺应之道 (养生建议)":
+            "穿衣注重保暖，尤其背部、腹部和足部，勿露寒。饮食上，温润为主，避寒凉。可食粥、汤，加姜、葱等温性调料。适当运动，微微出汗即可，利于宣肺通窍。",
+          "违逆之害 (不良影响)": "感受风寒或风燥，易发咳嗽、鼻塞、咽痛。脾胃虚弱者，易腹泻、消化不良。",
+          精要概述: "白露秋风天气凉，凉燥伤肺需温养。顾护脾胃添衣暖，顺应收敛好健康。",
+        },
+        {
+          节气名称: "秋分",
+          季节: "秋",
+          "节气特点/含义": "昼夜等长，阴阳平衡。之后夜长昼短。气温下降加速。",
+          "中医养生要点/原理": "阴阳气血相对平衡，但阴气渐盛，阳气渐衰。燥邪仍存。需调和阴阳，继续润肺养阴，防寒凉。",
+          "顺应之道 (养生建议)":
+            "作息规律，顺应阴阳平衡。情绪平和，避免悲秋思虑。饮食上，滋阴润燥与温中散寒并重，可食藕、百合、山药、大枣等。早晚加衣，注意头部和足部保暖。",
+          "违逆之害 (不良影响)": "阴阳失衡，易生不适。寒凉之邪易侵袭，引发关节疼痛、胃痛等。情志抑郁，耗伤肺气。",
+          精要概述: "秋分阴阳平，寒露催人行。润肺暖身调情志，平顺安康入深秋。",
+        },
+        {
+          节气名称: "寒露",
+          季节: "深秋",
+          "节气特点/含义": "天气更凉，露水成霜。气温持续下降。",
+          "中医养生要点/原理": "深秋寒气渐盛，燥邪与寒邪并存。肺金之气渐收，肾水之气渐旺。需养阴润燥，温补肺肾，防寒。",
+          "顺应之道 (养生建议)":
+            "注意全身保暖，尤其腰腹、关节。饮食上，滋阴润燥为主，同时适当温补，可食芝麻、糯米、鸡肉、牛肉等。早睡晚起，顺应阳气潜藏。保持心情平静，少思虑。",
+          "违逆之害 (不良影响)": "感受寒邪，易发关节痛、胃寒、感冒。燥邪伤肺，咳嗽难愈。阳气收敛不畅，影响睡眠。",
+          精要概述: "寒露霜渐浓，温养肺肾藏。润燥驱寒固本元，为冬储备添衣裳。",
+        },
+        {
+          节气名称: "霜降",
+          季节: "秋末",
+          "节气特点/含义": "地面出现初霜。天气更加寒冷干燥。",
+          "中医养生要点/原理": "秋季燥邪结束，寒气加剧。肺金收敛完成，肾水封藏开始。需温肾助阳，滋阴润燥（最后阶段），重点防寒。",
+          "顺应之道 (养生建议)":
+            "严防寒邪侵袭，穿厚衣物，戴帽围巾。饮食上，温补为主，可食羊肉、栗子等，少食生冷。早睡晚起，顺应自然。泡脚，搓揉腰腹，助肾阳。精神内守，宁静致远。",
+          "违逆之害 (不良影响)": "感受寒邪，关节炎、老寒腿易发。呼吸道易受寒燥刺激。肾阳不足者，畏寒更甚。",
+          精要概述: "霜降寒意重，敛阴护阳藏。温补肾阳去寒邪，精神内守待冬藏。",
+        },
+        {
+          节气名称: "立冬",
+          季节: "冬",
+          "节气特点/含义": "冬之开端。天气寒冷，万物活动趋于休止。",
+          "中医养生要点/原理": "冬属水，应肾。肾主藏精，为先天之本。立冬阳气潜藏，阴气极盛。养生以藏精御寒为要，温补肾阳。",
+          "顺应之道 (养生建议)":
+            "早睡晚起，保证充足睡眠，利于阳气潜藏。饮食上，温补肾阳，可食牛羊肉、栗子、核桃等。适当运动，但避免大汗，以利封藏。精神内守，情志安宁，少思虑。",
+          "违逆之害 (不良影响)": "熬夜、过度劳累，耗伤肾精。贪凉饮冷，损伤肾阳。大汗淋漓，耗散阳气。",
+          精要概述: "立冬阳气藏，养精固本元。温补肾阳避寒邪，蓄势待发迎新生。",
+        },
+        {
+          节气名称: "小雪",
+          季节: "冬",
+          "节气特点/含义": "开始降雪，雪量不大。气温持续下降。",
+          "中医养生要点/原理": "寒邪加剧。肾气封藏更深。需重点保暖，温养肾阳。注意皮肤干燥。",
+          "顺应之道 (养生建议)":
+            "做好全身及局部保暖，尤其头部、颈部、背部、足部。饮食上，继续温补肾阳，滋养阴液以防干燥。多食汤粥。适当泡脚，按摩涌泉穴、命门穴等。保持心情平和，避免烦躁。",
+          "违逆之害 (不良影响)": "感受寒邪，易发呼吸道疾病、关节疼痛。皮肤干燥皲裂。情绪波动，耗散肾气。",
+          精要概述: "小雪寒意浓，保暖护肾中。内外皆宜温养法，安然过冬精自藏。",
+        },
+        {
+          节气名称: "大雪",
+          季节: "冬",
+          "节气特点/含义": "降大雪，严寒。气候更加干燥。",
+          "中医养生要点/原理": "严寒侵袭。肾阳易虚，心阳亦需顾护（防心脑血管意外）。干燥伤肺。需温补肾阳，顾护心阳，润肺防燥。",
+          "顺应之道 (养生建议)":
+            "严寒天气减少外出，避免受寒。室内保持一定湿度。饮食上，温补益肾，可食黑芝麻、黑豆、核桃、腰果等。适当进行室内运动或缓慢的户外运动。保证充足睡眠。",
+          "违逆之害 (不良影响)": "寒邪入侵，易发心脑血管疾病、呼吸系统疾病、关节痛。燥邪伤肺，咳嗽加重。",
+          精要概述: "大雪严寒冬至近，温阳益肾护心肺。防寒保暖是首要，宁心静气享隆冬。",
+        },
+        {
+          节气名称: "冬至",
+          季节: "冬",
+          "节气特点/含义": "阴气极盛，阳气开始萌生。夜最长昼最短。是阴阳转化的关键节点。",
+          "中医养生要点/原理": "阴极阳生。肾气封藏最深，亦是阳气初萌、生发之始。养生重在藏精固本，扶助初生之阳，为来年阳气生发打基础。",
+          "顺应之道 (养生建议)":
+            "最佳养生时节。宜静养，多休息，避寒保暖，尤其足部。饮食上，温补而不燥热，可食各类温性补品（非药物，指食材）。心态平和，避免情志波动，利于阳气潜藏与萌发。可适当搓揉涌泉穴，激发阳气。",
+          "违逆之害 (不良影响)": "熬夜、过度劳累、纵欲，严重耗伤肾精和初生之阳。感受寒邪，阻碍阳气生发。情绪大起大落，扰乱气机。",
+          精要概述: "冬至阴极阳初萌，养精蓄锐固根本。顺应天时内收敛，为来年春生奠基础。",
+        },
+        {
+          节气名称: "小寒",
+          季节: "冬",
+          "节气特点/含义": "开始进入一年中最冷的阶段。",
+          "中医养生要点/原理": "严寒加剧。阳气潜藏，肾主封藏，需温肾助阳，防寒保暖。同时注意润肺防燥。",
+          "顺应之道 (养生建议)":
+            "保暖是重中之重，从头到脚，不使寒邪入侵。饮食上，继续温补肾阳，可食膏粱厚味，但需消化。室内注意通风，保持湿度。适当室内活动或避风寒的户外活动。",
+          "违逆之害 (不良影响)": "受寒感冒、支气管炎、心血管疾病高发。肾阳虚弱者，畏寒怕冷症状加重。",
+          精要概述: "小寒时节冻正酣，温阳固护肾为先。防寒保暖内外养，抵御严冬身自健。",
+        },
+        {
+          节气名称: "大寒",
+          季节: "冬末",
+          "节气特点/含义": "一年中最寒冷的时段。即将进入下一个循环（立春）。",
+          "中医养生要点/原理":
+            "寒邪最盛，同时阳气在地下酝酿，即将生发。养生重点仍在温肾助阳，防寒保暖，同时开始为春季的阳气生发做准备。脾胃功能亦需顾护。",
+          "顺应之道 (养生建议)":
+            "严防寒邪，务必做好保暖。饮食上，温补为主，可适当增加滋补之品（非药物），为开春储备能量。保持愉快平和的心情，有助于阳气内生。适当运动，但避免剧烈和出汗。",
+          "违逆之害 (不良影响)": "寒邪极易损伤人体阳气。抵抗力下降，易生病。情绪低落影响来年阳气生发。",
+          精要概述: "大寒极冷将回春，温补封藏待阳升。内外兼修养身心，迎接万象更新时。",
+        },
+      ]
+
+      const domElements = {}
+      let activeTermIndex = -1
+      let currentActualTermName = ""
+
+      const seasonalColors = {
+        春: { hex: "#4ade80", rgb: "74, 222, 128" },
+        春末: { hex: "#34d399", rgb: "52, 211, 153" },
+        夏: { hex: "#facc15", rgb: "250, 204, 21" },
+        秋: { hex: "#fb923c", rgb: "251, 146, 60" },
+        秋末: { hex: "#f59e0b", rgb: "245, 158, 11" },
+        深秋: { hex: "#f97316", rgb: "249, 115, 22" },
+        冬: { hex: "#60a5fa", rgb: "96, 165, 250" },
+        冬末: { hex: "#3b82f6", rgb: "59, 130, 246" },
+      }
+
+      function setSeasonalColors(season) {
+        const colors = seasonalColors[season] || seasonalColors["冬"]
+        document.documentElement.style.setProperty("--seasonal-color-rgb", colors.rgb)
+        document.documentElement.style.setProperty("--seasonal-color", colors.hex)
+      }
+
+      function cacheDOMElements() {
+        domElements.solarTermsGrid = document.getElementById("solar-terms-grid")
+        domElements.solarTermDetailContainer = document.getElementById("solar-term-detail-container")
+        domElements.detailPlaceholder = document.getElementById("detail-placeholder")
+        domElements.currentYear = document.getElementById("current-year")
+        domElements.currentHeaderTerm = document.getElementById("current-header-term")
+      }
+
+      function formatAdviceToList(text, iconClass, iconColorClass) {
+        if (!text) return '<p class="text-gray-500 text-sm">暂无详细信息。</p>'
+        return text
+          .split("。")
+          .filter((item) => item.trim() !== "")
+          .map(
+            (item) => `
+                    <li class="flex items-start mb-2">
+                        <i class="fas ${iconClass} ${iconColorClass} mr-3 mt-1 text-base flex-shrink-0"></i>
+                        <span class="text-gray-700 text-sm md:text-base">${item.trim()}。</span>
+                    </li>
+                `
+          )
+          .join("")
+      }
+
+      // 修正后的函数
+      function findCurrentActualSolarTermName() {
+        try {
+          const today = new Date()
+          const lunarDate = Lunar.fromDate(today) // Lunar 对象实例
+
+          // 尝试获取当天是否就是节气日
+          const currentJieQiObj = lunarDate.getCurrentJieQi()
+          if (currentJieQiObj) {
+            return currentJieQiObj.getName()
+          }
+
+          // 如果当天不是节气日，则获取上一个节气 (true 表示按天匹配，即当前所处的节气时段)
+          const prevJieQiObj = lunarDate.getPrevJieQi(true)
+          if (prevJieQiObj) {
+            return prevJieQiObj.getName()
+          }
+
+          // 如果以上都失败，作为最后的备用方案（理论上不太可能）
+          // 可以尝试获取年份的第一个节气，但这可能不准确反映当前
+          console.warn("Could not determine current solar term using getCurrentJieQi or getPrevJieQi. Falling back.")
+          const yearSolarTerms = lunarDate.getJieQiList() // 获取当年所有节气名称列表
+          if (yearSolarTerms && yearSolarTerms.length > 0) {
+            // 这并不理想，因为节气列表的第一个可能不是“立春”或年初的
+            // 但 lunar.js 的 getPrevJieQi 应该能处理好跨年
+            // 我们需要一个更可靠的回退，但现在先用这个作为信号
+            return yearSolarTerms[0] // 仅作为非常粗略的备用
+          }
+        } catch (error) {
+          console.error("Error determining current solar term:", error)
+          return "获取失败"
+        }
+        return "未知"
+      }
+
+      function displaySolarTermDetail(index) {
+        if (index < 0 || index >= solarTermData.length) {
+          domElements.detailPlaceholder.classList.remove("hidden")
+          domElements.solarTermDetailContainer.innerHTML = ""
+          domElements.solarTermDetailContainer.appendChild(domElements.detailPlaceholder)
+          return
+        }
+        const term = solarTermData[index]
+        activeTermIndex = index
+
+        setSeasonalColors(term.季节)
+
+        domElements.solarTermDetailContainer.classList.add("content-loading")
+        domElements.solarTermDetailContainer.style.opacity = "0"
+
+        setTimeout(() => {
+          domElements.detailPlaceholder.classList.add("hidden")
+          let html = `
+                    <div class="text-center mb-8">
+                        <h2 class="text-4xl md:text-5xl font-bold seasonal-text mb-2">${term.节气名称}</h2>
+                        <p class="text-gray-500 text-lg">${term.季节}</p>
+                    </div>
+                    <div class="bg-gray-50 seasonal-bg-soft p-4 sm:p-6 rounded-lg mb-8 shadow">
+                        <h3 class="text-xl font-semibold seasonal-text mb-3 flex items-center"><i class="fas fa-star mr-2 opacity-75"></i>精要概述</h3>
+                        <p class="text-gray-700 text-base md:text-lg leading-relaxed">${term.精要概述}</p>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-6 lg:gap-8">
+                        <div class="detail-section bg-white p-4 sm:p-5 rounded-lg shadow-md border border-gray-100">
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800 flex items-center"><i class="fas fa-cloud-sun-rain mr-2 text-gray-500"></i>节气特点/含义</h3>
+                            <p class="text-gray-600 text-sm md:text-base">${term["节气特点/含义"]}</p>
+                        </div>
+                        <div class="detail-section bg-white p-4 sm:p-5 rounded-lg shadow-md border border-gray-100">
+                            <h3 class="text-lg font-semibold mb-3 text-gray-800 flex items-center"><i class="fas fa-book-medical mr-2 text-gray-500"></i>中医养生要点/原理</h3>
+                            <p class="text-gray-600 text-sm md:text-base">${term["中医养生要点/原理"]}</p>
+                        </div>
+                        <div class="detail-section bg-white p-4 sm:p-5 rounded-lg shadow-md border border-gray-100 md:col-span-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800 flex items-center"><i class="fas fa-seedling mr-2 icon-leaf"></i>顺应之道</h3>
+                            <ul class="list-none space-y-1">${formatAdviceToList(
+                              term["顺应之道 (养生建议)"],
+                              "fa-check-circle",
+                              "icon-leaf"
+                            )}</ul>
+                        </div>
+                        <div class="detail-section bg-white p-4 sm:p-5 rounded-lg shadow-md border border-gray-100 md:col-span-1">
+                            <h3 class="text-lg font-semibold mb-4 text-gray-800 flex items-center"><i class="fas fa-exclamation-triangle mr-2 icon-warning"></i>违逆之害</h3>
+                            <ul class="list-none space-y-1">${formatAdviceToList(
+                              term["违逆之害 (不良影响)"],
+                              "fa-times-circle",
+                              "icon-warning"
+                            )}</ul>
+                        </div>
+                    </div>
+                `
+          domElements.solarTermDetailContainer.innerHTML = html
+          domElements.solarTermDetailContainer.classList.remove("content-loading")
+          domElements.solarTermDetailContainer.style.opacity = "1"
+        }, 100)
+
+        document.querySelectorAll(".solar-term-card").forEach((card, i) => {
+          card.classList.toggle("active-term", i === index)
+        })
+        highlightCurrentActualCard() // 确保点击后，当前实际节气的高亮（尤其是 badge）不会丢失
+      }
+
+      function highlightCurrentActualCard() {
+        const cards = document.querySelectorAll(".solar-term-card")
+        cards.forEach((card, i) => {
+          const termData = solarTermData[i] // 从我们的数据数组中获取节气对象
+          if (!termData) return // 防御性编程
+
+          const isCurrentActual = termData.节气名称 === currentActualTermName
+          card.classList.toggle("current-actual-term", isCurrentActual)
+
+          let badge = card.querySelector(".current-actual-term-badge")
+          if (isCurrentActual) {
+            if (!badge) {
+              badge = document.createElement("div")
+              badge.className = "current-actual-term-badge no-print"
+              badge.textContent = "当前"
+              card.appendChild(badge)
+            }
+          } else {
+            if (badge) {
+              badge.remove()
+            }
+          }
+        })
+      }
+
+      function generateSolarTermCards() {
+        if (!solarTermData || solarTermData.length === 0) {
+          domElements.solarTermsGrid.innerHTML = '<p class="text-center col-span-full text-red-500">未能加载节气数据。</p>'
+          return
+        }
+        const cardsHtml = solarTermData
+          .map((term, index) => {
+            const season = term.季节
+            let seasonClass = ""
+            // 为卡片赋予明确的季节类名，用于 CSS 中的季节性样式
+            if (season.includes("春")) seasonClass = "season-spring"
+            else if (season.includes("夏")) seasonClass = "season-summer"
+            else if (season.includes("秋")) seasonClass = "season-autumn"
+            else if (season.includes("冬")) seasonClass = "season-winter"
+            // 注意：这里不再需要为每个卡片单独设置 --seasonal-color-rgb，
+            // 因为季节性外观现在主要由固定的季节类驱动。
+            // --seasonal-color-rgb 和 --seasonal-color 变量主要用于详情区域和活动卡片的统一主题色。
+
+            return `
+                    <div class="solar-term-card ${seasonClass} bg-white p-3 sm:p-4 rounded-xl cursor-pointer text-center flex flex-col justify-between h-full"
+                         data-index="${index}">
+                         <div class="card-content">
+                            <h3 class="font-semibold text-lg sm:text-xl mb-1 seasonal-text">${term.节气名称}</h3>
+                            <span class="inline-block text-xs font-medium px-2 py-0.5 rounded-full seasonal-bg-soft seasonal-text">${term.季节}</span>
+                        </div>
+                    </div>
+                `
+          })
+          .join("")
+        domElements.solarTermsGrid.innerHTML = cardsHtml
+
+        domElements.solarTermsGrid.addEventListener("click", (event) => {
+          const card = event.target.closest(".solar-term-card")
+          if (card) {
+            const index = parseInt(card.dataset.index)
+            displaySolarTermDetail(index)
+          }
+        })
+      }
+
+      function initApp() {
+        cacheDOMElements()
+        domElements.currentYear.textContent = new Date().getFullYear()
+
+        currentActualTermName = findCurrentActualSolarTermName()
+        console.log("Current Actual Solar Term Determined:", currentActualTermName) // 调试日志
+
+        if (domElements.currentHeaderTerm) {
+          domElements.currentHeaderTerm.textContent = currentActualTermName || "未知"
+          if (currentActualTermName && currentActualTermName !== "获取失败" && currentActualTermName !== "未知") {
+            const currentTermObj = solarTermData.find((t) => t.节气名称 === currentActualTermName)
+            if (currentTermObj) {
+              setSeasonalColors(currentTermObj.季节)
+            } else {
+              console.warn(`Data for current term '${currentActualTermName}' not found in solarTermData.`)
+              setSeasonalColors("春") // 默认
+            }
+          } else {
+            setSeasonalColors("春") // 默认
+          }
+        }
+
+        generateSolarTermCards()
+        highlightCurrentActualCard()
+
+        const currentActualTermIndex = solarTermData.findIndex((term) => term.节气名称 === currentActualTermName)
+        if (currentActualTermIndex !== -1) {
+          displaySolarTermDetail(currentActualTermIndex)
+          const currentCard = document.querySelector(`.solar-term-card[data-index="${currentActualTermIndex}"]`)
+          if (currentCard) {
+            currentCard.classList.add("active-term") // 默认也激活当前实际节气
+          }
+        } else {
+          domElements.solarTermDetailContainer.style.opacity = "1"
+          domElements.detailPlaceholder.classList.remove("hidden")
+          console.log("Current actual solar term not found in data, showing placeholder.")
+        }
+      }
+
+      document.addEventListener("DOMContentLoaded", initApp)
+    </script>
+  </body>
+</html>

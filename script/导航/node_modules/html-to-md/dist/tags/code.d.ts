@@ -1,0 +1,11 @@
+import Tag from '../Tag';
+import { ParseOptions, TagOptions } from '../type';
+declare class Code extends Tag {
+    constructor(str: string, tagName: string | undefined, options: TagOptions);
+    beforeMergeSpace(content: string): string;
+    parseValidSubTag(subTagStr: string, subTagName: string, options: ParseOptions): [string, any];
+    parseOnlyString(subTagStr: string): [string, any];
+    slim(content: string): string;
+    exec(prevGap?: string, endGap?: string): string;
+}
+export default Code;

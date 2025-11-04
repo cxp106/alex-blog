@@ -1,0 +1,84 @@
+[
+  {
+    "category": "搜索",
+    "links": [
+      {
+        "title": "Searx",
+        "introduction": "提供来自谷歌、必应和其他网站的结果",
+        "link": "https://searx.be/"
+      },
+      {
+        "title": "DuckDuckGo",
+        "introduction": "保护。隐私。安心。",
+        "link": "https://duckduckgo.com/"
+      },
+      {
+        "title": "luxirty",
+        "introduction": "为专业人士优化，去除内容农场，无广告，简洁，快。",
+        "link": "https://search.luxirty.com/"
+      },
+      {
+        "title": "Startpage",
+        "introduction": "私人搜索引擎。无追踪。无搜索历史。",
+        "link": "https://www.startpage.com/"
+      },
+      {
+        "title": "google",
+        "introduction": "Google 高级搜索",
+        "link": "https://www.google.com/advanced_search"
+      },
+      {
+        "title": "yahoo",
+        "introduction": "雅虎高级网页搜索",
+        "link": "https://search.yahoo.com/web/advanced"
+      },
+      {
+        "title": "中国搜索",
+        "introduction": "一个搜索引擎，贴近民生、服务大众的应用服务和垂直搜索频道",
+        "link": "https://www.chinaso.com/"
+      },
+      {
+        "title": "百度图片",
+        "introduction": "一个百度图片搜索引擎",
+        "link": "https://image.baidu.com/"
+      },
+      {
+        "title": "Searx.space",
+        "introduction": "里面收录了目前基于「Searx」开源项目搭建的搜索引擎网站，保留隐私的好用搜索引擎都在这里了",
+        "link": "https://searx.space/"
+      },
+      {
+        "title": "可编程搜索",
+        "introduction": "google 自定义搜索",
+        "link": "https://programmablesearchengine.google.com/controlpanel/all"
+      },
+      {
+        "title": "blog",
+        "introduction": "自用",
+        "link": "https://cse.google.com/cse?cx=f3954429ae59c4fca",
+        "hot": true
+      },
+      {
+        "title": "豆瓣",
+        "introduction": "自用",
+        "link": "https://cse.google.com/cse?cx=d66c5d6d65f38471a",
+        "hot": true
+      },
+      {
+        "title": "keywordtool",
+        "introduction": "关键词工具",
+        "link": "https://keywordtool.io/"
+      },
+      {
+        "title": "google patents",
+        "introduction": "谷歌专利搜索",
+        "link": "https://patents.google.com/"
+      },
+      {
+        "title": "google scholar",
+        "introduction": "Google 学术搜索",
+        "link": "https://scholar.google.com/"
+      }
+    ]
+  }
+]

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>恒定亮度色彩生成器</title>
+    <style>
+      :root {
+        /* --- 亮色主题变量 (部分调整) --- */
+        --bg-color: #f4f7f9; /* Very light grey background */
+        --card-bg: #ffffff; /* White cards */
+        --text-color: #333333; /* Dark grey text */
+        --primary-color: #0056b3; /* A professional blue accent */
+        --primary-text: #ffffff; /* White text on primary */
+        --border-color: #e0e0e6; /* Light grey border */
+        --input-bg: #ffffff; /* White input background */
+        --input-border: #ced4da; /* Standard input border color */
+        --placeholder-text: #888888; /* Lighter grey for placeholders */
+        --swatch-size: 40px;
+        --font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        --border-radius: 6px;
+        --shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Softer shadow for light theme */
+        /* --- Toast 样式变量 --- */
+        --toast-bg: rgba(50, 50, 50, 0.9); /* Darker background for toast contrast */
+        --toast-text: #ffffff;
+        /* --- Swatch 内描边颜色 --- */
+        --swatch-inset-border-color: rgba(0, 0, 0, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        font-family: var(--font-family);
+        background-color: var(--bg-color);
+        color: var(--text-color);
+        line-height: 1.6;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        overflow-y: auto;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 900px;
+        background-color: var(--card-bg);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        padding: 2rem;
+        margin-bottom: 2rem;
+        border: 1px solid var(--border-color);
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 2rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 1rem;
+      }
+
+      header h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--text-color);
+        margin-bottom: 0.5rem;
+      }
+      header h1::before {
+        content: "☀️ ";
+      }
+      header p {
+        font-size: 0.9rem;
+        color: #6c757d;
+      }
+
+      .input-section {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 2rem;
+        flex-wrap: wrap;
+      }
+
+      .input-group {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        background-color: var(--input-bg);
+        border-radius: var(--border-radius);
+        padding: 0.5rem 1rem;
+        border: 1px solid var(--input-border);
+      }
+
+      .input-group label {
+        margin-right: 0.5rem;
+        font-size: 0.9rem;
+        white-space: nowrap;
+        color: #495057;
+      }
+
+      .input-group input[type="text"] {
+        flex-grow: 1;
+        background: none;
+        border: none;
+        outline: none;
+        color: var(--text-color);
+        font-size: 1rem;
+        min-width: 150px;
+      }
+      .input-group input[type="text"]::placeholder {
+        color: var(--placeholder-text);
+        opacity: 1; /* Firefox */
+      }
+
+      .input-group input[type="color"] {
+        width: 30px;
+        height: 30px;
+        border: 1px solid var(--input-border);
+        padding: 0;
+        background: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-left: 0.5rem;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+      }
+      .input-group input[type="color"]::-webkit-color-swatch-wrapper {
+        padding: 0;
+      }
+      .input-group input[type="color"]::-webkit-color-swatch {
+        border: none;
+        border-radius: 3px;
+      }
+      .input-group input[type="color"]::-moz-color-swatch {
+        border: none;
+        border-radius: 3px;
+      }
+
+      .generate-btn {
+        background-color: var(--primary-color);
+        color: var(--primary-text);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.1s ease;
+        white-space: nowrap;
+      }
+      .generate-btn:hover {
+        background-color: #004494;
+      }
+      .generate-btn:active {
+        transform: scale(0.98);
+      }
+
+      .results-section {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      }
+
+      .color-card {
+        background-color: var(--card-bg);
+        border-radius: var(--border-radius);
+        padding: 1.5rem;
+        border: 1px solid var(--border-color);
+        transition: box-shadow 0.3s ease;
+      }
+      .color-card:hover {
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+      }
+
+      .color-card h3 {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 0.5rem;
+        color: #495057;
+      }
+
+      .original-color-display {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .original-swatch {
+        width: 60px;
+        height: 60px;
+        border-radius: var(--border-radius);
+        /* border: 1px solid var(--border-color); */ /* Removed border */
+        box-shadow: inset 0 0 0 1px var(--swatch-inset-border-color); /* Use inset shadow */
+      }
+
+      .original-info p {
+        margin-bottom: 0.2rem;
+        font-size: 0.9rem;
+        cursor: pointer;
+        transition: color 0.2s ease;
+      }
+      .original-info p:hover {
+        color: var(--primary-color);
+      }
+
+      .swatch-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+      }
+
+      .swatch {
+        width: var(--swatch-size);
+        height: var(--swatch-size);
+        border-radius: 4px;
+        cursor: pointer;
+        /* border: 1px solid var(--border-color); */ /* Removed border */
+        box-shadow: inset 0 0 0 1px var(--swatch-inset-border-color); /* Use inset shadow for border */
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.25s ease, box-shadow 0.25s ease; /* Slightly smoother transition */
+      }
+      .swatch:hover {
+        transform: scale(1.05); /* Reduced scale effect */
+        /* Keep inset border, add subtle outer shadow */
+        box-shadow: inset 0 0 0 1px var(--swatch-inset-border-color), 0 2px 6px rgba(0, 0, 0, 0.12);
+        z-index: 10;
+      }
+
+      .swatch::after {
+        /* Tooltip for HEX code */
+        content: attr(data-hex);
+        position: absolute;
+        bottom: 110%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 0.3rem 0.6rem;
+        border-radius: 4px;
+        font-size: 0.8rem;
+        white-space: nowrap;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      .swatch:hover::after {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* --- Toast Notification Styles --- */
+      #toastContainer {
+        position: fixed;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+        pointer-events: none;
+      }
+
+      .toast {
+        background-color: var(--toast-bg);
+        color: var(--toast-text);
+        padding: 0.75rem 1.25rem;
+        border-radius: var(--border-radius);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+        font-size: 0.9rem;
+        font-weight: 500;
+        opacity: 0; /* Start invisible */
+        transform: translateY(20px); /* Start slightly lower */
+        /* IMPORTANT: Define transition for fade-in/out properties */
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: auto;
+        /* Initial appearance animation */
+        animation: toast-fade-in 0.3s ease forwards;
+      }
+
+      .toast.success {
+        background-color: rgba(40, 167, 69, 0.9);
+        color: white;
+      }
+      .toast.error {
+        background-color: rgba(220, 53, 69, 0.9);
+        color: white;
+      }
+      .toast.info {
+        background-color: rgba(23, 162, 184, 0.9);
+        color: white;
+      }
+
+      @keyframes toast-fade-in {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Class added by JS to trigger fade-out */
+      .toast.fade-out {
+        opacity: 0;
+        transform: translateY(20px); /* Move down again on fade-out */
+        /* Ensure transition applies to fade-out too */
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+
+      /* Initial placeholder styling for light theme */
+      #resultsPlaceholder {
+        text-align: center;
+        padding: 1.5rem;
+        border-radius: var(--border-radius);
+        margin-top: 1rem;
+        font-weight: 500;
+        background-color: #e9ecef;
+        color: #495057;
+        border: 1px solid #ced4da;
+      }
+      #resultsPlaceholder {
+        display: block;
+      }
+      .results-section:not(:empty) + #resultsPlaceholder {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <section class="input-section">
+        <div class="input-group">
+          <label for="colorInput">输入颜色 (HEX/RGB/RGBA):</label>
+          <input type="text" id="colorInput" placeholder="#3498DB 或 rgb(52, 152, 219)" />
+          <input type="color" id="colorPicker" aria-label="颜色选择器" />
+        </div>
+        <button id="generateBtn" class="generate-btn">生成色彩阵列</button>
+      </section>
+
+      <main id="resultsSection" class="results-section">
+        <!-- Results dynamically inserted -->
+      </main>
+      <div id="resultsPlaceholder">请于上方输入或选择一个颜色，妾身将为您推演色彩变化之道。</div>
+    </div>
+
+    <!-- Toast Notification Container -->
+    <div id="toastContainer" aria-live="polite"></div>
+
+    <!-- Import the ColorMaster Class (ensure ColorMaster.js is present in the same directory) -->
+    <script type="module">
+      // ！！！重要：请确保 ColorMaster.js 文件与此 HTML 文件在同一目录下，
+      // 且 ColorMaster.js 文件末尾有 'export default ColorMaster;'
+      import ColorMaster from "./ColorMaster.js"
+
+      const colorInput = document.getElementById("colorInput")
+      const colorPicker = document.getElementById("colorPicker")
+      const generateBtn = document.getElementById("generateBtn")
+      const resultsSection = document.getElementById("resultsSection")
+      const resultsPlaceholder = document.getElementById("resultsPlaceholder")
+      const toastContainer = document.getElementById("toastContainer")
+
+      // --- Event Listeners ---
+      colorPicker.addEventListener("input", (e) => {
+        colorInput.value = e.target.value.toUpperCase()
+      })
+      colorInput.addEventListener("input", (e) => {
+        const value = e.target.value.trim()
+        if (/^#[0-9A-F]{6}$/i.test(value) || /^#[0-9A-F]{3}$/i.test(value)) {
+          try {
+            colorPicker.value = value
+          } catch (error) {}
+        }
+      })
+      generateBtn.addEventListener("click", generateColors)
+      colorInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          generateColors()
+        }
+      })
+
+      // --- Core Logic ---
+      function generateColors() {
+        const colorValue = colorInput.value.trim()
+        resultsSection.innerHTML = ""
+        resultsPlaceholder.style.display = "none"
+
+        if (!colorValue) {
+          displayToast("请输入一个有效的颜色值。", "error")
+          resultsPlaceholder.style.display = "block"
+          return
+        }
+
+        try {
+          const master = new ColorMaster(colorValue)
+          displayOriginalColor(master)
+          const methods = [
+            { name: "类比色", func: master.getAnalogousColors },
+            { name: "互补色", func: master.getComplementaryColor },
+            { name: "三角色", func: master.getTriadicColors },
+            { name: "四方色", func: master.getSquareColors },
+            { name: "分裂互补色", func: master.getSplitComplementaryColors },
+            { name: "强调类比色", func: master.getAccentedAnalogousColors },
+            { name: "中性近色", func: master.getNeutralColors },
+            { name: "饱和度序列", func: () => master.getSaturationShiftColors(10) },
+            { name: "色调序列", func: () => master.getToneShiftColors(5) },
+          ]
+          methods.forEach((methodInfo) => {
+            // Ensure the function exists before calling
+            if (typeof master[methodInfo.func.name] === "function" || typeof methodInfo.func === "function") {
+              const colors = typeof methodInfo.func === "function" ? methodInfo.func.call(master) : master[methodInfo.func.name]()
+              displayColorSet(methodInfo.name, colors)
+            } else {
+              console.warn(`ColorMaster method not found for: ${methodInfo.name}`)
+            }
+          })
+        } catch (error) {
+          console.error("色彩生成失败：", error)
+          displayToast(`生成失败：${error.message}`, "error")
+          resultsPlaceholder.style.display = "block"
+        }
+      }
+
+      function displayOriginalColor(master) {
+        const card = document.createElement("div")
+        card.className = "color-card"
+        const title = document.createElement("h3")
+        title.textContent = "本源色彩"
+        card.appendChild(title)
+        const display = document.createElement("div")
+        display.className = "original-color-display"
+        const swatch = document.createElement("div")
+        const hex = master.getHex()
+        swatch.className = "original-swatch"
+        swatch.style.backgroundColor = hex
+        swatch.title = `点击复制 ${hex}`
+        swatch.addEventListener("click", () => copyToClipboard(hex, "HEX"))
+        display.appendChild(swatch)
+        const info = document.createElement("div")
+        info.className = "original-info"
+        const rgb = master.getRgb()
+        const hsl = master.getHsl()
+        const rgbString = `RGB: ${rgb.r}, ${rgb.g}, ${rgb.b}${rgb.a < 1 ? `, ${rgb.a.toFixed(2)}` : ""}`
+        const hslString = `HSL: ${hsl.h}°, ${(hsl.s * 100).toFixed(1)}%, ${(hsl.l * 100).toFixed(1)}%${
+          hsl.a < 1 ? `, ${hsl.a.toFixed(2)}` : ""
+        }`
+        const hexP = document.createElement("p")
+        hexP.textContent = `HEX: ${hex}`
+        hexP.addEventListener("click", () => copyToClipboard(hex, "HEX"))
+        info.appendChild(hexP)
+        const rgbP = document.createElement("p")
+        rgbP.textContent = rgbString
+        rgbP.addEventListener("click", () => copyToClipboard(`rgb(${rgb.r}, ${rgb.g}, ${rgb.b}${rgb.a < 1 ? `, ${rgb.a}` : ""})`, "RGB"))
+        info.appendChild(rgbP)
+        const hslP = document.createElement("p")
+        hslP.textContent = hslString
+        hslP.addEventListener("click", () =>
+          copyToClipboard(`hsl(${hsl.h}, ${Math.round(hsl.s * 100)}%, ${Math.round(hsl.l * 100)}%${hsl.a < 1 ? `, ${hsl.a}` : ""})`, "HSL")
+        )
+        info.appendChild(hslP)
+        const lightnessP = document.createElement("p")
+        lightnessP.textContent = `恒定亮度 (L): ${(hsl.l * 100).toFixed(1)}%`
+        lightnessP.style.opacity = "0.7"
+        info.appendChild(lightnessP)
+        display.appendChild(info)
+        card.appendChild(display)
+        resultsSection.appendChild(card)
+      }
+
+      function displayColorSet(titleText, colors) {
+        if (!colors || colors.length === 0) return
+        const card = document.createElement("div")
+        card.className = "color-card"
+        const title = document.createElement("h3")
+        title.textContent = titleText
+        card.appendChild(title)
+        const container = document.createElement("div")
+        container.className = "swatch-container"
+        colors.forEach((hex) => {
+          const swatch = createSwatchElement(hex)
+          container.appendChild(swatch)
+        })
+        card.appendChild(container)
+        resultsSection.appendChild(card)
+      }
+
+      function createSwatchElement(hex) {
+        const swatch = document.createElement("div")
+        swatch.className = "swatch"
+        swatch.style.backgroundColor = hex
+        swatch.setAttribute("data-hex", hex)
+        swatch.title = `点击复制 ${hex}`
+        swatch.addEventListener("click", () => copyToClipboard(hex, "HEX"))
+        return swatch
+      }
+
+      // --- Utility Functions ---
+      function copyToClipboard(text, type) {
+        navigator.clipboard
+          .writeText(text)
+          .then(() => {
+            displayToast(`${type} 值 ${text} 已复制。`, "success")
+          })
+          .catch((err) => {
+            console.error("复制失败：", err)
+            displayToast("复制到剪贴板失败。", "error")
+          })
+      }
+
+      function displayToast(message, type = "info") {
+        const toast = document.createElement("div")
+        toast.className = `toast ${type}` // Base class + type class
+        toast.textContent = message
+        toast.setAttribute("role", "alert") // Improve accessibility
+
+        toastContainer.appendChild(toast)
+
+        // Animation 'toast-fade-in' defined in CSS handles the initial appearance.
+
+        // Set timeout to start the fade-out process
+        const fadeOutTimer = setTimeout(() => {
+          toast.classList.add("fade-out") // Add class to trigger fade-out transition
+
+          // Function to remove the element after transition ends
+          const handleTransitionEnd = (event) => {
+            // Ensure the event is for the toast itself and for opacity or transform
+            if (event.target === toast && (event.propertyName === "opacity" || event.propertyName === "transform")) {
+              // Clean up: Remove the listener to prevent memory leaks
+              toast.removeEventListener("transitionend", handleTransitionEnd)
+              // Remove the element from the DOM if it still has a parent
+              if (toast.parentNode) {
+                toast.parentNode.removeChild(toast)
+              }
+            }
+          }
+
+          // Listen for the end of the fade-out transition
+          // Using { once: true } might be simpler if only one transition property matters,
+          // but listening without 'once' and checking the propertyName is more robust.
+          toast.addEventListener("transitionend", handleTransitionEnd)
+
+          // Fallback removal timer (slightly longer than transition)
+          const fallbackTimer = setTimeout(() => {
+            if (toast.parentNode) {
+              toast.parentNode.removeChild(toast)
+            }
+            // Important: Also remove the listener if fallback activates
+            toast.removeEventListener("transitionend", handleTransitionEnd)
+          }, 3000 + 500) // Display time (3000ms) + fade-out duration (400ms) + buffer (100ms)
+
+          // Clear the fallback timer if the transitionend listener fires correctly
+          toast.addEventListener("transitionend", () => clearTimeout(fallbackTimer), { once: true })
+        }, 3000) // Toast visible for 3 seconds before starting fade-out
+      }
+    </script>
+  </body>
+</html>

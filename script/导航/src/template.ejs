@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navigation Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.1.0/tailwind.min.css" />
+    <style>
+      /* 定义自定义颜色 */
+      :root {
+        --color-bg-white: #f7fafc;
+        --color-text-black: #2d3748;
+        --color-text-gray: #718096;
+        --color-text-blue: #4299e1;
+      }
+      /* 使用自定义颜色 */
+      .bg-white {
+        background-color: var(--color-bg-white);
+      }
+      .text-gray-800 {
+        color: var(--color-text-black);
+      }
+      .text-gray-600 {
+        color: var(--color-text-gray);
+      }
+      .hover\:text-blue-500:hover {
+        color: var(--color-text-blue);
+      }
+      .bg {
+        background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%),
+          radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
+        background-blend-mode: screen;
+      }
+      .bg-hot {
+        background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+      <% data.forEach(function(category) { %>
+      <div class="mb-4">
+        <h2 class="text-lg font-bold text-gray-800 mb-3"><%= category.category %></h2>
+        <div class="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6">
+          <% category.links.forEach(function(link) { %>
+          <div
+            class="bg-white rounded-lg px-4 py-2 cursor-pointer shadow hover:shadow-md hover:bg-gray-50 <%= link.hot ? 'bg-hot' : 'bg' %>"
+            data-link="<%= link.link %>"
+            title="<%= link.introduction %>"
+          >
+            <div class="block text-base font-medium text-gray-800 mb-1 truncate"><%= link.title %></div>
+            <p class="text-xs text-gray-600 truncate"><%= link.introduction %></p>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  </body>
+  <script>
+    <%- script %>
+  </script>
+</html>

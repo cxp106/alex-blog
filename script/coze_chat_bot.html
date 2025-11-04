@@ -1,0 +1,389 @@
+<!-- FILE: ./index.html -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>专业聊天窗口</title>
+    <style>
+      :root {
+        --color-background: #f7f8fa;
+        --color-text-primary: #1f2329;
+        --color-text-secondary: #646a73;
+        --color-user-bubble: #eaf2ff;
+        --color-assistant-bubble: #ffffff;
+        --color-border: #e5e6eb;
+        --color-error: #d93025;
+        --color-button-primary: #007aff;
+        --color-button-primary-hover: #0056b3;
+        --color-button-text: #ffffff;
+        --font-family-main: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        --border-radius-main: 12px;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-family-main);
+        background-color: var(--color-background);
+        color: var(--color-text-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 16px;
+        box-sizing: border-box;
+      }
+
+      .chat-window {
+        width: 100%;
+        max-width: 800px;
+        height: 90vh;
+        max-height: 1000px;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--color-assistant-bubble);
+        border-radius: var(--border-radius-main);
+        border: 1px solid var(--color-border);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+      }
+
+      .chat-window__header {
+        padding: 16px 20px;
+        font-weight: 600;
+        border-bottom: 1px solid var(--color-border);
+        text-align: center;
+      }
+
+      .chat-window__messages {
+        flex-grow: 1;
+        padding: 24px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .message {
+        display: flex;
+        max-width: 75%;
+        gap: 12px;
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fade-in 0.3s forwards;
+      }
+
+      @keyframes fade-in {
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .message--user {
+        align-self: flex-end;
+        flex-direction: row-reverse;
+      }
+      .message--assistant {
+        align-self: flex-start;
+      }
+
+      .message__avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: var(--color-border);
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        font-weight: bold;
+      }
+
+      .message__content {
+        padding: 12px 16px;
+        border-radius: var(--border-radius-main);
+        line-height: 1.6;
+        word-wrap: break-word;
+        white-space: pre-wrap; /* 保证换行符被正确渲染 */
+      }
+
+      .message--user .message__content {
+        background-color: var(--color-user-bubble);
+      }
+      .message--assistant .message__content {
+        background-color: var(--color-background);
+        border: 1px solid var(--color-border);
+      }
+      .message__content--error {
+        color: var(--color-error);
+        font-weight: 500;
+      }
+
+      .chat-window__input-form {
+        display: flex;
+        padding: 16px;
+        border-top: 1px solid var(--color-border);
+        gap: 10px;
+      }
+
+      .input-form__textarea {
+        flex-grow: 1;
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-family: inherit;
+        font-size: 16px;
+        resize: none;
+        height: 48px;
+        box-sizing: border-box;
+      }
+      .input-form__textarea:focus {
+        border-color: var(--color-button-primary);
+        outline: none;
+      }
+
+      .input-form__button {
+        border: none;
+        background-color: var(--color-button-primary);
+        color: var(--color-button-text);
+        padding: 0 20px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+      }
+      .input-form__button:hover {
+        background-color: var(--color-button-primary-hover);
+      }
+      .input-form__button:disabled {
+        background-color: var(--color-text-secondary);
+        cursor: not-allowed;
+      }
+
+      .dot-flashing {
+        position: relative;
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: var(--color-text-secondary);
+        color: var(--color-text-secondary);
+        animation: dot-flashing 1s infinite linear alternate;
+        animation-delay: 0.5s;
+      }
+      .dot-flashing::before,
+      .dot-flashing::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 0;
+      }
+      .dot-flashing::before {
+        left: -10px;
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: var(--color-text-secondary);
+        color: var(--color-text-secondary);
+        animation: dot-flashing 1s infinite alternate;
+        animation-delay: 0s;
+      }
+      .dot-flashing::after {
+        left: 10px;
+        width: 5px;
+        height: 5px;
+        border-radius: 5px;
+        background-color: var(--color-text-secondary);
+        color: var(--color-text-secondary);
+        animation: dot-flashing 1s infinite alternate;
+        animation-delay: 1s;
+      }
+      @keyframes dot-flashing {
+        0% {
+          background-color: var(--color-text-secondary);
+        }
+        50%,
+        100% {
+          background-color: rgba(100, 106, 115, 0.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat-window">
+      <header class="chat-window__header">AI 对话</header>
+      <main class="chat-window__messages" id="message-container" role="log" aria-live="polite"></main>
+      <form class="chat-window__input-form" id="chat-form">
+        <textarea class="input-form__textarea" id="message-input" placeholder="输入你的消息..." required></textarea>
+        <button class="input-form__button" id="send-button" type="submit" disabled>发送</button>
+      </form>
+    </div>
+
+    <script>
+      const CONFIG = {
+        API_URL: "https://api.coze.cn/v3/chat",
+        API_KEY: "Bearer sat_llrZaDC3QRJZmc60eaq4XBE814Xo2QNXMvRg89mx4kTFbtuLw9HgVIqNKvDUMxJt",
+        BOT_ID: "7538365445678645302",
+      }
+
+      const UI = {
+        messageContainer: document.getElementById("message-container"),
+        chatForm: document.getElementById("chat-form"),
+        messageInput: document.getElementById("message-input"),
+        sendButton: document.getElementById("send-button"),
+      }
+
+      const state = {
+        isStreaming: false,
+        conversation: [],
+      }
+
+      function setFormDisabled(disabled) {
+        state.isStreaming = disabled
+        UI.messageInput.disabled = disabled
+        UI.sendButton.disabled = disabled
+      }
+
+      function addMessage(role, content = "") {
+        const messageWrapper = document.createElement("div")
+        messageWrapper.className = `message message--${role}`
+        const avatar = document.createElement("div")
+        avatar.className = "message__avatar"
+        avatar.textContent = role === "user" ? "U" : "A"
+        const contentEl = document.createElement("div")
+        contentEl.className = "message__content"
+        contentEl.innerHTML = content
+        messageWrapper.appendChild(avatar)
+        messageWrapper.appendChild(contentEl)
+        UI.messageContainer.appendChild(messageWrapper)
+        UI.messageContainer.scrollTop = UI.messageContainer.scrollHeight
+        return contentEl
+      }
+
+      /**
+       * 核心修正：实现了精确的、符合 API 协议的 SSE 解析器。
+       * @param {string} userMessage - 用户发送的消息。
+       */
+      async function fetchStreamedResponse(userMessage) {
+        setFormDisabled(true)
+        const assistantContentEl = addMessage("assistant", '<div class="dot-flashing"></div>')
+
+        state.conversation.push({ role: "user", content: userMessage })
+
+        try {
+          const response = await fetch(CONFIG.API_URL, {
+            method: "POST",
+            headers: {
+              Authorization: CONFIG.API_KEY,
+              "Content-Type": "application/json",
+              Accept: "text/event-stream",
+            },
+            body: JSON.stringify({
+              bot_id: CONFIG.BOT_ID,
+              user_id: "007",
+              stream: true,
+              // 修正：API 可能期望的是 `additional_messages` 而不是简单的 `conversation` 历史
+              additional_messages: state.conversation.map((msg) => ({ ...msg, type: "question", content_type: "text" })),
+            }),
+          })
+
+          if (!response.ok) {
+            throw new Error(`API 请求失败: ${response.status} ${response.statusText}`)
+          }
+
+          const reader = response.body.getReader()
+          const decoder = new TextDecoder("utf-8")
+          let isFirstChunk = true
+          let buffer = ""
+          let assistantReply = ""
+
+          while (true) {
+            const { done, value } = await reader.read()
+            if (done) break
+
+            buffer += decoder.decode(value, { stream: true })
+            const messageBlocks = buffer.split("\n\n")
+            buffer = messageBlocks.pop()
+
+            for (const block of messageBlocks) {
+              if (!block) continue
+
+              let eventName = "message"
+              let dataStr = ""
+
+              const lines = block.split("\n")
+              for (const line of lines) {
+                if (line.startsWith("event:")) {
+                  eventName = line.substring(6).trim()
+                } else if (line.startsWith("data:")) {
+                  dataStr = line.substring(5).trim()
+                }
+              }
+
+              // **关键修正点**
+              if (eventName === "conversation.message.delta" && dataStr) {
+                try {
+                  const data = JSON.parse(dataStr)
+                  // **关键修正点**
+                  if (data && typeof data.content === "string") {
+                    if (isFirstChunk) {
+                      assistantContentEl.innerHTML = ""
+                      isFirstChunk = false
+                    }
+                    assistantContentEl.textContent += data.content
+                    assistantReply += data.content
+                    UI.messageContainer.scrollTop = UI.messageContainer.scrollHeight
+                  }
+                } catch (e) {
+                  console.warn("无法解析的 JSON 数据块:", dataStr, e)
+                }
+              }
+            }
+          }
+
+          if (assistantReply) {
+            state.conversation.push({ role: "assistant", content: assistantReply })
+          }
+        } catch (error) {
+          const errorMessage = error.message || "网络连接中断或发生未知错误。"
+          assistantContentEl.textContent = `错误：${errorMessage}`
+          assistantContentEl.classList.add("message__content--error")
+        } finally {
+          setFormDisabled(false)
+          UI.messageInput.focus()
+        }
+      }
+
+      function handleFormSubmit(event) {
+        event.preventDefault()
+        if (state.isStreaming) return
+        const userMessage = UI.messageInput.value.trim()
+        if (userMessage) {
+          addMessage("user", userMessage)
+          UI.messageInput.value = ""
+          UI.sendButton.disabled = true
+          fetchStreamedResponse(userMessage)
+        }
+      }
+
+      function handleInput() {
+        UI.sendButton.disabled = UI.messageInput.value.trim().length === 0
+      }
+
+      function initializeApp() {
+        UI.chatForm.addEventListener("submit", handleFormSubmit)
+        UI.messageInput.addEventListener("input", handleInput)
+        UI.messageInput.addEventListener("keydown", (event) => {
+          if (event.key === "Enter" && !event.shiftKey) {
+            event.preventDefault()
+            UI.chatForm.requestSubmit()
+          }
+        })
+      }
+
+      document.addEventListener("DOMContentLoaded", initializeApp)
+    </script>
+  </body>
+</html>

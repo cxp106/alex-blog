@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>术数综合数据查看器</title>
+    <script src="https://unpkg.com/iztro/dist/iztro.min.js"></script>
+    <script src="https://s4.zstatic.net/ajax/libs/lunar-javascript/1.6.13/lunar.js"></script>
+    <style>
+      :root {
+        --primary-color: #4a4e69;
+        --secondary-color: #9a8c98;
+        --background-color: #f2e9e4;
+        --card-background: #ffffff;
+        --text-color: #22223b;
+        --border-color: #c9ada7;
+        --accent-color: #ff7b54;
+        --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        --border-radius: 8px;
+        --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      body {
+        font-family: var(--font-family);
+        background-color: var(--background-color);
+        color: var(--text-color);
+        margin: 0;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 1.6;
+      }
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: var(--card-background);
+        padding: 20px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--box-shadow);
+      }
+      h1,
+      h2 {
+        color: var(--primary-color);
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 10px;
+        margin-top: 0;
+      }
+      .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 20px;
+      }
+      .form-group {
+        display: flex;
+        flex-direction: column;
+      }
+      .form-group.full-width {
+        grid-column: 1 / -1;
+      }
+      label {
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 0.9em;
+        color: var(--primary-color);
+      }
+      input,
+      select {
+        padding: 10px;
+        border: 1px solid var(--border-color);
+        border-radius: 4px;
+        font-size: 1em;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      input:focus,
+      select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 2px rgba(74, 78, 105, 0.2);
+      }
+      .button {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        font-size: 1em;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.1s;
+      }
+      .button-primary {
+        background-color: var(--primary-color);
+        color: white;
+        width: 100%;
+      }
+      .button-primary:hover {
+        background-color: #3b3e58;
+      }
+      .button-primary:active {
+        transform: scale(0.98);
+      }
+      .button-copy {
+        background-color: var(--accent-color);
+        color: white;
+        margin-top: 15px;
+        width: 100%;
+      }
+      .button-copy:hover {
+        background-color: #e66a43;
+      }
+      #result-area {
+        margin-top: 25px;
+        display: none;
+      }
+      .data-selector {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
+        background: var(--background-color);
+        padding: 5px;
+        border-radius: var(--border-radius);
+      }
+      .data-selector label {
+        flex: 1;
+        padding: 8px;
+        text-align: center;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+        font-weight: normal;
+        margin-bottom: 0;
+        user-select: none;
+      }
+      .data-selector input[type="radio"] {
+        display: none;
+      }
+      .data-selector input[type="radio"]:checked + label {
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+      .json-viewer-wrapper {
+        display: none;
+      }
+      .json-viewer {
+        background-color: #fdfaf9;
+        border: 1px solid var(--border-color);
+        border-radius: var(--border-radius);
+        padding: 15px;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+        font-size: 14px;
+        white-space: pre-wrap;
+        word-break: break-all;
+        max-height: 500px;
+        overflow-y: auto;
+      }
+      .json-viewer details {
+        padding-left: 20px;
+        border-left: 1px dashed var(--secondary-color);
+      }
+      .json-viewer summary {
+        cursor: pointer;
+        outline: none;
+        font-weight: bold;
+      }
+      .json-viewer .string {
+        color: #c33;
+      }
+      .json-viewer .number {
+        color: #39c;
+      }
+      .json-viewer .boolean {
+        color: #93c;
+      }
+      .json-viewer .null {
+        color: #aaa;
+      }
+      .json-viewer .key {
+        color: #669;
+      }
+      @media (min-width: 600px) {
+        .form-grid {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-grid">
+        <div class="form-group"><label for="birth-year">公历年</label><input type="number" id="birth-year" value="1999" /></div>
+        <div class="form-group"><label for="birth-month">公历月</label><input type="number" id="birth-month" value="9" /></div>
+        <div class="form-group"><label for="birth-day">公历日</label><input type="number" id="birth-day" value="9" /></div>
+        <div class="form-group"><label for="birth-hour">时 (0-23)</label><input type="number" id="birth-hour" value="9" /></div>
+        <div class="form-group full-width">
+          <label for="gender">性别</label
+          ><select id="gender">
+            <option value="男">男</option>
+            <option value="女">女</option>
+          </select>
+        </div>
+      </div>
+      <button id="analyze-button" class="button button-primary">生成数据</button>
+
+      <div id="result-area">
+        <div class="data-selector">
+          <input type="radio" id="select-ziwei" name="dataType" value="ziwei" checked /><label for="select-ziwei">紫微星盘</label>
+          <input type="radio" id="select-huangli" name="dataType" value="huangli" /><label for="select-huangli">当日黄历</label>
+        </div>
+        <div id="ziwei-viewer-wrapper" class="json-viewer-wrapper">
+          <h2>紫微星盘数据</h2>
+          <div id="ziwei-viewer" class="json-viewer"></div>
+        </div>
+        <div id="huangli-viewer-wrapper" class="json-viewer-wrapper">
+          <h2>黄历数据</h2>
+          <div id="huangli-viewer" class="json-viewer"></div>
+        </div>
+        <button id="copy-button" class="button button-copy">复制所选数据</button>
+      </div>
+    </div>
+
+    <script>
+      const analyzeButton = document.getElementById("analyze-button"),
+        resultArea = document.getElementById("result-area"),
+        copyButton = document.getElementById("copy-button")
+      const dataSelectors = document.querySelectorAll('input[name="dataType"]')
+      const ziweiViewerWrapper = document.getElementById("ziwei-viewer-wrapper"),
+        huangliViewerWrapper = document.getElementById("huangli-viewer-wrapper")
+      const ziweiViewer = document.getElementById("ziwei-viewer"),
+        huangliViewer = document.getElementById("huangli-viewer")
+      let ziweiData = null,
+        huangliData = null
+
+      analyzeButton.addEventListener("click", handleAnalysis)
+      copyButton.addEventListener("click", handleCopy)
+      dataSelectors.forEach((selector) => selector.addEventListener("change", updateView))
+
+      function getLunarInfo(date) {
+        const lunar = Lunar.fromDate(date)
+        const solar = lunar.getSolar()
+        const lunarYear = LunarYear.fromYear(lunar.getYear())
+        const shuJiu = lunar.getShuJiu(),
+          fu = lunar.getFu()
+
+        return {
+          lunarDate: `${lunar.getYearInChinese()}年 ${lunar.getMonthInChinese()}月 ${lunar.getDayInChinese()}`,
+          solarDate: `${solar.getYear()}年 ${solar.getMonth()}月 ${solar.getDay()}日 星期${solar.getWeekInChinese()} ${solar.getXingZuo()}座`,
+          ganAndZhi: {
+            year: `${lunar.getYearInGanZhi()} (${lunar.getYearShengXiao()}) ${lunar.getYearNaYin()}`,
+            month: `${lunar.getMonthInGanZhi()} (${lunar.getMonthShengXiao()}) ${lunar.getMonthNaYin()}`,
+            day: `${lunar.getDayInGanZhi()} (${lunar.getDayShengXiao()}) ${lunar.getDayNaYin()}`,
+          },
+          auspiciousAndInauspicious: { favorable: lunar.getDayYi(), unfavorable: lunar.getDayJi() },
+          clashAndSha: { clash: lunar.getChongDesc(), sha: lunar.getSha() },
+          solarTerms: {
+            previousTerm: { name: lunar.getPrevJieQi().getName(), time: lunar.getPrevJieQi().getSolar().toYmdHms() },
+            nextTerm: { name: lunar.getNextJieQi().getName(), time: lunar.getNextJieQi().getSolar().toYmdHms() },
+          },
+          festivals: [...lunar.getFestivals(), ...solar.getFestivals(), ...lunar.getOtherFestivals(), ...solar.getOtherFestivals()],
+          auspiciousAndOminousStars: { auspiciousStars: lunar.getDayJiShen(), ominousStars: lunar.getDayXiongSha() },
+          dailyGods: {
+            yangGuardian: lunar.getPositionYangGuiDesc(),
+            yinGuardian: lunar.getPositionYinGuiDesc(),
+            luckyGod: lunar.getPositionXiDesc(),
+            blessingGod: lunar.getPositionFuDesc(),
+            wealthGod: lunar.getPositionCaiDesc(),
+          },
+          otherInformation: {
+            season: lunar.getSeason(),
+            pengZu: `${lunar.getPengZuGan()} ${lunar.getPengZuZhi()}`,
+            hou: `${lunar.getHou()}, ${lunar.getWuHou()}`,
+            dailyFortune: lunar.getDayLu(),
+            sixDays: lunar.getLiuYao(),
+            yuanAndYun: `${lunarYear.getYuan()} ${lunarYear.getYun()}`,
+            zhiShui: lunarYear.getZhiShui(),
+            fenBing: lunarYear.getFenBing(),
+            gengTian: lunarYear.getGengTian(),
+            deJin: lunarYear.getDeJin(),
+          },
+          foto: {
+            year: lunar.getFoto().getYearInChinese(),
+            month: lunar.getFoto().getMonthInChinese(),
+            day: lunar.getFoto().getDayInChinese(),
+          },
+          tao: {
+            year: lunar.getTao().getYearInChinese(),
+            month: lunar.getTao().getMonthInChinese(),
+            day: lunar.getTao().getDayInChinese(),
+          },
+          yueXiang: lunar.getYueXiang(),
+          zhiXing: lunar.getZhiXing(),
+          dayTianShen: { name: lunar.getDayTianShen(), type: lunar.getDayTianShenType(), luck: lunar.getDayTianShenLuck() },
+          nineStar: lunar.getDayNineStar().toFullString(),
+          xunKong: { year: lunar.getYearXunKong(), month: lunar.getMonthXunKong(), day: lunar.getDayXunKong() },
+          shuJiu: shuJiu ? shuJiu.toFullString() : "无",
+          fu: fu ? fu.toFullString() : "无",
+          times: lunar.getTimes().map((time) => ({
+            ganZhi: time.getGanZhi(),
+            range: `${time.getMinHm()}-${time.getMaxHm()}`,
+            tianShen: time.getTianShen(),
+            tianShenType: time.getTianShenType(),
+            tianShenLuck: time.getTianShenLuck(),
+            chongDesc: time.getChongDesc(),
+            sha: time.getSha(),
+            yi: time.getYi(),
+            ji: time.getJi(),
+          })),
+        }
+      }
+
+      function handleAnalysis() {
+        const year = document.getElementById("birth-year").value,
+          month = document.getElementById("birth-month").value,
+          day = document.getElementById("birth-day").value,
+          hour = document.getElementById("birth-hour").value,
+          gender = document.getElementById("gender").value
+        if (!year || !month || !day || hour === "") {
+          return alert("请输入完整的公历出生年月日和时辰！")
+        }
+        if (parseInt(hour, 10) < 0 || parseInt(hour, 10) > 23) {
+          return alert("请输入有效的小时 (0-23)")
+        }
+
+        try {
+          const solarDateStr = `${year}-${month}-${day}`
+          const dateObject = new Date(parseInt(year), parseInt(month) - 1, parseInt(day))
+
+          ziweiData = iztro.astro.bySolar(solarDateStr, Math.floor(parseInt(hour) / 2), gender)
+          delete ziweiData["copyright"]
+          huangliData = getLunarInfo(dateObject)
+
+          if (ziweiData && huangliData) {
+            ziweiViewer.innerHTML = JSON.stringify(ziweiData)
+            huangliViewer.innerHTML = JSON.stringify(huangliData)
+            resultArea.style.display = "block"
+            document.getElementById("select-ziwei").checked = true
+            updateView()
+          }
+        } catch (error) {
+          console.error("Data generation error:", error)
+          alert(`发生错误：${error.message}。请检查输入的日期是否有效。`)
+          resultArea.style.display = "none"
+        }
+      }
+
+      function updateView() {
+        const selected = document.querySelector('input[name="dataType"]:checked').value
+        ziweiViewerWrapper.style.display = selected === "ziwei" ? "block" : "none"
+        huangliViewerWrapper.style.display = selected === "huangli" ? "block" : "none"
+      }
+
+      async function handleCopy() {
+        const selected = document.querySelector('input[name="dataType"]:checked').value
+        const dataToCopy = selected === "ziwei" ? ziweiData : huangliData
+        if (!dataToCopy) return
+        try {
+          await navigator.clipboard.writeText(JSON.stringify(dataToCopy))
+          copyButton.textContent = "复制成功！"
+          setTimeout(() => {
+            copyButton.textContent = "复制所选数据"
+          }, 2000)
+        } catch (err) {
+          console.error("Failed to copy: ", err)
+          copyButton.textContent = "复制失败"
+          alert("复制失败，您的浏览器可能不支持或未授权。")
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+[
+  {
+    "category": "App",
+    "links": [
+      {
+        "title": "Table Habit",
+        "introduction": "我们的应用程序通过易于使用的📈图表和工具帮助您养成并追踪微习惯，让您轻松养成持久的健康习惯🌱。立即开启您的个人成长之旅🚀！",
+        "link": "https://github.com/FriesI23/mhabit"
+      },
+      {
+        "title": "Loop Habit Tracker",
+        "introduction": "一款用于创建和维持长期良好习惯的移动应用程序",
+        "link": "https://github.com/iSoron/uhabits",
+        "hot": true
+      },
+      {
+        "title": "Simple Time Tracker",
+        "introduction": "跟踪时间的简单应用程序。",
+        "link": "https://github.com/Razeeman/Android-SimpleTimeTracker"
+      },
+      {
+        "title": "PhoneProfilesPlus",
+        "introduction": "Android 配置文件管理器 - 事件触发，手机情景模式 app",
+        "link": "https://github.com/henrichg/PhoneProfilesPlus"
+      },
+      {
+        "title": "TagWriter",
+        "introduction": "轻松编写和编程 NFC 标签",
+        "link": "https://www.nxp.com/design/design-center/software/rfid-developer-resources/nfc-tagwriter-app-by-nxp:NFC-TAGWRITER"
+      },
+      {
+        "title": "NFC Tools",
+        "introduction": "可以读取 NFC 标签和写数据在其上面",
+        "link": "https://play.google.com/store/apps/details?id=com.wakdev.wdnfc"
+      },
+      {
+        "title": "Cent",
+        "introduction": "完全免费、开源的多人协作记账 Web App",
+        "link": "https://github.com/glink25/Cent?tab=readme-ov-file"
+      },
+      {
+        "title": "Duolingo",
+        "introduction": "英语学习",
+        "link": "https://www.duolingo.cn/apk-download?via=other"
+      },
+      {
+        "title": "AnkiDroid",
+        "introduction": "跨平台记忆卡软件，可以制作和复习记忆卡。",
+        "link": "https://f-droid.org/packages/com.ichi2.anki/",
+        "info": "https://ankidroid.org/"
+      },
+      {
+        "title": "OSS Document Scanner",
+        "introduction": "文档扫描器",
+        "link": "https://apt.izzysoft.de/fdroid/index/apk/com.akylas.documentscanner"
+      },
+      {
+        "title": "Markor",
+        "introduction": "笔记软件，使用 Markdown 语法。",
+        "link": "https://f-droid.org/packages/net.gsantner.markor/"
+      },
+      {
+        "title": "Saber",
+        "introduction": "手写笔记，适合平板手写",
+        "link": "https://github.com/saber-notes/saber",
+        "timestamp": "2025-10-29T09:08:01.331Z"
+      },
+      {
+        "title": "Gcam-Services-Provider",
+        "introduction": "这个本身不是相机软件，但安装后允许用户安装 Gcam，即谷歌相机，该应用仅伪装了使用 Gcam 而无需 Play 服务所必需的 API。",
+        "link": "https://github.com/lukaspieper/Gcam-Services-Provider",
+        "timestamp": "2025-10-29T09:01:28.155Z"
+      },
+      {
+        "title": "Aegis",
+        "introduction": "双重验证（2FA）客户端，支持 HOTP 和 TOTP。",
+        "link": "https://f-droid.org/packages/com.beemdevelopment.aegis/",
+        "hot": true
+      },
+      {
+        "title": "Stratum",
+        "introduction": "双重验证（2FA）客户端，支持 Wear OS 查看验证码。",
+        "link": "https://apt.izzysoft.de/fdroid/index/apk/com.stratumauth.app"
+      },
+      {
+        "title": "PackageManager",
+        "introduction": "软件包管理器的源代码，一个用于管理应用程序的应用程序。",
+        "link": "https://github.com/SmartPack/PackageManager?tab=readme-ov-file"
+      },
+      {
+        "title": "AntiSplit-M",
+        "introduction": "一款用于在 Android 设备上将 APK 文件（APKS/XAPK/APKM）拆分（合并）为常规 .APK 文件的应用",
+        "link": "https://github.com/AbdurazaaqMohammed/AntiSplit-M",
+        "hot": true
+      }
+    ]
+  }
+]

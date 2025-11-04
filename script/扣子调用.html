@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Magic Pulse客服助手</title>
+    <style>
+      /* CSS is correct and requires no changes. */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      body {
+        background-color: #f0f2f5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .app-container {
+        width: 100%;
+        max-width: 600px;
+        background-color: white;
+        border-radius: 15px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 80vh;
+        max-height: 700px;
+      }
+      #chat-window {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        background-color: #f9f9f9;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .message {
+        max-width: 75%;
+        padding: 10px 15px;
+        border-radius: 18px;
+        margin: 5px 0;
+        line-height: 1.5;
+        word-wrap: break-word;
+        display: flex;
+        align-items: center;
+        min-height: 40px;
+      }
+      .user-message {
+        background-color: #0084ff;
+        color: white;
+        align-self: flex-end;
+        border-bottom-right-radius: 5px;
+      }
+      .ai-message {
+        background-color: #e5e5ea;
+        color: black;
+        align-self: flex-start;
+        border-bottom-left-radius: 5px;
+      }
+      #chat-form {
+        display: flex;
+        padding: 15px;
+        background-color: white;
+        border-top: 1px solid #eee;
+      }
+      #user-input {
+        flex: 1;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 25px;
+        outline: none;
+        font-size: 16px;
+      }
+      #send-button {
+        margin-left: 10px;
+        padding: 12px 20px;
+        background-color: #0084ff;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      #send-button:disabled {
+        background-color: #cccccc;
+        cursor: not-allowed;
+      }
+      .error-message {
+        color: #ff4d4f;
+        background-color: #fff1f0;
+        border: 1px solid #ffccc7;
+      }
+      .loader {
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(0, 0, 0, 0.1);
+        border-left-color: #000;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-container">
+      <div id="chat-window"></div>
+      <form id="chat-form">
+        <input type="text" id="user-input" placeholder="输入消息..." autocomplete="off" />
+        <button type="submit" id="send-button">发送</button>
+      </form>
+    </div>
+
+    <script>
+      "use strict"
+
+      const chatWindow = document.getElementById("chat-window")
+      const chatForm = document.getElementById("chat-form")
+      const userInput = document.getElementById("user-input")
+      const sendButton = document.getElementById("send-button")
+
+      const MAX_CONTEXT_TURNS = 3
+      const conversationHistory = []
+
+      function displayMessage(text, sender, isError = false) {
+        const messageDiv = document.createElement("div")
+        const senderClass = sender === "ai" ? "ai-message" : "user-message"
+        messageDiv.className = `message ${senderClass} ${isError ? "error-message" : ""}`
+        messageDiv.textContent = text
+        chatWindow.appendChild(messageDiv)
+        chatWindow.scrollTop = chatWindow.scrollHeight
+        return messageDiv
+      }
+
+      /**
+       * CORRECTED: This parser now matches the exact data structure you provided.
+       * @param {ReadableStreamDefaultReader} reader
+       * @param {HTMLElement} aiMessageDiv
+       * @returns {Promise<string|null>}
+       */
+      async function parseSSEStream(reader, aiMessageDiv) {
+        const decoder = new TextDecoder()
+        let finalContent = null
+        let firstChunk = true
+        let buffer = ""
+        let currentEvent = ""
+
+        while (true) {
+          const { done, value } = await reader.read()
+          if (done) break
+          buffer += decoder.decode(value, { stream: true })
+          const lines = buffer.split("\n")
+          buffer = lines.pop() || ""
+
+          for (const line of lines) {
+            const trimmedLine = line.trim()
+            if (trimmedLine.startsWith("event:")) {
+              currentEvent = trimmedLine.substring(6).trim()
+              continue
+            }
+
+            if (trimmedLine.startsWith("data:")) {
+              const dataContent = trimmedLine.substring(5).trim()
+              if (dataContent === "[DONE]") continue
+
+              try {
+                const eventData = JSON.parse(dataContent)
+
+                // CORRECTED LOGIC: Parse based on event type and top-level properties.
+                switch (currentEvent) {
+                  case "conversation.message.delta":
+                  case "conversation.message.completed":
+                    if (eventData.role === "assistant" && eventData.type === "answer" && typeof eventData.content === "string") {
+                      if (firstChunk) {
+                        aiMessageDiv.innerHTML = "" // Clear loader
+                        firstChunk = false
+                      }
+                      aiMessageDiv.textContent = eventData.content
+
+                      // Only set the final content on the completed event to ensure it's the last word.
+                      if (currentEvent === "conversation.message.completed") {
+                        finalContent = eventData.content
+                      }
+                    }
+                    break
+                  case "conversation.chat.failed":
+                    if (eventData.last_error && eventData.last_error.msg) {
+                      throw new Error(eventData.last_error.msg)
+                    }
+                    break
+                }
+              } catch (e) {
+                console.warn("SSE parsing error or logical error in handler:", e, "Data:", dataContent)
+              }
+            }
+          }
+        }
+        return finalContent
+      }
+
+      async function callAgentAPI(context) {
+        const API_KEY = "sat_llrZaDC3QRJZmc60eaq4XBE814Xo2QNXMvRg89mx4kTFbtuLw9HgVIqNKvDUMxJt"
+        const WORKFLOW_ID = "7534911809691516947"
+        // const API_KEY = "sat_ThARNSh2NVHjVDqYX3wHyayI1rhl9u5JDaTDsUHoSRzxGawcAj6CAMM99mxZqVdm"
+        // const WORKFLOW_ID = "7529350034799886372"
+
+        const aiMessageDiv = displayMessage("", "ai")
+        const loader = document.createElement("div")
+        loader.className = "loader"
+        aiMessageDiv.appendChild(loader)
+
+        try {
+          const apiMessages = context.map((msg) => ({ role: msg.role, content: msg.content, content_type: "text" }))
+          const response = await fetch("https://api.coze.cn/v1/workflows/chat", {
+            method: "POST",
+            headers: { Authorization: `Bearer ${API_KEY}`, "Content-Type": "application/json" },
+            body: JSON.stringify({ workflow_id: WORKFLOW_ID, additional_messages: apiMessages, stream: true }),
+          })
+
+          if (!response.ok) {
+            let errorMsg = response.statusText
+            try {
+              const errorData = await response.json()
+              errorMsg = errorData.msg || errorData.message || JSON.stringify(errorData)
+            } catch (e) {
+              /* Ignore */
+            }
+            throw new Error(`API 请求失败: ${response.status} - ${errorMsg}`)
+          }
+
+          const finalContent = await parseSSEStream(response.body.getReader(), aiMessageDiv)
+
+          if (finalContent) {
+            conversationHistory.push({ role: "assistant", content: finalContent })
+          } else if (aiMessageDiv.innerHTML.includes("loader")) {
+            aiMessageDiv.innerHTML = ""
+            aiMessageDiv.textContent = "未能获取有效回复。"
+          }
+        } catch (error) {
+          console.error("API调用或流处理出错:", error)
+          aiMessageDiv.innerHTML = ""
+          aiMessageDiv.textContent = error.message
+          aiMessageDiv.classList.add("error-message")
+        }
+      }
+
+      function handleFormSubmit(e) {
+        e.preventDefault()
+        const inputText = userInput.value.trim()
+        if (!inputText) return
+
+        sendButton.disabled = true
+        displayMessage(inputText, "user")
+        conversationHistory.push({ role: "user", content: inputText })
+        userInput.value = ""
+
+        const contextToSend = conversationHistory.slice(-MAX_CONTEXT_TURNS * 2)
+        callAgentAPI(contextToSend)
+
+        setTimeout(() => {
+          sendButton.disabled = false
+          userInput.focus()
+        }, 100)
+      }
+
+      chatForm.addEventListener("submit", handleFormSubmit)
+      userInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" && !e.shiftKey && !sendButton.disabled) {
+          e.preventDefault()
+          handleFormSubmit(new Event("submit", { cancelable: true }))
+        }
+      })
+
+      displayMessage("你好", "ai")
+    </script>
+  </body>
+</html>

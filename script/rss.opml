@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<opml version="2.0">
+  <head>
+    <title>精校 RSS 订阅列表</title>
+    <dateCreated>Mon, 14 Jul 2025 08:33:00 GMT</dateCreated>
+  </head>
+  <body>
+    <outline text="羊毛" title="羊毛">
+      <outline type="rss" text="羊毛日报" title="羊毛日报" xmlUrl="https://ym.today/feed" htmlUrl="https://ym.today"/>
+      <outline type="rss" text="薅羊毛小伙伴" title="薅羊毛小伙伴" xmlUrl="https://www.yangmaodang.club/rss" htmlUrl="https://www.yangmaodang.club"/>
+      <outline type="rss" text="有什么好东西值得买 - 即刻圈子" title="有什么好东西值得买 - 即刻圈子" xmlUrl="https://rsshub.ioiox.cn/jike/topic/5540e181e4b063749a7abfd9" htmlUrl="https://m.okjike.com/topics/5540e181e4b063749a7abfd9"/>
+      <outline type="rss" text="薅羊毛小分队 - 即刻圈子" title="薅羊毛小分队 - 即刻圈子" xmlUrl="https://rsshub.ioiox.cn/jike/topic/5523d164e4b0466c6563cd30" htmlUrl="https://m.okjike.com/topics/5523d164e4b0466c6563cd30"/>
+      <outline type="rss" text="真人范儿-羊毛优惠" title="真人范儿-羊毛优惠" xmlUrl="https://www.zrfan.com/feed/" htmlUrl="https://www.zrfan.com"/>
+    </outline>
+    <outline text="关注" title="关注">
+      <outline type="rss" text="深圳本地宝焦点资讯" title="深圳本地宝焦点资讯" xmlUrl="https://rsshub.flyago.cn/bendibao/news/sz" htmlUrl="http://sz.bendibao.com"/>
+      <outline type="rss" text="奇趣网站收藏家 - 即刻圈子" title="奇趣网站收藏家 - 即刻圈子" xmlUrl="https://rsshub.ioiox.cn/jike/topic/55d81b4b60b296e5679785de" htmlUrl="https://m.okjike.com/topics/55d81b4b60b296e5679785de"/>
+      <outline type="rss" text="JitHub程序员 - 即刻圈子" title="JitHub程序员 - 即刻圈子" xmlUrl="https://rsshub.ioiox.cn/jike/topic/55e02198dcef9f0e00d7b3c3" htmlUrl="https://m.okjike.com/topics/55e02198dcef9f0e00d7b3c3"/>
+      <outline type="rss" text="生活小姿势 - 即刻圈子" title="生活小姿势 - 即刻圈子" xmlUrl="https://rsshub.ioiox.cn/jike/topic/567b9036fb179d1100f8cbe1" htmlUrl="https://m.okjike.com/topics/567b9036fb179d1100f8cbe1"/>
+      <outline type="rss" text="潮流周刊" title="潮流周刊" xmlUrl="https://weekly.tw93.fun/rss.xml" htmlUrl="https://weekly.tw93.fun/"/>
+      <outline type="rss" text="阮一峰的网络日志" title="阮一峰的网络日志" xmlUrl="https://feeds.feedburner.com/ruanyifeng" htmlUrl="http://www.ruanyifeng.com/blog/"/>
+      <outline type="rss" text="冻梨游研社|绝区零" title="冻梨游研社|绝区零" xmlUrl="https://rsshub.ioiox.cn/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2387749445439635456" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2387749445439635456"/>
+      <outline type="rss" text="冻梨游研社|崩坏：星穹铁道" title="冻梨游研社|崩坏：星穹铁道" xmlUrl="https://rsshub.ioiox.cn/wechat/mp/msgalbum/MzU0NjAxMjI3OA==/2767905510162546689" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzU0NjAxMjI3OA==&amp;action=getalbum&amp;album_id=2767905510162546689"/>
+      <outline type="rss" text="喷嚏图卦" title="喷嚏图卦" xmlUrl="https://feedx.net/rss/pentitugua.xml" htmlUrl="http://dapenti.com"/>
+      <outline type="rss" text="信息差——独立开发者出海周刊" title="信息差——独立开发者出海周刊" xmlUrl="https://gapis.money/rss.xml" htmlUrl="https://gapis.money"/>
+      <outline type="rss" text="偷懒爱好者周刊" title="偷懒爱好者周刊" xmlUrl="https://toolight.cn/open/p/weekly/atom.xml" htmlUrl="https://echosoar.github.io/weekly/"/>
+      <outline type="rss" text="白歌的小站" title="白歌的小站" xmlUrl="https://rsshub.flyago.cn/wechat/mp/msgalbum/MzI1NzYzMDE2MA==/3669563742544510979" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzI1NzYzMDE2MA==&amp;action=getalbum&amp;album_id=3669563742544510979"/>
+      <outline type="rss" text="笛卡 - 最佳" title="笛卡 - 最佳" xmlUrl="https://dizkaz.com/feed" htmlUrl="https://dizkaz.com"/>
+      <outline type="rss" text="早报网" title="早报网" xmlUrl="https://rsshub.ioiox.cn/qqorw" htmlUrl="https://qqorw.cn/"/>
+      <outline type="rss" text="icheer.me" title="icheer.me" xmlUrl="https://icheer.me/atom.xml" htmlUrl="https://icheer.me"/>
+      <outline type="rss" text="谢乾坤 | Kingname" title="谢乾坤 | Kingname" xmlUrl="https://kingname.info/atom.xml" htmlUrl="https://kingname.info"/>
+      <outline type="rss" text="独立开发|独立开发周刊" title="独立开发|独立开发周刊" xmlUrl="https://rsshub.ioiox.cn/wechat/mp/msgalbum/MzkwODcyNDgyMQ==/3744741765530796042" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=MzkwODcyNDgyMQ==&amp;action=getalbum&amp;album_id=3744741765530796042"/>
+      <outline type="rss" text="Brief AI 電子報" title="Brief AI 電子報" xmlUrl="https://kill-the-newsletter.com/feeds/lb9mi22m325gvrj43mku.xml" htmlUrl="https://kill-the-newsletter.com"/>
+      <outline type="rss" text="大厂项目复盘知识库" title="大厂项目复盘知识库" xmlUrl="https://rsshub.ioiox.cn/yuque/suoyibo/lk20w0" htmlUrl="https://www.yuque.com/suoyibo/lk20w0"/>
+      <outline type="rss" text="HelloGitHub 月刊" title="HelloGitHub 月刊" xmlUrl="https://hellogithub.com/rss" htmlUrl="https://hellogithub.com"/>
+      <outline type="rss" text="老胡的周刊" title="老胡的周刊" xmlUrl="https://weekly.howie6879.com/rss/rss.xml" htmlUrl="https://weekly.howie6879.com/"/>
+      <outline type="rss" text="免費資源網路社群 - 免費資源指南，每日網路資訊與科技新知" title="免費資源網路社群 - 免費資源指南，每日網路資訊與科技新知" xmlUrl="https://feeds.feedburner.com/freegroup" htmlUrl="https://free.com.tw"/>
+      <outline type="rss" text="電腦玩物" title="電腦玩物" xmlUrl="https://feeds.feedburner.com/playpc" htmlUrl="http://www.playpcesor.com/"/>
+      <outline type="rss" text="ruanyf/weekly Issues" title="ruanyf/weekly Issues" xmlUrl="https://rsshub.ioiox.cn/github/issue/ruanyf/weekly" htmlUrl="https://github.com/ruanyf/weekly/issues"/>
+      <outline type="rss" text="小众软件" title="小众软件" xmlUrl="http://www.appinn.com/feed/" htmlUrl="https://www.appinn.com"/>
+      <outline type="rss" text="Product Hunt 每日热榜" title="Product Hunt 每日热榜" xmlUrl="https://decohack.com/feed/" htmlUrl="https://decohack.com"/>
+      <outline type="rss" text="ShowMeAI研究中心|ShowMeAI周刊" title="ShowMeAI研究中心|ShowMeAI周刊" xmlUrl="https://rsshub.ioiox.cn/wechat/mp/msgalbum/Mzg2OTYyMTcwMw==/2845675621728157697" htmlUrl="https://mp.weixin.qq.com/mp/appmsgalbum?__biz=Mzg2OTYyMTcwMw==&amp;action=getalbum&amp;album_id=2845675621728157697"/>
+      <outline type="rss" text="体验进阶" title="体验进阶" xmlUrl="https://werss.bestblogs.dev/feeds/MP_WXS_3222834839.atom" htmlUrl="/feeds/MP_WXS_3222834839.atom"/>
+      <outline type="rss" text="强少来了" title="强少来了" xmlUrl="https://werss.bestblogs.dev/feeds/MP_WXS_3018043842.atom" htmlUrl="/feeds/MP_WXS_3018043842.atom"/>
+      <outline type="rss" text="前端之巅" title="前端之巅" xmlUrl="https://werss.bestblogs.dev/feeds/MP_WXS_3513713196.atom" htmlUrl="/feeds/MP_WXS_3513713196.atom"/>
+      <outline type="rss" text="数字生命卡兹克" title="数字生命卡兹克" xmlUrl="https://wewerss.bestblogs.dev/feeds/MP_WXS_3223096120.atom" htmlUrl="/feeds/MP_WXS_3223096120.atom"/>
+      <outline type="rss" text="浮之静" title="浮之静" xmlUrl="https://wewerss.bestblogs.dev/feeds/MP_WXS_3236165275.atom" htmlUrl="/feeds/MP_WXS_3236165275.atom"/>
+      <outline type="rss" text="Clip设计夹" title="Clip设计夹" xmlUrl="https://werss.bestblogs.dev/feeds/MP_WXS_3297773927.atom" htmlUrl="/feeds/MP_WXS_3297773927.atom"/>
+      <outline type="rss" text="2AGI.NET" title="2AGI.NET" xmlUrl="https://www.2agi.net/blog/feed" htmlUrl="https://www.2agi.net/blog/"/>
+      <outline type="rss" text="OneFlow" title="OneFlow" xmlUrl="https://wewerss.bestblogs.dev/feeds/MP_WXS_3598661977.atom" htmlUrl="/feeds/MP_WXS_3598661977.atom"/>
+      <outline type="rss" text="智能涌现" title="智能涌现" xmlUrl="https://wewerss.bestblogs.dev/feeds/MP_WXS_3900464567.atom" htmlUrl="/feeds/MP_WXS_3900464567.atom"/>
+      <outline type="rss" text="刘润" title="刘润" xmlUrl="https://werss.bestblogs.dev/feeds/MP_WXS_2396392481.atom" htmlUrl="/feeds/MP_WXS_2396392481.atom"/>
+      <outline type="rss" text="笔记侠" title="笔记侠" xmlUrl="https://werss.bestblogs.dev/feeds/MP_WXS_3215037546.atom" htmlUrl="/feeds/MP_WXS_3215037546.atom"/>
+      <outline type="rss" text="旅游成功小组" title="旅游成功小组" xmlUrl="https://rss.app/feeds/qJ1DcUgskGRrGJhH.xml" htmlUrl="https://rss.app"/>
+      <outline type="rss" text="讨论精选    (豆瓣)" title="讨论精选    (豆瓣)" xmlUrl="https://rss.app/feeds/yxFJoOuRsRF0AQMh.xml" htmlUrl="https://rss.app"/>
+      <outline type="rss" text="深圳吃喝玩乐小分队 - 即刻圈子" title="深圳吃喝玩乐小分队 - 即刻圈子" xmlUrl="https://rsshub.ioiox.cn/jike/topic/562dfeb0daf87d13002cad92" htmlUrl="https://m.okjike.com/topics/562dfeb0daf87d13002cad92"/>
+      <outline type="rss" text="强少来了" title="强少来了" xmlUrl="https://www.fengxiaoqiang.com/feed.rss" htmlUrl="https://www.fengxiaoqiang.com"/>
+      <outline type="rss" text="龙爪槐守望者" title="龙爪槐守望者" xmlUrl="https://www.ftium4.com/rss.xml" htmlUrl="https://www.ftium4.com"/>
+      <outline type="rss" text="Tony Bai" title="Tony Bai" xmlUrl="https://tonybai.com/feed/" htmlUrl="https://tonybai.com"/>
+      <outline type="rss" text="运维咖啡吧" title="运维咖啡吧" xmlUrl="https://blog.ops-coffee.cn/feed.xml" htmlUrl="https://blog.ops-coffee.cn"/>
+    </outline>
+    <outline text="乐呵" title="乐呵">
+      <outline type="rss" text="热榜 - 煎蛋" title="热榜 - 煎蛋" xmlUrl="https://rsshub.ioiox.cn/jandan/top" htmlUrl="http://i.jandan.net/top"/>
+      <outline type="rss" text="网易轻松一刻" title="网易轻松一刻" xmlUrl="https://feedx.net/rss/163easy.xml" htmlUrl="http://www.163.com"/>
+    </outline>
+    <outline text="资讯" title="资讯">
+      <outline type="rss" text="中国气象爱好者的微博" title="中国气象爱好者的微博" xmlUrl="https://rsshub.ioiox.cn/weibo/user/1763864272" htmlUrl="https://weibo.com/1763864272/"/>
+      <outline type="rss" text="掘金前端本周最热" title="掘金前端本周最热" xmlUrl="https://rsshub.ioiox.cn/juejin/trending/frontend/weekly" htmlUrl="https://juejin.im/frontend?sort=weekly_hottest"/>
+      <outline type="rss" text="又有人在微博提到西丽了" title="又有人在微博提到西丽了" xmlUrl="https://rsshub.ioiox.cn/weibo/keyword/%E8%A5%BF%E4%B8%BD" htmlUrl="http://s.weibo.com/weibo/%E8%A5%BF%E4%B8%BD&amp;b=1&amp;nodup=1"/>
+      <outline type="rss" text="V2方圆" title="V2方圆" xmlUrl="https://v2fy.com/?feed=rss" htmlUrl="https://v2fy.com"/>
+      <outline type="rss" text="又有人在微博提到chiplet了" title="又有人在微博提到chiplet了" xmlUrl="https://rsshub.ioiox.cn/weibo/keyword/chiplet%E8%8A%AF" htmlUrl="http://s.weibo.com/weibo/chiplet%E8%8A%AF&amp;b=1&amp;nodup=1"/>
+      <outline type="rss" text="纽约时报双语版" title="纽约时报双语版" xmlUrl="https://feedx.net/rss/nytimesdual.xml" htmlUrl="http://nytimes.com"/>
+      <outline type="rss" text="分享_科技猎" title="分享_科技猎" xmlUrl="http://www.kejilie.com/s.do?text=%E5%88%86%E4%BA%AB&amp;sort=ctime&amp;feed=true" htmlUrl="http://www.kejilie.com"/>
+      <outline type="rss" text="值得_科技猎" title="值得_科技猎" xmlUrl="http://www.kejilie.com/s.do?text=%E5%80%BC%E5%BE%97&amp;sort=ctime&amp;feed=true" htmlUrl="http://www.kejilie.com"/>
+      <outline type="rss" text="报告_科技猎" title="报告_科技猎" xmlUrl="http://www.kejilie.com/s.do?text=%E6%8A%A5%E5%91%8A&amp;sort=ctime&amp;feed=true" htmlUrl="http://www.kejilie.com"/>
+      <outline type="rss" text="芯片_科技猎" title="芯片_科技猎" xmlUrl="http://www.kejilie.com/s.do?text=%E8%8A%AF%E7%89%87&amp;sort=ctime&amp;feed=true" htmlUrl="http://www.kejilie.com"/>
+      <outline type="rss" text="医疗_科技猎" title="医疗_科技猎" xmlUrl="http://www.kejilie.com/s.do?text=%E5%8C%BB%E7%96%97&amp;sort=ctime&amp;feed=true" htmlUrl="http://www.kejilie.com"/>
+      <outline type="rss" text="深圳_科技猎" title="深圳_科技猎" xmlUrl="http://www.kejilie.com/s.do?text=%E6%B7%B1%E5%9C%B3&amp;sort=ctime&amp;feed=true" htmlUrl="http://www.kejilie.com"/>
+      <outline type="rss" text="OSCHINA 社区最新新闻" title="OSCHINA 社区最新新闻" xmlUrl="https://www.oschina.net/news/rss" htmlUrl="https://www.oschina.net/news/rss"/>
+      <outline type="rss" text="Google快讯 - 芯片  ai 医疗" title="Google快讯 - 芯片  ai 医疗" xmlUrl="https://www.google.com/alerts/feeds/11344575993678740286/17574201597513808034" htmlUrl="https://www.google.com/alerts/feeds/11344575993678740286/17574201597513808034"/>
+      <outline type="rss" text="少数派" title="少数派" xmlUrl="https://sspai.com/feed/prime" htmlUrl="https://sspai.com"/>
+      <outline type="rss" text="光子星球" title="光子星球" xmlUrl="https://werss.bestblogs.dev/feeds/MP_WXS_3082518302.atom" htmlUrl="/feeds/MP_WXS_3082518302.atom"/>
+    </outline>
+    <outline text="产品" title="产品">
+      <outline type="rss" text="Show HN" title="Show HN" xmlUrl="https://showhn.buzzing.cc/feed.xml" htmlUrl="https://showhn.buzzing.cc/"/>
+      <outline type="rss" text="Product Hunt 热门" title="Product Hunt 热门" xmlUrl="https://ph.buzzing.cc/feed.xml" htmlUrl="https://ph.buzzing.cc/"/>
+      <outline type="rss" text="Huggingface Daily Papers" title="Huggingface Daily Papers" xmlUrl="https://rsshub.ioiox.cn/huggingface/daily-papers" htmlUrl="https://huggingface.co/papers"/>
+      <outline type="rss" text="Being towards death" title="Being towards death" xmlUrl="https://andrewji8-9527.xlog.app/feed" htmlUrl="https://andrewji8-9527.xlog.app"/>
+      <outline type="rss" text="分享创造" title="分享创造" xmlUrl="https://www.v2ex.com/feed/create.xml" htmlUrl="https://www.v2ex.com/"/>
+    </outline>
+  </body>
+</opml>

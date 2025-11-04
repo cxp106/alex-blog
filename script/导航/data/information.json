@@ -1,0 +1,193 @@
+[
+  {
+    "category": "资讯",
+    "links": [
+      {
+        "title": "今日热榜",
+        "introduction": "提供各站热榜聚合",
+        "link": "https://tophub.today/"
+      },
+      {
+        "title": "今日热榜",
+        "introduction": "汇聚全网热搜",
+        "link": "https://rebang.today/"
+      },
+      {
+        "title": "今日热点",
+        "introduction": "聚合每日热门、有趣资讯",
+        "link": "https://www.redian.me/"
+      },
+      {
+        "title": "速热点",
+        "introduction": "速看全网热点",
+        "link": "https://www.suredian.com/"
+      },
+      {
+        "title": "瓦斯阅读",
+        "introduction": "聚合优质的商业科技资讯",
+        "link": "https://qnmlgb.tech/"
+      },
+      {
+        "title": "内幕",
+        "introduction": "你不知道的内幕消息",
+        "link": "https://t.me/s/inside1024"
+      },
+      {
+        "title": "V2EX",
+        "introduction": "互联网创意工作者们的社区",
+        "link": "https://www.v2ex.com/"
+      },
+      {
+        "title": "过早客",
+        "introduction": "武汉地区的在线交流分享社区",
+        "link": "https://www.guozaoke.com/"
+      },
+      {
+        "title": "虫部落",
+        "introduction": "搜索知识、技术和经验分享社区",
+        "link": "https://www.chongbuluo.com/"
+      },
+      {
+        "title": "蛙先知",
+        "introduction": "好奇心驱动的 AI 社区",
+        "link": "https://www.waxianzhi.com/"
+      },
+      {
+        "title": "LINUX.DO",
+        "introduction": "新的理想型社区，交流技术、资源和生活",
+        "link": "https://linux.do/"
+      },
+      {
+        "title": "IDC Flare",
+        "introduction": "域名、主机等信息集散地。",
+        "link": "https://idcflare.com/"
+      },
+      {
+        "title": "见山论坛",
+        "introduction": "互联网综合交流，日常生活、科技数码、工作学习、羊毛福利、建站交流、技术教程、资源分享等，山不见我，我去见山。",
+        "link": "https://www.jianshan.org/"
+      },
+      {
+        "title": "2Libra",
+        "introduction": "「2Libra」，To Balance，走向平衡，一个以工作与生活平衡为核心的社区。",
+        "link": "https://2libra.com/",
+        "info": "谷歌登录"
+      },
+      {
+        "title": "姿势论坛",
+        "introduction": "一个交流，娱乐，学习的论坛。资源共享，共同学习，共同进步。",
+        "link": "https://bbs.zsxwz.com/"
+      },
+      {
+        "title": "TGSO",
+        "introduction": "TG 资源网，专业的 telegram 搜索引擎",
+        "link": "https://tgso.top/new"
+      },
+      {
+        "title": "云段子",
+        "introduction": "收集各种搞笑段子、热门神评论、幽默笑话",
+        "link": "https://www.yduanzi.com/"
+      },
+      {
+        "title": "思方网",
+        "introduction": "掌握有效的思考方法，学习如何独立思考",
+        "link": "https://philosophy.hku.hk/think/chi/"
+      },
+      {
+        "title": "有用经验",
+        "introduction": "分享有用经验，打破信息茧房，每条经验均为人工甄选，无广放心食用",
+        "link": "https://yyjingyan.com/"
+      },
+      {
+        "title": "喷嚏网",
+        "introduction": "阅读、发现和分享：8 小时外的健康生活",
+        "link": "https://www.dapenti.com/"
+      },
+      {
+        "title": "5000 言",
+        "introduction": "集合了大众所熟知的经典国学，并给予翻译和解读",
+        "link": "https://5000yan.com/"
+      },
+      {
+        "title": "心晴网",
+        "introduction": "一个心理学社区，可以在线阅读心理学入门书籍",
+        "link": "http://www.ixinqing.com/"
+      },
+      {
+        "title": "漢典",
+        "introduction": "收录超过八万个汉字，二十万个词语",
+        "link": "https://www.zdic.net/"
+      },
+      {
+        "title": "书格",
+        "introduction": "自由开放的在线古籍图书馆，分享介绍有价值的古籍善本、字画",
+        "link": "https://shuge.org/"
+      },
+      {
+        "title": "book.clouds",
+        "introduction": "获取 Z-library（Zlibrary）最新地址、镜像站点、客户端下载，支持多语言，安全稳定，全球和中国均可访问。",
+        "link": "https://book.clouds.pp.ua/"
+      },
+      {
+        "title": "古诗文网",
+        "introduction": "古诗文经典传承",
+        "link": "https://www.gushiwen.cn/"
+      },
+      {
+        "title": "手工客",
+        "introduction": "学习手工 diy、分享手工作品、购买手工材料包",
+        "link": "https://www.ishougongke.com/"
+      },
+      {
+        "title": "Fold 'N Fly",
+        "introduction": "纸飞机的各种折法图解",
+        "link": "https://www.foldnfly.com/"
+      },
+      {
+        "title": "科学原理",
+        "introduction": "通过多媒体和交互方式轻松直观的了解各种东西的科学原理",
+        "link": "https://ciechanow.ski/archives/"
+      },
+      {
+        "title": "WikiHow",
+        "introduction": "解决各类问题的学习指南，汇聚各个领域值得信赖的研究与专业知识",
+        "link": "https://zh.wikihow.com/"
+      },
+      {
+        "title": "提示词讨论",
+        "introduction": "看下都在讨论关于提示词的帖子",
+        "link": "https://www.google.com/search?q=提示词 site:https://www.threads.com/&tbs=qdr:d"
+      },
+      {
+        "title": "前端资源网",
+        "introduction": "经验总结 - 记录日常工作生活中遇到的问题，技术和知识点",
+        "link": "https://www.w3h5.com/Exp.html"
+      },
+      {
+        "title": "midjourneysref",
+        "introduction": "获取生图的灵感",
+        "link": "https://midjourneysref.com/zh/guide/Best-trending-Sref-Codes/Flat vector"
+      },
+      {
+        "title": "promptbase",
+        "introduction": "获取生图的灵感",
+        "link": "https://promptbase.com/"
+      },
+      {
+        "title": "Justin3go",
+        "introduction": "坚持深耕技术领域的 T 型前端程序员，关注独立开发与 AI，喜欢 Vuejs、Nestjs, 还会点 Python、搜索引擎、NLP、Web3、后端",
+        "link": "https://justin3go.com/"
+      },
+      {
+        "title": "sideidea",
+        "introduction": "独立开发者/远程工作者盈利产品案例分享，定期和您分享最新独立开发者和远程工作者们的盈利产品案例",
+        "link": "https://sideidea.com/"
+      },
+      {
+        "title": "优惠信息 购物指南 NGA 玩家社区 P1",
+        "introduction": "NGA 论坛，装机神贴，电脑报价，新闻，行情，装机，攒机，评测，新品，数码，手机，硬件论坛，NGA，安卓，苹果",
+        "link": "https://ngabbs.com/thread.php?fid=570"
+      }
+    ]
+  }
+]

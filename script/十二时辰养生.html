@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>十二时辰 · 动态壁纸</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --text-primary: rgba(255, 255, 255, 0.9);
+        --text-secondary: rgba(255, 255, 255, 0.65);
+        --accent-color: #f7d8a3;
+        --shadow-color: rgba(247, 216, 163, 0.8);
+        --transition-duration: 1.2s; /* 稍微调整时长以获得更好体感 */
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        font-family: "Noto Serif SC", serif;
+        color: var(--text-primary);
+        background: #000;
+      }
+      #app {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .background-gradient {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        transition: background var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .content-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        perspective: 1000px;
+      }
+      .shi-chen-card {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+        opacity: 0;
+        pointer-events: none;
+        backface-visibility: hidden;
+        /* 定义默认状态的变换和过渡 */
+        transform: translateX(50px) scale(0.95);
+        transition: opacity var(--transition-duration) ease-in-out, transform var(--transition-duration) cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      /* 激活状态：进入视野 */
+      .shi-chen-card.active {
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateX(0) scale(1);
+      }
+      /* 退出状态：离开视野 */
+      .shi-chen-card.exiting {
+        /* 关键：确保退出时也有过渡效果 */
+        transform: translateX(-50px) scale(0.95);
+        opacity: 0;
+      }
+
+      /* --- 其余 CSS 与之前相同 --- */
+      .shi-chen-title {
+        font-size: 4rem;
+        font-weight: 700;
+        color: var(--accent-color);
+        text-shadow: 0 0 15px var(--shadow-color);
+        margin-bottom: 5px;
+      }
+      .time-range {
+        font-size: 0.9rem;
+        color: var(--text-secondary);
+        margin-bottom: 2rem;
+      }
+      .meridian-name {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+      }
+      .content-section {
+        margin-bottom: 1.8rem;
+      }
+      .section-title {
+        font-size: 1.1rem;
+        font-weight: 700;
+        letter-spacing: 0.2rem;
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 0.8rem;
+      }
+      .section-text {
+        font-size: 1rem;
+        line-height: 1.9;
+        text-align: justify;
+        color: var(--text-secondary);
+      }
+      .swipe-indicator {
+        position: absolute;
+        bottom: 3vh;
+        left: 50%;
+        transform: translateX(-50%);
+        color: rgba(255, 255, 255, 0.3);
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+        opacity: 0;
+        animation: fadeInOut 4s ease-in-out 3s forwards;
+        z-index: 20;
+      }
+      @keyframes fadeInOut {
+        0%,
+        100% {
+          opacity: 0;
+        }
+        25%,
+        75% {
+          opacity: 1;
+        }
+      }
+      @media (max-height: 700px) {
+        .shi-chen-title {
+          font-size: 3rem;
+        }
+        .meridian-name {
+          font-size: 1.2rem;
+          margin-bottom: 1.5rem;
+        }
+        .content-section {
+          margin-bottom: 1.5rem;
+        }
+        .section-text {
+          font-size: 0.9rem;
+          line-height: 1.8;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div class="background-gradient"></div>
+      <div class="content-container"></div>
+      <div class="swipe-indicator">左右滑动以探索</div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const data = [
+          {
+            时辰: "子时",
+            时间范围: "23:00 - 1:00",
+            地支: "子",
+            当令经络: "足少阳胆经",
+            经络属性: "少阳",
+            生理活动精要:
+              "此时辰，天地闭合，阴气盛极，然物极必反，‘一阳’初生。此微弱之阳气，乃生命之根，由胆经所主。胆为‘中正之官’，主决断，胆气在此刻潜养，为次日之生机奠基。深寐，是天地予人身最宝贵之甘露，以养此初生之阳。",
+            古典医理引申:
+              "《内经》有云：‘凡十一脏，取决于胆也。’子时为阴阳交替之枢纽，若能安睡，则胆气充盈，决断有方，诸脏皆安。反之，则胆火内扰，根基动摇。",
+            顺应之道:
+              "务必于亥时末入眠，子时已入深寐。此非仅为歇息，实为参与天地造化之过程。熄灭灯火，摒绝思虑，使神魂归窍，与天地同寂，以养阳气之萌芽。",
+            违逆之害:
+              "子时不寐，谓之‘逆天而行’。耗损胆气，使初阳不得生发。轻则口苦、目眩、心烦不宁；重则日久胆怯易惊，情志不定，或生结石等形质之患，乃自绝于生机。",
+            体察之象: "子时辗转难眠者，多为胆气虚或肝胆有火。此时若自然醒转，切勿扰动，宜静卧调息，意守丹田，护此微阳。",
+          },
+          {
+            时辰: "丑时",
+            时间范围: "1:00 - 3:00",
+            地支: "丑",
+            当令经络: "足厥阴肝经",
+            经络属性: "厥阴",
+            生理活动精要:
+              "肝为‘将军之官’，主藏血，主疏泄。丑时，人体气血经历一日奔波，皆归于肝。肝脏在此际进行血液之净化、修复与储藏，并为全身筋脉补充能量。‘人卧则血归于肝’，安眠是肝脏完成此重任之唯一前提。",
+            古典医理引申:
+              "《内经》曰：‘肝者，罢极之本，魂之居也。’意指肝能使人耐受疲劳，亦是‘魂’之居所。丑时深睡，则血能养肝，魂亦得安，人方能神志清晰，谋虑周全。",
+            顺应之道: "延续子时之静谧，沉入无梦或少梦之深眠。身心俱寂，使‘将军’卸甲归田，从容调度，完成血液之新陈代谢，使魂魄安然归舍。",
+            违逆之害:
+              "丑时不眠，则肝失所养，血不归藏。肝之疏泄功能失常，毒素积聚，气机郁滞。轻则面色青晦，双目干涩，筋脉僵硬，易怒暴躁；重则损伤肝体，百病由生。",
+            体察之象: "此时惊醒，多为肝经郁火或肝血亏虚。醒后若感烦躁易怒，或有噩梦，皆为肝魂不宁之象。",
+          },
+          {
+            时辰: "寅时",
+            时间范围: "3:00 - 5:00",
+            地支: "寅",
+            当令经络: "手太阴肺经",
+            经络属性: "太阴",
+            生理活动精要:
+              "寅时，天地由静极转入动，阳气始升。肺为‘相傅之官’，主一身之气，‘朝百脉’。此刻肺经当令，将肝脏于丑时净化之新鲜血液，通过肺气之宣发肃降，重新布散至全身百脉，为人之一日活动奏响序曲。",
+            古典医理引申:
+              "《内经》论：‘肺者，气之本。’寅时肺气充盈，则气血分布有序，脏腑功能得以启动。故修行之人，多于此时起身，采纳天地初生之清气，以助我身之阳。",
+            顺应之道:
+              "此时应处于深度睡眠之末。身体虽静，然内部气血已然开始周流。若此时醒来，不宜即起，可静卧行深呼吸（龟息之法），以助肺气宣发，吐故纳新。",
+            违逆之害:
+              "此时咳嗽加剧或无故惊醒，多为肺气虚弱或肺有伏邪之兆。若强起劳作，则使气血分配紊乱，易感外邪，或致体倦神疲，气机不畅。",
+            体察之象: "体弱者或肺部有疾者，常于此时醒来或咳嗽。反之，若睡眠安稳，则说明肺气调和，气血充盈。",
+          },
+          {
+            时辰: "卯时",
+            时间范围: "5:00 - 7:00",
+            地支: "卯",
+            当令经络: "手阳明大肠经",
+            经络属性: "阳明",
+            生理活动精要:
+              "卯时，日出东方，天地之门开。肺经于寅时布散气血，其阳气推动与其相表里之大肠经。大肠主‘传导之官’，此时功能最盛，将一夜代谢之浊阴糟粕排出体外，此谓‘开天门，泄地户’，为机体吐故纳新之关键一步。",
+            古典医理引申:
+              "肺与大肠相表里，肺气肃降，方能助大肠传导。卯时排便，乃顺应天地清升浊降之自然规律，使人体内部清明洁净，以纳新谷。",
+            顺应之道: "天醒我亦醒。起身缓行，饮温水一杯以润肠道，而后从容如厕，排空浊物。此为养生第一要务，胜过补药三分。",
+            违逆之害:
+              "卯时不起，或憋便不排，则浊气内留，废毒重吸，上可熏蒸心肺，致口臭、面斑；下可壅塞气机，致腹胀、神昏。日久，正气必损。",
+            体察之象: "此时有便意且通畅者，为气机顺达之佳兆。若便秘或排泄不力，提示肺气不足或肠道津亏有热。",
+          },
+          {
+            时辰: "辰时",
+            时间范围: "7:00 - 9:00",
+            地支: "辰",
+            当令经络: "足阳明胃经",
+            经络属性: "阳明",
+            生理活动精要:
+              "胃为‘仓廪之官’，主受纳腐熟水谷。辰时，天地阳气已盛，人体阳明经气血最旺，消化之力如日中天。此时进食早餐，如大地承纳春雨，能最高效地化为精气，滋养五脏六腑，为一日之活动提供坚实能量。",
+            古典医理引申: "‘有胃气则生，无胃气则死。’胃为后天之本，气血生化之源头。辰时养胃，乃是为生命这棵大树浇灌根部，其义至重。",
+            顺应之道: "务必进食温热、营养丰盛之早餐，细嚼慢咽。此餐非为口腹之欲，乃为供养全身脏腑。忌食生冷，以免遏伤胃阳。",
+            违逆之害:
+              "辰时不食，则胃中空转，阳气无所依附而耗散。长此以往，胃气虚弱，脾运失健，致气血双亏，百骸失养，或形体消瘦，或痰湿内生。",
+            体察之象: "此时食欲旺盛，精力充沛，为胃气强健之象。若食欲不振，或食后胃胀，则为胃气不足或有食滞之兆。",
+          },
+          {
+            时辰: "巳时",
+            时间范围: "9:00 - 11:00",
+            地支: "巳",
+            当令经络: "足太阴脾经",
+            经络属性: "太阴",
+            生理活动精要:
+              "脾为‘谏议之官’，主运化水谷精微，为‘后天之本’。巳时，脾经接替胃经，开始对食物进行精细加工，将营养物质化为气血津液，并将其‘升清’，上输心肺，布散周身。此时亦是人神思最敏锐、精力最集中的时刻。",
+            古典医理引申:
+              "《内经》云：‘脾主为胃行其津液者也。’脾气健运，则清阳上升，浊阴下降，人体清爽活泼。若脾虚，则运化无力，湿浊内停。",
+            顺应之道:
+              "此为一日中工作与学习之黄金时刻。然需谨记，‘思伤脾’，专注之时亦需间或放松，避免过度思虑。可饮少量温水，以助脾之运化。",
+            违逆之害:
+              "过度劳神，或饮食不节，最易损伤脾气。脾伤则运化失司，水湿不化，易生腹胀、便溏、肢体困重、面黄、口淡无味等症。气血生化无源，则百病丛生。",
+            体察之象: "此时头脑清晰，精力旺盛，是脾气健运的表现。若感困倦、疲乏、腹胀，则多为脾虚湿困之象。",
+          },
+          {
+            时辰: "午时",
+            时间范围: "11:00 - 13:00",
+            地支: "午",
+            当令经络: "手少阴心经",
+            经络属性: "少阴",
+            生理活动精要:
+              "心为‘君主之官’，主神明，藏神。午时，日丽中天，阳气达到顶峰，心经气血亦至巅峰。此时阴气初生，乃‘合阴’之时。短暂休憩，可助心肾相交，水火既济，为君主养神，以安天下（全身）。",
+            古典医理引申:
+              "《内经》云：‘心藏神。’神安则五脏六腑皆安。午时小憩，称为‘子午觉’，是古代圣贤遵循阴阳消长规律的养生大智慧，旨在‘养心阴，抑心火’。",
+            顺应之道:
+              "静坐或小寐一刻（约一炷香时间），即便不能入睡，闭目养神亦可。使心神内敛，气血平和。忌食后立即劳作及剧烈运动，忌大喜大怒，扰动君主。",
+            违逆之害:
+              "午时不休，或情志过激，则心火过旺，心血暗耗。轻则心悸、胸闷、气短、烦躁；重则日久神不守舍，失眠健忘，甚至引发心脉瘀阻之重疾。",
+            体察之象: "此时微有困意，小憩后神清气爽，是心气调和之象。若心悸、烦乱、大汗淋漓，则为心气受扰或心阴不足之兆。",
+          },
+          {
+            时辰: "未时",
+            时间范围: "13:00 - 15:00",
+            地支: "未",
+            当令经络: "手太阳小肠经",
+            经络属性: "太阳",
+            生理活动精要:
+              "小肠为‘受盛之官’，主化物，能‘泌别清浊’。午餐之后，食物精华由小肠进行二次吸收，将清者（营养）输送至脾，浊者（糟粕与废水）下传大肠与膀胱。此乃营养吸收之关键环节。",
+            古典医理引申: "小肠与心相表里。心火若过旺，可下移小肠，导致小便短赤、灼痛。故心神安泰，亦有助于小肠功能正常。",
+            顺应之道: "午饭后宜缓行百步，或静坐片刻，不宜立即伏案或剧烈活动，为小肠提供安稳的工作环境。此时可多饮温水，以助其分清泌浊。",
+            违逆之害: "餐后即行剧烈运动或劳神，会使气血分散，影响小肠吸收功能，导致营养流失。长期如此，虽食亦瘦，或生腹泻、腹痛之症。",
+            体察之象: "午后精神渐复，无腹胀腹泻，是小肠功能良好之表现。若吸收不良，面黄肌瘦，或舌尖赤红，可能与小肠功能失调有关。",
+          },
+          {
+            时辰: "申时",
+            时间范围: "15:00 - 17:00",
+            地支: "申",
+            当令经络: "足太阳膀胱经",
+            经络属性: "太阳",
+            生理活动精要:
+              "膀胱为‘州都之官’，主藏津液，赖肾之气化以排泄水液。膀胱经乃人体最长之经脉，循行背部，为一身之藩篱，能抵御外邪。此时是人体津液代谢与排毒之重要时段，亦是记忆力与学习效率之另一高峰。",
+            古典医理引申: "膀胱经气通畅，则周身阳气振奋。其经脉上通于脑，故此时头脑清明。肾与膀胱相表里，膀胱之气化有赖于肾阳之温煦。",
+            顺应之道:
+              "此时宜多饮清水，以助排毒。适度活动，如散步、伸展，可激发膀胱经阳气，缓解背部疲劳。善用此时段进行学习或处理复杂事务。",
+            违逆之害:
+              "憋尿最伤膀胱，久之可上累于肾。此时若感疲劳，乃阳气自然转衰之象，不宜强撑，以免耗伤肾气。若膀胱经不通，则易腰酸背痛，小便不利。",
+            体察之象: "此时饮水后小便通畅，精神尚佳，为膀胱经气足之象。若此时异常困倦，或后脑、颈背酸痛，提示膀胱经气或肾气有所不足。",
+          },
+          {
+            时辰: "酉时",
+            时间范围: "17:00 - 19:00",
+            地支: "酉",
+            当令经络: "足少阴肾经",
+            经络属性: "少阴",
+            生理活动精要:
+              "肾为‘作强之官’，主藏精，为‘先天之本’。酉时，日落月升，天地阳气收敛，阴气渐长。人体之气血流注于肾，开始进行一日之封藏。肾精乃生命之本源，此时养肾，即是为生命‘充电’。",
+            古典医理引申: "《内经》云：‘肾者主水，受五脏六腑之精而藏之。’酉时是肾脏贮藏精华，休养生息之时，为次日乃至一生的活力打下基础。",
+            顺应之道:
+              "宜静不宜动。停止繁忙工作，归家放松。晚餐宜清淡，量不宜多，以不劳烦脾胃、不增加肾脏负担为要。可用温水浴足，引火归元，助肾封藏。",
+            违逆之害:
+              "此时若剧烈运动、纵情声色、过食咸味、熬夜劳作，皆是盗泄肾精之举。长此以往，必致腰膝酸软、须发早白、耳鸣齿摇、精力衰退等早衰之象。",
+            体察之象: "此时身体略感疲惫，渴望休息，乃正常生理现象。若反觉亢奋，或腰酸异常，需警惕肾阴亏虚，虚火上炎。",
+          },
+          {
+            时辰: "戌时",
+            时间范围: "19:00 - 21:00",
+            地支: "戌",
+            当令经络: "手厥阴心包经",
+            经络属性: "厥阴",
+            生理活动精要:
+              "心包为‘臣使之官’，是心脏之外卫，代心受邪，代心行令，主喜乐。戌时，夜幕降临，阳气尽收，心包经当令，以清理心脏周围环境，使君主安然入寝。此时宜营造轻松愉悦之氛围。",
+            古典医理引申: "心包经通畅，则心脉调和，心神安宁。故戌时又称‘娱乐之时’，但此‘乐’非狂欢，而是恬淡之乐，以养心神。",
+            顺应之道:
+              "宜散步、静坐、听雅乐、与家人温言闲谈、展卷夜读。保持心境平和，释放日间压力。此为‘养心’之最佳时机，为亥时入睡做好铺垫。",
+            违逆之害: "此时若激烈争吵、观看惊悚影像、进行高强度脑力劳动，皆会扰乱心包，使‘君主’不宁，直接导致失眠、多梦、心悸、胸闷。",
+            体察之象: "此时心平气和，身心舒畅，易生倦意，为健康之态。若胸闷心烦，掌心发热，则可能为心包有火，或痰湿阻滞。",
+          },
+          {
+            时辰: "亥时",
+            时间范围: "21:00 - 23:00",
+            地支: "亥",
+            当令经络: "手少阳三焦经",
+            经络属性: "少阳",
+            生理活动精要:
+              "三焦为‘决渎之官’，通行元气，总管全身气机与水液之道。亥时，天地入定，乃一日之终章。三焦经当令，以调和诸脏，通利水道，使百脉得以休养生息，为子时一阳初生创造最佳之内环境。",
+            古典医理引申:
+              "三焦为六腑中最大之腑，是气血津液运行之总枢纽。亥时安睡，则三焦得以疏通，五脏六腑皆能得到濡养，所谓‘睡个好觉，百脉皆通’。",
+            顺应之道:
+              "万籁俱寂，人亦应随之入静。完成洗漱，温水浴足，而后上榻安眠。务必在亥时之内进入睡眠状态。此为‘人定’之时，顺之则康，逆之则损。",
+            违逆之害:
+              "亥时不睡，则三焦水道不通，气机紊乱。轻则次日昏沉，口干咽燥；重则百脉俱滞，阴阳失调，久之可致水肿、淋巴不畅，甚至影响内分泌之平衡。",
+            体察之象: "此时自然困倦，安然入睡，是为最佳状态。若此时精神抖擞，难以入眠，多为阴不潜阳，或心肾不交，乃失衡之兆，需及时调整。",
+          },
+        ]
+        const gradients = [
+          "radial-gradient(ellipse at bottom, #0d1a3a 0%, #000000 70%)",
+          "radial-gradient(ellipse at bottom, #0f1c40 0%, #02021c 70%)",
+          "radial-gradient(ellipse at bottom, #18234f 0%, #0c0f2e 70%)",
+          "radial-gradient(ellipse at bottom, #4A3E6B 0%, #20244E 70%)",
+          "radial-gradient(ellipse at bottom, #876597 0%, #525384 70%)",
+          "radial-gradient(ellipse at bottom, #F7C2A3 0%, #8AA7D8 100%)",
+          "radial-gradient(ellipse at bottom, #FFE8A3 0%, #76B4D6 100%)",
+          "radial-gradient(ellipse at bottom, #F7D8A3 0%, #6E97C2 100%)",
+          "radial-gradient(ellipse at bottom, #F5B68F 0%, #617FAB 100%)",
+          "radial-gradient(ellipse at bottom, #D98B96 0%, #5D6A9D 100%)",
+          "radial-gradient(ellipse at bottom, #4b366a 0%, #1f2241 80%)",
+          "radial-gradient(ellipse at bottom, #1e264b 0%, #0a0e23 70%)",
+        ]
+
+        const container = document.querySelector(".content-container")
+        const background = document.querySelector(".background-gradient")
+
+        let cards = []
+        let currentIndex = -1 // 初始化为 -1，确保首次加载能触发切换
+        let isUserInteracting = false
+        let autoModeTimeout
+
+        // --- 核心切换函数 (已修复) ---
+        function switchToCard(newIndex) {
+          if (newIndex === currentIndex) return // 如果已经是当前卡片，则不执行任何操作
+
+          const oldIndex = currentIndex
+          currentIndex = newIndex
+
+          // 更新背景
+          background.style.background = gradients[currentIndex]
+
+          // --- THE FIX IS HERE ---
+          // 处理即将离开的卡片 (如果存在)
+          if (oldIndex !== -1) {
+            const oldCard = cards[oldIndex]
+            oldCard.classList.remove("active") // 移除 active，触发淡出
+            oldCard.classList.add("exiting") // 添加 exiting，辅助 transform 动画
+
+            // 关键：在动画结束后清理 exiting class，防止影响下一次进入
+            oldCard.addEventListener(
+              "transitionend",
+              () => {
+                oldCard.classList.remove("exiting")
+              },
+              { once: true }
+            ) // { once: true } 确保监听器只执行一次后自动移除
+          }
+
+          // 处理即将进入的卡片
+          const newCard = cards[currentIndex]
+          newCard.classList.add("active") // 添加 active，触发淡入
+        }
+
+        function init() {
+          data.forEach((item, index) => {
+            const card = document.createElement("div")
+            card.className = "shi-chen-card"
+            card.dataset.index = index
+            // 注意：为内容区增加了滚动容器，处理长文本
+            card.innerHTML = `<div class="card-inner-content" style="max-height: 95vh; overflow-y: auto; -webkit-overflow-scrolling: touch; padding: 0 10px;"> ... </div>`
+            // 填充详细内容
+            card.querySelector(".card-inner-content").innerHTML = `
+                    <h1 class="shi-chen-title">${item.时辰}</h1>
+                    <p class="time-range">${item.时间范围}</p>
+                    <h2 class="meridian-name">${item.当令经络}</h2>
+                    <div class="content-section"><h3 class="section-title">◈ 生理精要 ◈</h3><p class="section-text">${item.生理活动精要}</p></div>
+                    <div class="content-section"><h3 class="section-title">◈ 顺应之道 ◈</h3><p class="section-text">${item.顺应之道}</p></div>
+                    <div class="content-section"><h3 class="section-title">◈ 违逆之害 ◈</h3><p class="section-text">${item.违逆之害}</p></div>
+                `
+            container.appendChild(card)
+            cards.push(card)
+          })
+
+          switchToCard(getCurrentShiChenIndex())
+
+          setInterval(checkTime, 60000)
+          initSwipe()
+        }
+
+        function getCurrentShiChenIndex() {
+          const hour = new Date().getHours()
+          if (hour >= 23 || hour < 1) return 0
+          if (hour >= 1 && hour < 3) return 1
+          if (hour >= 3 && hour < 5) return 2
+          if (hour >= 5 && hour < 7) return 3
+          if (hour >= 7 && hour < 9) return 4
+          if (hour >= 9 && hour < 11) return 5
+          if (hour >= 11 && hour < 13) return 6
+          if (hour >= 13 && hour < 15) return 7
+          if (hour >= 15 && hour < 17) return 8
+          if (hour >= 17 && hour < 19) return 9
+          if (hour >= 19 && hour < 21) return 10
+          if (hour >= 21 && hour < 23) return 11
+          return 0
+        }
+
+        function checkTime() {
+          if (isUserInteracting) return
+          const realTimeIndex = getCurrentShiChenIndex()
+          if (realTimeIndex !== currentIndex) {
+            switchToCard(realTimeIndex)
+          }
+        }
+
+        function initSwipe() {
+          let startX = 0
+          let endX = 0
+          const threshold = 50
+
+          container.addEventListener("touchstart", (e) => {
+            if (e.touches.length === 1) {
+              // 只响应单指触摸
+              startX = e.touches[0].clientX
+              isUserInteracting = true
+              clearTimeout(autoModeTimeout)
+            }
+          })
+
+          container.addEventListener("touchmove", (e) => {
+            if (e.touches.length === 1) {
+              endX = e.touches[0].clientX
+            }
+          })
+
+          container.addEventListener("touchend", () => {
+            if (startX === 0) return // 如果没有有效的 touchstart，则忽略
+
+            if (startX - endX > threshold) {
+              switchToCard((currentIndex + 1) % 12)
+            } else if (endX - startX > threshold) {
+              switchToCard((currentIndex - 1 + 12) % 12)
+            }
+
+            clearTimeout(autoModeTimeout)
+            autoModeTimeout = setTimeout(() => {
+              isUserInteracting = false
+              checkTime()
+            }, 10000)
+
+            startX = 0
+            endX = 0
+          })
+        }
+
+        init()
+      })
+    </script>
+  </body>
+</html>

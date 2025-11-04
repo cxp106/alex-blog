@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Helios - 高级二维码合成器</title>
+    <!-- 选用功能更强大的 qr-code-styling 库以支持高级定制 -->
+    <script src="https://unpkg.com/qr-code-styling@1.6.0/lib/qr-code-styling.js"></script>
+    <style>
+      /* ADR-02: 采用 CSS 自定义属性 (Variables) 和 BEM 命名法 */
+      :root {
+        --color-primary: #007bff;
+        --color-primary-dark: #0056b3;
+        --color-success: #28a745;
+        --color-danger: #dc3545;
+        --color-light: #f8f9fa;
+        --color-dark: #343a40;
+        --color-gray: #6c757d;
+        --color-border: #dee2e6;
+        --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        --spacing-unit: 8px;
+        --border-radius: 6px; /* 此处定义圆角值 */
+        --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.075);
+      }
+
+      /* --- 全局重置与基础样式 --- */
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: var(--font-family-sans-serif);
+        background-color: var(--color-light);
+        color: var(--color-dark);
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        min-height: 100vh;
+        padding: calc(var(--spacing-unit) * 4);
+      }
+
+      /* --- 主应用容器与卡片布局 --- */
+      .app-container {
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .card {
+        background-color: #ffffff;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-sm);
+        padding: calc(var(--spacing-unit) * 4);
+      }
+
+      .card__header {
+        text-align: center;
+        margin-bottom: calc(var(--spacing-unit) * 3);
+        font-size: 1.75rem;
+        font-weight: 500;
+      }
+
+      /* --- 表单组 --- */
+      .form-group {
+        margin-bottom: calc(var(--spacing-unit) * 2);
+      }
+
+      .input-field {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .input-field__label {
+        margin-bottom: var(--spacing-unit);
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .input-field__input {
+        width: 100%;
+        padding: calc(var(--spacing-unit) * 1.5);
+        border: 1px solid var(--color-border);
+        border-radius: var(--border-radius);
+        font-size: 1rem;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .input-field__input:focus {
+        outline: none;
+        border-color: var(--color-primary);
+        box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+      }
+
+      .input-field__input--invalid {
+        border-color: var(--color-danger);
+      }
+
+      .input-field__error {
+        color: var(--color-danger);
+        font-size: 0.8rem;
+        height: calc(var(--spacing-unit) * 2);
+        margin-top: calc(var(--spacing-unit) / 2);
+      }
+
+      /* --- 预览面板 --- */
+      .preview-panel {
+        position: relative;
+        width: 100%;
+        padding-top: 56.25%; /* 16:9 响应式比例 */
+        background-color: var(--color-light);
+        border: 1px dashed var(--color-border);
+        border-radius: var(--border-radius);
+        margin-top: calc(var(--spacing-unit) * 3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .preview-panel__canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+
+      .preview-panel__loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(0, 0, 0, 0.1);
+        border-left-color: var(--color-primary);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        display: none; /* 默认隐藏 */
+      }
+
+      .preview-panel--loading .preview-panel__loader {
+        display: block;
+      }
+
+      @keyframes spin {
+        to {
+          transform: translate(-50%, -50%) rotate(360deg);
+        }
+      }
+
+      /* --- 操作按钮 --- */
+      .action-button {
+        width: 100%;
+        padding: calc(var(--spacing-unit) * 1.5) 0;
+        margin-top: calc(var(--spacing-unit) * 3);
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #ffffff;
+        background-color: var(--color-primary);
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+      }
+
+      .action-button:hover:not(:disabled) {
+        background-color: var(--color-primary-dark);
+      }
+
+      .action-button:disabled {
+        background-color: var(--color-gray);
+        cursor: not-allowed;
+      }
+
+      .action-button--success {
+        background-color: var(--color-success);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="app-container">
+      <div class="card">
+        <h1 class="card__header">高级二维码合成器</h1>
+
+        <div class="form-group">
+          <div class="input-field">
+            <label for="imageUrl" class="input-field__label">背景图片 URL (必填)</label>
+            <input type="text" id="imageUrl" class="input-field__input" placeholder="https://example.com/image.jpg" />
+            <span id="imageUrlError" class="input-field__error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-field">
+            <label for="linkUrl" class="input-field__label">跳转链接 URL (必填)</label>
+            <input type="text" id="linkUrl" class="input-field__input" placeholder="https://example.com" />
+            <span id="linkUrlError" class="input-field__error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="input-field">
+            <label for="iconUrl" class="input-field__label">中心图标 URL (可选)</label>
+            <input type="text" id="iconUrl" class="input-field__input" placeholder="https://example.com/icon.png" />
+            <span id="iconUrlError" class="input-field__error" aria-live="polite"></span>
+          </div>
+        </div>
+
+        <div id="previewPanel" class="preview-panel">
+          <canvas id="resultCanvas" class="preview-panel__canvas"></canvas>
+          <div class="preview-panel__loader"></div>
+        </div>
+
+        <button id="actionBtn" class="action-button" disabled>输入内容以生成</button>
+      </div>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- 常量 ---
+        // FIX: 从 CSS 获取变量值并转换为数字，供 Canvas API 使用
+        const BORDER_RADIUS = parseInt(getComputedStyle(document.documentElement).getPropertyValue("--border-radius"), 10)
+
+        // --- DOM 元素 ---
+        const elements = {
+          imageUrlInput: document.getElementById("imageUrl"),
+          linkUrlInput: document.getElementById("linkUrl"),
+          iconUrlInput: document.getElementById("iconUrl"),
+          actionBtn: document.getElementById("actionBtn"),
+          resultCanvas: document.getElementById("resultCanvas"),
+          previewPanel: document.getElementById("previewPanel"),
+          errors: {
+            imageUrl: document.getElementById("imageUrlError"),
+            linkUrl: document.getElementById("linkUrlError"),
+            iconUrl: document.getElementById("iconUrlError"),
+          },
+        }
+
+        // --- 应用状态 ---
+        const state = {
+          values: { imageUrl: "", linkUrl: "", iconUrl: "" },
+          errors: { imageUrl: "", linkUrl: "", iconUrl: "" },
+          isLoading: false,
+          generatedDataUrl: null,
+        }
+
+        /**
+         * @description 根据当前应用状态更新 UI。
+         */
+        const updateUI = () => {
+          Object.keys(state.errors).forEach((key) => {
+            const inputEl = elements[`${key}Input`]
+            const errorEl = elements.errors[key]
+            errorEl.textContent = state.errors[key]
+            if (state.errors[key]) {
+              inputEl.classList.add("input-field__input--invalid")
+            } else {
+              inputEl.classList.remove("input-field__input--invalid")
+            }
+          })
+
+          if (state.isLoading) {
+            elements.previewPanel.classList.add("preview-panel--loading")
+            elements.actionBtn.disabled = true
+            elements.actionBtn.textContent = "正在生成..."
+          } else {
+            elements.previewPanel.classList.remove("preview-panel--loading")
+          }
+
+          if (!state.isLoading) {
+            if (state.generatedDataUrl) {
+              elements.actionBtn.disabled = false
+              elements.actionBtn.textContent = "下载图片"
+              elements.actionBtn.classList.add("action-button--success")
+            } else {
+              const hasRequiredInput = state.values.imageUrl && state.values.linkUrl
+              const hasErrors = Object.values(state.errors).some((e) => e)
+              elements.actionBtn.disabled = !hasRequiredInput || hasErrors
+              elements.actionBtn.textContent = "生成图片"
+              elements.actionBtn.classList.remove("action-button--success")
+            }
+          }
+        }
+
+        /**
+         * @description 验证 URL 字符串的有效性。
+         */
+        const isValidUrl = (url) => {
+          if (!url) return true
+          try {
+            new URL(url)
+            return true
+          } catch (_) {
+            return false
+          }
+        }
+
+        /**
+         * @description 异步加载图片。
+         */
+        const loadImage = (src) =>
+          new Promise((resolve, reject) => {
+            const img = new Image()
+            img.crossOrigin = "Anonymous"
+            img.onload = () => resolve(img)
+            img.onerror = () => reject(new Error("图片加载失败，请检查 URL 或 CORS 设置。"))
+            img.src = src
+          })
+
+        /**
+         * @description 核心功能：生成带二维码的图片。
+         */
+        const generateImage = async () => {
+          state.isLoading = true
+          state.generatedDataUrl = null
+          updateUI()
+
+          try {
+            const { imageUrl, linkUrl, iconUrl } = state.values
+            if (!imageUrl || !linkUrl) return
+
+            const bgImage = await loadImage(imageUrl)
+
+            const qrCode = new QRCodeStyling({
+              width: 300,
+              height: 300,
+              data: linkUrl,
+              image: iconUrl || undefined,
+              dotsOptions: { color: "#000000", type: "rounded" },
+              backgroundOptions: { color: "#ffffff" },
+              imageOptions: { crossOrigin: "anonymous", margin: 5, imageSize: 0.3 },
+              qrOptions: { errorCorrectionLevel: "H" },
+            })
+            const qrBlob = await qrCode.getRawData("png")
+            if (!qrBlob) throw new Error("二维码 Blob 生成失败。")
+            const qrImage = await loadImage(URL.createObjectURL(qrBlob))
+
+            const canvas = elements.resultCanvas
+            const ctx = canvas.getContext("2d")
+            canvas.width = bgImage.width
+            canvas.height = bgImage.height
+
+            ctx.drawImage(bgImage, 0, 0)
+
+            const qrSize = Math.min(bgImage.width, bgImage.height) * 0.25
+            const padding = qrSize * 0.1
+            const margin = Math.min(bgImage.width, bgImage.height) * 0.05
+            const bgRectSize = qrSize + padding * 2
+            const bgRectX = canvas.width - bgRectSize - margin
+            const bgRectY = canvas.height - bgRectSize - margin
+
+            ctx.fillStyle = "rgba(255, 255, 255, 0.9)"
+            ctx.beginPath()
+            // FIX: 使用从 CSS 解析的 BORDER_RADIUS 常量，而不是 CSS 变量字符串
+            ctx.moveTo(bgRectX + BORDER_RADIUS, bgRectY)
+            ctx.arcTo(bgRectX + bgRectSize, bgRectY, bgRectX + bgRectSize, bgRectY + bgRectSize, BORDER_RADIUS)
+            ctx.arcTo(bgRectX + bgRectSize, bgRectY + bgRectSize, bgRectX, bgRectY + bgRectSize, BORDER_RADIUS)
+            ctx.arcTo(bgRectX, bgRectY + bgRectSize, bgRectX, bgRectY, BORDER_RADIUS)
+            ctx.arcTo(bgRectX, bgRectY, bgRectX + bgRectSize, bgRectY, BORDER_RADIUS)
+            ctx.closePath()
+            ctx.fill()
+
+            ctx.drawImage(qrImage, bgRectX + padding, bgRectY + padding, qrSize, qrSize)
+
+            state.generatedDataUrl = canvas.toDataURL("image/png")
+          } catch (error) {
+            console.error("生成失败：", error)
+            state.errors.imageUrl = error.message
+          } finally {
+            state.isLoading = false
+            updateUI()
+          }
+        }
+
+        let debounceTimer
+        const handleInputChange = () => {
+          state.values = {
+            imageUrl: elements.imageUrlInput.value.trim(),
+            linkUrl: elements.linkUrlInput.value.trim(),
+            iconUrl: elements.iconUrlInput.value.trim(),
+          }
+
+          state.errors.imageUrl = state.values.imageUrl && !isValidUrl(state.values.imageUrl) ? "请输入有效的URL" : ""
+          state.errors.linkUrl = state.values.linkUrl && !isValidUrl(state.values.linkUrl) ? "请输入有效的URL" : ""
+          state.errors.iconUrl = state.values.iconUrl && !isValidUrl(state.values.iconUrl) ? "请输入有效的URL" : ""
+
+          state.generatedDataUrl = null
+          updateUI()
+
+          clearTimeout(debounceTimer)
+          const hasRequiredInput = state.values.imageUrl && state.values.linkUrl
+          const hasErrors = Object.values(state.errors).some((e) => e)
+          if (hasRequiredInput && !hasErrors) {
+            debounceTimer = setTimeout(generateImage, 500)
+          }
+        }
+
+        const handleActionClick = () => {
+          if (state.generatedDataUrl) {
+            const link = document.createElement("a")
+            link.href = state.generatedDataUrl
+            link.download = "qr-image-generated.png"
+            document.body.appendChild(link)
+            link.click()
+            document.body.removeChild(link)
+          }
+        }
+
+        elements.imageUrlInput.addEventListener("input", handleInputChange)
+        elements.linkUrlInput.addEventListener("input", handleInputChange)
+        elements.iconUrlInput.addEventListener("input", handleInputChange)
+        elements.actionBtn.addEventListener("click", handleActionClick)
+
+        updateUI()
+      })
+    </script>
+  </body>
+</html>

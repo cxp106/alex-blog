@@ -1,0 +1,158 @@
+[
+  {
+    "category": "常用",
+    "links": [
+      {
+        "title": "chipuller",
+        "introduction": "官网",
+        "link": "https://www.chipuller.com/"
+      },
+      {
+        "title": "chipuller 1.0",
+        "introduction": "测试环境",
+        "link": "http://au.chipu.com/?ref_path=http://cp.chipu.com/system/"
+      },
+      {
+        "title": "GitLab",
+        "introduction": "代码仓库",
+        "link": "http://cad2.gitlab.chipu.com/"
+      },
+      {
+        "title": "MagicPulse API",
+        "introduction": "API 文档",
+        "link": "http://172.16.6.25:4002/swagger-ui/index.html"
+      },
+      {
+        "title": "chipuller 官网内容管理",
+        "introduction": "chipuller 官网内容管理",
+        "link": "https://mp.chipuller.com/main/news",
+        "info": "账号：chipuller  密码：Chipuller@654321"
+      },
+      {
+        "title": "芯尚官网",
+        "introduction": "芯尚医疗科技是一家专注于创新型医疗器械的公司，致力于通过先进的技术改善人们的生活质量。我们的产品线包括最新的心电贴片监测设备，旨在为用户提供便捷、准确的心脏健康监测服务。",
+        "link": "https://www.sincesam.com/"
+      },
+      {
+        "title": "芯尚官网内容管理",
+        "introduction": "芯尚官网内容管理",
+        "link": "https://magicpulse-web.sincesam.com/webapp/website-news"
+      },
+      {
+        "title": "MagicPulse 后台",
+        "introduction": "测试环境",
+        "link": "https://magicpulse-web-test.sincesam.com/webapp/login"
+      },
+      {
+        "title": "MagicPulse 后台",
+        "introduction": "正式环境",
+        "link": "https://magicpulse-web.sincesam.com/webapp/login"
+      },
+      {
+        "title": "芯尚",
+        "introduction": "官网",
+        "link": "https://www.sincesam.com/"
+      },
+      {
+        "title": "创意猎人",
+        "introduction": "AIGC 知识库",
+        "link": "https://aigcreative.feishu.cn/wiki/R7bMwrNjfilcTGkumqoc6ulgnMd?table=tblv19nrHzI6xQ35&view=vewrWZi67k"
+      },
+      {
+        "title": "AIMOBY",
+        "introduction": "科技洞察",
+        "link": "https://aimoby.com/"
+      },
+      {
+        "title": "艾瑞网",
+        "introduction": "互联网数据资讯聚合平台",
+        "link": "https://www.iresearch.cn/"
+      },
+      {
+        "title": "齐思",
+        "introduction": "为科研创业探寻前沿认知",
+        "link": "https://news.miracleplus.com/"
+      },
+      {
+        "title": "商业新知",
+        "introduction": "IT 互联网频道",
+        "link": "https://www.shangyexinzhi.com/news_list/p-cl-1"
+      },
+      {
+        "title": "AI 资讯",
+        "introduction": "这里有最及时全面的人工智能资讯报道",
+        "link": "https://aitntnews.com/newList.html?typeId=1"
+      },
+      {
+        "title": "BestBlogs.dev",
+        "introduction": "汇集顶级编程、人工智能、产品、科技文章",
+        "link": "https://www.bestblogs.dev/feeds?featured=y"
+      },
+      {
+        "title": "来一点医学科学前沿",
+        "introduction": "顶刊上的生物医学大佬们又干了啥",
+        "link": "https://t.me/s/CNSmydream"
+      },
+      {
+        "title": "慧语简报",
+        "introduction": "每日新闻早读",
+        "link": "https://news.topurl.cn/"
+      },
+      {
+        "title": "热点墨客",
+        "introduction": "看热点",
+        "link": "https://hot.rss.ink/articles/1"
+      },
+      {
+        "title": "iforest.fm",
+        "introduction": "探索世界各地的森林的声音，放松减压，逃避喧嚣",
+        "link": "https://fm.sleepon.us/"
+      },
+      {
+        "title": "ambiphone",
+        "introduction": "用于工作、学习和放松的环境音乐，可以保存并分享自己的配置",
+        "link": "https://ambiph.one/"
+      },
+      {
+        "title": "Rainy Mood",
+        "introduction": "沉浸式的雷雨声背景音，适用于助眠、学习或放松",
+        "link": "https://www.rainymood.com/"
+      },
+      {
+        "title": "Earth.fm",
+        "introduction": "Earth.fm 收集来自世界各地大自然的声音，让人沉浸式的收听",
+        "link": "https://earth.fm/"
+      },
+      {
+        "title": "Moodist",
+        "introduction": "开源免费的背景音工具，可组合多种类型的音效，创造用于保持专注和平静的环境氛围",
+        "link": "https://moodist.mvze.net/"
+      },
+      {
+        "title": "FreeMind",
+        "introduction": "以大自然的声音为灵感，轻松创建专注或放松的音乐氛围",
+        "link": "https://freemind.fit/"
+      },
+      {
+        "title": "猫看",
+        "introduction": "在线白噪音网站，包括自然、物品、动物、场景等音效，可选择多种声音进行组合",
+        "link": "https://www.maokan.cc"
+      },
+      {
+        "title": "泡泡白噪音",
+        "introduction": "各类白噪音环境音，帮助你放松心情安心工作与睡眠",
+        "link": "https://www.ppbzy.com/"
+      },
+      {
+        "title": "See Yue",
+        "introduction": "Typora 主题",
+        "link": "https://github.com/jinghu-moon/typora-see-yue-theme"
+      },
+      {
+        "title": "Microsoft Rewards",
+        "introduction": "看看积分",
+        "link": "https://rewards.bing.com/"
+      }
+    ]
+  }
+]
